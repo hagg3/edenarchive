@@ -1,9 +1,12 @@
 ---
-layout: article
+layout: page
 title: How to Make Videos with Far Rendering
 date: 2013-05-31
-author: Mrob27
+author: Robert Munafo (Mrob27)
 ---
+
+2013-05-31
+Robert Munafo (Mrob27)
 
 # How to Make Videos with Far Rendering
 [Original article](https://edenworldbuilder.fandom.com/wiki/User_blog:Mrob27/How_to_Make_Videos_with_Far_Rendering)

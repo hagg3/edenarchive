@@ -1,11 +1,13 @@
 ---
-layout: article
+layout: page
 title: Video Game Museum
 date: 2026-01-01
 author: edenworldbuilder.fandom.com
 ---
 
-# Video Game Museum
+2026-01-01
+Eden World Builder Wiki
+
 Download the world [here]({{ site.baseurl }}/worlds/video-game-museum/).
 
 ## Description

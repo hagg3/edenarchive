@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: page
 title: Eden - World Builder
 date: 2026-01-01
 author: edenworldbuilder.fandom.com
 ---
+
+2026-01-01
 
 # Eden World Builder
 

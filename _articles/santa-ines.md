@@ -1,11 +1,12 @@
 ---
-layout: article
+layout: page
 title: Santa Ines
 date: 2026-01-01
 author: Sam H
 ---
 
-# Santa Ines
+2026-01-01
+Sam H
 
 ## Description
 
