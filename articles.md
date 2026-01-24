@@ -26,9 +26,12 @@ Under Construction!
 <ul>
   {% for article in sorted_articles %}
     <li>
-      <a href="{{ article.url }}">{{ article.title }}</a>
-      {% if article.date %}<small>({{ article.date | date: "%Y-%m-%d" }})</small>{% endif %}
+      <a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a>
+      {% if article.date %}
+        <small>({{ article.date | date: "%Y-%m-%d" }})</small>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
+
 

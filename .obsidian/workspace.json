@@ -1,0 +1,194 @@
+{
+  "main": {
+    "id": "0c79cc3188f925b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "3be5d91dfd7e7ad2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4294a8a903de984",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_articles/santa-ines.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "santa-ines"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f84895290338a91e",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfc15562e60b8273",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "198916231b0574ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "97e73c93ed11cd82",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "83e7090161bf10db",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "61766c578fd790ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f62667967d3d7e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "539afdd93dfe8746",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_articles/santa-ines.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for santa-ines"
+            }
+          },
+          {
+            "id": "7e1dd85d2605850e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_articles/santa-ines.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from santa-ines"
+            }
+          },
+          {
+            "id": "d35e0fc8986c8c59",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "718b0fd2cfe98012",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2f09cebec76ffd40",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_articles/santa-ines.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of santa-ines"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d4294a8a903de984",
+  "lastOpenFiles": [
+    "_articles/video-game-museum.md",
+    "_articles/santa-ines.md",
+    "_articles/how-to-make-videos-with-far-rendering.md",
+    "_articles/eden-world-builder.md",
+    "_articles/creatures.md"
+  ]
+}
