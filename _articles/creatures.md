@@ -2,7 +2,7 @@
 layout: page
 title: Creatures
 date: 2026-01-01
-permalink: /articles/creatures/
+author: edenworldbuilder.fandom.com
 ---
 
 # Creatures

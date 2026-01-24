@@ -2,7 +2,7 @@
 layout: page
 title: Video Game Museum
 date: 2026-01-01
-permalink: /articles/video-game-museum/
+author: edenworldbuilder.fandom.com
 ---
 
 # Video Game Museum

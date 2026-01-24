@@ -2,7 +2,7 @@
 layout: page
 title: Eden - World Builder
 date: 2026-01-01
-permalink: /articles/eden-world-builder/
+author: edenworldbuilder.fandom.com
 ---
 
 # Eden World Builder

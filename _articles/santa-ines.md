@@ -2,7 +2,7 @@
 layout: page
 title: Santa Ines
 date: 2026-01-01
-permalink: /articles/santa-ines/
+author: Sam H
 ---
 
 # Santa Ines
