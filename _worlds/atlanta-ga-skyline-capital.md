@@ -3,14 +3,14 @@ layout: page
 filename: 1408490349.eden
 worldname: Atlanta GA Skyline Capital
 publishdate: 2014-08-20
-author: 
+author: null
 tags:
-  - temple
-  - american
-  - usa
-  - city
-  - oldterrain
-  - modern
+- temple
+- america
+- usa
+- city
+- oldterrain
+- modern
 ---
 ## Atlanta GA Skyline Capital
 

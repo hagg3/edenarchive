@@ -5,14 +5,14 @@ worldname: Pit Parkour 6'2
 publishdate: 2025-07-22
 author: jbeh1321
 tags:
-  - lighting
-  - parkour
-  - puzzle
-  - adventure
-  - quest
-  - portals
-  - abstract
-  - exploration
+- lighting
+- parkour
+- puzzle
+- adventure
+- quest
+- portal
+- abstract
+- exploration
 ---
 ## Pit Parkour 6'2
 

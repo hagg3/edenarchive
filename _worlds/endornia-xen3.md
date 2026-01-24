@@ -5,18 +5,18 @@ worldname: Endornia XEN3
 publishdate: 2025-02-23
 author: Sam H
 tags:
-  - customterrain
-  - large
-  - beach
-  - city
-  - exploration
-  - interiors
-  - european
-  - roads
-  - airport
-  - infrastructure
-  - sea
-  - experimental
+- customterrain
+- large
+- beach
+- city
+- exploration
+- interior
+- europe
+- roads
+- airport
+- infrastructure
+- sea
+- experimental
 ---
 ## Endornia XEN3
 

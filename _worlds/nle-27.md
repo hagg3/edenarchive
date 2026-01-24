@@ -5,14 +5,14 @@ worldname: NLE 27
 publishdate: 2025-12-21
 author: Same as Skyscraper Empire?
 tags:
-  - impressive
-  - skyscrapers
-  - modern
-  - architecture
-  - city
-  - realistic
-  - detailed
-  - interiors
+- impressive
+- skyscraper
+- modern
+- architecture
+- city
+- realistic
+- detailed
+- interior
 ---
 ## NLE 27
 

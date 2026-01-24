@@ -3,15 +3,15 @@ layout: page
 filename: 1458650822.eden
 worldname: The Sector
 publishdate: 2016-03-22
-author: 
+author: null
 tags:
-  - town
-  - european
-  - medieval
-  - castle
-  - palace
-  - kingdom
-  - wall
+- town
+- europe
+- medieval
+- castle
+- palace
+- kingdom
+- wall
 ---
 ## The Sector
 

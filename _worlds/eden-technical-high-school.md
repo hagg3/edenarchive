@@ -3,13 +3,13 @@ layout: page
 filename: 1629864134.eden
 worldname: Eden Technical High School
 publishdate: 2021-08-25
-author: 
+author: null
 tags:
-  - detailed
-  - interiors
-  - school
-  - college
-  - university
+- detailed
+- interior
+- school
+- college
+- university
 ---
 ## Eden Technical High School
 

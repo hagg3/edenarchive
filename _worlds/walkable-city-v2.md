@@ -5,13 +5,13 @@ worldname: Walkable City v2
 publishdate: 2025-12-25
 author: Joe
 tags:
-  - small
-  - scene
-  - town
-  - village
-  - interiors
-  - detailed
-  - europe
+- small
+- scene
+- town
+- village
+- interior
+- detailed
+- europe
 ---
 ## Walkable City v2
 

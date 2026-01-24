@@ -3,20 +3,19 @@ layout: page
 filename: 1768087119.eden
 worldname: TALLINN 2026
 publishdate: 2026-01-10
-archivedate: 
-filesize: "1.7 MB"
-author: 
+archivedate: null
+filesize: 1.7 MB
+author: null
 tags:
-  - signs
-  - retro
-  - europe
-  - oldterrain
-  - caves
-  - estonia
-  - city
-  - town
-  - interior
-  - signs
+- signs
+- retro
+- europe
+- oldterrain
+- caves
+- estonia
+- city
+- town
+- interior
 ---
 ## TALLINN 2026
 

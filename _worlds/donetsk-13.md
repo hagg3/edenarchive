@@ -5,13 +5,13 @@ worldname: Donetsk 13
 publishdate: 2025-09-27
 author: Monica_DOn
 tags:
-  - large
-  - city
-  - russian
-  - brutalist
-  - soviet
-  - architecture
-  - exploration
+- large
+- city
+- russian
+- brutalism
+- soviet
+- architecture
+- exploration
 ---
 ## Donetsk 13
 

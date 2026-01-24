@@ -3,17 +3,17 @@ layout: page
 filename: 1768425572.eden
 worldname: Desert World Template
 publishdate: 2026-01-14
-archivedate: 
-filesize: "0.5 MB"
+archivedate: null
+filesize: 0.5 MB
 author: Jeremy, Sam H
 tags:
-  - customterrain
-  - maniuplator
-  - template
-  - sand
-  - desert
-  - SamH
-  - jeremy
+- customterrain
+- manipulator
+- template
+- sand
+- desert
+- SamH
+- jeremy
 ---
 ## Desert World Template
 

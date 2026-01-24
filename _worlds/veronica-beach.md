@@ -3,19 +3,19 @@ layout: page
 filename: 1766673793.eden
 worldname: Veronica Beach
 publishdate: 2025-12-25
-author: 
+author: null
 tags:
-  - impressive
-  - beach
-  - resort
-  - pools
-  - interior
-  - modern
-  - summer
-  - shops
-  - hotel
-  - vacation
-  - holiday
+- impressive
+- beach
+- resort
+- pool
+- interior
+- modern
+- summer
+- shops
+- hotel
+- vacation
+- holiday
 ---
 ## Veronica Beach
 

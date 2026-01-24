@@ -3,18 +3,18 @@ layout: page
 filename: 1315348100.eden
 worldname: olypmics by dante
 publishdate: 2011-09-06
-author: 
+author: null
 tags:
-  - old
-  - veryoldterrain
-  - oldcaves
-  - retro
-  - abstract
-  - planetarium
-  - stadium
-  - olympics
-  - sport
-  - airport
+- old
+- veryoldterrain
+- oldcaves
+- retro
+- abstract
+- planetarium
+- stadium
+- olympic
+- sports
+- airport
 ---
 ## olypmics by dante
 

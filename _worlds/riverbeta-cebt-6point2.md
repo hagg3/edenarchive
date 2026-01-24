@@ -3,15 +3,15 @@ layout: page
 filename: 1458329249.eden
 worldname: riverbeta cebt 6point2
 publishdate: 2016-03-18
-author: 
+author: null
 tags:
-  - remix
-  - large
-  - soviet
-  - brutalist
-  - abstract
-  - castle
-  - fortress
+- remix
+- large
+- soviet
+- brutalism
+- abstract
+- castle
+- fortress
 ---
 ## riverbeta cebt 6point2
 

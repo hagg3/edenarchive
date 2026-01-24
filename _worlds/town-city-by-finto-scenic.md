@@ -5,15 +5,14 @@ worldname: town city by finto scenic
 publishdate: 2025-01-24
 author: Finto
 tags:
-  - city
-  - uk
-  - european
-  - interiors
-  - scale
-  - exploration
-  - star
-  - reallistic
-  - exploration
+- city
+- uk
+- europe
+- interior
+- scale
+- exploration
+- star
+- realistic
 ---
 ## town city by finto scenic
 

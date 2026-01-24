@@ -5,21 +5,21 @@ worldname: Pherbos V4 Forgotten Factory
 publishdate: 2024-01-16
 author: Erik0310, pherbos
 tags:
-  - impressive
-  - flat
-  - large
-  - city
-  - european
-  - german
-  - scale
-  - realistic
-  - interiors
-  - exploration
-  - abandoned
-  - airport
-  - port
-  - infrastructure
-  - metro
+- impressive
+- flat
+- large
+- city
+- europe
+- germany
+- scale
+- realistic
+- interior
+- exploration
+- abandoned
+- airport
+- port
+- infrastructure
+- metro
 ---
 ## Pherbos V4 Forgotten Factory
 

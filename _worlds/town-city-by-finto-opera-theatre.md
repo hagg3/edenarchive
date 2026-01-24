@@ -5,11 +5,11 @@ worldname: town city by finto opera theatre
 publishdate: 2025-12-06
 author: Finto
 tags:
-  - uk
-  - british
-  - europe
-  - realistic
-  - interiors
+- uk
+- british
+- europe
+- realistic
+- interior
 ---
 ## town city by finto opera theatre
 

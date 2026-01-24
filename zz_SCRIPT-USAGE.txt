@@ -1,4 +1,7 @@
-z_add_world.py is a script that allows you to upload a .eden.zip file, specify attributes and upload it to the site. By following the below naming convention, attributes are auto-filled:
+
+********** z_add_world.py **********
+
+script that allows you to upload a .eden.zip file, specify attributes and upload it to the site. By following the below naming convention, attributes are auto-filled:
 
 World Name 0000000000 tags go here.eden.zip
 
@@ -31,3 +34,8 @@ python3 z_add_world.py --folder "/Users/rc/EdenAllFiles/Eden-WorldsCompressed/"
 
 Batch-add a directory + individual files:
 python3 z_add_world.py --eden file1.zip file2.zip --folder "/folder/of/zips"
+
+********** tag cleanup **********
+1. Run analyze_tags.py to find tags that can be merged
+2. Use the output to create a tag_map.yaml
+3. Run merge_tags.py

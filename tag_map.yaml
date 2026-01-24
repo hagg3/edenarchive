@@ -1,0 +1,23 @@
+# Tag normalization map
+# Key → tag to replace
+# Value → canonical tag to keep
+
+american: america
+architechture: architecture
+brutalist: brutalism
+enviroments: environment
+european: europe
+german: germany
+newheightlimit: heightlimit
+houses: house
+infastructure: infrastructure
+infrasstructure: infrastructure
+interiors: interior
+maniuplator: manipulator
+needsrevie: needsreview
+olympics: olympic
+pools: pool
+sport: sports
+portals: portal
+reallistic: realistic
+skyscrapers: skyscraper

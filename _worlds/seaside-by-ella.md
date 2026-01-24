@@ -5,14 +5,14 @@ worldname: Seaside by ella
 publishdate: 2026-01-11
 author: Ella
 tags:
-  - newterrain
-  - mansion
-  - house
-  - modern
-  - quality
-  - impressive
-  - interiors
-  - scene
+- newterrain
+- mansion
+- house
+- modern
+- quality
+- impressive
+- interior
+- scene
 ---
 ## Seaside by ella
 

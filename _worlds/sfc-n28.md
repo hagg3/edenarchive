@@ -3,11 +3,11 @@ layout: page
 filename: 1765990570.eden
 worldname: SFC n28
 publishdate: 2025-12-17
-author: 
+author: null
 tags:
-  - skyscrapers
-  - city
-  - needsreview
+- skyscraper
+- city
+- needsreview
 ---
 ## SFC n28
 
