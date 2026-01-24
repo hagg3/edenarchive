@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: Creatures
 date: 2026-01-01
 author: edenworldbuilder.fandom.com

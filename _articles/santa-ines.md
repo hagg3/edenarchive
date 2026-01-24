@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: Santa Ines
 date: 2026-01-01
 author: Sam H
