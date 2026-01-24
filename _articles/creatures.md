@@ -6,6 +6,7 @@ Eden World Builder Wiki
 ---
 
 2026-01-01
+
 Eden World Builder Wiki
 
 Creatures are non-playable characters in Eden - World Builder, introduced in Update 1.7. Players can interact with creatures in various ways, including capturing, painting, burning, or destroying them. They can be captured and placed anywhere in the world, which is useful for building zoos, enclosures, or custom scenarios.

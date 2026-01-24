@@ -7,8 +7,6 @@ author: edenworldbuilder.fandom.com
 
 2026-01-01
 
-# Eden World Builder
-
 Eden World Builder is a block-based sandbox building game for iOS devices, including the iPad, iPhone, and iPod Touch. It was created by developer Ari Ronen and his company Kingly Software Inc. (also known as Kingly Games). First released in 2010, Eden allows players to freely build and explore virtual worlds without objectives, enemies, or narrative constraints.
 
 Since its initial release, Eden World Builder has sold over three million copies and was frequently featured in the Top 100 apps on the iTunes App Store. In January 2018, the game’s source code was open-sourced, allowing continued development and maintenance by the community.

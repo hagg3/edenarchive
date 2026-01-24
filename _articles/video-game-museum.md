@@ -6,6 +6,7 @@ author: edenworldbuilder.fandom.com
 ---
 
 2026-01-01
+
 Eden World Builder Wiki
 
 Download the world [here]({{ site.baseurl }}/worlds/video-game-museum/).

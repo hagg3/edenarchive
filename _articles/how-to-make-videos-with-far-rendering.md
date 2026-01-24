@@ -6,9 +6,9 @@ author: Robert Munafo (Mrob27)
 ---
 
 2013-05-31
+
 Robert Munafo (Mrob27)
 
-# How to Make Videos with Far Rendering
 [Original article](https://edenworldbuilder.fandom.com/wiki/User_blog:Mrob27/How_to_Make_Videos_with_Far_Rendering)
 
 Here's a trailer I made of my world Takeshi'74178784'22, which is a heavily modified version of Djasiantech's Mega_City_Tokyo_(Extended).
