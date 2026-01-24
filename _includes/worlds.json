@@ -1,0 +1,14 @@
+[
+{% for world in site.worlds %}
+  {
+    "filename": {{ world.filename | jsonify }},
+    "worldname": {{ world.worldname | jsonify }},
+    "publishdate": {{ world.publishdate | jsonify }},
+    "archivedate": {{ world.archivedate | jsonify }},
+    "filesize": {{ world.filesize | jsonify }},
+    "author": {{ world.author | jsonify }},
+    "tags": {{ world.tags | jsonify }},
+    "url": {{ world.url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

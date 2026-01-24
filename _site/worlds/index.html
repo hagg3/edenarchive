@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Worlds Archive | Eden Worlds Archive</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Worlds Archive" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/worlds/" />
+<meta property="og:url" content="http://localhost:4000/worlds/" />
+<meta property="og:site_name" content="Eden Worlds Archive" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Worlds Archive" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Worlds Archive","url":"http://localhost:4000/worlds/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eden Worlds Archive" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Eden Worlds Archive</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/articles.html">Articles</a><a class="page-link" href="/links.html">Links</a><a class="page-link" href="/worlds/">Worlds Archive</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Worlds Archive</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="introduction">Introduction</h2>
+<p>This page contains a list of every world contained in the curated archive. All archived worlds are organized using a <strong>manual tagging system</strong>. Tags allow worlds to be browsed and filtered by type and theme.</p>
+
+<p>An unresolved bug in the latest version of Eden has meant that the vast majority of newly uploaded worlds in the last 1-2 years do not contain a preview image. We are trying to remedy this by providing custom preview images for each world. For now however, many pages and entries in the table below will show missing image errors.</p>
+
+<h2 id="downloads-and-file-handling">Downloads and File Handling</h2>
+
+<p>World files hosted on this site are <strong>compressed for download</strong>.</p>
+
+<ul>
+  <li>After downloading, you must <strong>extract the archive</strong> before importing the world into Eden.</li>
+  <li>In some cases, files may be <strong>double-compressed</strong> .</li>
+  <li>Extraction is successful once you are left with a <code class="language-plaintext highlighter-rouge">.eden</code> file that is <strong>larger than the originally downloaded archive</strong>.</li>
+</ul>
+
+<p>If you end up with a usable <code class="language-plaintext highlighter-rouge">.eden</code> file, the extraction has worked correctly.</p>
+
+<h2 id="browse-worlds">Browse Worlds</h2>
+
+<p><input id="search" type="text" placeholder="Search name, author, tags…" /></p>
+
+<p><label>
+  From:
+  <input id="date-from" type="date" />
+</label></p>
+
+<p><label>
+  To:
+  <input id="date-to" type="date" />
+</label></p>
+
+<p><label>
+  Tag:
+  <select id="tag-filter">
+    <option value="">All</option>
+  </select>
+</label></p>
+
+<table id="world-table">
+  <thead>
+    <tr>
+      <th>Preview</th>
+      <th>World</th>
+      <th>Author</th>
+      <th>Published</th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+const tableBody = document.querySelector("#world-table tbody");
+const searchInput = document.getElementById("search");
+const tagSelect = document.getElementById("tag-filter");
+const dateFrom = document.getElementById("date-from");
+const dateTo = document.getElementById("date-to");
+
+let allWorlds = [];
+
+fetch("/assets/data/worlds.json")
+  .then(res => res.json())
+  .then(worlds => {
+    allWorlds = worlds;
+    populateTags(worlds);
+    render(worlds);
+  });
+
+function populateTags(worlds) {
+  const tags = new Set();
+  worlds.forEach(w => (w.tags || []).forEach(t => tags.add(t)));
+
+  [...tags].sort().forEach(tag => {
+    const opt = document.createElement("option");
+    opt.value = tag;
+    opt.textContent = tag;
+    tagSelect.appendChild(opt);
+  });
+}
+
+function render(worlds) {
+  tableBody.innerHTML = "";
+
+  worlds.forEach(w => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+    <td class="preview-cell">
+        ${w.filename ? `
+        <img
+         src="/assets/worldfiles/${w.filename.replace('.eden','')}/${w.filename}.png"
+         alt="Preview of ${w.worldname}"
+            loading="lazy"
+        >
+        ` : ``}
+    </td>
+    <td><a href="${w.url}">${w.worldname}</a></td>
+    <td>${w.author || ""}</td>
+    <td>${w.publishdate || ""}</td>
+    <td>${(w.tags || []).join(", ")}</td>
+    `;
+
+    tableBody.appendChild(row);
+  });
+}
+
+function applyFilters() {
+  const q = searchInput.value.toLowerCase();
+  const tag = tagSelect.value;
+  const from = dateFrom.value;
+  const to = dateTo.value;
+
+  const filtered = allWorlds.filter(w => {
+    const text =
+      `${w.worldname} ${w.author} ${(w.tags || []).join(" ")}`.toLowerCase();
+
+    if (q && !text.includes(q)) return false;
+    if (tag && !(w.tags || []).includes(tag)) return false;
+    if (from && w.publishdate < from) return false;
+    if (to && w.publishdate > to) return false;
+
+    return true;
+  });
+
+  render(filtered);
+}
+
+[searchInput, tagSelect, dateFrom, dateTo].forEach(el =>
+  el.addEventListener("input", applyFilters)
+);
+
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Eden Worlds Archive</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Eden Worlds Archive</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+url: "https://hagg3sam.github.io"
+baseurl: "/edenworlds"
+theme: minima
+
+title: Eden Worlds Archive
+
+exclude:
+  - z_Uploading
+  - node-mapgen-broken
+  
+header_pages:
+  - about.md
+  - articles.md
+  - links.md
+  - worlds.md
+
+
+collections:
+  worlds:
+    output: true
+    permalink: /worlds/:name/
+  articles:
+    output: true
+    permalink: /articles/:name/
+

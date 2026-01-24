@@ -1,0 +1,33 @@
+z_add_world.py is a script that allows you to upload a .eden.zip file, specify attributes and upload it to the site. By following the below naming convention, attributes are auto-filled:
+
+World Name 0000000000 tags go here.eden.zip
+
+Example:
+
+My New Footy Project 1532966106 sport stadium arena football soccer.eden.zip
+
+Basic usage:
+
+python3 z_add_world.py --eden uploads/1644212230.eden.zip
+
+
+Direct from server:
+
+python3 z_add_world.py --eden 1574215598
+
+
+With optional images:
+
+python3 z_add_world.py \
+  --eden uploads/1644212230.eden.zip \
+  --preview uploads/preview.png \
+  --map uploads/map.png
+
+
+Batch-add a directory:
+
+python3 z_add_world.py --folder "/Users/rc/EdenAllFiles/Eden-WorldsCompressed/"
+
+
+Batch-add a directory + individual files:
+python3 z_add_world.py --eden file1.zip file2.zip --folder "/folder/of/zips"

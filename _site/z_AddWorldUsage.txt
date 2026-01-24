@@ -1,0 +1,25 @@
+Basic usage:
+
+python3 z_add_world.py --eden uploads/1644212230.eden.zip
+
+
+Direct from server:
+
+python3 z_add_world.py --eden 1574215598
+
+
+With optional images:
+
+python3 z_add_world.py \
+  --eden uploads/1644212230.eden.zip \
+  --preview uploads/preview.png \
+  --map uploads/map.png
+
+
+Batch-add a directory:
+
+python3 z_add_world.py --folder "/Users/rc/EdenAllFiles/Eden-WorldsCompressed/"
+
+
+Batch-add a directory + individual files:
+python3 z_add_world.py --eden file1.zip file2.zip --folder "/folder/of/zips"

@@ -1,0 +1,40 @@
+<table>
+  <thead>
+    <tr>
+      <th>Detail</th>
+      <th>Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Filename</strong></td>
+      <td>{{ page.filename }}</td>
+    </tr>
+    <tr>
+      <td><strong>Published</strong></td>
+      <td>{{ page.publishdate }}</td>
+    </tr>
+<!--
+    <tr>
+      <td><strong>Archived</strong></td>
+      <td>{{ page.archivedate }}</td>
+    </tr>
+    <tr>
+      <td><strong>Filesize</strong></td>
+      <td>{{ page.filesize }}</td>
+    </tr>
+-->
+    <tr>
+      <td><strong>Author</strong></td>
+      <td>{{ page.author }}</td>
+    </tr>
+    <tr>
+      <td><strong>Tags</strong></td>
+      <td>
+        {% if page.tags %}
+          {{ page.tags | join: ", " }}
+        {% endif %}
+      </td>
+    </tr>
+  </tbody>
+</table>
