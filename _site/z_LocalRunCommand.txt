@@ -1,3 +1,0 @@
-bundle exec jekyll serve --livereload --baseurl ""
-
-http://localhost:4000/
