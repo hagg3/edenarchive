@@ -1,7 +1,7 @@
 ---
 layout: page
 filename: 1696877729.eden
-worldname: Los Santos begins 0'0'9 (cvborder and swiss donmark)
+worldname: Los Santos begins 0'0'9
 publishdate: 2023-10-09
 author: 
 tags:
