@@ -1,3 +1,0 @@
-The .eden world files are in a compressed state. They need to be decompressed to be playable in the app. To do this, you can usually just add '.zip' to the end of the file and extract like you usually would with your OS' default .zip extraction methods.
-
-When decompressed, the files need to be placed in the /documents directory of the Eden app. You need a jailbroken device or a sideloaded version of the Eden app with file sharing enabled to access this directory.  

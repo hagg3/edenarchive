@@ -1,1 +1,0 @@
-Note - I have tried to remove or exclude duplicates i.e. worlds that appear on the 2012 featured list or elsewhere in the archive
