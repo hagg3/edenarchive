@@ -4,7 +4,7 @@ layout: home
 ## Home
 This website is a **work-in-progress preservation and curation project** for *Eden World Builder*.
 
-The core purpose of the project is to maintain a **curated catalogue of high-quality Eden world files**, rather than a raw or complete bulk archive. Over the lifetime of the game, tens of thousands of worlds were uploaded—many of which are spam uploads, broken test files, or minor revisions of existing catalogue worlds. Attempting to archive everything would significantly reduce the usefulness of the collection.
+The core purpose of the project is to maintain a **curated catalogue of high-quality Eden world files**, rather than a raw or complete bulk archive. Over the lifetime of the game, tens of thousands of worlds were uploaded. Thousands of these worlds are spam uploads, or minor revisions of existing. Attempting to archive everything would significantly reduce the usefulness of the collection.
 
 Instead, this site focuses on:
 
