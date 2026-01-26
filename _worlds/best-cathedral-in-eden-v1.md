@@ -3,8 +3,6 @@ layout: page
 filename: 1328584989.eden
 worldname: Best Cathedral in Eden V1
 publishdate: 2012-02-07
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

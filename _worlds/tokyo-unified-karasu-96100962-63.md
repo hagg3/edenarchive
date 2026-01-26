@@ -3,8 +3,6 @@ layout: page
 filename: 1592031274.eden
 worldname: Tokyo Unified Karasu 96100962'63
 publishdate: 2020-06-13
-archivedate: 
-filesize: "475.1 MB"
 author: 
 tags:
 ---

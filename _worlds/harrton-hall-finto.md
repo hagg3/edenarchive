@@ -3,8 +3,6 @@ layout: page
 filename: 1711119585.eden
 worldname: Harrton Hall Finto
 publishdate: 2024-03-22
-archivedate: 
-filesize: "148.4 MB"
 author: 
 tags:
 ---

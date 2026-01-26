@@ -3,8 +3,6 @@ layout: page
 filename: 1682630490.eden
 worldname: Eden Power V2
 publishdate: 2023-04-27
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - power

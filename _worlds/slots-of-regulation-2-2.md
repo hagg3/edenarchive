@@ -3,8 +3,6 @@ layout: page
 filename: 1751380102.eden
 worldname: Slots of Regulation 2.2
 publishdate: 2025-07-01
-archivedate: 
-filesize: "406.1 MB"
 author: 
 tags:
 ---

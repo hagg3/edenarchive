@@ -3,8 +3,6 @@ layout: page
 filename: 1761624860.eden
 worldname: Texas Resort 10 21 25
 publishdate: 2025-10-28
-archivedate: 
-filesize: "123.9 MB"
 author: 
 tags:
 ---

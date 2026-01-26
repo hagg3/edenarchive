@@ -3,8 +3,6 @@ layout: page
 filename: 1471785477.eden
 worldname: Enterprise Phase 2 Refit 1
 publishdate: 2016-08-21
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - impressive

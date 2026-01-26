@@ -3,8 +3,6 @@ layout: page
 filename: 1668707777.eden
 worldname: Zone 3 DeepUnderwater
 publishdate: 2022-11-17
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - newterrain

@@ -3,8 +3,6 @@ layout: page
 filename: 1635617028.eden
 worldname: JOE PARISH SPORTS COMPLEX
 publishdate: 2021-10-30
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - sport

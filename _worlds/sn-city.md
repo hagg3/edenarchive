@@ -3,8 +3,6 @@ layout: page
 filename: 1618052390.eden
 worldname: SN City
 publishdate: 2021-04-10
-archivedate: null
-filesize: 163.3 MB
 author: null
 tags:
 - unqiue

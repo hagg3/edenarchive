@@ -3,8 +3,6 @@ layout: page
 filename: 1761712003.eden
 worldname: city 18 JARED
 publishdate: 2025-10-29
-archivedate: 
-filesize: "145.6 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1768162972.eden
 worldname: neighborhoods
 publishdate: 2026-01-11
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

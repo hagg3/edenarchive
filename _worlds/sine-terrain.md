@@ -3,8 +3,6 @@ layout: page
 filename: 1541264139.eden
 worldname: sine terrain
 publishdate: 2018-11-03
-archivedate: 
-filesize: "0.1 MB"
 author: Jeremy
 tags:
   - customterrain

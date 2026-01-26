@@ -3,8 +3,6 @@ layout: page
 filename: 1391968432.eden
 worldname: Elysian City by AJ v6 Venture II
 publishdate: 2014-02-09
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

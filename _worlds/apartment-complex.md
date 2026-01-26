@@ -3,8 +3,6 @@ layout: page
 filename: 1688320962.eden
 worldname: apartment complex
 publishdate: 2023-07-02
-archivedate: 
-filesize: "1.6 MB"
 author: 
 tags:
   - suburb

@@ -3,8 +3,6 @@ layout: page
 filename: 1339956983.eden
 worldname: Hogwarts By Brendan V7
 publishdate: 2012-06-17
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

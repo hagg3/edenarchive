@@ -3,8 +3,6 @@ layout: page
 filename: 1577484756.eden
 worldname: ella fortney houses1245
 publishdate: 2019-12-27
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

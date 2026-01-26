@@ -3,8 +3,6 @@ layout: page
 filename: 1492006246.eden
 worldname: Eden World Tour V19 2017 Updated
 publishdate: 2017-04-12
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

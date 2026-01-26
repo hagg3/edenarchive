@@ -3,8 +3,6 @@ layout: page
 filename: 1768204208.eden
 worldname: One Chunk
 publishdate: 2026-01-12
-archivedate: 
-filesize: "0.8 MB"
 author: 
 tags:
 ---

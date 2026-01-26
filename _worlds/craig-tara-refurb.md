@@ -3,8 +3,6 @@ layout: page
 filename: 1768254253.eden
 worldname: Craig Tara Refurb
 publishdate: 2026-01-12
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

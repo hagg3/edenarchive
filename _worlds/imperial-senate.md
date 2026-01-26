@@ -3,8 +3,6 @@ layout: page
 filename: 1658372649.eden
 worldname: imperial senate
 publishdate: 2022-07-21
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - star

@@ -3,8 +3,6 @@ layout: page
 filename: 1342718792.eden
 worldname: 3 amazing church by k05
 publishdate: 2012-07-19
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

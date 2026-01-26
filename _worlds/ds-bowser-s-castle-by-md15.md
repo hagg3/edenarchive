@@ -3,8 +3,6 @@ layout: page
 filename: 1617127304.eden
 worldname: DS Bowser's Castle by MD15
 publishdate: 2021-03-30
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

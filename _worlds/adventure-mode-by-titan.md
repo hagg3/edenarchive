@@ -3,8 +3,6 @@ layout: page
 filename: 1737141911.eden
 worldname: Adventure mode by Titan
 publishdate: 2025-01-17
-archivedate: 
-filesize: "175.5 MB"
 author: 
 tags:
 ---

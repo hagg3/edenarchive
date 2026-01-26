@@ -3,8 +3,6 @@ layout: page
 filename: 1457876466.eden
 worldname: Beverly Hills 5 star hotel estate
 publishdate: 2016-03-13
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

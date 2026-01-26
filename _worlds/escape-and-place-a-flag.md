@@ -3,8 +3,6 @@ layout: page
 filename: 1492022506.eden
 worldname: Escape and place a flag
 publishdate: 2017-04-12
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

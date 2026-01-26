@@ -3,8 +3,6 @@ layout: page
 filename: 1758776684.eden
 worldname: kayamathelatestversion
 publishdate: 2025-09-25
-archivedate: 
-filesize: "43.7 MB"
 author: 
 tags:
 ---

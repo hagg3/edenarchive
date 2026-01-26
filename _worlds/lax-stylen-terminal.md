@@ -3,8 +3,6 @@ layout: page
 filename: 1630758630.eden
 worldname: LAX   STYLEN TERMINAL
 publishdate: 2021-09-04
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
   - airport

@@ -3,8 +3,6 @@ layout: page
 filename: 1629976936.eden
 worldname: SUfutureB 2.1
 publishdate: 2021-08-26
-archivedate: 
-filesize: "579.8 MB"
 author: 
 tags:
 ---

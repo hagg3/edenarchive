@@ -3,8 +3,6 @@ layout: page
 filename: 1768126356.eden
 worldname: Tw iB
 publishdate: 2026-01-11
-archivedate: 
-filesize: "2.4 MB"
 author: 
 tags:
 ---

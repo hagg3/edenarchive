@@ -3,8 +3,6 @@ layout: page
 filename: 1630945028.eden
 worldname: Government Palace V6
 publishdate: 2021-09-06
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

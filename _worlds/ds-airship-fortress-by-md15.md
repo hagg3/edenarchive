@@ -3,8 +3,6 @@ layout: page
 filename: 1508097950.eden
 worldname: DS Airship Fortress by MD15
 publishdate: 2017-10-15
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

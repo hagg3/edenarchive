@@ -3,8 +3,6 @@ layout: page
 filename: 1680020947.eden
 worldname: Concept Arena empty mhk
 publishdate: 2023-03-28
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
   - arena

@@ -3,8 +3,6 @@ layout: page
 filename: 1624811397.eden
 worldname: Biome and Void v3'0 by SCG
 publishdate: 2021-06-27
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1699690758.eden
 worldname: big city by STEGAMOS a
 publishdate: 2023-11-11
-archivedate: 
-filesize: "2059.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1544045069.eden
 worldname: Beach Terrain Template
 publishdate: 2018-12-05
-archivedate: 
-filesize: "5.7 MB"
 author: Jeremy
 tags:
   - customterrain

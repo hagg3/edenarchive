@@ -3,8 +3,6 @@ layout: page
 filename: 1752035858.eden
 worldname: SCG's Eden Jungle v2 WIP
 publishdate: 2025-07-09
-archivedate: 
-filesize: "157.3 MB"
 author: SCG
 tags:
   - needsreview

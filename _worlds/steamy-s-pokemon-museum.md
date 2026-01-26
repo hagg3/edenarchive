@@ -3,8 +3,6 @@ layout: page
 filename: 1501599483.eden
 worldname: steamy's pokemon museum
 publishdate: 2017-08-01
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

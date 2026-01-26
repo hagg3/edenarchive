@@ -3,8 +3,6 @@ layout: page
 filename: 1697235352.eden
 worldname: Metropolitan City Finto Gallery
 publishdate: 2023-10-13
-archivedate: 
-filesize: "203.0 MB"
 author: 
 tags:
 ---

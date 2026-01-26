@@ -3,8 +3,6 @@ layout: page
 filename: 1333932485.eden
 worldname: Emerald Empire Suburbia V1
 publishdate: 2012-04-09
-archivedate: 
-filesize: "0.9 MB"
 author: 
 tags:
 ---

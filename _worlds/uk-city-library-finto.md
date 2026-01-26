@@ -3,8 +3,6 @@ layout: page
 filename: 1675076090.eden
 worldname: UK City Library Finto
 publishdate: 2023-01-30
-archivedate: 
-filesize: "199.1 MB"
 author: 
 tags:
 ---

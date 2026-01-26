@@ -3,8 +3,6 @@ layout: page
 filename: 1753809393.eden
 worldname: Big Ben Test17
 publishdate: 2025-07-29
-archivedate: 
-filesize: "5356.5 MB"
 author: 
 tags:
   - needsreview

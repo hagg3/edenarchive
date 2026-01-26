@@ -3,8 +3,6 @@ layout: page
 filename: 1675031677.eden
 worldname: city in progress v214 (possibly same as cvfutureb)
 publishdate: 2023-01-29
-archivedate: 
-filesize: "593.7 MB"
 author: 
 tags:
 ---

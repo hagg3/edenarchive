@@ -3,8 +3,6 @@ layout: page
 filename: 1332233243.eden
 worldname: Hogwarts the one and only
 publishdate: 2012-03-20
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

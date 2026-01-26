@@ -3,8 +3,6 @@ layout: page
 filename: 1594227869.eden
 worldname: Hamilton Project
 publishdate: 2020-07-08
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
   - arena

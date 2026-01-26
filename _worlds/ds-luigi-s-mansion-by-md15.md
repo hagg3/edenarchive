@@ -3,8 +3,6 @@ layout: page
 filename: 1654140410.eden
 worldname: DS Luigi's Mansion by MD15
 publishdate: 2022-06-02
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

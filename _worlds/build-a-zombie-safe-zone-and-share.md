@@ -3,8 +3,6 @@ layout: page
 filename: 1601162157.eden
 worldname: build a zombie safe zone and share
 publishdate: 2020-09-27
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - battle

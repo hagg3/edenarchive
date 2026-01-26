@@ -3,8 +3,6 @@ layout: page
 filename: 1487408318.eden
 worldname: Epsilon City
 publishdate: 2017-02-18
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
 ---

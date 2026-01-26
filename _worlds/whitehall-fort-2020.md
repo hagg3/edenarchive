@@ -3,8 +3,6 @@ layout: page
 filename: 1585490889.eden
 worldname: Whitehall Fort 2020
 publishdate: 2020-03-29
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

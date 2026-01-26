@@ -3,8 +3,6 @@ layout: page
 filename: 1330426233.eden
 worldname: Enjoy Machi City V6
 publishdate: 2012-02-28
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

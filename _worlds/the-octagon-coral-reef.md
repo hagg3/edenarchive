@@ -3,8 +3,6 @@ layout: page
 filename: 1749655270.eden
 worldname: The Octagon Coral Reef
 publishdate: 2025-06-11
-archivedate: 
-filesize: "961.5 MB"
 author: theoctagon_
 tags:
   - iconic

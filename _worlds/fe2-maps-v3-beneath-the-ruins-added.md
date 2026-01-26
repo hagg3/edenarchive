@@ -3,8 +3,6 @@ layout: page
 filename: 1637735430.eden
 worldname: FE2 Maps V3 Beneath the Ruins Added
 publishdate: 2021-11-24
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - very

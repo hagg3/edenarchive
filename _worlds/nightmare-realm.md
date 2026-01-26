@@ -3,8 +3,6 @@ layout: page
 filename: 1626996218.eden
 worldname: NIGHTMARE REALM
 publishdate: 2021-07-23
-archivedate: 
-filesize: "2.0 MB"
 author: 
 tags:
 ---

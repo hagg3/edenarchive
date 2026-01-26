@@ -3,8 +3,6 @@ layout: page
 filename: 1543862963.eden
 worldname: Normal Terrain 2
 publishdate: 2018-12-03
-archivedate: 
-filesize: "1.0 MB"
 author: Jeremy
 tags:
   - customterrain

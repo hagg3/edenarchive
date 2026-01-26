@@ -3,8 +3,6 @@ layout: page
 filename: 1665108557.eden
 worldname: BOSTON MA V2
 publishdate: 2022-10-07
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

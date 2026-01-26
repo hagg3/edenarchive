@@ -3,8 +3,6 @@ layout: page
 filename: 1543781460.eden
 worldname: Normal Terrain Test
 publishdate: 2018-12-02
-archivedate: 
-filesize: "0.5 MB"
 author: Jeremy
 tags:
   - customterrain

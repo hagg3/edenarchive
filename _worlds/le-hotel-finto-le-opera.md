@@ -3,8 +3,6 @@ layout: page
 filename: 1708733364.eden
 worldname: Le Hotel Finto le opera
 publishdate: 2024-02-24
-archivedate: 
-filesize: "299.2 MB"
 author: 
 tags:
 ---

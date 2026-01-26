@@ -3,8 +3,6 @@ layout: page
 filename: 1650686082.eden
 worldname: Luxury Cruiser TW v3
 publishdate: 2022-04-23
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

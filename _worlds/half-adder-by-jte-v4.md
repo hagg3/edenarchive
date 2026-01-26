@@ -3,8 +3,6 @@ layout: page
 filename: 1579798725.eden
 worldname: Half Adder by JTE v4
 publishdate: 2020-01-23
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - unique

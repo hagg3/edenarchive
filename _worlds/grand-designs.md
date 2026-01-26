@@ -3,8 +3,6 @@ layout: page
 filename: 1330339416.eden
 worldname: Grand Designs
 publishdate: 2012-02-27
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

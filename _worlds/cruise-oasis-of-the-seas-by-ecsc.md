@@ -3,8 +3,6 @@ layout: page
 filename: 1333633812.eden
 worldname: CRUISE OASIS OF THE SEAS BY ECSC
 publishdate: 2012-04-05
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

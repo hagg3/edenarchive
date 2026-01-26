@@ -3,8 +3,6 @@ layout: page
 filename: 1335629329.eden
 worldname: olympic grand hotel by k05 the best
 publishdate: 2012-04-28
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

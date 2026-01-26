@@ -3,8 +3,6 @@ layout: page
 filename: 1766508294.eden
 worldname: Rheinland V73
 publishdate: 2025-12-23
-archivedate: 
-filesize: "13.7 MB"
 author: 
 tags:
   - normalterrain

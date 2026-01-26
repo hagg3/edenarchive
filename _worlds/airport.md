@@ -3,8 +3,6 @@ layout: page
 filename: 1492393962.eden
 worldname: Airport
 publishdate: 2017-04-17
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

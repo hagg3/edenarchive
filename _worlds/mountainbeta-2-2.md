@@ -3,8 +3,6 @@ layout: page
 filename: 1751868866.eden
 worldname: MountainBeta 2.2
 publishdate: 2025-07-07
-archivedate: 
-filesize: "3985.6 MB"
 author: 
 tags:
   - customterrain

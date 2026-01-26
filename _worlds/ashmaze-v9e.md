@@ -3,8 +3,6 @@ layout: page
 filename: 1378720674.eden
 worldname: ASHMAZE V9E
 publishdate: 2013-09-09
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
 ---

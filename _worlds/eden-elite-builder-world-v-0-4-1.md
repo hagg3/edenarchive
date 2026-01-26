@@ -3,8 +3,6 @@ layout: page
 filename: 1375219771.eden
 worldname: Eden ELITE Builder World V 0'4'1
 publishdate: 2013-07-30
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1752178198.eden
 worldname: HG Stadt des Wandels 100
 publishdate: 2025-07-10
-archivedate: 
-filesize: "541.3 MB"
 author: 
 tags:
   - needsreview

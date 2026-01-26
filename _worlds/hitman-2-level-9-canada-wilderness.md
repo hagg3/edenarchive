@@ -3,8 +3,6 @@ layout: page
 filename: 1619965373.eden
 worldname: Hitman  2 Level 9 Canada Wilderness
 publishdate: 2021-05-02
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - hitman

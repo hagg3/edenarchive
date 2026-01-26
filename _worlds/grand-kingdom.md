@@ -3,8 +3,6 @@ layout: page
 filename: 1328243041.eden
 worldname: Grand Kingdom
 publishdate: 2012-02-03
-archivedate: 
-filesize: "3.2 MB"
 author: 
 tags:
 ---

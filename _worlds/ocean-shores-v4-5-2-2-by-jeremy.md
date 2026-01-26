@@ -3,8 +3,6 @@ layout: page
 filename: 1700569552.eden
 worldname: Ocean Shores V4'5 2.2 by jeremy
 publishdate: 2023-11-21
-archivedate: 
-filesize: "3880.7 MB"
 author: 
 tags:
 ---

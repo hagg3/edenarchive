@@ -3,8 +3,6 @@ layout: page
 filename: 1705432759.eden
 worldname: Starling City 7'0 2.2
 publishdate: 2024-01-16
-archivedate: 
-filesize: "8388.4 MB"
 author: 
 tags:
 ---

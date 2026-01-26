@@ -3,8 +3,6 @@ layout: page
 filename: 1582142885.eden
 worldname: Mk 8 Luigi's Mansion
 publishdate: 2020-02-19
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - mariokart

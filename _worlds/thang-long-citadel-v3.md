@@ -3,8 +3,6 @@ layout: page
 filename: 1639288588.eden
 worldname: thang long citadel v3
 publishdate: 2021-12-12
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - temple

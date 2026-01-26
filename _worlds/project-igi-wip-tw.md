@@ -3,8 +3,6 @@ layout: page
 filename: 1688849043.eden
 worldname: Project IGI WIP TW
 publishdate: 2023-07-08
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - facility

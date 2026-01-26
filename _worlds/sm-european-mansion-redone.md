@@ -3,8 +3,6 @@ layout: page
 filename: 1619917117.eden
 worldname: SM European Mansion redone
 publishdate: 2021-05-02
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

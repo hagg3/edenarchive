@@ -3,8 +3,6 @@ layout: page
 filename: 1330443658.eden
 worldname: Airport San Francisco
 publishdate: 2012-02-28
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

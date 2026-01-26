@@ -3,8 +3,6 @@ layout: page
 filename: 1767578073.eden
 worldname: 2 parcore course no cheating
 publishdate: 2026-01-05
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - puzzle

@@ -3,8 +3,6 @@ layout: page
 filename: 1395526997.eden
 worldname: Ar9 Shadoville by BrixXx
 publishdate: 2014-03-22
-archivedate: 
-filesize: "1.3 MB"
 author: 
 tags:
 ---

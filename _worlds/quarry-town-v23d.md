@@ -3,8 +3,6 @@ layout: page
 filename: 1747726695.eden
 worldname: quarry town V23D
 publishdate: 2025-05-20
-archivedate: 
-filesize: "2517.4 MB"
 author: 
 tags:
   - needsreview

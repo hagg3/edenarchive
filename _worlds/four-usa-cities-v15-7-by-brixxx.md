@@ -3,8 +3,6 @@ layout: page
 filename: 1392588568.eden
 worldname: Four USA Cities V15'7 by BrixXx
 publishdate: 2014-02-16
-archivedate: 
-filesize: "1.5 MB"
 author: 
 tags:
 ---

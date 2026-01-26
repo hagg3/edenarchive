@@ -3,8 +3,6 @@ layout: page
 filename: 1427936678.eden
 worldname: Elf Castle by CDog 252
 publishdate: 2015-04-02
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

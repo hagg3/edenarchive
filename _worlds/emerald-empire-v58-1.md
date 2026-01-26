@@ -3,8 +3,6 @@ layout: page
 filename: 1395934507.eden
 worldname: EMERALD EMPIRE v58'1
 publishdate: 2014-03-27
-archivedate: 
-filesize: "4.0 MB"
 author: 
 tags:
 ---

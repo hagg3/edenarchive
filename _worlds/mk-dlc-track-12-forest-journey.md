@@ -3,8 +3,6 @@ layout: page
 filename: 1538843612.eden
 worldname: MK DLC track 12 Forest journey
 publishdate: 2018-10-06
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - mariokart

@@ -3,8 +3,6 @@ layout: page
 filename: 1607232431.eden
 worldname: Eden City v12'5 Dblcut3
 publishdate: 2020-12-06
-archivedate: 
-filesize: "264.1 MB"
 author: 
 tags:
 ---

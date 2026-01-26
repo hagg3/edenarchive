@@ -3,8 +3,6 @@ layout: page
 filename: 1671378587.eden
 worldname: British City V5 Finto
 publishdate: 2022-12-18
-archivedate: 
-filesize: "196.5 MB"
 author: 
 tags:
 ---

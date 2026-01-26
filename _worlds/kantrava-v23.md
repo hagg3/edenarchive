@@ -3,8 +3,6 @@ layout: page
 filename: 1727785917.eden
 worldname: Kantrava v23
 publishdate: 2024-10-01
-archivedate: 
-filesize: "2513.2 MB"
 author: 
 tags:
 ---

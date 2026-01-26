@@ -3,8 +3,6 @@ layout: page
 filename: 1705462378.eden
 worldname: Olympic City The Ascent
 publishdate: 2024-01-17
-archivedate: 
-filesize: "1756.2 MB"
 author: 
 tags:
 ---

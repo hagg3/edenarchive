@@ -3,8 +3,6 @@ layout: page
 filename: 1731352236.eden
 worldname: Matthgic world 20241111 2.2
 publishdate: 2024-11-11
-archivedate: 
-filesize: "561.0 MB"
 author: 
 tags:
 ---

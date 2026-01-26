@@ -3,8 +3,6 @@ layout: page
 filename: 1337335884.eden
 worldname: Apple City FUTURE new skate park V3
 publishdate: 2012-05-18
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

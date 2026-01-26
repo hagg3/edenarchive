@@ -3,8 +3,6 @@ layout: page
 filename: 1323775488.eden
 worldname: Beaumaris Castle by DJKyle
 publishdate: 2011-12-13
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1328253641.eden
 worldname: Gurenn Lagann Cathedral HQ
 publishdate: 2012-02-03
-archivedate: 
-filesize: "1.3 MB"
 author: 
 tags:
 ---

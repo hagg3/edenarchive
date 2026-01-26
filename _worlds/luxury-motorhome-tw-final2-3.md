@@ -3,8 +3,6 @@ layout: page
 filename: 1703073391.eden
 worldname: Luxury Motorhome TW Final2'3
 publishdate: 2023-12-20
-archivedate: 
-filesize: "126.4 MB"
 author: 
 tags:
 ---

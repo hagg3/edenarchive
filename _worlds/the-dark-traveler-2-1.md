@@ -3,8 +3,6 @@ layout: page
 filename: 1591888297.eden
 worldname: The dark traveler 2.1
 publishdate: 2020-06-11
-archivedate: 
-filesize: "9.3 MB"
 author: 
 tags:
 ---

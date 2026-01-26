@@ -3,8 +3,6 @@ layout: page
 filename: 1328881843.eden
 worldname: Betzensteiner Str
 publishdate: 2012-02-10
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

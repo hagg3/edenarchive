@@ -3,8 +3,6 @@ layout: page
 filename: 1707775753.eden
 worldname: Headford V6x2
 publishdate: 2024-02-12
-archivedate: 
-filesize: "1.9 MB"
 author: 
 tags:
 ---

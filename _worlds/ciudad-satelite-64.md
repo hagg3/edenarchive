@@ -3,8 +3,6 @@ layout: page
 filename: 1644212230.eden
 worldname: CIUDAD satelite 64
 publishdate: 2022-02-07
-archivedate: 
-filesize: "106.0 MB"
 author: 
 tags:
 ---

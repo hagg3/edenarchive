@@ -3,8 +3,6 @@ layout: page
 filename: 1584707613.eden
 worldname: Swiss V3'1 Betalpin
 publishdate: 2020-03-20
-archivedate: 
-filesize: "134.7 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1599011731.eden
 worldname: The Citadel Fortress
 publishdate: 2020-09-02
-archivedate: 
-filesize: "1.0 MB"
 author: 
 tags:
   - newterrain

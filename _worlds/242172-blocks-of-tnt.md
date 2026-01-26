@@ -3,8 +3,6 @@ layout: page
 filename: 1331665215.eden
 worldname: 242172 BLOCKS OF TNT
 publishdate: 2012-03-13
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

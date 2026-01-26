@@ -3,8 +3,6 @@ layout: page
 filename: 1358961719.eden
 worldname: Galaxy coaster mystery version bykid
 publishdate: 2013-01-23
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

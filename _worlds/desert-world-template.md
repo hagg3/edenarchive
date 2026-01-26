@@ -3,8 +3,6 @@ layout: page
 filename: 1768425572.eden
 worldname: Desert World Template
 publishdate: 2026-01-14
-archivedate: null
-filesize: 0.5 MB
 author: Jeremy, Sam H
 tags:
 - customterrain

@@ -3,8 +3,6 @@ layout: page
 filename: 1621701778.eden
 worldname: skyscraper Empire AW construction 2.1 unverified
 publishdate: 2021-05-22
-archivedate: 
-filesize: "64.6 MB"
 author: 
 tags:
 ---

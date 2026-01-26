@@ -3,8 +3,6 @@ layout: page
 filename: 1395878564.eden
 worldname: Colored Crystal Islands V1
 publishdate: 2014-03-27
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

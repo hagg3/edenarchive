@@ -3,8 +3,6 @@ layout: page
 filename: 1497802310.eden
 worldname: Frabanta by Santiago Hidalgo V2'0
 publishdate: 2017-06-18
-archivedate: 
-filesize: "4.3 MB"
 author: 
 tags:
 ---

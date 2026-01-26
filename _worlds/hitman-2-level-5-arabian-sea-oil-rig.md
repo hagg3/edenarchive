@@ -3,8 +3,6 @@ layout: page
 filename: 1613567200.eden
 worldname: Hitman 2 Level 5 Arabian Sea Oil Rig
 publishdate: 2021-02-17
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - unique

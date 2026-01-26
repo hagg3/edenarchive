@@ -3,8 +3,6 @@ layout: page
 filename: 1608223562.eden
 worldname: INCREDIBLE Zoo Full Release
 publishdate: 2020-12-17
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1550991723.eden
 worldname: Complex 1A
 publishdate: 2019-02-24
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - needsreview

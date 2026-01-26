@@ -3,8 +3,6 @@ layout: page
 filename: 1769287256.eden
 worldname: Aperture Portal Adventure Legacy
 publishdate: 2026-01-24
-archivedate: 
-filesize: "19.5 MB"
 author: Sam H
 tags:
   - portal

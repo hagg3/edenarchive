@@ -3,8 +3,6 @@ layout: page
 filename: 1587327805.eden
 worldname: Soviet States
 publishdate: 2020-04-19
-archivedate: 
-filesize: "1.8 MB"
 author: 
 tags:
   - city

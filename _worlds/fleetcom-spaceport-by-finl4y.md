@@ -3,8 +3,6 @@ layout: page
 filename: 1514869194.eden
 worldname: FleetCom Spaceport by Finl4y
 publishdate: 2018-01-02
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - space

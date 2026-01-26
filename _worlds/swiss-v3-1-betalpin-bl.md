@@ -3,8 +3,6 @@ layout: page
 filename: 1664994800.eden
 worldname: Swiss V3'1 Betalpin BL
 publishdate: 2022-10-05
-archivedate: 
-filesize: "0.7 MB"
 author: 
 tags:
 ---

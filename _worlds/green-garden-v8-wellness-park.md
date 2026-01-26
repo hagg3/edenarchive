@@ -3,8 +3,6 @@ layout: page
 filename: 1365535358.eden
 worldname: Green Garden V8 Wellness Park
 publishdate: 2013-04-09
-archivedate: 
-filesize: "0.6 MB"
 author: 
 tags:
 ---

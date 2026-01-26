@@ -3,8 +3,6 @@ layout: page
 filename: 1651329180.eden
 worldname: Updated town part 5 new library
 publishdate: 2022-04-30
-archivedate: 
-filesize: "1.8 MB"
 author: 
 tags:
 ---

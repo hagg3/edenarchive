@@ -3,8 +3,6 @@ layout: page
 filename: 1340268884.eden
 worldname: Chinese Palace by Steven V20
 publishdate: 2012-06-21
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

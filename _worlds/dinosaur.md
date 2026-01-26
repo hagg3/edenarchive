@@ -3,8 +3,6 @@ layout: page
 filename: 1331289217.eden
 worldname: Dinosaur
 publishdate: 2012-03-09
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

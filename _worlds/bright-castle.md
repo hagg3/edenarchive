@@ -3,8 +3,6 @@ layout: page
 filename: 1330158845.eden
 worldname: Bright Castle
 publishdate: 2012-02-25
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

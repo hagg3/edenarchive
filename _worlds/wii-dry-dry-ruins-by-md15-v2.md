@@ -3,8 +3,6 @@ layout: page
 filename: 1425091476.eden
 worldname: Wii Dry Dry Ruins by MD15 V2
 publishdate: 2015-02-28
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

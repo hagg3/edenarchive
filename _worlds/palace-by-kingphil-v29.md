@@ -3,8 +3,6 @@ layout: page
 filename: 1700044300.eden
 worldname: Palace by KingPhil v29
 publishdate: 2023-11-15
-archivedate: 
-filesize: "1038.9 MB"
 author: 
 tags:
 ---

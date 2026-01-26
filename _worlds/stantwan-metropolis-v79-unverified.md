@@ -3,8 +3,6 @@ layout: page
 filename: 1629843611.eden
 worldname: Stantwan Metropolis V79 unverified
 publishdate: 2021-08-24
-archivedate: 
-filesize: "345.0 MB"
 author: 
 tags:
 ---

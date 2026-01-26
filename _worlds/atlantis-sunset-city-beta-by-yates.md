@@ -3,8 +3,6 @@ layout: page
 filename: 1395475541.eden
 worldname: Atlantis Sunset City Beta by Yates
 publishdate: 2014-03-22
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

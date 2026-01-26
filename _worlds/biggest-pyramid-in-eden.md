@@ -3,8 +3,6 @@ layout: page
 filename: 1329080003.eden
 worldname: Biggest Pyramid in Eden
 publishdate: 2012-02-12
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

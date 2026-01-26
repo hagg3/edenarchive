@@ -3,8 +3,6 @@ layout: page
 filename: 1663479582.eden
 worldname: Magic City V22 By Kiri
 publishdate: 2022-09-18
-archivedate: 
-filesize: "24.1 MB"
 author: 
 tags:
 ---

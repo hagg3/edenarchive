@@ -3,8 +3,6 @@ layout: page
 filename: 1769365605.eden
 worldname: manchon
 publishdate: 2026-01-25
-archivedate: 
-filesize: "0.8 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1663286512.eden
 worldname: Find the Moofs Factory Update V6'1
 publishdate: 2022-09-16
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1702401159.eden
 worldname: catherdral wip finto
 publishdate: 2023-12-12
-archivedate: 
-filesize: "240.7 MB"
 author: 
 tags:
 ---

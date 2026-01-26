@@ -3,8 +3,6 @@ layout: page
 filename: 1329106966.eden
 worldname: Alabama Stadium V11
 publishdate: 2012-02-13
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

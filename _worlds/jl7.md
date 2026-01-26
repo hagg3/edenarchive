@@ -3,8 +3,6 @@ layout: page
 filename: 1767963971.eden
 worldname: JL7
 publishdate: 2026-01-09
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

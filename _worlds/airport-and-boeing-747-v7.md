@@ -3,8 +3,6 @@ layout: page
 filename: 1331115272.eden
 worldname: Airport and Boeing 747 V7
 publishdate: 2012-03-07
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

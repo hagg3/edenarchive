@@ -3,8 +3,6 @@ layout: page
 filename: 1745769226.eden
 worldname: Rainbow Parkour Map 21 Levels SCG
 publishdate: 2025-04-27
-archivedate: 
-filesize: "149.0 MB"
 author: SCG
 tags:
   - cool

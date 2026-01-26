@@ -3,8 +3,6 @@ layout: page
 filename: 1605298028.eden
 worldname: Super Mario War Gallery 8 Maps
 publishdate: 2020-11-13
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

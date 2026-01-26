@@ -3,8 +3,6 @@ layout: page
 filename: 1617048659.eden
 worldname: Mars Colony 5000 2.1
 publishdate: 2021-03-29
-archivedate: 
-filesize: "3.5 MB"
 author: 
 tags:
 ---

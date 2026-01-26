@@ -3,8 +3,6 @@ layout: page
 filename: 1609459987.eden
 worldname: The Boston Plaza
 publishdate: 2021-01-01
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

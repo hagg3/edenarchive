@@ -3,8 +3,6 @@ layout: page
 filename: 1664645785.eden
 worldname: nanuni oil plant ver3
 publishdate: 2022-10-01
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - industrial

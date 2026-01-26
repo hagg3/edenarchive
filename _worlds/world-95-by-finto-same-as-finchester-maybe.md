@@ -3,8 +3,6 @@ layout: page
 filename: 1714479378.eden
 worldname: World 95 by Finto - same as finchester maybe
 publishdate: 2024-04-30
-archivedate: 
-filesize: "317.4 MB"
 author: 
 tags:
 ---

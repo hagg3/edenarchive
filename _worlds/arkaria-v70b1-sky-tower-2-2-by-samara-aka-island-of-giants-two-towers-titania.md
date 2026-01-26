@@ -3,8 +3,6 @@ layout: page
 filename: 1701562164.eden
 worldname: Arkaria v70b1 Sky tower 2.2 by Samara aka island of giants two towers titania
 publishdate: 2023-12-03
-archivedate: 
-filesize: "3054.6 MB"
 author: 
 tags:
 ---

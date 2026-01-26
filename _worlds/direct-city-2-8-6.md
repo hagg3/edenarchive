@@ -3,8 +3,6 @@ layout: page
 filename: 1395190665.eden
 worldname: Direct City 2'8'6
 publishdate: 2014-03-19
-archivedate: 
-filesize: "2.2 MB"
 author: 
 tags:
 ---

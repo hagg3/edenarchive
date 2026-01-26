@@ -3,8 +3,6 @@ layout: page
 filename: 1611245909.eden
 worldname: Village With Fort V19 Dblcut3
 publishdate: 2021-01-21
-archivedate: 
-filesize: "74.6 MB"
 author: 
 tags:
 ---

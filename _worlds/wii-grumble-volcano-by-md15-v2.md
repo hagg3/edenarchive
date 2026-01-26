@@ -3,8 +3,6 @@ layout: page
 filename: 1425091742.eden
 worldname: Wii Grumble Volcano by MD15 V2
 publishdate: 2015-02-28
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1609297028.eden
 worldname: Dinosaur Realm
 publishdate: 2020-12-30
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

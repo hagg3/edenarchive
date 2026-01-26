@@ -3,8 +3,6 @@ layout: page
 filename: 1700088510.eden
 worldname: draft boarding school finto
 publishdate: 2023-11-15
-archivedate: 
-filesize: "182.4 MB"
 author: 
 tags:
 ---

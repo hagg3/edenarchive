@@ -3,8 +3,6 @@ layout: page
 filename: 1627740037.eden
 worldname: Hitman 3 mission 1 kentucky flood
 publishdate: 2021-07-31
-archivedate: 
-filesize: "1.1 MB"
 author: 
 tags:
   - hitman

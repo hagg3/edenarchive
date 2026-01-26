@@ -3,8 +3,6 @@ layout: page
 filename: 1605538733.eden
 worldname: The Library of Congress TZECHLAB_1739
 publishdate: 2020-11-16
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1586799270.eden
 worldname: SWISS V7 CS
 publishdate: 2020-04-13
-archivedate: 
-filesize: "0.9 MB"
 author: 
 tags:
 ---

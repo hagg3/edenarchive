@@ -3,8 +3,6 @@ layout: page
 filename: 1753153533.eden
 worldname: Kritona 2025
 publishdate: 2025-07-22
-archivedate: 
-filesize: "7508.3 MB"
 author: 
 tags:
   - huge

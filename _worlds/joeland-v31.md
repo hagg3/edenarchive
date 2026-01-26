@@ -3,8 +3,6 @@ layout: page
 filename: 1767711812.eden
 worldname: Joeland V31
 publishdate: 2026-01-06
-archivedate: 
-filesize: "6.0 MB"
 author: 
 tags:
   - heightlimit

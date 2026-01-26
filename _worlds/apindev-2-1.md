@@ -3,8 +3,6 @@ layout: page
 filename: 1710178192.eden
 worldname: apindev 2.1
 publishdate: 2024-03-11
-archivedate: 
-filesize: "18.8 MB"
 author: 
 tags:
 ---

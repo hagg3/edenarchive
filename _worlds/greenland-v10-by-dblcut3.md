@@ -3,8 +3,6 @@ layout: page
 filename: 1600181398.eden
 worldname: Greenland v10 by Dblcut3
 publishdate: 2020-09-15
-archivedate: 
-filesize: "143.4 MB"
 author: 
 tags:
 ---

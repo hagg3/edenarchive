@@ -3,8 +3,6 @@ layout: page
 filename: 1538837970.eden
 worldname: Project Villa 0'1'2
 publishdate: 2018-10-06
-archivedate: 
-filesize: "1.1 MB"
 author: 
 tags:
   - quality

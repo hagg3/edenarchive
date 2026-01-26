@@ -3,8 +3,6 @@ layout: page
 filename: 1699908458.eden
 worldname: Red Empire Palace
 publishdate: 2023-11-13
-archivedate: 
-filesize: "5.0 MB"
 author: 
 tags:
 ---

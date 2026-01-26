@@ -3,8 +3,6 @@ layout: page
 filename: 1700043700.eden
 worldname: Brepa V2
 publishdate: 2023-11-15
-archivedate: 
-filesize: "4.8 MB"
 author: 
 tags:
   - has

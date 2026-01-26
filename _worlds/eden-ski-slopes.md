@@ -3,8 +3,6 @@ layout: page
 filename: 1662878666.eden
 worldname: Eden Ski Slopes
 publishdate: 2022-09-11
-archivedate: 
-filesize: "1.8 MB"
 author: 
 tags:
 ---

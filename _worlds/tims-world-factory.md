@@ -3,8 +3,6 @@ layout: page
 filename: 1570916662.eden
 worldname: TIMS WORLD Factory
 publishdate: 2019-10-12
-archivedate: 
-filesize: "0.9 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1443856649.eden
 worldname: Wii DK Summit Unfinished MD15
 publishdate: 2015-10-03
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

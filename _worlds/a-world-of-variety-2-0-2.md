@@ -3,8 +3,6 @@ layout: page
 filename: 1330911768.eden
 worldname: A World Of Variety 2'0'2
 publishdate: 2012-03-05
-archivedate: 
-filesize: "0.6 MB"
 author: 
 tags:
 ---

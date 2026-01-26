@@ -3,8 +3,6 @@ layout: page
 filename: 1357675305.eden
 worldname: 4 AMAZING SHIPS BY GG
 publishdate: 2013-01-08
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1349644277.eden
 worldname: 'Eden Springs'
 publishdate: 2012-10-07
-archivedate: 
-filesize: "0.9 MB"
 author: 
 tags:
 ---

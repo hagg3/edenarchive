@@ -3,8 +3,6 @@ layout: page
 filename: 1589991018.eden
 worldname: Dark Sci Facility Insane FE2
 publishdate: 2020-05-20
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - nice

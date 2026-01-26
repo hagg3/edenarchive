@@ -3,8 +3,6 @@ layout: page
 filename: 1619618520.eden
 worldname: Hitman 2 Level 8 Atlanta Funeral
 publishdate: 2021-04-28
-archivedate: 
-filesize: "3.2 MB"
 author: 
 tags:
 ---

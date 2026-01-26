@@ -3,8 +3,6 @@ layout: page
 filename: 1329034658.eden
 worldname: Freiheitsstatue
 publishdate: 2012-02-12
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

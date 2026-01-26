@@ -3,8 +3,6 @@ layout: page
 filename: 1687993858.eden
 worldname: Edgest City 2'0
 publishdate: 2023-06-29
-archivedate: 
-filesize: "600.9 MB"
 author: 
 tags:
 ---

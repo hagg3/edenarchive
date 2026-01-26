@@ -3,8 +3,6 @@ layout: page
 filename: 1699811542.eden
 worldname: Normal Terrain Motorway And Road
 publishdate: 2023-11-12
-archivedate: 
-filesize: "1.1 MB"
 author: 
 tags:
   - customterrain

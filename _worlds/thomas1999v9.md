@@ -3,8 +3,6 @@ layout: page
 filename: 1768668239.eden
 worldname: Thomas1999v9
 publishdate: 2026-01-17
-archivedate: 
-filesize: "8.4 MB"
 author: 
 tags:
   - update

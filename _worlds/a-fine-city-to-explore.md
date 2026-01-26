@@ -3,8 +3,6 @@ layout: page
 filename: 1330091988.eden
 worldname: A Fine City To Explore
 publishdate: 2012-02-24
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

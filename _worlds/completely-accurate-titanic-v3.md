@@ -3,8 +3,6 @@ layout: page
 filename: 1349634874.eden
 worldname: COMPLETELY ACCURATE TITANIC v3
 publishdate: 2012-10-07
-archivedate: 
-filesize: "0.6 MB"
 author: 
 tags:
 ---

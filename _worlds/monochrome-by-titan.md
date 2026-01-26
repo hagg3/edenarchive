@@ -3,8 +3,6 @@ layout: page
 filename: 1737141920.eden
 worldname: Monochrome by Titan
 publishdate: 2025-01-17
-archivedate: 
-filesize: "121.9 MB"
 author: 
 tags:
 ---

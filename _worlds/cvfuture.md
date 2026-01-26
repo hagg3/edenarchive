@@ -3,8 +3,6 @@ layout: page
 filename: 1640111186.eden
 worldname: CVfuture
 publishdate: 2021-12-21
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

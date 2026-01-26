@@ -3,8 +3,6 @@ layout: page
 filename: 1601773613.eden
 worldname: cyberman facility
 publishdate: 2020-10-04
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

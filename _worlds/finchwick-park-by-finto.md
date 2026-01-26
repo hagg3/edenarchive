@@ -3,8 +3,6 @@ layout: page
 filename: 1713703552.eden
 worldname: Finchwick Park by Finto
 publishdate: 2024-04-21
-archivedate: 
-filesize: "561.4 MB"
 author: 
 tags:
 ---

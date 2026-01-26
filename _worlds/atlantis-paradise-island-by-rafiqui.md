@@ -3,8 +3,6 @@ layout: page
 filename: 1343907521.eden
 worldname: Atlantis Paradise Island By RafiQui
 publishdate: 2012-08-02
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

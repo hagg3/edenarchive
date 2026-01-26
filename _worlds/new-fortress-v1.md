@@ -3,8 +3,6 @@ layout: page
 filename: 1653721723.eden
 worldname: New Fortress v1
 publishdate: 2022-05-28
-archivedate: 
-filesize: "2.9 MB"
 author: 
 tags:
   - castle

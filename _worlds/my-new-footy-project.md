@@ -3,8 +3,6 @@ layout: page
 filename: 1532966106.eden
 worldname: My New Footy Project
 publishdate: 2018-07-30
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - sport

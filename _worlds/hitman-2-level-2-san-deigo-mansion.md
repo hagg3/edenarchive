@@ -3,8 +3,6 @@ layout: page
 filename: 1616329196.eden
 worldname: Hitman 2 Level 2 San Deigo Mansion
 publishdate: 2021-03-21
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

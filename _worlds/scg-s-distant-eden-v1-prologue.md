@@ -3,8 +3,6 @@ layout: page
 filename: 1644098793.eden
 worldname: SCG's Distant Eden v1 Prologue
 publishdate: 2022-02-05
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

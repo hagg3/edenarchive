@@ -3,8 +3,6 @@ layout: page
 filename: 1624328797.eden
 worldname: Free Equestria
 publishdate: 2021-06-22
-archivedate: 
-filesize: "0.7 MB"
 author: 
 tags:
   - scene

@@ -3,8 +3,6 @@ layout: page
 filename: 1654552839.eden
 worldname: Big Coaster TW final2
 publishdate: 2022-06-06
-archivedate: 
-filesize: "0.8 MB"
 author: 
 tags:
 ---

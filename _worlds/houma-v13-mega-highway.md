@@ -3,8 +3,6 @@ layout: page
 filename: 1512104301.eden
 worldname: Houma V13 Mega Highway
 publishdate: 2017-12-01
-archivedate: 
-filesize: "1.5 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1668301558.eden
 worldname: Portal V'3'1 UNFINISHED DUE TO BUGS
 publishdate: 2022-11-13
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
   - portal

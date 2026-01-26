@@ -3,8 +3,6 @@ layout: page
 filename: 1627921596.eden
 worldname: USS Enterprise
 publishdate: 2021-08-02
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - impressive

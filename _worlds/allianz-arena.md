@@ -3,8 +3,6 @@ layout: page
 filename: 1328870817.eden
 worldname: Allianz Arena
 publishdate: 2012-02-10
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

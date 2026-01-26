@@ -3,8 +3,6 @@ layout: page
 filename: 1768571109.eden
 worldname: eden disneyland v41
 publishdate: 2026-01-16
-archivedate: 
-filesize: "4.5 MB"
 author: 
 tags:
 ---

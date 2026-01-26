@@ -3,8 +3,6 @@ layout: page
 filename: 1579312122.eden
 worldname: Cathedral of Mary Queen of Angels
 publishdate: 2020-01-18
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

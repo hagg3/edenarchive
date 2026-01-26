@@ -3,8 +3,6 @@ layout: page
 filename: 1555283479.eden
 worldname: Namco Museum GBA
 publishdate: 2019-04-15
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

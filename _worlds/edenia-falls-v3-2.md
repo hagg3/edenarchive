@@ -3,8 +3,6 @@ layout: page
 filename: 1711212668.eden
 worldname: Edenia Falls V3'2
 publishdate: 2024-03-23
-archivedate: 
-filesize: "782.9 MB"
 author: 
 tags:
 ---

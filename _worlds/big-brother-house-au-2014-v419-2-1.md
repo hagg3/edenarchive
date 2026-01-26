@@ -3,8 +3,6 @@ layout: page
 filename: 1645436093.eden
 worldname: Big Brother House AU 2014 V419 2.1
 publishdate: 2022-02-21
-archivedate: 
-filesize: "75.9 MB"
 author: 
 tags:
 ---

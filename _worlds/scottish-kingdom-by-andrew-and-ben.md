@@ -3,8 +3,6 @@ layout: page
 filename: 1768049850.eden
 worldname: scottish kingdom by andrew and ben
 publishdate: 2026-01-10
-archivedate: 
-filesize: "1.8 MB"
 author: 
 tags:
 ---

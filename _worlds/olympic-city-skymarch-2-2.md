@@ -3,8 +3,6 @@ layout: page
 filename: 1737689872.eden
 worldname: Olympic City Skymarch 2.2
 publishdate: 2025-01-24
-archivedate: 
-filesize: "1796.2 MB"
 author: 
 tags:
 ---

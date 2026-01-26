@@ -3,8 +3,6 @@ layout: page
 filename: 1378496568.eden
 worldname: Concrete Jungle V'1 By Kiri
 publishdate: 2013-09-06
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

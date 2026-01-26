@@ -3,8 +3,6 @@ layout: page
 filename: 1768061645.eden
 worldname: EDENLANDIA 2025
 publishdate: 2026-01-10
-archivedate: 
-filesize: "1.5 MB"
 author: 
 tags:
 ---

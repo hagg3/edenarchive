@@ -3,8 +3,6 @@ layout: page
 filename: 1766324747.eden
 worldname: biome
 publishdate: 2025-12-21
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

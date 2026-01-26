@@ -3,8 +3,6 @@ layout: page
 filename: 1737762077.eden
 worldname: town city by finto scenic 2.2
 publishdate: 2025-01-24
-archivedate: 
-filesize: "582.2 MB"
 author: 
 tags:
 ---

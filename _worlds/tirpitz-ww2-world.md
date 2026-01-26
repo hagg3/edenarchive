@@ -3,8 +3,6 @@ layout: page
 filename: 1587407955.eden
 worldname: Tirpitz (ww2 world)
 publishdate: 2020-04-20
-archivedate: 
-filesize: "67.5 MB"
 author: 
 tags:
 ---

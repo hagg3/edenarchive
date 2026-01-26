@@ -3,8 +3,6 @@ layout: page
 filename: 1353036528.eden
 worldname: BCA Train v9
 publishdate: 2012-11-16
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

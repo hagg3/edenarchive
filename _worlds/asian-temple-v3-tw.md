@@ -3,8 +3,6 @@ layout: page
 filename: 1664223357.eden
 worldname: Asian Temple v3 TW
 publishdate: 2022-09-26
-archivedate: 
-filesize: "1.6 MB"
 author: 
 tags:
 ---

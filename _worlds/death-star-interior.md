@@ -3,8 +3,6 @@ layout: page
 filename: 1328435130.eden
 worldname: Death Star Interior
 publishdate: 2012-02-05
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

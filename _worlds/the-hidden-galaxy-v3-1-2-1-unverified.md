@@ -3,8 +3,6 @@ layout: page
 filename: 1624407437.eden
 worldname: The Hidden Galaxy v3'1 2.1 unverified
 publishdate: 2021-06-23
-archivedate: 
-filesize: "381.6 MB"
 author: 
 tags:
 ---

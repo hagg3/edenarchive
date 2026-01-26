@@ -3,8 +3,6 @@ layout: page
 filename: 1665971018.eden
 worldname: Hampton V1 Hampton Hall Finto 2
 publishdate: 2022-10-17
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

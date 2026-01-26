@@ -3,8 +3,6 @@ layout: page
 filename: 1329080448.eden
 worldname: AT AT Walker und AT ST
 publishdate: 2012-02-12
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

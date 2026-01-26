@@ -3,8 +3,6 @@ layout: page
 filename: 1607531887.eden
 worldname: Puerto Marabella V63'0 Alpha
 publishdate: 2020-12-09
-archivedate: 
-filesize: "355.0 MB"
 author: 
 tags:
 ---

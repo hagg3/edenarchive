@@ -3,8 +3,6 @@ layout: page
 filename: 1342990932.eden
 worldname: 34 Great Star Wars ships jedi starfi
 publishdate: 2012-07-22
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

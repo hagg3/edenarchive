@@ -3,8 +3,6 @@ layout: page
 filename: 1329120391.eden
 worldname: Basketball Stadium
 publishdate: 2012-02-13
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1744228977.eden
 worldname: PMJ ND 20
 publishdate: 2025-04-09
-archivedate: 
-filesize: "1456.3 MB"
 author: 
 tags:
   - needsreview

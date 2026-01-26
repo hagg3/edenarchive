@@ -3,8 +3,6 @@ layout: page
 filename: 1328978675.eden
 worldname: Hogwarts Castle
 publishdate: 2012-02-11
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

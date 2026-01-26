@@ -3,8 +3,6 @@ layout: page
 filename: 1669707216.eden
 worldname: sandhu mansion v2
 publishdate: 2022-11-29
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

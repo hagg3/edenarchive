@@ -3,8 +3,6 @@ layout: page
 filename: 1611520374.eden
 worldname: Valley High new library
 publishdate: 2021-01-24
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

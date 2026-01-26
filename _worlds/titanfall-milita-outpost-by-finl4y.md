@@ -3,8 +3,6 @@ layout: page
 filename: 1566606036.eden
 worldname: Titanfall Milita Outpost By Finl4y
 publishdate: 2019-08-24
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
   - unique

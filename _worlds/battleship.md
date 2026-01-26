@@ -3,8 +3,6 @@ layout: page
 filename: 1328637238.eden
 worldname: Battleship
 publishdate: 2012-02-07
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

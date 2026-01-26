@@ -3,8 +3,6 @@ layout: page
 filename: 1605122985.eden
 worldname: MK City 08
 publishdate: 2020-11-11
-archivedate: 
-filesize: "1.4 MB"
 author: 
 tags:
   - needsreview

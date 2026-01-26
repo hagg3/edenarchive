@@ -3,8 +3,6 @@ layout: page
 filename: 1580523721.eden
 worldname: Royal Albert Hall Theatre and Movie
 publishdate: 2020-02-01
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

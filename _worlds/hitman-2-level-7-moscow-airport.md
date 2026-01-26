@@ -3,8 +3,6 @@ layout: page
 filename: 1615640331.eden
 worldname: Hitman 2 Level 7 Moscow Airport
 publishdate: 2021-03-13
-archivedate: 
-filesize: "5.5 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1394825696.eden
 worldname: Babblecat City V17'2 Optimization
 publishdate: 2014-03-14
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

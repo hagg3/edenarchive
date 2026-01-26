@@ -3,8 +3,6 @@ layout: page
 filename: 1609471412.eden
 worldname: The Cozy inn 2.1
 publishdate: 2021-01-01
-archivedate: 
-filesize: "1.0 MB"
 author: 
 tags:
 ---

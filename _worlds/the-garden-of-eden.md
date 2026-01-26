@@ -3,8 +3,6 @@ layout: page
 filename: 1642912749.eden
 worldname: The Garden Of Eden
 publishdate: 2022-01-23
-archivedate: 
-filesize: "1.6 MB"
 author: 
 tags:
 ---

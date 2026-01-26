@@ -3,8 +3,6 @@ layout: page
 filename: 1626408184.eden
 worldname: Citadel Uru'baen
 publishdate: 2021-07-16
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
   - castle

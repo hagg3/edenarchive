@@ -3,8 +3,6 @@ layout: page
 filename: 1395213221.eden
 worldname: ALPIN TOWN by Munta V1
 publishdate: 2014-03-19
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

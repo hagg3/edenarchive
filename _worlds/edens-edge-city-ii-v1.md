@@ -3,8 +3,6 @@ layout: page
 filename: 1360685187.eden
 worldname: EDENS EDGE CITY II V1
 publishdate: 2013-02-12
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

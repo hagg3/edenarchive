@@ -3,8 +3,6 @@ layout: page
 filename: 1767713477.eden
 worldname: James and Leyton 0986544
 publishdate: 2026-01-06
-archivedate: 
-filesize: "1.6 MB"
 author: 
 tags:
   - oldterrain

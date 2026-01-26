@@ -3,8 +3,6 @@ layout: page
 filename: 1327255147.eden
 worldname: Hogwarts School
 publishdate: 2012-01-22
-archivedate: 
-filesize: "0.7 MB"
 author: 
 tags:
 ---

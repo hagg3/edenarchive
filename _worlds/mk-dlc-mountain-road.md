@@ -3,8 +3,6 @@ layout: page
 filename: 1547988212.eden
 worldname: MK DLC Mountain Road
 publishdate: 2019-01-20
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - mariokart

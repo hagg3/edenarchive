@@ -3,8 +3,6 @@ layout: page
 filename: 1768141763.eden
 worldname: KLSVII
 publishdate: 2026-01-11
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

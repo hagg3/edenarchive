@@ -3,8 +3,6 @@ layout: page
 filename: 1546462004.eden
 worldname: Scooby Doo Spooky Swamp V2 by MD15
 publishdate: 2019-01-02
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

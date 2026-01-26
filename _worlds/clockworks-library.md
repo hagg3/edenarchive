@@ -3,8 +3,6 @@ layout: page
 filename: 1609687178.eden
 worldname: clockworks library
 publishdate: 2021-01-03
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

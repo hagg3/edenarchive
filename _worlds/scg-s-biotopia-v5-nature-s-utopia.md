@@ -3,8 +3,6 @@ layout: page
 filename: 1625963110.eden
 worldname: SCG's Biotopia v5 'Nature's Utopia'
 publishdate: 2021-07-11
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

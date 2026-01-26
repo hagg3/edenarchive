@@ -3,8 +3,6 @@ layout: page
 filename: 1559961551.eden
 worldname: Mk DLC Track 2 Luigi Land
 publishdate: 2019-06-08
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - mariokart

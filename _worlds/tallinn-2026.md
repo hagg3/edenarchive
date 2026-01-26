@@ -3,8 +3,6 @@ layout: page
 filename: 1768087119.eden
 worldname: TALLINN 2026
 publishdate: 2026-01-10
-archivedate: null
-filesize: 1.7 MB
 author: null
 tags:
 - signs

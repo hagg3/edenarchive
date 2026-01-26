@@ -3,8 +3,6 @@ layout: page
 filename: 1594160951.eden
 worldname: Desert Temple 2.1
 publishdate: 2020-07-07
-archivedate: 
-filesize: "21.1 MB"
 author: 
 tags:
 ---

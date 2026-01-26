@@ -3,8 +3,6 @@ layout: page
 filename: 1548535365.eden
 worldname: the moon project
 publishdate: 2019-01-26
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - space

@@ -3,8 +3,6 @@ layout: page
 filename: 1328961448.eden
 worldname: Charlie Sheen
 publishdate: 2012-02-11
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

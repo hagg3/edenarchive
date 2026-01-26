@@ -3,8 +3,6 @@ layout: page
 filename: 1538191775.eden
 worldname: MK Dlc track 11 Island tour
 publishdate: 2018-09-29
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - mariokart

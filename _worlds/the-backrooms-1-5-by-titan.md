@@ -3,8 +3,6 @@ layout: page
 filename: 1737141944.eden
 worldname: The backrooms 1'5 by titan
 publishdate: 2025-01-17
-archivedate: 
-filesize: "184.8 MB"
 author: 
 tags:
 ---

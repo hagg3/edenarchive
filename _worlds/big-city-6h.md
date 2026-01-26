@@ -3,8 +3,6 @@ layout: page
 filename: 1328803352.eden
 worldname: Big City 6h
 publishdate: 2012-02-09
-archivedate: 
-filesize: "2.0 MB"
 author: 
 tags:
 ---

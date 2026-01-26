@@ -3,8 +3,6 @@ layout: page
 filename: 1650665537.eden
 worldname: Logic Gates Using Portals
 publishdate: 2022-04-22
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
   - unique

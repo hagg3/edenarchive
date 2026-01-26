@@ -3,8 +3,6 @@ layout: page
 filename: 1458346332.eden
 worldname: BEST CITY BY JOEYGRIM
 publishdate: 2016-03-19
-archivedate: 
-filesize: "0.7 MB"
 author: 
 tags:
 ---

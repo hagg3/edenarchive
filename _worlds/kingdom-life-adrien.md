@@ -3,8 +3,6 @@ layout: page
 filename: 1767908401.eden
 worldname: Kingdom Life ADRIEN
 publishdate: 2026-01-08
-archivedate: 
-filesize: "3.0 MB"
 author: 
 tags:
   - impressive

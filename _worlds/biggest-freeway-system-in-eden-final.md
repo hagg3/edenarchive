@@ -3,8 +3,6 @@ layout: page
 filename: 1696004617.eden
 worldname: Biggest freeway system in eden Final
 publishdate: 2023-09-29
-archivedate: 
-filesize: "2.8 MB"
 author: 
 tags:
 ---

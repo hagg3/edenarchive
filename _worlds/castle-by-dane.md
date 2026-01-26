@@ -3,8 +3,6 @@ layout: page
 filename: 1760978495.eden
 worldname: Castle by dane
 publishdate: 2025-10-20
-archivedate: 
-filesize: "38.2 MB"
 author: 
 tags:
 ---

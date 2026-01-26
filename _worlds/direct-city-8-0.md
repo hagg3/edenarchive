@@ -3,8 +3,6 @@ layout: page
 filename: 1487778207.eden
 worldname: DIRECT CITY 8'0
 publishdate: 2017-02-22
-archivedate: 
-filesize: "3.3 MB"
 author: 
 tags:
 ---

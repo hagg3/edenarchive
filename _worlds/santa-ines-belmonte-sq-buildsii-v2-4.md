@@ -3,8 +3,6 @@ layout: page
 filename: 1688374495.eden
 worldname: Santa Ines Belmonte sq buildsII V2'4
 publishdate: 2023-07-03
-archivedate: 
-filesize: "46.1 MB"
 author: 
 tags:
 ---

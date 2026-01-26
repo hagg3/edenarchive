@@ -3,8 +3,6 @@ layout: page
 filename: 1394575321.eden
 worldname: Eden City v2'2 Residential Dblcut3
 publishdate: 2014-03-11
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

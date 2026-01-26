@@ -3,8 +3,6 @@ layout: page
 filename: 1576681668.eden
 worldname: CHEF GMBH UND CO 14
 publishdate: 2019-12-18
-archivedate: 
-filesize: "3.2 MB"
 author: 
 tags:
   - needsreview

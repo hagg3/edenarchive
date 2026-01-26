@@ -3,8 +3,6 @@ layout: page
 filename: 1699681133.eden
 worldname: Ultimate Graveyard V2
 publishdate: 2023-11-11
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

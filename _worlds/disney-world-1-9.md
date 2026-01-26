@@ -3,8 +3,6 @@ layout: page
 filename: 1393968583.eden
 worldname: Disney World 1'9
 publishdate: 2014-03-04
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
 ---

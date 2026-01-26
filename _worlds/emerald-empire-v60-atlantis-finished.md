@@ -3,8 +3,6 @@ layout: page
 filename: 1424147091.eden
 worldname: EMERALD EMPIRE v60 ATLANTIS FINISHED
 publishdate: 2015-02-17
-archivedate: 
-filesize: "4.1 MB"
 author: 
 tags:
 ---

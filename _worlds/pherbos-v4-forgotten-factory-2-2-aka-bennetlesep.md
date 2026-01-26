@@ -3,8 +3,6 @@ layout: page
 filename: 1705397666.eden
 worldname: Pherbos V4 Forgotten Factory 2.2 aka bennetlesep
 publishdate: 2024-01-16
-archivedate: 
-filesize: "3437.2 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1768121080.eden
 worldname: silly little ice slide v3
 publishdate: 2026-01-11
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

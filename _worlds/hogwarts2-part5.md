@@ -3,8 +3,6 @@ layout: page
 filename: 1329028387.eden
 worldname: Hogwarts2 Part5
 publishdate: 2012-02-12
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

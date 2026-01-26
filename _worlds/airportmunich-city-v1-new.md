@@ -3,8 +3,6 @@ layout: page
 filename: 1373973244.eden
 worldname: AIRPORTMUNICH city V1 new
 publishdate: 2013-07-16
-archivedate: 
-filesize: "0.8 MB"
 author: 
 tags:
 ---

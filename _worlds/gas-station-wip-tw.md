@@ -3,8 +3,6 @@ layout: page
 filename: 1684159477.eden
 worldname: Gas Station WIP TW
 publishdate: 2023-05-15
-archivedate: 
-filesize: "1.2 MB"
 author: 
 tags:
 ---

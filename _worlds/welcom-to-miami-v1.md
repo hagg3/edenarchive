@@ -3,8 +3,6 @@ layout: page
 filename: 1737904907.eden
 worldname: Welcom to miami v1
 publishdate: 2025-01-26
-archivedate: 
-filesize: "1021.8 MB"
 author: 
 tags:
 ---

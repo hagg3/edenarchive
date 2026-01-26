@@ -3,8 +3,6 @@ layout: page
 filename: 1628022159.eden
 worldname: Eden Airport Circuit V'6
 publishdate: 2021-08-03
-archivedate: 
-filesize: "0.5 MB"
 author: 
 tags:
 ---

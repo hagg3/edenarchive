@@ -3,8 +3,6 @@ layout: page
 filename: 1747953512.eden
 worldname: The Giants House by heidiz
 publishdate: 2025-05-22
-archivedate: 
-filesize: "134.2 MB"
 author: 
 tags:
   - scene

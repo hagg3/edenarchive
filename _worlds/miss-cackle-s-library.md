@@ -3,8 +3,6 @@ layout: page
 filename: 1406279565.eden
 worldname: Miss Cackle's Library
 publishdate: 2014-07-25
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1661987565.eden
 worldname: CIUDAD satelite 70
 publishdate: 2022-09-01
-archivedate: 
-filesize: "2.5 MB"
 author: 
 tags:
 ---

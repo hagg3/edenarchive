@@ -3,8 +3,6 @@ layout: page
 filename: 1329101253.eden
 worldname: AT Madrid Stadium by TheCrowBdm
 publishdate: 2012-02-13
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

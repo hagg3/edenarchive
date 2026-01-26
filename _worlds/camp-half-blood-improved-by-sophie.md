@@ -3,8 +3,6 @@ layout: page
 filename: 1492529118.eden
 worldname: CAMP HALF BLOOD improved by Sophie
 publishdate: 2017-04-18
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

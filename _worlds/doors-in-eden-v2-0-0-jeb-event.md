@@ -3,8 +3,6 @@ layout: page
 filename: 1680621708.eden
 worldname: Doors in Eden V2'0'0 JEB EVENT
 publishdate: 2023-04-04
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

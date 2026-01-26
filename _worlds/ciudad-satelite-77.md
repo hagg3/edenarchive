@@ -3,8 +3,6 @@ layout: page
 filename: 1752471070.eden
 worldname: CIUDAD satelite 77
 publishdate: 2025-07-14
-archivedate: null
-filesize: 632.5 MB
 author: null
 tags:
 - mexico

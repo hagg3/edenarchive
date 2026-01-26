@@ -3,8 +3,6 @@ layout: page
 filename: 1749496104.eden
 worldname: Neo Arabia
 publishdate: 2025-06-09
-archivedate: 
-filesize: "4.2 MB"
 author: 
 tags:
   - needsreview

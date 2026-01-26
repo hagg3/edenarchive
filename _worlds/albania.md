@@ -3,8 +3,6 @@ layout: page
 filename: 1766760458.eden
 worldname: Albania
 publishdate: 2025-12-26
-archivedate: 
-filesize: "1.6 MB"
 author: 
 tags:
   - needsreview

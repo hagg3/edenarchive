@@ -3,8 +3,6 @@ layout: page
 filename: 1646378140.eden
 worldname: Storybrooke V1 by MD15
 publishdate: 2022-03-04
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1565553920.eden
 worldname: Fort Knox Cs
 publishdate: 2019-08-11
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

@@ -3,8 +3,6 @@ layout: page
 filename: 1712510052.eden
 worldname: Recreating Garitton Finto art galler
 publishdate: 2024-04-07
-archivedate: 
-filesize: "232.6 MB"
 author: 
 tags:
 ---

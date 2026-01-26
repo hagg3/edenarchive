@@ -3,8 +3,6 @@ layout: page
 filename: 1335186586.eden
 worldname: GTA EDEN V1 Uncompleted
 publishdate: 2012-04-23
-archivedate: 
-filesize: "0.2 MB"
 author: 
 tags:
 ---

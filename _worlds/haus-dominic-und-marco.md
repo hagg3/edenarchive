@@ -3,8 +3,6 @@ layout: page
 filename: 1665868319.eden
 worldname: Haus Dominic und Marco
 publishdate: 2022-10-15
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
   - newterrain

@@ -3,8 +3,6 @@ layout: page
 filename: 1494812260.eden
 worldname: Debonaire
 publishdate: 2017-05-15
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

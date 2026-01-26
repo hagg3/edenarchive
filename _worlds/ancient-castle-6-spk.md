@@ -3,8 +3,6 @@ layout: page
 filename: 1387411822.eden
 worldname: ANCIENT CASTLE 6 spk
 publishdate: 2013-12-19
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

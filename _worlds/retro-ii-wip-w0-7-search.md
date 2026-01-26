@@ -3,8 +3,6 @@ layout: page
 filename: 1753784054.eden
 worldname: Retro II WIP w0'7 Search
 publishdate: 2025-07-29
-archivedate: 
-filesize: "391.6 MB"
 author: 
 tags:
   - needsreview

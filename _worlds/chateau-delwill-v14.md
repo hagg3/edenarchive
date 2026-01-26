@@ -3,8 +3,6 @@ layout: page
 filename: 1330025851.eden
 worldname: Chateau Delwill V14
 publishdate: 2012-02-23
-archivedate: 
-filesize: "0.3 MB"
 author: 
 tags:
 ---

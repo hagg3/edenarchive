@@ -3,8 +3,6 @@ layout: page
 filename: 1329154640.eden
 worldname: Deep Space Defence 7 the Leviathan
 publishdate: 2012-02-13
-archivedate: 
-filesize: "0.1 MB"
 author: 
 tags:
 ---

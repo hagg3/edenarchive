@@ -3,8 +3,6 @@ layout: page
 filename: 1623093424.eden
 worldname: Fortress for Amelia Woodward 1441 SC
 publishdate: 2021-06-07
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

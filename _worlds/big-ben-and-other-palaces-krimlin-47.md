@@ -3,8 +3,6 @@ layout: page
 filename: 1706952473.eden
 worldname: Big Ben and other palaces krimlin 47
 publishdate: 2024-02-03
-archivedate: 
-filesize: "8.3 MB"
 author: 
 tags:
 ---

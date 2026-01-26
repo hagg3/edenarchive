@@ -3,8 +3,6 @@ layout: page
 filename: 1423428050.eden
 worldname: Tree House By Ella
 publishdate: 2015-02-08
-archivedate: 
-filesize: "0.0 MB"
 author: 
 tags:
 ---

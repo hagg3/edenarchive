@@ -3,8 +3,6 @@ layout: page
 filename: 1662131746.eden
 worldname: Willy Wonkas Chocolate Factory
 publishdate: 2022-09-02
-archivedate: 
-filesize: "0.4 MB"
 author: 
 tags:
 ---

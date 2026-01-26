@@ -3,8 +3,6 @@ layout: page
 filename: 1768873761.eden
 worldname: james and johns world v36
 publishdate: 2026-01-20
-archivedate: 
-filesize: "0.9 MB"
 author: McR3D
 tags:
   - abstract
