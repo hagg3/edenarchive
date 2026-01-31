@@ -3,8 +3,20 @@ layout: page
 filename: 1624407437.eden
 worldname: The Hidden Galaxy v3'1 2.1 unverified
 publishdate: 2021-06-23
-author: 
+author: Steve Bruce
 tags:
+- veryoldterrain
+- underground
+- caves
+- exploration
+- lighting
+- rpg
+- story
+- quest
+- adventure
+- planets
+- large
+- variety
 ---
 ## The Hidden Galaxy v3'1 2.1 unverified
 

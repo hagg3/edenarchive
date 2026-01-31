@@ -7,6 +7,24 @@ archivedate:
 filesize: "2.7 MB"
 author: 
 tags:
+  - impressive
+  - detailed
+  - retro
+  - oldterrain
+  - park
+  - garden
+  - nature
+  - castle
+  - medieval
+  - lighting
+  - church
+  - kingdom
+  - fantasy
+  - roleplay
+  - royal
+  - city
+  - town
+  - architecture
 ---
 ## Kingdom Life Returnal 2
 
