@@ -38,11 +38,11 @@ Note: World downloads are compressed, and must be unzipped before played.
 
 ## Gallery
 
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1767908401/01.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1767908401/02.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1767908401/03.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1767908401/04.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1767908401/05.png)
+![Preview Image](https://i.imgur.com/CzFA9jy.png)
+![Preview Image](https://i.imgur.com/2DLKFKJ.png)
+![Preview Image](https://i.imgur.com/aMCJjRL.png)
+![Preview Image](https://i.imgur.com/bEPzl5W.png)
+![Preview Image](https://i.imgur.com/kpfJbMU.png)
 
 ## Map
 

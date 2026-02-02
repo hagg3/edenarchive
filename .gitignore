@@ -1,0 +1,12 @@
+# Apple filesystem junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Finder / volume metadata
+Icon?
+.Spotlight-V100
+.Trashes
+.Trashes/*
+.fseventsd
+.VolumeIcon.icns

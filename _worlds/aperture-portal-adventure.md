@@ -29,19 +29,21 @@ Note: World downloads are compressed, and must be unzipped before played.
 
 ## Gallery
 
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img1.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img2.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img3.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img4.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img5.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img6.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img7.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img8.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img9.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img10.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img11.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img12.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1769347905/img13.png)
+## Gallery
+
+![Preview Image](https://i.imgur.com/Em0nQvp.png)
+![Preview Image](https://i.imgur.com/c923T4k.png)
+![Preview Image](https://i.imgur.com/6EnvzwP.png)
+![Preview Image](https://i.imgur.com/50MMD0w.png)
+![Preview Image](https://i.imgur.com/eFnGBjR.png)
+![Preview Image](https://i.imgur.com/3vfTJYH.png)
+![Preview Image](https://i.imgur.com/AIoz1r6.png)
+![Preview Image](https://i.imgur.com/oZyyXyb.png)
+![Preview Image](https://i.imgur.com/vmezISW.png)
+![Preview Image](https://i.imgur.com/N8sUHdl.png)
+![Preview Image](https://i.imgur.com/q51bJXu.png)
+![Preview Image](https://i.imgur.com/WQXbLwa.png)
+![Preview Image](https://i.imgur.com/jaPw64j.png)
 
 ## Map
 
