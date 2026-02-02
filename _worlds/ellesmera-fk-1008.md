@@ -34,20 +34,12 @@ Note: World downloads are compressed, and must be unzipped before played.
 
 ## Gallery
 
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/1.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/2.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/3.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/4.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/5.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/6.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/7.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/8.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/9.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/10.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/11.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/12.png)
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1768384405/13.png)
-
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779039040372839/13.png?ex=69819f40&is=69804dc0&hm=d8183958836e89c0279f3022e26e58b30e39c753a0e74fedb78674b22a9ae7a7&)
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779037798858899/11.png?ex=69819f40&is=69804dc0&hm=5b625ff983ef38864f82f07618cbe96ec8fe2c91a343a70e9bc5b8430e14a709&)
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779022040862884/9.png?ex=69819f3c&is=69804dbc&hm=e5a6cf4eb34ae56b915c75b7cf1c9567719ffe960f4c6f76a8f0d1bda670f671&)
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779019809361971/6.png?ex=69819f3c&is=69804dbc&hm=35bab51909c67113afa7cae292c9b81c02e1833a9e52de6eb1a8afbbab518f64&)
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779017435512948/3.png?ex=69819f3b&is=69804dbb&hm=e71ffa9a38614c84df7c0b95175cbe9788ef01766a4c55d01c7af01ebccfc975&)
+![Preview Image](https://cdn.discordapp.com/attachments/1467776113605349519/1467779016055459913/1.png?ex=69819f3b&is=69804dbb&hm=c2b45b8cf08d4beaf7c594137dd5b87532540244fc5bcd3d4729534b39de484d&)
 
 ## Map
 
