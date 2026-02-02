@@ -1,50 +1,68 @@
 {
-  "generated_at": "2026-02-02T22:03:42.056194Z",
+  "generated_at": "2026-02-02T22:09:41.362675Z",
   "criteria": {
-    "min_category_hits": 2,
-    "require_strong_if_below_min": true,
+    "min_category_hits": 1,
+    "require_strong_if_below_min": false,
     "max_per_series": 3,
     "strong_keywords": [
       "adventure",
       "airport",
+      "aquarium",
       "arena",
       "base",
+      "battle",
+      "boss",
       "bunker",
       "campaign",
+      "campus",
       "castle",
       "cathedral",
       "challenge",
       "citadel",
+      "college",
       "complex",
       "course",
+      "courthouse",
       "ctf",
       "dungeon",
       "facility",
       "factory",
       "fortress",
+      "gauntlet",
+      "harbor",
       "hospital",
       "lab",
       "laboratory",
       "library",
+      "mall",
       "maze",
+      "minigame",
       "mission",
       "museum",
       "observatory",
       "palace",
       "parkour",
+      "plaza",
+      "port",
+      "prison",
       "puzzle",
       "quest",
+      "questline",
+      "raid",
       "replica",
       "research",
       "rpg",
       "school",
+      "speedrun",
       "stadium",
       "station",
       "stronghold",
       "survival",
       "temple",
       "trial",
-      "vault"
+      "university",
+      "vault",
+      "zoo"
     ],
     "keywords": {
       "iteration": [
@@ -66,6 +84,13 @@
         "workshop",
         "demo",
         "proof",
+        "milestone",
+        "checkpoint",
+        "refactor",
+        "overhaul",
+        "rebuild",
+        "tuning",
+        "rebalance",
         "v1",
         "v2",
         "v3",
@@ -99,7 +124,18 @@
         "shipyard",
         "platform",
         "tower",
-        "gate"
+        "gate",
+        "subway",
+        "railway",
+        "freight",
+        "depot",
+        "warehouse",
+        "barracks",
+        "checkpoint",
+        "launch",
+        "silo",
+        "pipeline",
+        "dam"
       ],
       "worldbuilding": [
         "city",
@@ -124,7 +160,16 @@
         "continent",
         "metropolis",
         "village",
-        "town"
+        "town",
+        "borough",
+        "neighborhood",
+        "shrine",
+        "sanctuary",
+        "monastery",
+        "frontier",
+        "wasteland",
+        "bay",
+        "harbor"
       ],
       "realworld": [
         "museum",
@@ -144,7 +189,19 @@
         "fortress",
         "palace",
         "temple",
-        "stadium"
+        "stadium",
+        "mall",
+        "plaza",
+        "arena",
+        "harbor",
+        "port",
+        "aquarium",
+        "zoo",
+        "university",
+        "college",
+        "campus",
+        "prison",
+        "courthouse"
       ],
       "gameplay": [
         "adventure",
@@ -161,7 +218,14 @@
         "mission",
         "dungeon",
         "course",
-        "trial"
+        "trial",
+        "gauntlet",
+        "speedrun",
+        "battle",
+        "boss",
+        "raid",
+        "questline",
+        "minigame"
       ],
       "older": [
         "classic",
@@ -183,11 +247,27 @@
         "sandbox",
         "replica",
         "project",
-        "buildlog"
+        "buildlog",
+        "worklog",
+        "diary",
+        "dev"
       ]
     }
   },
   "results": [
+    {
+      "id": "1349604739",
+      "name": "air port by jake and FINL4Y v4",
+      "score": 4,
+      "signals": [
+        "iteration",
+        "architecture",
+        "realworld",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "air port by jake and finl4y"
+    },
     {
       "id": "1391045685",
       "name": "DANIELAND v21 HOSPITAL JAIL UPDATE",
@@ -269,6 +349,28 @@
       "series_key": "cmg internatonal airport 1"
     },
     {
+      "id": "1362930767",
+      "name": "jared arena entrance",
+      "score": 2,
+      "signals": [
+        "realworld",
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena entrance"
+    },
+    {
+      "id": "1362865500",
+      "name": "jared arena cover",
+      "score": 2,
+      "signals": [
+        "realworld",
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena cover"
+    },
+    {
       "id": "1359001449",
       "name": "DANIELAND v15 ELMHURST STATION",
       "score": 2,
@@ -300,6 +402,17 @@
       ],
       "strong_hits": 1,
       "series_key": "party park jumping puzzle"
+    },
+    {
+      "id": "1336179525",
+      "name": "jared arena",
+      "score": 2,
+      "signals": [
+        "realworld",
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena"
     },
     {
       "id": "1334505420",
@@ -394,26 +507,6 @@
       "series_key": "little mini lava dance party parkour"
     },
     {
-      "id": "1362930767",
-      "name": "jared arena entrance",
-      "score": 1,
-      "signals": [
-        "gameplay"
-      ],
-      "strong_hits": 1,
-      "series_key": "jared arena entrance"
-    },
-    {
-      "id": "1362865500",
-      "name": "jared arena cover",
-      "score": 1,
-      "signals": [
-        "gameplay"
-      ],
-      "strong_hits": 1,
-      "series_key": "jared arena cover"
-    },
-    {
       "id": "1358690357",
       "name": "cmg fake airport with new planes",
       "score": 1,
@@ -442,16 +535,6 @@
       ],
       "strong_hits": 1,
       "series_key": "big airport by finl4y"
-    },
-    {
-      "id": "1336179525",
-      "name": "jared arena",
-      "score": 1,
-      "signals": [
-        "gameplay"
-      ],
-      "strong_hits": 1,
-      "series_key": "jared arena"
     },
     {
       "id": "1423347694",
@@ -536,18 +619,6 @@
       ],
       "strong_hits": 0,
       "series_key": "kingdom of danieland 1"
-    },
-    {
-      "id": "1349604739",
-      "name": "air port by jake and FINL4Y v4",
-      "score": 3,
-      "signals": [
-        "iteration",
-        "architecture",
-        "version"
-      ],
-      "strong_hits": 0,
-      "series_key": "air port by jake and finl4y"
     },
     {
       "id": "1423677958",
@@ -724,17 +795,6 @@
       ],
       "strong_hits": 0,
       "series_key": "danieland f10 and sims"
-    },
-    {
-      "id": "1389474689",
-      "name": "cmg king ski resort v5",
-      "score": 2,
-      "signals": [
-        "iteration",
-        "version"
-      ],
-      "strong_hits": 0,
-      "series_key": "cmg king ski resort"
     },
     {
       "id": "1382283637",
@@ -979,15 +1039,1146 @@
       "series_key": "olympic village add improvements"
     },
     {
-      "id": "1330264845",
-      "name": "AIR FORCE 1 NIGHT WATCH BY FINL4Y v1",
-      "score": 2,
+      "id": "1423718313",
+      "name": "test upload3",
+      "score": 1,
       "signals": [
-        "iteration",
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "test upload3"
+    },
+    {
+      "id": "1423716152",
+      "name": "test upload2",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "test upload2"
+    },
+    {
+      "id": "1423489072",
+      "name": "Lil' Ole Log Cabin's UPDATE '2'",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s 2"
+    },
+    {
+      "id": "1423406988",
+      "name": "test upload",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "test upload"
+    },
+    {
+      "id": "1423233388",
+      "name": "Lil' Ole Log Cabin's Hideout UPDATE",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s hideout"
+    },
+    {
+      "id": "1423192350",
+      "name": "Rock Bottom V01",
+      "score": 1,
+      "signals": [
         "version"
       ],
       "strong_hits": 0,
-      "series_key": "air force 1 night watch by finl4y"
+      "series_key": "rock bottom"
+    },
+    {
+      "id": "1423149489",
+      "name": "New update blocks",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "new blocks"
+    },
+    {
+      "id": "1422971165",
+      "name": "Island Biome 'By Red'",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "island biome by red"
+    },
+    {
+      "id": "1422452243",
+      "name": "LV Batcave Nathaniel Brusch Beta 11",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "lv batcave nathaniel brusch 11"
+    },
+    {
+      "id": "1422335947",
+      "name": "Share test",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "share test"
+    },
+    {
+      "id": "1421121232",
+      "name": "Eden World Tour V14",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "eden world tour"
+    },
+    {
+      "id": "1421099983",
+      "name": "Greenland by Dblcut3 BETA",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "greenland by dblcut3"
+    },
+    {
+      "id": "1420403245",
+      "name": "Olympic Metropolis Storm Maiden",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic metropolis storm maiden"
+    },
+    {
+      "id": "1414288569",
+      "name": "My Town Lauratopia",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "my town lauratopia"
+    },
+    {
+      "id": "1412040304",
+      "name": "the peacful mansion by cmg update po",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "the peacful mansion by cmg po"
+    },
+    {
+      "id": "1408658702",
+      "name": "DANIELAND v30 ULTIMATE BEACH HOUSE",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland ultimate beach house"
+    },
+    {
+      "id": "1408331342",
+      "name": "DANIELAND v29 PUEBLO MANSION",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland pueblo mansion"
+    },
+    {
+      "id": "1403187049",
+      "name": "DANIELAND v26 THE BIG HOUSE  7292",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland the big house 7292"
+    },
+    {
+      "id": "1403147000",
+      "name": "DANIELAND v26 THE BIG HOUSE",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland the big house"
+    },
+    {
+      "id": "1402783400",
+      "name": "DANIELAND v25 HOUSING UPDATES",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland housing updates"
+    },
+    {
+      "id": "1401056360",
+      "name": "DANIELAND v24 UPDATES AND APARTMENT",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland updates and apartment"
+    },
+    {
+      "id": "1399141452",
+      "name": "cmg king ski resort v31",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg king ski resort"
+    },
+    {
+      "id": "1399073502",
+      "name": "TITANFALL MILITIA OUTPOST BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "architecture"
+      ],
+      "strong_hits": 0,
+      "series_key": "titanfall militia outpost by finl4y"
+    },
+    {
+      "id": "1395902053",
+      "name": "coooooool version7",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "coooooool"
+    },
+    {
+      "id": "1394839359",
+      "name": "AIRBASE AND SHIPYARD BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "architecture"
+      ],
+      "strong_hits": 0,
+      "series_key": "airbase and shipyard by finl4y"
+    },
+    {
+      "id": "1392662363",
+      "name": "DANIELAND v23 BUNGALOW AND HIGHWAY",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland bungalow and highway"
+    },
+    {
+      "id": "1390187322",
+      "name": "DANIELAND v20 BE ALL END ALL",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland be all end all"
+    },
+    {
+      "id": "1389274664",
+      "name": "update of tiny mansion by cmg",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "of tiny mansion by cmg"
+    },
+    {
+      "id": "1388617220",
+      "name": "MODERN CITY BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "modern city by finl4y"
+    },
+    {
+      "id": "1387063682",
+      "name": "ZOMBI CITY ON HILL BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "zombi city on hill by finl4y"
+    },
+    {
+      "id": "1373211170",
+      "name": "cmg exotic airlines 747 400 ver 2",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg exotic airlines 747 400"
+    },
+    {
+      "id": "1370370176",
+      "name": "DANIELAND v19 emergency",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland emergency"
+    },
+    {
+      "id": "1367461445",
+      "name": "cmg amg ski resort update",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg amg ski resort"
+    },
+    {
+      "id": "1367450777",
+      "name": "cmg ski resort update 3",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg ski resort 3"
+    },
+    {
+      "id": "1367437046",
+      "name": "cmg ski resort update 2",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg ski resort 2"
+    },
+    {
+      "id": "1365957342",
+      "name": "Huge Olympic Village",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "huge olympic village"
+    },
+    {
+      "id": "1365617072",
+      "name": "cmg ski resort update 1",
+      "score": 1,
+      "signals": [
+        "iteration"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg ski resort 1"
+    },
+    {
+      "id": "1358904674",
+      "name": "DANIELAND v13 FOXWOODS THEATRE",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland foxwoods theatre"
+    },
+    {
+      "id": "1358208435",
+      "name": "DANIELAND v13 BEACHFRONT PROPERTY",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland beachfront property"
+    },
+    {
+      "id": "1353639173",
+      "name": "DANIELAND v10 WESTERN EXPANSION",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland western expansion"
+    },
+    {
+      "id": "1351966017",
+      "name": "William's Olympic Village",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "william s olympic village"
+    },
+    {
+      "id": "1350271027",
+      "name": "Party Park v12 Guest House",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park guest house"
+    },
+    {
+      "id": "1345394285",
+      "name": "The Olympic Village",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "the olympic village"
+    },
+    {
+      "id": "1344372145",
+      "name": "Party Park v12 Coffe Shop",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park coffe shop"
+    },
+    {
+      "id": "1341800045",
+      "name": "Party Park v9 New Resturant and more",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park new resturant and more"
+    },
+    {
+      "id": "1339639815",
+      "name": "Party Park v8 New House",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park new house"
+    },
+    {
+      "id": "1338508918",
+      "name": "Party Park v6 MAJOR UDATE",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park major udate"
+    },
+    {
+      "id": "1336338042",
+      "name": "Olympic Villages V30 The Three Villa",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic villages the three villa"
+    },
+    {
+      "id": "1336242130",
+      "name": "Olympic Village V21T",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village v21t"
+    },
+    {
+      "id": "1332965314",
+      "name": "DANIELAND v8 THE COASTER",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland the coaster"
+    },
+    {
+      "id": "1332332466",
+      "name": "DANIELAND v6 IN HONOR OF CHRIS RUCCI",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland in honor of chris rucci"
+    },
+    {
+      "id": "1328318566",
+      "name": "roller coaster v 3 by cmg",
+      "score": 1,
+      "signals": [
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "roller coaster by cmg"
+    },
+    {
+      "id": "1328048740",
+      "name": "Amazing Olympic Village",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "amazing olympic village"
+    },
+    {
+      "id": "1324056034",
+      "name": "Olympic Village",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village"
+    },
+    {
+      "id": "1323210779",
+      "name": "Olympic Village by Marcus",
+      "score": 1,
+      "signals": [
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village by marcus"
+    },
+    {
+      "id": "1423609477",
+      "name": "Lil' Ole Log Cabin's Improved Room",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s improved room"
+    },
+    {
+      "id": "1423497082",
+      "name": "Lil' Ole Log Cabin's New Portal Room",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s new portal room"
+    },
+    {
+      "id": "1423447404",
+      "name": "light colors",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "light colors"
+    },
+    {
+      "id": "1423408969",
+      "name": "loadscreen testing world",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "loadscreen testing world"
+    },
+    {
+      "id": "1423406308",
+      "name": "World 35",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 35"
+    },
+    {
+      "id": "1423406144",
+      "name": "World 24",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 24"
+    },
+    {
+      "id": "1423338628",
+      "name": "World of 1000 Wonders",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world of 1000 wonders"
+    },
+    {
+      "id": "1423257191",
+      "name": "Lil' Ole Log Cabin's Mini Ice Rink",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s mini ice rink"
+    },
+    {
+      "id": "1423241285",
+      "name": "Lil' Ole Log Cabin's Garden",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin s garden"
+    },
+    {
+      "id": "1423189406",
+      "name": "Lil' Ole Log Cabin",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "lil ole log cabin"
+    },
+    {
+      "id": "1423106700",
+      "name": "time to get dizzy",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "time to get dizzy"
+    },
+    {
+      "id": "1423013240",
+      "name": "Duo Volcano",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "duo volcano"
+    },
+    {
+      "id": "1423012413",
+      "name": "Stalker Attack",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "stalker attack"
+    },
+    {
+      "id": "1422970762",
+      "name": "The Altar",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "the altar"
+    },
+    {
+      "id": "1422706879",
+      "name": "matiasworldbeta",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "matiasworldbeta"
+    },
+    {
+      "id": "1422706470",
+      "name": "cool cloud house by espeon",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cool cloud house by espeon"
+    },
+    {
+      "id": "1422569228",
+      "name": "Vuenccoaster 34min",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "vuenccoaster 34min"
+    },
+    {
+      "id": "1422482598",
+      "name": "Purpl",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "purpl"
+    },
+    {
+      "id": "1422482513",
+      "name": "Purple Beach Normal Y Section",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "purple beach normal y section"
+    },
+    {
+      "id": "1422454473",
+      "name": "The Last Airbender All Elements 3",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "the last airbender all elements 3"
+    },
+    {
+      "id": "1422454440",
+      "name": "Thunderbirds Ship Designs 5 by NHB",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "thunderbirds ship designs 5 by nhb"
+    },
+    {
+      "id": "1422452354",
+      "name": "Around the World Biome Edges",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "around the world biome edges"
+    },
+    {
+      "id": "1421773759",
+      "name": "Around the World Just Edges",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "around the world just edges"
+    },
+    {
+      "id": "1421322305",
+      "name": "Hibari 88018017 'Tokyo'",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "hibari 88018017 tokyo"
+    },
+    {
+      "id": "1421118437",
+      "name": "Bedrock Biome",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "bedrock biome"
+    },
+    {
+      "id": "1421116927",
+      "name": "Tropical Biome",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "tropical biome"
+    },
+    {
+      "id": "1421112202",
+      "name": "Birmingham Pool Edited M1",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "birmingham pool edited m1"
+    },
+    {
+      "id": "1421110896",
+      "name": "Volcano",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "volcano"
+    },
+    {
+      "id": "1421105798",
+      "name": "Cloral M14 Michigander",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cloral m14 michigander"
+    },
+    {
+      "id": "1421102930",
+      "name": "Underworld Biome",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "underworld biome"
+    },
+    {
+      "id": "1421102002",
+      "name": "Mountain Biome",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "mountain biome"
+    },
+    {
+      "id": "1421099748",
+      "name": "Every Flower",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "every flower"
+    },
+    {
+      "id": "1421098115",
+      "name": "Greenland by Dblcut3 NHB",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "greenland by dblcut3 nhb"
+    },
+    {
+      "id": "1421091968",
+      "name": "Vuenccoasterzw16 nextgen",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "vuenccoasterzw16 nextgen"
+    },
+    {
+      "id": "1420947924",
+      "name": "World 0",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 0"
+    },
+    {
+      "id": "1420614415",
+      "name": "World d",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world d"
+    },
+    {
+      "id": "1420614327",
+      "name": "World s",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world s"
+    },
+    {
+      "id": "1420614029",
+      "name": "World 8",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 8"
+    },
+    {
+      "id": "1420405869",
+      "name": "World 10",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 10"
+    },
+    {
+      "id": "1420405148",
+      "name": "World 5",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 5"
+    },
+    {
+      "id": "1420404934",
+      "name": "World 2",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 2"
+    },
+    {
+      "id": "1420404873",
+      "name": "World 1",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 1"
+    },
+    {
+      "id": "1420165585",
+      "name": "World 8 the beast",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "world 8 the beast"
+    },
+    {
+      "id": "1414288886",
+      "name": "Add to War of Eden",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "add to war of eden"
+    },
+    {
+      "id": "1414288565",
+      "name": "football amd house",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "football amd house"
+    },
+    {
+      "id": "1414288250",
+      "name": "cool littie conseps for your world",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cool littie conseps for your world"
+    },
+    {
+      "id": "1414288209",
+      "name": "mateos house4",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "mateos house4"
+    },
+    {
+      "id": "1413748505",
+      "name": "yabyabyab2211",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "yabyabyab2211"
+    },
+    {
+      "id": "1412040027",
+      "name": "the peacful mansion by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "the peacful mansion by cmg"
+    },
+    {
+      "id": "1410881794",
+      "name": "I broke the game By FINL4Y",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "i broke the game by finl4y"
+    },
+    {
+      "id": "1405110047",
+      "name": "cmg king tree house",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg king tree house"
+    },
+    {
+      "id": "1399985577",
+      "name": "cmg king ski resort by Maddy",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg king ski resort by maddy"
+    },
+    {
+      "id": "1395402289",
+      "name": "BCA by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "bca by cmg"
+    },
+    {
+      "id": "1394383393",
+      "name": "my big house by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "my big house by cmg"
+    },
+    {
+      "id": "1393178127",
+      "name": "thats not from me the real cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "thats not from me the real cmg"
+    },
+    {
+      "id": "1393172885",
+      "name": "cool mansion by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cool mansion by cmg"
+    },
+    {
+      "id": "1393163361",
+      "name": "cool limo by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cool limo by cmg"
+    },
+    {
+      "id": "1393081051",
+      "name": "cmg reef resort an hotel",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg reef resort an hotel"
+    },
+    {
+      "id": "1393059597",
+      "name": "cmg king's yacht",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg king s yacht"
+    },
+    {
+      "id": "1393002139",
+      "name": "the best tupolev the world from cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "the best tupolev the world from cmg"
+    },
+    {
+      "id": "1392898889",
+      "name": "red robot by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "red robot by cmg"
+    },
+    {
+      "id": "1391829572",
+      "name": "HOTEL1mark",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "hotel1mark"
+    },
+    {
+      "id": "1389450825",
+      "name": "cmg's new name is CMG KING",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg s new name is cmg king"
+    },
+    {
+      "id": "1389445140",
+      "name": "skate thing by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "skate thing by cmg"
+    },
+    {
+      "id": "1389281774",
+      "name": "speed racer by cmg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "speed racer by cmg"
+    },
+    {
+      "id": "1388778840",
+      "name": "fvfvcmgfvg",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "fvfvcmgfvg"
+    },
+    {
+      "id": "1387063732",
+      "name": "SLIDE FUN BY FINL4Y",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "slide fun by finl4y"
+    },
+    {
+      "id": "1387063642",
+      "name": "LARGE CRANE BY FINL4Y",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "large crane by finl4y"
+    },
+    {
+      "id": "1385693831",
+      "name": "danielandnicole",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "danielandnicole"
+    },
+    {
+      "id": "1381600247",
+      "name": "cmg exotic crj 700 U R welcome d 8",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg exotic crj 700 u r welcome d 8"
+    },
+    {
+      "id": "1381599173",
+      "name": "U R welcome  cmg exotic crj 700",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "u r welcome cmg exotic crj 700"
+    },
+    {
+      "id": "1375576423",
+      "name": "cmg king and angele hotel",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "cmg king and angele hotel"
+    },
+    {
+      "id": "1375316587",
+      "name": "MIDEVIL DANIELAND 4",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "midevil danieland 4"
+    },
+    {
+      "id": "1375241140",
+      "name": "MIDEVIL DANIELAND 3",
+      "score": 0,
+      "signals": [],
+      "strong_hits": 0,
+      "series_key": "midevil danieland 3"
     }
   ]
 }

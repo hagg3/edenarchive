@@ -18,38 +18,29 @@ KEYWORDS = {
     "iteration": [
         "alpha", "beta", "prototype", "test", "rev", "revision", "build",
         "update", "pass", "phase", "draft", "concept", "wip", "iteration",
-        "progress", "workshop", "demo", "proof", "milestone", "checkpoint",
-        "refactor", "overhaul", "rebuild", "tuning", "rebalance",
-        "v1", "v2", "v3", "v4", "v5",
+        "progress", "workshop", "demo", "proof", "v1", "v2", "v3", "v4", "v5",
     ],
     "architecture": [
         "station", "base", "outpost", "hub", "terminal", "dock", "port",
         "facility", "plant", "complex", "control", "sector", "zone", "module",
         "reactor", "hangar", "runway", "bridge", "tunnel", "metro", "rail",
         "harbor", "dockyard", "shipyard", "platform", "tower", "gate",
-        "subway", "railway", "freight", "depot", "warehouse", "barracks",
-        "checkpoint", "launch", "silo", "pipeline", "dam",
     ],
     "worldbuilding": [
         "city", "district", "capital", "ruins", "colony", "settlement",
         "stronghold", "citadel", "fort", "realm", "domain", "archive",
         "kingdom", "empire", "republic", "province", "region", "island",
         "archipelago", "continent", "metropolis", "village", "town",
-        "borough", "neighborhood", "shrine", "sanctuary", "monastery",
-        "frontier", "wasteland", "bay", "harbor",
     ],
     "realworld": [
         "museum", "library", "airport", "hospital", "school", "factory",
         "laboratory", "lab", "research", "observatory", "bunker", "vault",
         "cathedral", "castle", "fortress", "palace", "temple", "stadium",
-        "mall", "plaza", "arena", "harbor", "port", "aquarium", "zoo",
-        "university", "college", "campus", "prison", "courthouse",
     ],
     "gameplay": [
         "adventure", "quest", "puzzle", "maze", "parkour", "challenge",
         "arena", "ctf", "rpg", "survival", "campaign", "mission",
-        "dungeon", "course", "trial", "gauntlet", "speedrun",
-        "battle", "boss", "raid", "questline", "minigame",
+        "dungeon", "course", "trial",
     ],
     "older": [
         "classic", "old", "legacy", "original", "remake", "redux", "definitive", "final",
@@ -57,7 +48,7 @@ KEYWORDS = {
     ],
     "other": [
         "unfinished", "abandoned", "experiment", "testbed", "sandbox", "replica",
-        "project", "buildlog", "worklog", "diary", "dev",
+        "project", "buildlog",
     ],
 }
 
@@ -68,8 +59,8 @@ STRONG_KEYWORDS = set(
 )
 
 # Require at least this many category hits OR at least one strong keyword
-MIN_CATEGORY_HITS = 1
-REQUIRE_STRONG_IF_BELOW_MIN = False
+MIN_CATEGORY_HITS = 2
+REQUIRE_STRONG_IF_BELOW_MIN = True
 
 # Cap how many variations per "series" name before final filtering
 MAX_PER_SERIES = 3
