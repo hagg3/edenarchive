@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T21:55:45.267136Z",
+  "generated_at": "2026-02-02T22:03:42.056194Z",
   "criteria": {
     "min_category_hits": 2,
     "require_strong_if_below_min": true,
@@ -10,18 +10,27 @@
       "arena",
       "base",
       "bunker",
+      "campaign",
+      "castle",
+      "cathedral",
       "challenge",
       "citadel",
       "complex",
+      "course",
       "ctf",
+      "dungeon",
       "facility",
       "factory",
+      "fortress",
       "hospital",
+      "lab",
       "laboratory",
       "library",
       "maze",
+      "mission",
       "museum",
       "observatory",
+      "palace",
       "parkour",
       "puzzle",
       "quest",
@@ -29,9 +38,12 @@
       "research",
       "rpg",
       "school",
+      "stadium",
       "station",
       "stronghold",
       "survival",
+      "temple",
+      "trial",
       "vault"
     ],
     "keywords": {
@@ -49,6 +61,11 @@
         "draft",
         "concept",
         "wip",
+        "iteration",
+        "progress",
+        "workshop",
+        "demo",
+        "proof",
         "v1",
         "v2",
         "v3",
@@ -69,7 +86,20 @@
         "control",
         "sector",
         "zone",
-        "module"
+        "module",
+        "reactor",
+        "hangar",
+        "runway",
+        "bridge",
+        "tunnel",
+        "metro",
+        "rail",
+        "harbor",
+        "dockyard",
+        "shipyard",
+        "platform",
+        "tower",
+        "gate"
       ],
       "worldbuilding": [
         "city",
@@ -83,7 +113,18 @@
         "fort",
         "realm",
         "domain",
-        "archive"
+        "archive",
+        "kingdom",
+        "empire",
+        "republic",
+        "province",
+        "region",
+        "island",
+        "archipelago",
+        "continent",
+        "metropolis",
+        "village",
+        "town"
       ],
       "realworld": [
         "museum",
@@ -93,10 +134,17 @@
         "school",
         "factory",
         "laboratory",
+        "lab",
         "research",
         "observatory",
         "bunker",
-        "vault"
+        "vault",
+        "cathedral",
+        "castle",
+        "fortress",
+        "palace",
+        "temple",
+        "stadium"
       ],
       "gameplay": [
         "adventure",
@@ -108,7 +156,12 @@
         "arena",
         "ctf",
         "rpg",
-        "survival"
+        "survival",
+        "campaign",
+        "mission",
+        "dungeon",
+        "course",
+        "trial"
       ],
       "older": [
         "classic",
@@ -118,7 +171,9 @@
         "remake",
         "redux",
         "definitive",
-        "final"
+        "final",
+        "vintage",
+        "retro"
       ],
       "other": [
         "unfinished",
@@ -127,7 +182,8 @@
         "testbed",
         "sandbox",
         "replica",
-        "project"
+        "project",
+        "buildlog"
       ]
     }
   },
@@ -143,6 +199,41 @@
       ],
       "strong_hits": 1,
       "series_key": "danieland hospital jail"
+    },
+    {
+      "id": "1334991666",
+      "name": "Olympic Village V15 Obstacle Course",
+      "score": 3,
+      "signals": [
+        "worldbuilding",
+        "gameplay",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "olympic village obstacle course"
+    },
+    {
+      "id": "1334761814",
+      "name": "Olympic Village V14 Maze",
+      "score": 3,
+      "signals": [
+        "worldbuilding",
+        "gameplay",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "olympic village maze"
+    },
+    {
+      "id": "1404349384",
+      "name": "DANIELAND v28 NEWCASTLETON CASTLE",
+      "score": 2,
+      "signals": [
+        "realworld",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "danieland newcastleton castle"
     },
     {
       "id": "1365329520",
@@ -211,15 +302,36 @@
       "series_key": "party park jumping puzzle"
     },
     {
-      "id": "1334761814",
-      "name": "Olympic Village V14 Maze",
+      "id": "1334505420",
+      "name": "DANIELAND v9 THE TEMPLE OF RUCCI",
       "score": 2,
       "signals": [
-        "gameplay",
+        "realworld",
         "version"
       ],
       "strong_hits": 1,
-      "series_key": "olympic village maze"
+      "series_key": "danieland the temple of rucci"
+    },
+    {
+      "id": "1332554137",
+      "name": "DANIELAND v7 SARAH'S DREAM CASTLE",
+      "score": 2,
+      "signals": [
+        "realworld",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "danieland sarah s dream castle"
+    },
+    {
+      "id": "1423286138",
+      "name": "Impossible obstacle course",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "impossible obstacle course"
     },
     {
       "id": "1416686539",
@@ -390,6 +502,18 @@
       "series_key": "my realistic city 1"
     },
     {
+      "id": "1421088915",
+      "name": "Island of the Giant V76 Beta BrixXx",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "island of the giant brixxx"
+    },
+    {
       "id": "1403747817",
       "name": "DANIELAND v27 DUBLIN CITY UPDATE",
       "score": 3,
@@ -400,6 +524,18 @@
       ],
       "strong_hits": 0,
       "series_key": "danieland dublin city"
+    },
+    {
+      "id": "1376524257",
+      "name": "Kingdom of DANIELAND v2'1",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "kingdom of danieland 1"
     },
     {
       "id": "1349604739",
@@ -447,6 +583,17 @@
       "series_key": "le bluflaym royaume by brixxx"
     },
     {
+      "id": "1422706325",
+      "name": "Vecter Metropolis V9 by BrixXx",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "vecter metropolis by brixxx"
+    },
+    {
       "id": "1422706107",
       "name": "Colossal City V22 by BrixXx",
       "score": 2,
@@ -491,17 +638,6 @@
       "series_key": "six usa cities by brixxx"
     },
     {
-      "id": "1421088915",
-      "name": "Island of the Giant V76 Beta BrixXx",
-      "score": 2,
-      "signals": [
-        "iteration",
-        "version"
-      ],
-      "strong_hits": 0,
-      "series_key": "island of the giant brixxx"
-    },
-    {
       "id": "1421088203",
       "name": "DIRECT CITY 3'5 beta test",
       "score": 2,
@@ -522,6 +658,17 @@
       ],
       "strong_hits": 0,
       "series_key": "cmg king dimond grand hotel"
+    },
+    {
+      "id": "1407109137",
+      "name": "Kingdom of DANIELAND v7",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "kingdom of danieland"
     },
     {
       "id": "1393177943",
@@ -610,28 +757,6 @@
       ],
       "strong_hits": 0,
       "series_key": "cmg direct city diamond hotel 2"
-    },
-    {
-      "id": "1376879687",
-      "name": "Kingdom of DANIELAND v5",
-      "score": 2,
-      "signals": [
-        "iteration",
-        "version"
-      ],
-      "strong_hits": 0,
-      "series_key": "kingdom of danieland"
-    },
-    {
-      "id": "1376524257",
-      "name": "Kingdom of DANIELAND v2'1",
-      "score": 2,
-      "signals": [
-        "iteration",
-        "version"
-      ],
-      "strong_hits": 0,
-      "series_key": "kingdom of danieland 1"
     },
     {
       "id": "1368584676",
@@ -733,6 +858,72 @@
       "series_key": "party park new name"
     },
     {
+      "id": "1336242175",
+      "name": "Olympic Village V21 The Big War",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village the big war"
+    },
+    {
+      "id": "1336063782",
+      "name": "Olympic Village V20 Alien Invasion",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village alien invasion"
+    },
+    {
+      "id": "1335633557",
+      "name": "Olympic Village V16 The Big Sea",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village the big sea"
+    },
+    {
+      "id": "1334682455",
+      "name": "Olympic Village V13 Roads",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village roads"
+    },
+    {
+      "id": "1334515254",
+      "name": "Olympic Village V12'1 Improved",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village 1 improved"
+    },
+    {
+      "id": "1334513712",
+      "name": "Olympic Village V12 After The Zombie",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village after the zombie"
+    },
+    {
       "id": "1332215744",
       "name": "DANIELAND v5 THE GREAT PYRAMID",
       "score": 2,
@@ -775,6 +966,17 @@
       ],
       "strong_hits": 0,
       "series_key": "danieland emily s dream"
+    },
+    {
+      "id": "1331465838",
+      "name": "Olympic Village V7 ADD IMPROVEMENTS",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "olympic village add improvements"
     },
     {
       "id": "1330264845",

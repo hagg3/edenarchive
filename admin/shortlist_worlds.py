@@ -7,6 +7,9 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 # ----------------------------
 # Configuration (easy to tweak)
 # ----------------------------
@@ -14,29 +17,38 @@ from typing import Dict, List, Tuple
 KEYWORDS = {
     "iteration": [
         "alpha", "beta", "prototype", "test", "rev", "revision", "build",
-        "update", "pass", "phase", "draft", "concept", "wip", "v1", "v2", "v3", "v4", "v5",
+        "update", "pass", "phase", "draft", "concept", "wip", "iteration",
+        "progress", "workshop", "demo", "proof", "v1", "v2", "v3", "v4", "v5",
     ],
     "architecture": [
         "station", "base", "outpost", "hub", "terminal", "dock", "port",
         "facility", "plant", "complex", "control", "sector", "zone", "module",
+        "reactor", "hangar", "runway", "bridge", "tunnel", "metro", "rail",
+        "harbor", "dockyard", "shipyard", "platform", "tower", "gate",
     ],
     "worldbuilding": [
         "city", "district", "capital", "ruins", "colony", "settlement",
         "stronghold", "citadel", "fort", "realm", "domain", "archive",
+        "kingdom", "empire", "republic", "province", "region", "island",
+        "archipelago", "continent", "metropolis", "village", "town",
     ],
     "realworld": [
         "museum", "library", "airport", "hospital", "school", "factory",
-        "laboratory", "research", "observatory", "bunker", "vault",
+        "laboratory", "lab", "research", "observatory", "bunker", "vault",
+        "cathedral", "castle", "fortress", "palace", "temple", "stadium",
     ],
     "gameplay": [
         "adventure", "quest", "puzzle", "maze", "parkour", "challenge",
-        "arena", "ctf", "rpg", "survival",
+        "arena", "ctf", "rpg", "survival", "campaign", "mission",
+        "dungeon", "course", "trial",
     ],
     "older": [
         "classic", "old", "legacy", "original", "remake", "redux", "definitive", "final",
+        "vintage", "retro",
     ],
     "other": [
-        "unfinished", "abandoned", "experiment", "testbed", "sandbox", "replica", "project",
+        "unfinished", "abandoned", "experiment", "testbed", "sandbox", "replica",
+        "project", "buildlog",
     ],
 }
 
@@ -150,16 +162,35 @@ def pick_latest_per_series(candidates: List[dict]) -> List[dict]:
 def main():
     parser = argparse.ArgumentParser(description="Shortlist Eden worlds from server file list")
     parser.add_argument("--list", required=True, help="Path to file list (e.g. file_list2 260202.txt)")
-    parser.add_argument("--worlds", default="_worlds", help="Path to _worlds directory")
-    parser.add_argument("--out", default="admin/reports/shortlist.txt", help="Output text file")
-    parser.add_argument("--json", default="admin/reports/shortlist.json", help="Output JSON file")
+    parser.add_argument("--worlds", default=str(REPO_ROOT / "_worlds"), help="Path to _worlds directory")
+    parser.add_argument("--out", default=str(REPO_ROOT / "admin/reports/shortlist.txt"), help="Output text file")
+    parser.add_argument("--json", default=str(REPO_ROOT / "admin/reports/shortlist.json"), help="Output JSON file")
     parser.add_argument("--max", type=int, default=200, help="Max results to write (after filtering)")
     args = parser.parse_args()
 
-    list_path = Path(args.list).expanduser().resolve()
-    worlds_dir = Path(args.worlds).expanduser().resolve()
-    out_txt = Path(args.out).expanduser().resolve()
-    out_json = Path(args.json).expanduser().resolve()
+    list_path = Path(args.list).expanduser()
+    if not list_path.is_absolute():
+        list_path = (REPO_ROOT / list_path).resolve()
+    else:
+        list_path = list_path.resolve()
+
+    worlds_dir = Path(args.worlds).expanduser()
+    if not worlds_dir.is_absolute():
+        worlds_dir = (REPO_ROOT / worlds_dir).resolve()
+    else:
+        worlds_dir = worlds_dir.resolve()
+
+    out_txt = Path(args.out).expanduser()
+    if not out_txt.is_absolute():
+        out_txt = (REPO_ROOT / out_txt).resolve()
+    else:
+        out_txt = out_txt.resolve()
+
+    out_json = Path(args.json).expanduser()
+    if not out_json.is_absolute():
+        out_json = (REPO_ROOT / out_json).resolve()
+    else:
+        out_json = out_json.resolve()
 
     if not list_path.exists():
         print(f"ERROR: list file not found: {list_path}")
