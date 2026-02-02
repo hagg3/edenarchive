@@ -81,13 +81,14 @@ There is no runtime backend. All querying and filtering is done at build time.
 │   ├── 1584569002.md
 │   └── ...
 ├── assets/
-│   ├── worldfiles/         # Raw .eden world files
-│   │   ├── 1584568651.eden
+│   ├── worldfiles/         # Per-world asset folders (zipped .eden, preview, map)
+│   │   ├── 1584568651/
+│   │   │   ├── 1584568651.eden.zip
+│   │   │   ├── 1584568651.eden.png
+│   │   │   └── map.png
 │   │   └── ...
-│   ├── previews/           # Preview images
-│   └── maps/               # Optional map images
-├── scripts/
-│   └── upload_worlds.py    # Automation script
+├── z_add_world.py          # Automation script
+├── worlds.json             # Generated JSON index (build output)
 ├── index.md
 └── _site/                  # Generated output (ignored by Git)
 ```
@@ -96,20 +97,20 @@ There is no runtime backend. All querying and filtering is done at build time.
 
 ## World Files (`assets/worldfiles`)
 
-- Stores the **raw, downloadable world files** (e.g. `.eden`).
+- Stores **downloadable world files** as compressed `.eden.zip` archives.
     
 - Files are not processed by Jekyll.
     
-- Naming convention typically matches the world entry filename or ID.
+- Files and folders are organized by **numeric world ID**.
     
 
 Example:
 
 ```
-assets/worldfiles/1584568651.eden
+assets/worldfiles/1584568651/1584568651.eden.zip
 ```
 
-These files are linked from the rendered world pages but never duplicated into `_site` manually.
+Preview images (`<id>.eden.png`) and maps (`map.png`) are also stored in the same per‑world folder when available. These assets are linked from the rendered world pages but never duplicated into `_site` manually.
 
 ---
 
@@ -167,7 +168,7 @@ Although Jekyll is static, the site functions as a database via:
     
 - **Liquid filters:** sort, where, group_by
     
-- **Derived indexes:** pages for tags, authors, dates
+- **Derived index feed:** `worlds.json` is generated at build time from `site.worlds`
     
 
 ### Supported Queries
@@ -185,7 +186,7 @@ Worlds can be filtered or sorted by:
 - Archive date
     
 
-All queries are resolved at build time.
+The **index feed** is built at compile time, and the **worlds list page filters in the browser** using that feed.
 
 ---
 
@@ -202,11 +203,11 @@ Typical generated pages include:
 - **Individual world pages**
     
 
-These pages iterate over `site.worlds` and apply Liquid filters.
+These pages iterate over `site.worlds` and apply Liquid filters. The main “Worlds Archive” list uses a generated JSON feed plus client‑side filtering.
 
 ---
 
-## Automation Script (`upload_worlds.py`)
+## Automation Script (`z_add_world.py`)
 
 A Python script is used to automate ingestion of new worlds.
 
@@ -218,9 +219,11 @@ A Python script is used to automate ingestion of new worlds.
     
 - Normalize filenames and slugs
     
-- Copy assets into `assets/worldfiles`
+- Copy assets into `assets/worldfiles/<id>/`
     
-- Optionally handle preview images
+- Compress `.eden` into `.eden.zip`
+    
+- Optionally download preview images and save map images
     
 
 ### Why Automation Exists
@@ -260,7 +263,7 @@ The script is run **before committing** changes to Git.
     
 - Contains the fully rendered static site
     
-- Must be excluded via `.gitignore`
+- Should be excluded via `.gitignore` (recommended)
     
 
 Never edit `_site` directly.
@@ -299,7 +302,7 @@ The system trades runtime flexibility for long‑term archival stability.
 
 - `_worlds` = metadata database
     
-- `assets/worldfiles` = raw downloadable content
+- `assets/worldfiles` = downloadable content (compressed archives + images)
     
 - Liquid templates = query layer
     

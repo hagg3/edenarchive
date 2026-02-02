@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Jekyll build output
+_site
+
 # Finder / volume metadata
 Icon?
 .Spotlight-V100
