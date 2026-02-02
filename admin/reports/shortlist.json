@@ -1,0 +1,791 @@
+{
+  "generated_at": "2026-02-02T21:55:45.267136Z",
+  "criteria": {
+    "min_category_hits": 2,
+    "require_strong_if_below_min": true,
+    "max_per_series": 3,
+    "strong_keywords": [
+      "adventure",
+      "airport",
+      "arena",
+      "base",
+      "bunker",
+      "challenge",
+      "citadel",
+      "complex",
+      "ctf",
+      "facility",
+      "factory",
+      "hospital",
+      "laboratory",
+      "library",
+      "maze",
+      "museum",
+      "observatory",
+      "parkour",
+      "puzzle",
+      "quest",
+      "replica",
+      "research",
+      "rpg",
+      "school",
+      "station",
+      "stronghold",
+      "survival",
+      "vault"
+    ],
+    "keywords": {
+      "iteration": [
+        "alpha",
+        "beta",
+        "prototype",
+        "test",
+        "rev",
+        "revision",
+        "build",
+        "update",
+        "pass",
+        "phase",
+        "draft",
+        "concept",
+        "wip",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5"
+      ],
+      "architecture": [
+        "station",
+        "base",
+        "outpost",
+        "hub",
+        "terminal",
+        "dock",
+        "port",
+        "facility",
+        "plant",
+        "complex",
+        "control",
+        "sector",
+        "zone",
+        "module"
+      ],
+      "worldbuilding": [
+        "city",
+        "district",
+        "capital",
+        "ruins",
+        "colony",
+        "settlement",
+        "stronghold",
+        "citadel",
+        "fort",
+        "realm",
+        "domain",
+        "archive"
+      ],
+      "realworld": [
+        "museum",
+        "library",
+        "airport",
+        "hospital",
+        "school",
+        "factory",
+        "laboratory",
+        "research",
+        "observatory",
+        "bunker",
+        "vault"
+      ],
+      "gameplay": [
+        "adventure",
+        "quest",
+        "puzzle",
+        "maze",
+        "parkour",
+        "challenge",
+        "arena",
+        "ctf",
+        "rpg",
+        "survival"
+      ],
+      "older": [
+        "classic",
+        "old",
+        "legacy",
+        "original",
+        "remake",
+        "redux",
+        "definitive",
+        "final"
+      ],
+      "other": [
+        "unfinished",
+        "abandoned",
+        "experiment",
+        "testbed",
+        "sandbox",
+        "replica",
+        "project"
+      ]
+    }
+  },
+  "results": [
+    {
+      "id": "1391045685",
+      "name": "DANIELAND v21 HOSPITAL JAIL UPDATE",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "realworld",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "danieland hospital jail"
+    },
+    {
+      "id": "1365329520",
+      "name": "eden city airport cmg",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "eden city airport cmg"
+    },
+    {
+      "id": "1364559211",
+      "name": "cmg internatonal airport update 2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "cmg internatonal airport 2"
+    },
+    {
+      "id": "1364554941",
+      "name": "cmg internatonal airport update 1",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "cmg internatonal airport 1"
+    },
+    {
+      "id": "1359001449",
+      "name": "DANIELAND v15 ELMHURST STATION",
+      "score": 2,
+      "signals": [
+        "architecture",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "danieland elmhurst station"
+    },
+    {
+      "id": "1342550358",
+      "name": "Party Park v10 Secret Base",
+      "score": 2,
+      "signals": [
+        "architecture",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "party park secret base"
+    },
+    {
+      "id": "1339441251",
+      "name": "Party Park v7 Jumping Puzzle",
+      "score": 2,
+      "signals": [
+        "gameplay",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "party park jumping puzzle"
+    },
+    {
+      "id": "1334761814",
+      "name": "Olympic Village V14 Maze",
+      "score": 2,
+      "signals": [
+        "gameplay",
+        "version"
+      ],
+      "strong_hits": 1,
+      "series_key": "olympic village maze"
+    },
+    {
+      "id": "1416686539",
+      "name": "MOON BASE BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "architecture"
+      ],
+      "strong_hits": 1,
+      "series_key": "moon base by finl4y"
+    },
+    {
+      "id": "1388617249",
+      "name": "SPACE FLEET AIR BASE BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "architecture"
+      ],
+      "strong_hits": 1,
+      "series_key": "space fleet air base by finl4y"
+    },
+    {
+      "id": "1388099839",
+      "name": "NIGHT WATCH AIR BASE BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "architecture"
+      ],
+      "strong_hits": 1,
+      "series_key": "night watch air base by finl4y"
+    },
+    {
+      "id": "1384889527",
+      "name": "HELLS MAZE BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "hells maze by finl4y"
+    },
+    {
+      "id": "1382272649",
+      "name": "cmg mega airport",
+      "score": 1,
+      "signals": [
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "cmg mega airport"
+    },
+    {
+      "id": "1369597768",
+      "name": "little mini lava dance party parkour",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "little mini lava dance party parkour"
+    },
+    {
+      "id": "1362930767",
+      "name": "jared arena entrance",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena entrance"
+    },
+    {
+      "id": "1362865500",
+      "name": "jared arena cover",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena cover"
+    },
+    {
+      "id": "1358690357",
+      "name": "cmg fake airport with new planes",
+      "score": 1,
+      "signals": [
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "cmg fake airport with new planes"
+    },
+    {
+      "id": "1358365043",
+      "name": "cmg internatonal airport",
+      "score": 1,
+      "signals": [
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "cmg internatonal airport"
+    },
+    {
+      "id": "1340047209",
+      "name": "BIG AIRPORT BY FINL4Y",
+      "score": 1,
+      "signals": [
+        "realworld"
+      ],
+      "strong_hits": 1,
+      "series_key": "big airport by finl4y"
+    },
+    {
+      "id": "1336179525",
+      "name": "jared arena",
+      "score": 1,
+      "signals": [
+        "gameplay"
+      ],
+      "strong_hits": 1,
+      "series_key": "jared arena"
+    },
+    {
+      "id": "1423347694",
+      "name": "My Realistic City V3'3",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "my realistic city 3"
+    },
+    {
+      "id": "1422930748",
+      "name": "My Realistic City V3'2",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "my realistic city 2"
+    },
+    {
+      "id": "1422706276",
+      "name": "Magic City Extended V3 by BrixXx",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "magic city extended by brixxx"
+    },
+    {
+      "id": "1422385080",
+      "name": "My Realistic City V3'1",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "my realistic city 1"
+    },
+    {
+      "id": "1403747817",
+      "name": "DANIELAND v27 DUBLIN CITY UPDATE",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland dublin city"
+    },
+    {
+      "id": "1349604739",
+      "name": "air port by jake and FINL4Y v4",
+      "score": 3,
+      "signals": [
+        "iteration",
+        "architecture",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "air port by jake and finl4y"
+    },
+    {
+      "id": "1423677958",
+      "name": "MOUNTAIN MANSION NHB V2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "mountain mansion nhb"
+    },
+    {
+      "id": "1422948852",
+      "name": "DIRECT CITY 3'9 BETA 2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "direct city 3 9 2"
+    },
+    {
+      "id": "1422706406",
+      "name": "Le Bluflaym Royaume V4 by BrixXx",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "le bluflaym royaume by brixxx"
+    },
+    {
+      "id": "1422706107",
+      "name": "Colossal City V22 by BrixXx",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "colossal city by brixxx"
+    },
+    {
+      "id": "1421693623",
+      "name": "DIRECT CITY 3'9 BETA",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "direct city 3 9"
+    },
+    {
+      "id": "1421342093",
+      "name": "Best Hogwarts by Nathaniel Brusch V5",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "best hogwarts by nathaniel brusch"
+    },
+    {
+      "id": "1421251163",
+      "name": "Six USA Cities V18 Beta by BrixXx",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "six usa cities by brixxx"
+    },
+    {
+      "id": "1421088915",
+      "name": "Island of the Giant V76 Beta BrixXx",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "island of the giant brixxx"
+    },
+    {
+      "id": "1421088203",
+      "name": "DIRECT CITY 3'5 beta test",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "worldbuilding"
+      ],
+      "strong_hits": 0,
+      "series_key": "direct city 3 5 test"
+    },
+    {
+      "id": "1414237993",
+      "name": "cmg king dimond grand hotel v4",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg king dimond grand hotel"
+    },
+    {
+      "id": "1393177943",
+      "name": "cmg king tupelev and concord v2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg king tupelev and concord"
+    },
+    {
+      "id": "1393079769",
+      "name": "cmg king's villa and yacht v3",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg king s villa and yacht"
+    },
+    {
+      "id": "1393009441",
+      "name": "cmg tupelev 144 and concorde v2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg tupelev 144 and concorde"
+    },
+    {
+      "id": "1393006424",
+      "name": "cmg tupelew 144 and concorde v2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg tupelew 144 and concorde"
+    },
+    {
+      "id": "1392340273",
+      "name": "DANIELAND v22 F10 AND SIMS UPDATE",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland f10 and sims"
+    },
+    {
+      "id": "1389474689",
+      "name": "cmg king ski resort v5",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg king ski resort"
+    },
+    {
+      "id": "1382283637",
+      "name": "cmg direct city diamond hotel v12",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg direct city diamond hotel"
+    },
+    {
+      "id": "1382271920",
+      "name": "cmg direct city diamond hotel v9 2",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "cmg direct city diamond hotel 2"
+    },
+    {
+      "id": "1376879687",
+      "name": "Kingdom of DANIELAND v5",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "kingdom of danieland"
+    },
+    {
+      "id": "1376524257",
+      "name": "Kingdom of DANIELAND v2'1",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "kingdom of danieland 1"
+    },
+    {
+      "id": "1368584676",
+      "name": "DANIELAND v18 LITTLE BREEZY UPDATE",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland little breezy"
+    },
+    {
+      "id": "1357531991",
+      "name": "DANIELAND v12 EASTERN UPDATE",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland eastern"
+    },
+    {
+      "id": "1356635258",
+      "name": "DANIELAND v11 CITY LOCKDOWN",
+      "score": 2,
+      "signals": [
+        "worldbuilding",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland city lockdown"
+    },
+    {
+      "id": "1339470915",
+      "name": "parkers party park v2",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "parkers party park"
+    },
+    {
+      "id": "1336953386",
+      "name": "Party Park v5 Slide Pad",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park slide pad"
+    },
+    {
+      "id": "1336833767",
+      "name": "Party Park v4 Ride Help RePost This",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park ride help repost this"
+    },
+    {
+      "id": "1336833634",
+      "name": "Party Park v3 BURN IT",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park burn it"
+    },
+    {
+      "id": "1336263521",
+      "name": "Party Park v2 Remove and Fix Rides",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park remove and fix rides"
+    },
+    {
+      "id": "1336244738",
+      "name": "Party Park v1 New Name",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "party park new name"
+    },
+    {
+      "id": "1332215744",
+      "name": "DANIELAND v5 THE GREAT PYRAMID",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland the great pyramid"
+    },
+    {
+      "id": "1331919889",
+      "name": "DANIELAND v3 CARA'S DREAM",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland cara s dream"
+    },
+    {
+      "id": "1331778503",
+      "name": "DANIELAND v3 NOEL'S DREAM",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland noel s dream"
+    },
+    {
+      "id": "1331691343",
+      "name": "DANIELAND v2 EMILY'S DREAM",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "danieland emily s dream"
+    },
+    {
+      "id": "1330264845",
+      "name": "AIR FORCE 1 NIGHT WATCH BY FINL4Y v1",
+      "score": 2,
+      "signals": [
+        "iteration",
+        "version"
+      ],
+      "strong_hits": 0,
+      "series_key": "air force 1 night watch by finl4y"
+    }
+  ]
+}

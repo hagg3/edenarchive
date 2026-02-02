@@ -34,6 +34,9 @@ python3 admin/edenadmin.py validate
 
 # Validate and write a JSON report to a file
 python3 admin/edenadmin.py validate --out admin/reports/validate.json
+
+# Build a shortlist from a server file list (dedupe series to latest)
+python3 admin/shortlist_worlds.py --list "file_list2 260202.txt"
 ```
 
 ## Notes
