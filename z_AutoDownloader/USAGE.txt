@@ -1,0 +1,3 @@
+Run fetch_worlds.py and it will read world names in worlds.txt, find them on the Eden server via search, and then bulk download them.
+
+Run fetch_worlds.py --ids if worlds.txt just contains IDs.

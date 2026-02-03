@@ -1,6 +1,7 @@
 import requests
 import re
 import time
+import sys
 from pathlib import Path
 import urllib3
 
@@ -17,9 +18,28 @@ OUT_DIR.mkdir(exist_ok=True)
 SEARCH_URL = "http://app2.edengame.net/list2.php"
 DOWNLOAD_BASE = "https://files2.edengame.net"
 
-# --- Functions ---
-def fetch_latest_world(world_name):
-    # Send search request
+# --- Helpers ---
+def download_eden_file(file_id: str, name_prefix: str | None = None):
+    eden_name = f"{file_id}.eden"
+    url = f"{DOWNLOAD_BASE}/{eden_name}"
+
+    try:
+        data = requests.get(url, timeout=60).content
+    except Exception as e:
+        print(f"[ERROR] Download failed for {eden_name}: {e}")
+        return
+
+    if name_prefix:
+        out_name = f"{name_prefix} {eden_name}.zip"
+    else:
+        out_name = f"{eden_name}.zip"
+
+    out_file = OUT_DIR / out_name
+    out_file.write_bytes(data)
+    print(f"[OK] downloaded {out_name}")
+
+# --- Mode 1: name-based search ---
+def fetch_latest_world_by_name(world_name: str):
     r = requests.get(
         SEARCH_URL,
         params={"search": world_name},
@@ -28,38 +48,39 @@ def fetch_latest_world(world_name):
     )
     r.raise_for_status()
 
-    # Parse alternating FILENAMEID.eden / WorldName.name format
     matches = re.findall(r"(\d+\.eden)", r.text)
     if not matches:
         print(f"[MISS] {world_name} — no results found")
         return
 
-    latest = matches[0]  # Topmost = newest
-    url = f"{DOWNLOAD_BASE}/{latest}"
+    latest_id = matches[0].replace(".eden", "")
+    print(f"[OK] {world_name} -> {latest_id}")
+    download_eden_file(latest_id, name_prefix=world_name)
 
-    print(f"[OK] {world_name} -> {latest}")
-
-    # Download world file
-    try:
-        data = requests.get(url, timeout=60).content
-    except Exception as e:
-        print(f"[ERROR] Download failed for {latest}: {e}")
+# --- Mode 2: ID-only ---
+def fetch_world_by_id(file_id: str):
+    if not file_id.isdigit():
+        print(f"[SKIP] invalid ID: {file_id}")
         return
 
-    # Save to downloads directory
-    # Example: "Manchon 1769365605.eden.zip"
-    out_file = OUT_DIR / f"{world_name} {latest}.zip"
-    out_file.write_bytes(data)
+    print(f"[OK] ID-only download {file_id}")
+    download_eden_file(file_id)
 
 # --- Main ---
 if __name__ == "__main__":
     if not WORLDS_FILE.exists():
         print(f"[ERROR] worlds.txt not found at {WORLDS_FILE}")
-        exit(1)
+        sys.exit(1)
+
+    use_id_mode = "--ids" in sys.argv
 
     with open(WORLDS_FILE) as f:
-        worlds = [line.strip() for line in f if line.strip()]
+        entries = [line.strip() for line in f if line.strip()]
 
-    for w in worlds:
-        fetch_latest_world(w)
-        time.sleep(1)  # polite rate limit
+    for entry in entries:
+        if use_id_mode:
+            fetch_world_by_id(entry)
+        else:
+            fetch_latest_world_by_name(entry)
+
+        time.sleep(1)  # polite rate limiting
