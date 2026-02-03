@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import random
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -174,7 +175,9 @@ def main():
     parser.add_argument("--worlds", default=str(REPO_ROOT / "_worlds"), help="Path to _worlds directory")
     parser.add_argument("--out", default=str(REPO_ROOT / "admin/reports/shortlist.txt"), help="Output text file")
     parser.add_argument("--json", default=str(REPO_ROOT / "admin/reports/shortlist.json"), help="Output JSON file")
-    parser.add_argument("--max", type=int, default=200, help="Max results to write (after filtering)")
+    parser.add_argument("--max", type=int, default=400, help="Max results to write (after filtering)")
+    parser.add_argument("--shuffle", action="store_true", help="Shuffle input order before scoring")
+    parser.add_argument("--seed", type=int, default=None, help="Random seed for shuffling (optional)")
     args = parser.parse_args()
 
     list_path = Path(args.list).expanduser()
@@ -211,10 +214,16 @@ def main():
     archived_ids = load_archived_ids(worlds_dir)
     word_re = compile_keyword_patterns()
 
+    entries = list(parse_file_list(list_path))
+    if args.shuffle:
+        if args.seed is not None:
+            random.seed(args.seed)
+        random.shuffle(entries)
+
     candidates = []
     seen_names = set()
 
-    for filename, name in parse_file_list(list_path):
+    for filename, name in entries:
         world_id = filename[:-5]
         if world_id in archived_ids:
             continue
