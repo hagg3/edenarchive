@@ -8,7 +8,7 @@ tags:
 ---
 ## Big Brother House AU 2014 V419 2.1
 
-There may be an article available for this world. Check back soon!
+[Click here](https://edenworldbuilder.fandom.com/wiki/Big_Brother_House_AU) to read the article for this world on the Eden Wiki.
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1645436093/1645436093.eden.png)
 

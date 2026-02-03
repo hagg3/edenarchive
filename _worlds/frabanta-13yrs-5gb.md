@@ -24,10 +24,11 @@ tags:
 - modern
 - resort
 - environment
+- wiki
 ---
 ## Frabanta 13Yrs 5gb
 
-There may be an article available for this world. Check back soon!
+[Click here](https://edenworldbuilder.fandom.com/wiki/Frabanta_City) to read the article for this world on the Eden Wiki.
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1764606837/1764606837.eden.png)
 

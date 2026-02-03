@@ -5,10 +5,11 @@ worldname: Eden City v12'5 Dblcut3
 publishdate: 2020-12-06
 author: 
 tags:
+- wiki
 ---
 ## Eden City v12'5 Dblcut3
 
-There may be an article available for this world. Check back soon!
+[Click here](https://edenworldbuilder.fandom.com/wiki/Eden_City_by_Dblcut3) to read the article for this world on the Eden Wiki.
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1607232431/1607232431.eden.png)
 

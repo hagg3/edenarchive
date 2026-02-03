@@ -5,10 +5,11 @@ worldname: ASHMAZE V7E
 publishdate: 2012-08-19
 author: 
 tags:
+- wiki
 ---
 ## ASHMAZE V7E
 
-There may be an article available for this world. Check back soon!
+[Click here](https://edenworldbuilder.fandom.com/wiki/Ashmaze/) to read the article for this world on the Eden Wiki.
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1345403608/1345403608.eden.png)
 

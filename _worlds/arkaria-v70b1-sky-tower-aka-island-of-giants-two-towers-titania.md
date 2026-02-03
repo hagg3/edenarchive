@@ -8,8 +8,9 @@ tags:
 ---
 ## Arkaria v70b1 Sky tower
 
+[Click here](https://edenworldbuilder.fandom.com/wiki/Arkaria) to read the article for this world on the Eden Wiki.
+
 This world has been known under other names, like Island of Giants and Two Titans.
-There may be an article available for this world. Check back soon!
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1701562164/1701562164.eden.png)
 
