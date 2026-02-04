@@ -19,7 +19,7 @@ SEARCH_URL = "http://app2.edengame.net/list2.php"
 DOWNLOAD_BASE = "https://files2.edengame.net"
 
 # --- Helpers ---
-def download_eden_file(file_id: str, name_prefix: str | None = None):
+def download_eden_file(file_id: str, world_name: str | None = None):
     eden_name = f"{file_id}.eden"
     url = f"{DOWNLOAD_BASE}/{eden_name}"
 
@@ -29,10 +29,11 @@ def download_eden_file(file_id: str, name_prefix: str | None = None):
         print(f"[ERROR] Download failed for {eden_name}: {e}")
         return
 
-    if name_prefix:
-        out_name = f"{name_prefix} {eden_name}.zip"
+    if world_name:
+        # CORRECT ORDER: NAME first, ID last
+        out_name = f"{world_name} {file_id}.eden.zip"
     else:
-        out_name = f"{eden_name}.zip"
+        out_name = f"{file_id}.eden.zip"
 
     out_file = OUT_DIR / out_name
     out_file.write_bytes(data)
@@ -55,16 +56,24 @@ def fetch_latest_world_by_name(world_name: str):
 
     latest_id = matches[0].replace(".eden", "")
     print(f"[OK] {world_name} -> {latest_id}")
-    download_eden_file(latest_id, name_prefix=world_name)
+    download_eden_file(latest_id, world_name)
 
-# --- Mode 2: ID-only ---
-def fetch_world_by_id(file_id: str):
-    if not file_id.isdigit():
-        print(f"[SKIP] invalid ID: {file_id}")
-        return
+# --- Mode 2: ID + name pairs ---
+def fetch_worlds_by_id_pairs(lines: list[str]):
+    if len(lines) % 2 != 0:
+        print("[ERROR] worlds.txt must contain ID / name pairs when using --ids")
+        sys.exit(1)
 
-    print(f"[OK] ID-only download {file_id}")
-    download_eden_file(file_id)
+    it = iter(lines)
+    for file_id, raw_name in zip(it, it):
+        if not file_id.isdigit():
+            print(f"[SKIP] invalid ID: {file_id}")
+            continue
+
+        world_name = raw_name.removesuffix(".name")
+        print(f"[OK] ID-only {file_id} -> {world_name}")
+        download_eden_file(file_id, world_name)
+        time.sleep(1)
 
 # --- Main ---
 if __name__ == "__main__":
@@ -75,12 +84,11 @@ if __name__ == "__main__":
     use_id_mode = "--ids" in sys.argv
 
     with open(WORLDS_FILE) as f:
-        entries = [line.strip() for line in f if line.strip()]
+        lines = [line.strip() for line in f if line.strip()]
 
-    for entry in entries:
-        if use_id_mode:
-            fetch_world_by_id(entry)
-        else:
-            fetch_latest_world_by_name(entry)
-
-        time.sleep(1)  # polite rate limiting
+    if use_id_mode:
+        fetch_worlds_by_id_pairs(lines)
+    else:
+        for name in lines:
+            fetch_latest_world_by_name(name)
+            time.sleep(1)
