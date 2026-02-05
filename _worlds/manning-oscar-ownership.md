@@ -1,11 +1,13 @@
 ---
 layout: page
-filename: 1764252681.eden
+filename: 1770266165.eden
 worldname: Manning Oscar Ownership
-publishdate: 2025-11-27
+publishdate: 2026-02-05
+archivedate: 
+filesize: "1.0 MB"
 author: 
 tags:
-  - impressive
+  - quality
   - modern
   - flat
   - temple
@@ -16,7 +18,7 @@ tags:
 
 There may be an article available for this world. Check back soon!
 
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1764252681/1764252681.eden.png)
+![Preview Image]({{ site.baseurl }}/assets/worldfiles/1770266165/1770266165.eden.png)
 
 {% include world-details.html %}
 
@@ -26,4 +28,4 @@ Note: World downloads are compressed, and must be unzipped before played.
 
 ## Map
 
-![Map]({{ site.baseurl }}/assets/worldfiles/1764252681/map.png)
+![Map]({{ site.baseurl }}/assets/worldfiles/1770266165/map.png)
