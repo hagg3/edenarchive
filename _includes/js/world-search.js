@@ -10,7 +10,9 @@ fetch("{{ site.baseurl }}/assets/data/worlds.json")
   .then(res => res.json())
   .then(worlds => {
     allWorlds = worlds;
+
     populateTags(worlds);
+    computeStats(worlds);
     render(worlds);
   });
 
@@ -50,6 +52,49 @@ function render(worlds) {
     tableBody.appendChild(row);
   });
 }
+
+function computeStats(worlds) {
+  // --- Total worlds ---
+  document.getElementById("stat-total").textContent = worlds.length;
+
+  // --- Unique authors ---
+  const authors = new Set(
+    worlds.map(w => w.author).filter(Boolean)
+  );
+  document.getElementById("stat-authors").textContent = authors.size;
+
+  // --- Top 3 tags ---
+  const tagCounts = {};
+  worlds.forEach(w => {
+    (w.tags || []).forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+  });
+
+  const topTags = Object.entries(tagCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([tag, count]) => `${tag} (${count})`);
+
+  document.getElementById("stat-top-tags").textContent =
+    topTags.length ? topTags.join(", ") : "—";
+
+  // --- 3 most recent worlds ---
+  const recentList = document.getElementById("stat-recent");
+  recentList.innerHTML = "";
+
+  const recentWorlds = worlds
+    .filter(w => w.publishdate)
+    .sort((a, b) => b.publishdate.localeCompare(a.publishdate))
+    .slice(0, 3);
+
+  recentWorlds.forEach(w => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="{{ site.baseurl }}${w.url}">${w.worldname}</a> (${w.publishdate})`;
+    recentList.appendChild(li);
+  });
+}
+
 
 function applyFilters() {
   const q = searchInput.value.toLowerCase();

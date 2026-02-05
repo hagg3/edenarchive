@@ -18,6 +18,20 @@ World files hosted on this site are **compressed for download**.
 
 If you end up with a usable `.eden` file, the extraction has worked correctly.
 
+## Archive Statistics
+
+<div id="world-stats" class="world-stats">
+  <ul>
+    <li><strong>Total worlds archived:</strong> <span id="stat-total">–</span></li>
+    <li><strong>Top tags:</strong> <span id="stat-top-tags">–</span></li>
+    <li><strong>Most recently added:</strong>
+      <ul id="stat-recent"></ul>
+    </li>
+    <li><strong>Unique authors:</strong> <span id="stat-authors">–</span></li>
+  </ul>
+</div>
+
+
 ## Browse Worlds
 
 <input id="search" type="text" placeholder="Search name, author, tags…" />
