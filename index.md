@@ -12,9 +12,13 @@ Instead, this site focuses on:
 - **Notable community creations** and “hidden gems” discovered through the later shared-worlds upload and search systems  
 - Select **historically or technically significant versions** of worlds, where older iterations meaningfully demonstrate how a world evolved over time  
 
-Older versions are only archived where they add value; this is not intended to be a version-complete mirror of the Eden servers.
+➡ **[Browse the archived worlds]({{ site.baseurl }}/worlds)**
 
-There already exists a fan-maintained project at (https://eden.anmon.org/) that aims to mass archive and preserve worlds. It even includes a feature that allows you to quickly archive a world from the game servers, provided that you know the world ID.
+Older versions of worlds are only archived where they add value; this is not intended to be a version-complete mirror of the Eden servers.
+
+There already exists a fan-maintained project at that aims to mass archive and preserve worlds. It even includes a feature that allows you to quickly archive a world from the game servers, provided that you know the world ID. You can visit that below:
+
+➡ **[Mass archive at eden.anmon.org](https://eden.anmon.org/)**
 
 ## Improved Discoverability
 
@@ -28,8 +32,6 @@ To address this, all archived worlds are organized using a **manual tagging syst
 - Experimental or technical worlds  
 
 This makes it significantly easier to discover worlds by interest rather than by filename, author, or upload date alone.
-
-➡ **[Browse the archived worlds]({{ site.baseurl }}/worlds)**
 
 
 ## Community and Discussion

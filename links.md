@@ -18,7 +18,7 @@ This page serves as an index of resources related to Eden. It includes official 
 
 [Community Projects Discord Server (including this project)](https://discord.gg/SgEQfurMmj )
 
-[May's Eden Archive](https://eden.anmon.org/ )
+[Mass archive project](https://eden.anmon.org/ )
 
 [Eden: World Builder Wiki (hosted on Fandom)](https://edenworldbuilder.fandom.com/)
 
