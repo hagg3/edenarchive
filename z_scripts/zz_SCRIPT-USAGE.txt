@@ -6,8 +6,7 @@ script that allows you to upload a .eden.zip file, specify attributes and upload
 World Name 0000000000 tags go here.eden.zip
 
 Example:
-
-My New Footy Project 1532966106 sport stadium arena football soccer.eden.zip
+ßMy New Footy Project 1532966106 sport stadium arena football soccer.eden.zip
 
 Basic usage:
 
@@ -29,7 +28,7 @@ python3 z_add_world.py \
 
 Batch-add a directory:
 
-python3 z_add_world.py --folder "/Users/rc/EdenAllFiles/Eden-WorldsCompressed/"
+python3 z_add_world.py --folder
 
 
 Batch-add a directory + individual files:
