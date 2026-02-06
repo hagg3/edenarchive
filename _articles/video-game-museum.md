@@ -13,7 +13,7 @@ Download the world [here]({{ site.baseurl }}/worlds/video-game-museum/).
 
 ## Description
 
-Video Game Museum is one of the oldest and most iconic Eden worlds. The world consists of a series of pixel art monuments depicting various characters and icons from mostly 8-bit retro video games. Most of the monuments are located underground in the naturally occurring cave system. 
+Video Game Museum is one of the oldest and most iconic Eden worlds. The world consists of a series of around 18 different pixel art monuments depicting various characters and icons from mostly 8-bit retro video games. Most of the monuments are located underground in the naturally occurring cave system. 
 
 This world is built on one of the oldest forms of the Normal World terrain generation, from before Flat World terrain was even an option. Versions of the game with this particular terrain featured sprawling underground caves which were later removed due to performance issues on limited device hardware at the time. Video Game Museum is one of the rare few worlds that have these caves in them.
 

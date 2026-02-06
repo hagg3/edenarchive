@@ -18,7 +18,7 @@ tags:
 ---
 ## Video Game Museum
 
-There is an [article]({{ site.baseurl }}/articles/video-game-museum/) for this world.
+[Click here](https://edenworldbuilder.fandom.com/wiki/Video_Game_Museum) to read the article for this world on the Eden Wiki.
 
 Note: The particular version of this world linked here (1584568651) is functionally identical but not the same as the original version uploaded in 2011. The original version does not render properly in newer Eden versions.
 
