@@ -9,7 +9,7 @@ exclude:
   - node-mapgen-broken
   
 header_pages:
-  - articles.md
+#  - articles.md
   - blog.md
   - links.md
   - worlds.md

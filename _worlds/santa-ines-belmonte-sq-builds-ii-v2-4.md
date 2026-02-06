@@ -10,7 +10,7 @@ tags:
 ---
 ## Santa Ines Belmonte sq buildsII
 
-There is an [article]({{ site.baseurl }}/articles/santa-ines) for this world.
+[Click here](https://edenworldbuilder.fandom.com/wiki/Santa_Ines) to read the article for this world on the Eden Wiki.
 
 ![Preview Image]({{ site.baseurl }}/assets/worldfiles/1688374495/1688374495.eden.png)
 
