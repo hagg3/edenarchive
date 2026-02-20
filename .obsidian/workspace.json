@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/santa-ines.md",
+                "file": "_posts/2021-08-17-moof-hacks-tips-and-tricks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "santa-ines"
+              "title": "2021-08-17-moof-hacks-tips-and-tricks"
+            }
+          },
+          {
+            "id": "0e1b539e84629adc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,10 +196,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "d4294a8a903de984",
+  "active": "0e1b539e84629adc",
   "lastOpenFiles": [
-    "_articles/video-game-museum.md",
     "_articles/santa-ines.md",
+    "_articles/video-game-museum.md",
     "_articles/how-to-make-videos-with-far-rendering.md",
     "_articles/eden-world-builder.md",
     "_articles/creatures.md"
