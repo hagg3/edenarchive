@@ -1,8 +1,8 @@
 ---
 layout: page
-filename: 1770542100.eden
-worldname: Steden 4'7
-publishdate: 2026-02-08
+filename: 1773296976.eden
+worldname: Steden 4'9
+publishdate: 2026-03-12
 archivedate: 
 filesize: "2.3 MB"
 author: 
@@ -12,11 +12,11 @@ tags:
   - church
   - oldterrain
 ---
-## Steden 4'7
+## Steden 4'9
 
 There may be an article available for this world. Check back soon!
 
-![Preview Image]({{ site.baseurl }}/assets/worldfiles/1770542100/1770542100.eden.png)
+![Preview Image]({{ site.baseurl }}/assets/worldfiles/1773296976/1773296976.eden.png)
 
 {% include world-details.html %}
 
@@ -26,4 +26,4 @@ Note: World downloads are compressed, and must be unzipped before played.
 
 ## Map
 
-![Map]({{ site.baseurl }}/assets/worldfiles/1770542100/map.png)
+![Map]({{ site.baseurl }}/assets/worldfiles/1773296976/map.png)
