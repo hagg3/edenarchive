@@ -23,6 +23,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent
 WORLDS_DIR = REPO_ROOT / "_worlds"
 ASSETS_DIR = REPO_ROOT / "assets" / "worldfiles"
+MAPGEN_DIST = REPO_ROOT / "node-mapgen" / "dist" / "generate-map.js"
 MAPGEN_SCRIPT = REPO_ROOT / "node-mapgen" / "src" / "generate-map.ts"
 TEMP_DIR = REPO_ROOT / ".mapgen-tmp"
 WORLD_ID_RE = re.compile(r"(\d{10,})\.eden$")
@@ -130,7 +131,8 @@ def generate_map(world_id: str) -> bool:
             return False
 
         result = subprocess.run(
-            ["npx", "ts-node", str(MAPGEN_SCRIPT), str(eden_file), str(map_path)],
+            (["node", str(MAPGEN_DIST)] if MAPGEN_DIST.exists()
+             else ["npx", "ts-node", str(MAPGEN_SCRIPT)]) + [str(eden_file), str(map_path)],
             cwd=str(REPO_ROOT / "node-mapgen"),
             capture_output=True,
             text=True,
@@ -193,9 +195,8 @@ def main():
         print(f"ERROR: _worlds/ directory not found at {WORLDS_DIR}", file=sys.stderr)
         sys.exit(1)
 
-    if not MAPGEN_SCRIPT.exists():
-        print(f"ERROR: node-mapgen not found at {MAPGEN_SCRIPT}", file=sys.stderr)
-        print("Run: cd node-mapgen && npm install", file=sys.stderr)
+    if not MAPGEN_DIST.exists() and not MAPGEN_SCRIPT.exists():
+        print(f"ERROR: node-mapgen not found. Run: cd node-mapgen && npm install && npx tsc", file=sys.stderr)
         sys.exit(1)
 
     missing = find_missing(target_id=args.world_id)
