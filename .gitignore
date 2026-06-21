@@ -1,3 +1,9 @@
+# Temporary directory for map generation (generate_missing_maps.py)
+.mapgen-tmp/
+
+# node-mapgen dependencies
+node-mapgen/node_modules/
+
 # Apple filesystem junk
 .DS_Store
 .AppleDouble
