@@ -80,11 +80,13 @@ def download_preview(world_id: str, dest_path: Path):
 
 def generate_map_for_world(eden_file: Path, output_dir: Path):
     try:
-        subprocess.run(
+        result = subprocess.run(
             ["npx", "ts-node", "node-mapgen/src/generate-map.ts",
-             str(eden_file), str(output_dir)],
+             str(eden_file), str(output_dir / "map.png")],
             check=False
         )
+        if result.returncode != 0:
+            print(f"⚠ Map generation failed for {eden_file.name}")
     except Exception as e:
         print(f"⚠ Map generation error for {eden_file.name}: {e}")
 
