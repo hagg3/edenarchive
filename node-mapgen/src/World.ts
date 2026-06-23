@@ -18,6 +18,7 @@ export type WorldMeta = {
   skyColor: number;
   worldArea: WorldArea;
   chunks: ChunkPointer[];
+  numBands: number; // 4 for 64z legacy worlds, 16 for 256z New Dawn worlds
 };
 
 export type WorldData = {
@@ -69,7 +70,17 @@ export function loadWorldFromArrayBuffer(buffer: ArrayBuffer): WorldData {
   }
 
   const worldArea = computeArea(chunks);
-  return { meta: { name, skyColor, worldArea, chunks }, bytes };
+
+  // Detect 64z (4 bands) vs 256z (16 bands) by minimum gap between chunk file offsets.
+  // Matches the algorithm in eden-world-editor's parse_world_inner (lib.rs).
+  const addresses = chunks.map((c) => c.address).sort((a, b) => a - b);
+  let minGap = 32768;
+  for (let i = 1; i < addresses.length; i++) {
+    minGap = Math.min(minGap, addresses[i] - addresses[i - 1]);
+  }
+  const numBands = minGap >= 131072 ? 16 : 4;
+
+  return { meta: { name, skyColor, worldArea, chunks, numBands }, bytes };
 }
 
 function isGzip(data: Uint8Array): boolean {

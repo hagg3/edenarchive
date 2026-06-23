@@ -17,9 +17,9 @@ export function renderNormalMap(world: WorldData): MapPixels {
     for (let lx = 0; lx < 16; lx++) {
       for (let ly = 0; ly < 16; ly++) {
         // Scan from the top band downward. Each band covers 16 z-levels (8192 bytes).
-        // Try all 16 bands (covers both 64z and 256z worlds); bounds check guards each access.
+        // Use meta.numBands (4 for 64z worlds, 16 for 256z) to avoid reading into adjacent chunks.
         let found = false;
-        for (let band = 15; band >= 0 && !found; band--) {
+        for (let band = meta.numBands - 1; band >= 0 && !found; band--) {
           for (let lz = 15; lz >= 0; lz--) {
             const bi = addr + band * 8192 + lx * 256 + ly * 16 + lz;
             const pi = bi + 4096;
