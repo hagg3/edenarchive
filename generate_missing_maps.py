@@ -63,9 +63,9 @@ def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
     Extract a world .eden file from a zip archive.
 
     Handles three packaging patterns found in the archive:
-      1. zip → raw .eden file
-      2. zip → gzip-compressed file named .eden or .eden.zip (World.ts handles gzip)
-      3. zip → zip → .eden (double-nested)
+      1. zip -> raw .eden file
+      2. zip -> gzip-compressed file named .eden or .eden.zip (World.ts handles gzip)
+      3. zip -> zip -> .eden (double-nested)
     """
     if not zipfile.is_zipfile(zip_path):
         return None
@@ -99,7 +99,7 @@ def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
             # Check if it's an actual zip (real nested zip) or just a gzip/raw .eden
             if zipfile.is_zipfile(extracted):
                 return _extract_eden(extracted, dest)
-            # It's a gzip or raw .eden — rename to .eden so node-mapgen sees it
+            # It's a gzip or raw .eden -- rename to .eden so node-mapgen sees it
             renamed = extracted.with_suffix("").with_suffix(".eden")
             extracted.rename(renamed)
             return renamed
@@ -115,12 +115,25 @@ def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
     return None
 
 
+def find_zip(world_id: str) -> Path | None:
+    """Return the zip for a world, falling back to any *.zip in the asset dir."""
+    standard = ASSETS_DIR / world_id / f"{world_id}.eden.zip"
+    if standard.exists():
+        return standard
+    asset_dir = ASSETS_DIR / world_id
+    if asset_dir.is_dir():
+        candidates = sorted(asset_dir.glob("*.zip")) + sorted(asset_dir.glob("*.eden.zip"))
+        if candidates:
+            return candidates[0]
+    return None
+
+
 def generate_map(world_id: str) -> bool:
-    zip_path = ASSETS_DIR / world_id / f"{world_id}.eden.zip"
+    zip_path = find_zip(world_id)
     map_path = ASSETS_DIR / world_id / "map.png"
 
-    if not zip_path.exists():
-        print(f"  ⚠ No zip found: {zip_path.name}")
+    if zip_path is None:
+        print(f"  ⚠ No zip found for {world_id}")
         return False
 
     clear_temp_dir()
