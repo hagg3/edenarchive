@@ -1,21 +1,44 @@
 # Temporary directory for map generation (generate_missing_maps.py)
+
 .mapgen-tmp/
 
 # node-mapgen dependencies
+
 node-mapgen/node_modules/
 
-# Apple filesystem junk
+# macOS filesystem junk
+
 .DS_Store
+.DS_Store?
 .AppleDouble
 .LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Finder metadata
+
+Icon?
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 # Jekyll build output
+
 _site
 
-# Finder / volume metadata
-Icon?
-.Spotlight-V100
-.Trashes
-.Trashes/*
-.fseventsd
-.VolumeIcon.icns
+# Obsidian editor config
+.obsidian/
+
+# node-mapgen-broken dependencies
+node-mapgen-broken/node_modules/
+
+# Scratch/dump files
+file_list*.txt
