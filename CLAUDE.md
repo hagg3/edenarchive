@@ -56,7 +56,7 @@ every markdown file in the corpus — is enforced by `admin/tests/`. Run it afte
 module:
 
 ```bash
-admin/.venv/bin/python -m pytest admin/tests -q     # must be 870/870 (grows as admin/ grows)
+admin/.venv/bin/python -m pytest admin/tests -q     # must be 887/887 (grows as admin/ grows)
 ```
 
 ## Admin App (`admin/`)
@@ -80,15 +80,16 @@ admin/core/       # pure library, no FastAPI imports, usable from CLI scripts
   hashing.py      # streaming zip + payload sha256 (never extracts to disk, even for 8+ GB worlds)
   tags.py         # near-dupe grouping, tag_map.yaml bulk retag
   dupes.py        # candidate-pair scoring (hash/name/author), dismissal persistence
+  importer.py     # de-interactivized z_add_world.py: staged upload -> similarity check -> commit
   git.py          # read-only git
 admin/app/        # FastAPI + Jinja2 + HTMX; jobs.py (asyncio queue), routers/, templates/, static/
-admin/tests/      # ~870 tests; the front-matter round-trip test gates all write features
-admin/.runtime/   # gitignored: index.db, backups/. Disposable — markdown is the truth.
+admin/tests/      # ~890 tests; the front-matter round-trip test gates all write features
+admin/.runtime/   # gitignored: index.db, backups/, uploads/. Disposable — markdown is the truth.
 ```
 
-**Status: M0–M5 shipped** — read-only dashboard, world editing, assets + map-generation job queue,
-tag health, duplicate/version detection, blog/article CRUD. M6 (upload flow) and M7 (optional CLI
-cleanup) are what's left. The roadmap, design rationale, and findings behind them are in
+**Status: M0–M6 all shipped** — read-only dashboard, world editing, assets + map-generation job
+queue, tag health, duplicate/version detection, blog/article CRUD, upload flow. Only M7 (optional
+CLI cleanup) remains. The roadmap, design rationale, and findings behind them are in
 `ADMIN_APP_PLAN.md` — each milestone has an "outcome" section with what was actually built and
 verified live against the real repo, which is more current than anything summarized here.
 
@@ -179,6 +180,15 @@ Extracts each `.eden.zip` into `.mapgen-tmp/` (gitignored, repo-root), generates
 
 ## Adding New Worlds
 
+**Preferred: the admin app's `/upload`** (`./admin/run.sh`) — staged upload with a similarity
+check against the archive (world ID already archived is a hard block; near-name/version-chain
+and hash matches are soft warnings requiring explicit confirmation) before anything is written,
+then auto-enqueues a map-generation job. Same underlying logic as `z_add_world.py`
+(`admin/core/importer.py` is a de-interactivized port of it — same naming-convention parsing,
+same front-matter shape, same never-overwrite-an-existing-`.md` behavior), minus the terminal
+prompts and plus the duplicate check.
+
+**CLI, still works, no similarity check:**
 ```bash
 python3 z_add_world.py --eden path/to/world.eden
 python3 z_add_world.py --folder path/to/folder/   # batch import
