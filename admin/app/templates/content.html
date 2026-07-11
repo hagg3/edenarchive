@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Content — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Content</h1>
+</div>
+
+<div class="cols">
+  <section class="card">
+    <h2>Posts <span class="muted">{{ posts | length }}</span>
+      <a class="tiny-link" href="/content/post/create">+ new</a>
+    </h2>
+    {% if posts %}
+      <table class="kv">
+        {% for p in posts %}
+        <tr>
+          <td class="mono">{{ p.filename_date }}</td>
+          <td><a href="/content/post/{{ p.filename }}">{{ p.title or p.filename }}</a></td>
+          <td class="muted">{{ p.author }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p class="empty">No posts yet.</p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Articles <span class="muted">{{ articles | length }}</span>
+      <a class="tiny-link" href="/content/article/create">+ new</a>
+    </h2>
+    {% if articles %}
+      <table class="kv">
+        {% for a in articles %}
+        <tr>
+          <td><a href="/content/article/{{ a.filename }}">{{ a.title or a.filename }}</a></td>
+          <td class="muted">{{ a.author }}</td>
+          <td>{% if a.doc.malformed %}<span class="pill bad">invalid front matter</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p class="empty">No articles yet.</p>
+    {% endif %}
+  </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}{{ (item.title if item else 'New ' + kind) }} — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <a class="back" href="/content">← content</a>
+  <h1>{{ item.title if item else ('New ' + kind) }}</h1>
+  {% if item and item.doc.malformed %}<span class="pill bad">invalid front matter</span>{% endif %}
+</div>
+
+{% if saved %}<p class="ok">Saved.</p>{% endif %}
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+
+{% if suggested_filename %}
+  <p class="warn">
+    Title/date no longer match the filename — Jekyll uses the filename, not the front-matter
+    date, for a post's actual publish date and URL.
+    <form class="inline" method="post" action="/content/{{ kind }}/{{ item.filename }}/rename">
+      <button class="tiny" type="submit">Rename to {{ suggested_filename }}</button>
+    </form>
+  </p>
+{% endif %}
+
+<form method="post"
+      action="{{ '/content/' + kind + '/' + item.filename if item else '/content/' + kind + '/create' }}">
+  <section class="card">
+    <h2>Front matter</h2>
+    {% if item %}<p class="muted mono">{{ kind }}s/{{ item.filename }}</p>{% endif %}
+
+    {% if item and item.doc.malformed %}
+      <p class="err">Front matter is not valid YAML — {{ item.doc.error }}.
+      Values could not be read. Editing is disabled until it is repaired by hand.</p>
+    {% endif %}
+
+    <table class="kv form-kv">
+      <tr><td>title</td><td>
+        <input name="title" value="{{ item.title if item else form.title if form else '' }}"
+               required {{ 'disabled' if item and item.doc.malformed }}>
+      </td></tr>
+      <tr><td>author</td><td>
+        <input name="author" value="{{ item.author if item else form.author if form else '' }}"
+               {{ 'disabled' if item and item.doc.malformed }}>
+      </td></tr>
+      {% if kind == 'post' or (item and item.date) or (not item) %}
+      <tr><td>date</td><td>
+        <input name="date" class="mono" placeholder="YYYY-MM-DD"
+               value="{{ item.date if item else form.date if form else '' }}"
+               {% if kind == 'post' %}required{% endif %}
+               {{ 'disabled' if item and item.doc.malformed }}>
+        {% if item and item.kind == 'post' %}
+          <span class="muted">filename date: {{ item.filename_date or '—' }}</span>
+        {% endif %}
+      </td></tr>
+      {% endif %}
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Body <button type="button" class="tiny" id="preview-toggle"
+                      hx-post="/content/preview" hx-include="[name=body]"
+                      hx-target="#md-preview" hx-swap="innerHTML">Preview</button></h2>
+    <textarea name="body" class="body-edit" rows="18"
+              {{ 'disabled' if item and item.doc.malformed }}
+              >{{ (item.body.strip('\n') if item else form.body if form else '') }}</textarea>
+    <div id="md-preview"></div>
+  </section>
+
+  <div class="save-row">
+    <button type="submit" {{ 'disabled' if item and item.doc.malformed }}>
+      {{ 'Save' if item else 'Create' }}
+    </button>
+    <span class="muted">Writes the file directly — review with <code>git diff</code>.</span>
+    {% if item %}
+      <form class="inline" method="post" action="/content/{{ kind }}/{{ item.filename }}/delete"
+            onsubmit="return confirm('Delete {{ item.filename }}? This removes the file immediately.');">
+        <button class="tiny" type="submit">Delete</button>
+      </form>
+    {% endif %}
+  </div>
+</form>
+
+{% if item %}
+<section class="card">
+  <h2>Working-tree diff</h2>
+  <div hx-get="/content/{{ kind }}/{{ item.filename }}/diff" hx-trigger="load" hx-swap="innerHTML">
+    <p class="muted">loading…</p>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

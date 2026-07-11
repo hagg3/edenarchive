@@ -1,9 +1,54 @@
 # Eden Archive Admin — Handoff / Implementation Plan
 
-> **Status: M4 ✅ DONE (2026-07-11).** Duplicate & version detection is shipped — streaming
-> payload hashing (verified against the *entire* real archive, all 763 zipped worlds, 0
-> failures, including Starling City's 8.8 GB), name/hash-based scoring, `/dupes` review UI,
-> persisted dismissals. See "M4 outcome" below.
+> **Status: M5 ✅ DONE (2026-07-11).** Blog/article CRUD is shipped — reuses M1's
+> format-preserving `frontmatter.py` machinery for `_posts`/`_articles` too (it was never
+> world-specific), with an explicit rename-warning flow rather than silent renames when a
+> post's date or an article's title changes. See "M5 outcome" below.
+
+---
+
+## M5 outcome (2026-07-11)
+
+**Shipped:** `admin/core/content.py` (`ContentItem`, `load`/`load_all`/`create`/`save`/
+`rename`/`delete` for both `_posts` and `_articles`), `GET /content` (combined list),
+`GET`/`POST /content/{kind}/create`, `GET`/`POST /content/{kind}/{filename}`, `POST
+/content/{kind}/{filename}/rename`, `POST /content/{kind}/{filename}/delete`, `GET
+/content/{kind}/{filename}/diff`, `POST /content/preview` (markdown → HTML via the `markdown`
+package already in requirements.txt).
+
+**Key design decision — reused `frontmatter.py`, didn't build a parallel format-preserving
+parser.** `CANONICAL_ORDER`/`ALWAYS_QUOTED` only affect world-specific keys (`worldname`,
+`filesize`, `tags`) that posts/articles never use, and the quoting-preservation logic (keep
+whatever the original line did) is generic. Confirmed this holds against the real corpus:
+`_posts/*.md` quote `title:` (e.g. `title: "Moof Hacks: Tips and Tricks"`), `_articles/*.md`
+don't (`title: Santa Ines`) — both round-trip correctly with the same `render()`.
+
+**Rename is a separate, explicit action — never automatic on save**, addressing the plan's
+"rename warnings" requirement literally rather than silently renaming on any title/date edit.
+Found live while testing M1's precedent doesn't quite carry over: Jekyll uses a post's
+*filename* date (not its front-matter `date:` field) for permalink/sort order — confirmed in
+the real corpus, `_posts/2026-02-09-a-b-c.md`'s front matter says `date: 2013-05-31`, a
+genuine, intentional mismatch. So editing the date field alone is a legitimate, meaningful
+action distinct from renaming the file, and the UI must not conflate them. `content_edit.html`
+shows a warning banner with an explicit "Rename to …" button whenever the title/date would
+imply a different filename; nothing renames until that button is clicked.
+
+**14 new tests** (`admin/tests/test_content.py`) — no-op save, targeted single-line diff, create
+(including the `filename_date` vs. front-matter-`date` distinction), rename collision refusal,
+malformed front matter (`_articles/creatures.md`) still loads and flags rather than crashing,
+delete. **870/870 green.**
+
+**Live-verified against the real repo:** the list page correctly showed all 3 posts + 4 articles
+(with `creatures.md` flagged `invalid front matter`, exactly as the M0 finding described).
+Created a real post, edited it, previewed markdown (headings/bold/links rendered correctly),
+triggered the rename-suggestion banner by changing the title, confirmed the explicit rename
+endpoint actually moved the file, checked the diff panel, then deleted it — `git status` was
+clean before and after, confirming no test residue was left in `_posts`/`_articles`. Also
+confirmed a real quirk during testing: the corpus's `_posts`/`_articles` files (unlike
+`_worlds/*.md`) currently don't end in a trailing newline; `content.save()`'s body
+normalization adds one on first edit (matching M1's `normalize_body` convention) — a real,
+one-time, intentional diff, not a bug, exactly like M0 finding 3's `worldname:` trailing-space
+case.
 
 ---
 
@@ -739,7 +784,7 @@ __pycache__/
 
 **M4 — Dupes & versions. ✅ DONE (2026-07-11).** `core/hashing` streaming payload hash over the archive, `core/dupes` scoring, `/dupes` review UI, persisted dismissals. See the M4 outcome section above.
 
-**M5 — Blog/article CRUD.** `core/content`, list/create/edit/delete, markdown live preview, filename/date/slug rules with rename warnings.
+**M5 — Blog/article CRUD. ✅ DONE (2026-07-11).** `core/content`, list/create/edit/delete, markdown live preview, filename/date/slug rules with rename warnings. See the M5 outcome section above.
 
 **M6 — Upload flow.** `core/importer` (de-interactivized `z_add_world.py`), staged upload → hash + similarity check → review panel → commit → auto-enqueue map. **Depends on M2 and M4**, hence last.
 

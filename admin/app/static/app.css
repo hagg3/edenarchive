@@ -65,6 +65,14 @@ button.tiny { padding: 2px 8px; font-size: 11px; margin-left: auto; }
 .inline-actions { display: flex; gap: 4px; }
 .inline-actions button { padding: 3px 8px; font-size: 11px; }
 
+.tiny-link { font-size: 12px; font-weight: 400; color: var(--accent); margin-left: 8px; }
+
+.md-preview { margin-top: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px;
+              background: var(--panel-2); }
+.md-preview:empty { display: none; }
+.md-preview img { max-width: 100%; }
+.md-preview pre { overflow-x: auto; }
+
 .htmx-indicator { opacity: 0; color: var(--muted); font-size: 13px; transition: opacity .2s; }
 .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { opacity: 1; }
 

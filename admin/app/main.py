@@ -14,7 +14,7 @@ from fastapi.staticfiles import StaticFiles
 
 from ..core import git, index, paths
 from .jobs import JobQueue
-from .routers import assets_api, dashboard, dupes_api, git_api, jobs_api, tags_api, worlds
+from .routers import assets_api, content_api, dashboard, dupes_api, git_api, jobs_api, tags_api, worlds
 from .templating import templates
 
 STATE: dict = {}
@@ -59,6 +59,7 @@ app.include_router(assets_api.router)
 app.include_router(jobs_api.router)
 app.include_router(tags_api.router)
 app.include_router(dupes_api.router)
+app.include_router(content_api.router)
 
 app.mount(
     "/static", StaticFiles(directory=paths.REPO_ROOT / "admin/app/static"), name="static"
