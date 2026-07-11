@@ -1,0 +1,29 @@
+<div id="stats" class="stats">
+  <a class="stat" href="/worlds">
+    <span class="n">{{ counts.total }}</span><span class="l">worlds</span>
+  </a>
+  <a class="stat {{ 'bad' if counts.missing_zip }}" href="/worlds?asset=missing_zip">
+    <span class="n">{{ counts.missing_zip }}</span><span class="l">missing zip</span>
+  </a>
+  <a class="stat {{ 'warn' if counts.missing_map }}" href="/worlds?asset=missing_map">
+    <span class="n">{{ counts.missing_map }}</span><span class="l">missing map</span>
+  </a>
+  <a class="stat {{ 'warn' if counts.missing_preview }}" href="/worlds?asset=missing_preview">
+    <span class="n">{{ counts.missing_preview }}</span><span class="l">missing preview</span>
+  </a>
+  <a class="stat {{ 'warn' if counts.untagged }}" href="/worlds?issue=missing_tags">
+    <span class="n">{{ counts.untagged }}</span><span class="l">untagged</span>
+  </a>
+  <div class="stat">
+    <span class="n">{{ counts.authors }}</span><span class="l">authors</span>
+  </div>
+  <div class="stat">
+    <span class="n">{{ counts.zip_bytes | human_bytes }}</span><span class="l">world files</span>
+  </div>
+  {% if scan %}
+  <div class="stat done">
+    <span class="n">✓</span>
+    <span class="l">{{ scan.updated }} reindexed</span>
+  </div>
+  {% endif %}
+</div>

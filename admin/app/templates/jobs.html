@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Jobs — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Jobs</h1>
+</div>
+
+{% if not jobs %}
+  <p class="empty">No jobs yet — generate a map from a world page or the assets grid.</p>
+{% else %}
+<table class="worlds">
+  <thead>
+    <tr><th>#</th><th>Kind</th><th>Target</th><th>Status</th><th>Queued</th><th>Ended</th></tr>
+  </thead>
+  <tbody>
+    {% for j in jobs %}
+    <tr>
+      <td class="mono"><a href="/jobs/{{ j.id }}">{{ j.id }}</a></td>
+      <td>{{ j.kind }}</td>
+      <td class="mono">{{ j.target }}</td>
+      <td>
+        <span class="pill {{ 'ok' if j.status == 'ok' else 'bad' if j.status in ('failed','cancelled') else 'warn' }}">
+          {{ j.status }}{{ ' (' + j.error_class + ')' if j.error_class }}
+        </span>
+      </td>
+      <td class="mono">{{ j.queued_at | short_time }}</td>
+      <td class="mono">{{ j.ended_at | short_time if j.ended_at else '—' }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+{% endblock %}

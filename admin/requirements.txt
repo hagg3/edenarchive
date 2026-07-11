@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+jinja2>=3.1
+python-multipart>=0.0.12
+PyYAML>=6.0
+requests>=2.32
+markdown>=3.7
+pytest>=8.0
+httpx>=0.27              # TestClient for app tests (M1+)

@@ -257,6 +257,41 @@ The script is run **before committing** changes to Git.
 
 ---
 
+## Admin UI
+
+Curating 768 worlds through interactive terminal prompts does not scale, and it gives you no way
+to see the archive as a whole. So there is a **local web app** for administration:
+
+```bash
+./admin/run.sh          # → http://127.0.0.1:8765
+```
+
+It runs against your cloned copy of the repo. It is **local-only** (bound to `127.0.0.1`) and it
+**never talks to GitHub** — it writes plain files into the working tree, and you review them with
+`git diff` and push to publish, exactly as if you had edited them by hand.
+
+What it gives you:
+
+- **Dashboard** — archive counts and defect tallies at a glance: worlds missing a zip, a map, a
+  preview, or tags. Plus a live panel of your uncommitted changes.
+- **Worlds** — full-text search across name, author, tags and body, with filters by tag, author,
+  asset state and defect, and map thumbnails inline.
+- **World detail** — front matter, assets, map/preview images, and the `git diff` for that file.
+
+Planned: world and blog editing, map generation from the browser, tag health, duplicate and
+version detection, and an upload flow that warns you when a world is already archived under a
+slightly different name.
+
+The app is currently **read-only** — it will not modify anything under `_worlds/` or `assets/`.
+See `admin/README.md` for details, and `ADMIN_APP_PLAN.md` for the roadmap.
+
+> **⚠️ Anything that writes a world file must go through `admin/core/frontmatter.py`.**
+> The world files were hand-emitted, not written by a YAML library, and the corpus depends on
+> their exact bytes (empty values end in a trailing space, `filesize` is always quoted). Running
+> `yaml.dump` over a world file silently rewrites all of that.
+
+---
+
 ## Build Output (`_site`)
 
 - `_site` is **generated**, not authored

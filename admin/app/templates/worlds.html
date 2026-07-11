@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Worlds — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Worlds</h1>
+</div>
+
+<form class="filters" hx-get="/worlds" hx-target="#world-table" hx-swap="outerHTML"
+      hx-trigger="submit, input from:#q delay:250ms, change from:select"
+      hx-push-url="true">
+  <input id="q" type="search" name="q" value="{{ q }}" placeholder="Search name, author, tags, body…"
+         autocomplete="off">
+
+  <select name="tag">
+    <option value="">all tags</option>
+    {% for t in tags %}
+      <option value="{{ t.tag }}" {{ 'selected' if t.tag == tag }}>{{ t.tag }} ({{ t.n }})</option>
+    {% endfor %}
+  </select>
+
+  <select name="author">
+    <option value="">all authors</option>
+    {% for a in authors %}
+      <option value="{{ a }}" {{ 'selected' if a == author }}>{{ a }}</option>
+    {% endfor %}
+  </select>
+
+  <select name="asset">
+    <option value="">any assets</option>
+    <option value="complete"        {{ 'selected' if asset == 'complete' }}>complete</option>
+    <option value="missing_map"     {{ 'selected' if asset == 'missing_map' }}>missing map</option>
+    <option value="missing_preview" {{ 'selected' if asset == 'missing_preview' }}>missing preview</option>
+    <option value="missing_zip"     {{ 'selected' if asset == 'missing_zip' }}>missing zip</option>
+  </select>
+
+  <select name="issue">
+    <option value="">any state</option>
+    <option value="any" {{ 'selected' if issue == 'any' }}>has defects</option>
+    {% for k in issue_kinds %}
+      <option value="{{ k }}" {{ 'selected' if k == issue }}>{{ k.replace('_',' ') }}</option>
+    {% endfor %}
+  </select>
+
+  <select name="sort">
+    <option value="name"      {{ 'selected' if sort == 'name' }}>name A–Z</option>
+    <option value="name_desc" {{ 'selected' if sort == 'name_desc' }}>name Z–A</option>
+    <option value="date"      {{ 'selected' if sort == 'date' }}>newest</option>
+    <option value="date_asc"  {{ 'selected' if sort == 'date_asc' }}>oldest</option>
+    <option value="author"    {{ 'selected' if sort == 'author' }}>author</option>
+    <option value="size"      {{ 'selected' if sort == 'size' }}>largest</option>
+  </select>
+
+  <a class="clear" href="/worlds">reset</a>
+</form>
+
+{% include "partials/world_table.html" %}
+
+{% endblock %}

@@ -15,9 +15,11 @@ Usage:
     python3 generate_missing_maps.py --force      # regenerate ALL worlds (overwrites existing maps)
 """
 import argparse
+import os
 import re
 import subprocess
 import sys
+import time
 import zipfile
 from pathlib import Path
 
@@ -27,7 +29,47 @@ ASSETS_DIR = REPO_ROOT / "assets" / "worldfiles"
 MAPGEN_DIST = REPO_ROOT / "node-mapgen" / "dist" / "generate-map.js"
 MAPGEN_SCRIPT = REPO_ROOT / "node-mapgen" / "src" / "generate-map.ts"
 TEMP_DIR = REPO_ROOT / ".mapgen-tmp"
+LOCK_FILE = TEMP_DIR / ".lock"
 WORLD_ID_RE = re.compile(r"(\d{10,})\.eden$")
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except OSError:
+        return False
+    return True
+
+
+def check_not_locked():
+    """Shares a lockfile with admin/core/mapgen.py so this script and the
+    admin app's job queue never touch .mapgen-tmp/ at the same time."""
+    if not LOCK_FILE.exists():
+        return
+    try:
+        pid_s, _, ts_s = LOCK_FILE.read_text().strip().partition(" ")
+        pid, ts = int(pid_s), float(ts_s)
+    except (ValueError, OSError):
+        return
+    if pid != os.getpid() and _pid_alive(pid) and (time.time() - ts) < 3600:
+        print(
+            f"ERROR: map generation is already running (pid {pid}) — "
+            "probably the admin app. Wait for it to finish.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+
+def acquire_lock():
+    TEMP_DIR.mkdir(exist_ok=True)
+    LOCK_FILE.write_text(f"{os.getpid()} {time.time()}")
+
+
+def release_lock():
+    try:
+        LOCK_FILE.unlink()
+    except FileNotFoundError:
+        pass
 
 
 def get_world_id(md_path: Path) -> str | None:
@@ -237,7 +279,8 @@ def main():
     if args.limit and len(worlds) > args.limit:
         print(f"Processing first {args.limit} of {len(worlds)}")
 
-    TEMP_DIR.mkdir(exist_ok=True)
+    check_not_locked()
+    acquire_lock()
     ok = fail = 0
     try:
         for world_id in to_process:
@@ -248,6 +291,7 @@ def main():
                 fail += 1
     finally:
         clear_temp_dir()
+        release_lock()
 
     print(f"\nDone: {ok} generated, {fail} failed")
 

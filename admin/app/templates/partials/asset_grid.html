@@ -1,0 +1,73 @@
+{% macro qs(page) -%}
+/assets?status={{ status }}&sort={{ sort }}&page={{ page }}
+{%- endmacro %}
+
+<div id="asset-grid">
+  <p class="count">{{ total }} world{{ '' if total == 1 else 's' }}</p>
+
+  {% if not rows %}
+    <p class="empty">Nothing matches that filter.</p>
+  {% else %}
+  <table class="worlds">
+    <thead>
+      <tr>
+        <th class="thumb"></th>
+        <th>World</th>
+        <th>Zip</th>
+        <th>Map</th>
+        <th>Preview</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td class="thumb">
+          {% if r.has_map %}
+            <img loading="lazy" src="/assets/{{ r.world_id }}/map.png" alt="">
+          {% else %}
+            <span class="nomap">—</span>
+          {% endif %}
+        </td>
+        <td>
+          <a class="wname" href="/worlds/{{ r.slug }}">{{ r.worldname or r.slug }}</a>
+          <span class="wid">{{ r.world_id or 'no id' }}</span>
+        </td>
+        <td><span class="pill {{ 'ok' if r.has_zip else 'bad' }}">{{ 'zip' if r.has_zip else 'missing' }}</span></td>
+        <td>
+          {% if r.map_status == 'too_large' %}
+            <span class="pill warn" title="payload too large for node-mapgen">too large</span>
+          {% elif r.has_map %}
+            <span class="pill ok">present</span>
+          {% else %}
+            <span class="pill warn">missing</span>
+          {% endif %}
+        </td>
+        <td><span class="pill {{ 'ok' if r.has_preview else 'warn' }}">{{ 'present' if r.has_preview else 'missing' }}</span></td>
+        <td class="rowaction">
+          {% if r.world_id and r.has_zip and not r.has_map and r.map_status != 'too_large' %}
+          <form method="post" action="/assets/{{ r.world_id }}/map">
+            <button class="tiny" type="submit">generate map</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if pages > 1 %}
+  <nav class="pager">
+    {% if page > 1 %}
+      <a hx-get="{{ qs(page - 1) }}" hx-target="#asset-grid" hx-swap="outerHTML"
+         hx-push-url="true" href="{{ qs(page - 1) }}">← prev</a>
+    {% endif %}
+    <span>page {{ page }} of {{ pages }}</span>
+    {% if page < pages %}
+      <a hx-get="{{ qs(page + 1) }}" hx-target="#asset-grid" hx-swap="outerHTML"
+         hx-push-url="true" href="{{ qs(page + 1) }}">next →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+  {% endif %}
+</div>

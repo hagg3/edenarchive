@@ -1,0 +1,6 @@
+{% if not diff.strip() %}
+  <p class="ok">No uncommitted changes to <span class="mono">{{ path }}</span>.</p>
+{% else %}
+  <pre class="diff">{% for line in diff.split('\n') %}<span class="{% if line.startswith('+++') or line.startswith('---') %}dh{% elif line.startswith('+') %}da{% elif line.startswith('-') %}dd{% elif line.startswith('@@') %}dhunk{% endif %}">{{ line }}</span>
+{% endfor %}</pre>
+{% endif %}

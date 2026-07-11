@@ -1,0 +1,36 @@
+<h2>
+  Pending changes
+  <span class="muted">{{ branch }}</span>
+  <button class="tiny" hx-post="/git/fetch" hx-target="#git-panel" hx-swap="innerHTML">fetch</button>
+</h2>
+
+{% if message %}<p class="muted">{{ message }}</p>{% endif %}
+
+{% if ahead_behind and ahead_behind[1] > 0 %}
+  <p class="err">origin/main is {{ ahead_behind[1] }} commit(s) ahead — pull before editing.</p>
+{% endif %}
+
+{% if not changes %}
+  <p class="ok">Working tree is clean.</p>
+{% else %}
+  <p class="muted">{{ changes | length }} changed file(s){% if ahead_behind %},
+     {{ ahead_behind[0] }} unpushed commit(s){% endif %}</p>
+
+  {% for group, items in grouped.items() %}
+    <details {{ 'open' if group in ('worlds', 'articles', 'posts') }}>
+      <summary>{{ group }} <span class="muted">{{ items | length }}</span></summary>
+      <ul class="changes">
+        {% for c in items[:40] %}
+          <li><span class="st {{ c.status | trim }}">{{ c.label }}</span>
+              <span class="mono">{{ c.path }}</span></li>
+        {% endfor %}
+        {% if items | length > 40 %}
+          <li class="muted">…and {{ items | length - 40 }} more</li>
+        {% endif %}
+      </ul>
+    </details>
+  {% endfor %}
+
+  <p class="muted note">Run this yourself — the admin never commits:</p>
+  <pre class="cmd">{{ commit_hint }}</pre>
+{% endif %}

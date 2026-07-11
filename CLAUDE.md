@@ -11,6 +11,7 @@ URL: `https://hagg3.github.io/edenarchive`
 | Collections | `_worlds/` (768 entries), `_articles/` |
 | Scripting | Python 3 (admin/import/batch tools) |
 | Map rendering | TypeScript + Node.js (`node-mapgen/`) |
+| Admin app | FastAPI + Jinja2 + HTMX, local-only (`admin/`) |
 
 ## Repository Structure
 
@@ -22,10 +23,67 @@ node-mapgen/        # TypeScript CLI: renders .eden files to top-down PNG maps
 node-mapgen-broken/ # Old broken version (kept for history, not used)
 z_add_world.py      # Interactive importer: one or many worlds at once
 generate_missing_maps.py  # Batch-generate map.png for worlds that lack one
-admin/edenadmin.py  # Admin CLI: validate | import | tags | download
+admin/              # Admin app (web UI) + core library + edenadmin.py CLI
 z_AutoDownloader/   # Bulk download helper (fetch_worlds.py)
-z_scripts/          # Tag analysis/merge utilities
+z_scripts/          # Tag analysis/merge utilities (see warnings below)
+ADMIN_APP_PLAN.md   # Admin app design + roadmap; read before extending admin/
 ```
+
+## ⚠️ Never `yaml.dump` a world file
+
+**This is the single biggest correctness risk in the repo.** The `_worlds/*.md` front matter was
+hand-emitted by `z_add_world.py:190-201`, not written by a YAML library, and the corpus depends
+on those exact bytes:
+
+- Empty values are written `key: ` **with a trailing space**. 598 files have `author: `; zero
+  have a bare `author:`.
+- `filesize` is **always** double-quoted (`filesize: "3.5 MB"`). Nothing else ever is.
+- Tags are block sequences: `tags:` then `  - tag` at 2-space indent.
+- Files are LF and ASCII. All 208 `archivedate:` lines are currently empty.
+
+`yaml.safe_dump` destroys all of this — it unquotes `filesize`, turns an empty `archivedate:`
+into `archivedate: null`, and re-wraps the file, producing a huge spurious diff.
+
+**Anything that modifies a world file must go through `admin/core/frontmatter.py`**, which uses
+YAML only to *read* and edits the original lines in place, leaving every untouched line
+byte-identical. Its invariant — `render(parse(f)) == f` for all 775 markdown files — is enforced
+by `admin/tests/`. Run it after touching that module:
+
+```bash
+admin/.venv/bin/python -m pytest admin/tests -q     # must be 782/782
+```
+
+`z_scripts/tag manage/merge_tags.py` violates this today and corrupts the formatting of every
+file it touches. Do not use it; do not copy its `save_file()`.
+
+## Admin App (`admin/`)
+
+Local-only web app for browsing and curating the archive. Writes plain files into the working
+tree; the archivist reviews with `git diff` and pushes. It never talks to GitHub, and never runs
+`add`/`commit`/`push`/`checkout`/`reset`.
+
+```bash
+./admin/run.sh          # → http://127.0.0.1:8765 (creates admin/.venv on first run)
+```
+
+```
+admin/core/       # pure library, no FastAPI imports, usable from CLI scripts
+  paths.py        # all repo paths; validates every write stays inside the archive
+  frontmatter.py  # ★ format-preserving parse/render (see warning above)
+  world.py        # World record: front matter + assets on disk; validate()
+  index.py        # SQLite cache + incremental scanner + FTS search
+  git.py          # read-only git
+admin/app/        # FastAPI + Jinja2 + HTMX; templates/, static/ (htmx vendored, no CDN)
+admin/tests/      # the front-matter round-trip test — gates all write features
+admin/.runtime/   # gitignored: index.db, backups/. Disposable — markdown is the truth.
+```
+
+**Status: M0 (read-only) is shipped** — dashboard, world search/filter, world detail, git panel.
+Editing, map generation, tag health, dupe detection and the upload flow are M1–M6. The roadmap,
+the design rationale, and the findings behind them are in `ADMIN_APP_PLAN.md`.
+
+The SQLite index at `admin/.runtime/index.db` is a disposable cache — delete it and it rebuilds
+on next start. Markdown is always the source of truth. Cold scan of 768 worlds: ~1.4s.
 
 ## World Page Format
 
@@ -117,6 +175,22 @@ python3 admin/edenadmin.py tags merge         # apply tag_map.yaml merges
 
 `validate` checks for: `missing_zip`, `missing_preview`, `missing_map`, `missing_tags`, `invalid_publishdate`, `missing_asset_dir`, `invalid_front_matter`.
 
+**Known bugs in the CLI** (all fixed in the admin app; the CLI gets rewired onto `admin/core/`
+in M7):
+
+- `validate` needs **PyYAML, which is not installed system-wide** — it exits with an error under
+  bare `python3`. Use the admin venv: `admin/.venv/bin/python admin/edenadmin.py validate`.
+- `validate` reports **`invalid_publishdate` for all 768 worlds**. PyYAML loads a bare
+  `2011-09-07` as a `datetime.date`, not a `str`, so its `isinstance(pd, str)` check
+  (`edenadmin.py:136`) always fails. Ignore that line; every other count is correct.
+- `tags analyze` / `tags merge` **read zero worlds** — they run with `cwd` set to
+  `z_scripts/tag manage/`, but those scripts hardcode a relative `Path("_worlds")`.
+- `_articles/creatures.md` has **genuinely malformed front matter** (a bare
+  `Eden World Builder Wiki` line with no key). Worth repairing by hand.
+
+Current real defect counts: 1 `missing_asset_dir`, 5 `missing_zip`, 227 `missing_preview`,
+14 `missing_map`, 392 `missing_tags`.
+
 ## Dev / Build
 
 ```bash
@@ -126,4 +200,14 @@ bundle exec jekyll build    # production build to _site/
 
 The site is deployed automatically by GitHub Pages on push to `main`.
 
-`_config.yml` excludes `z_Uploading/` and `node-mapgen-broken/` from the Jekyll build. `node-mapgen/node_modules/` and `.mapgen-tmp/` are gitignored.
+`_config.yml` excludes the tooling from the Jekyll build so it is never published to GitHub
+Pages: `z_Uploading/`, `node-mapgen-broken/`, `admin/`, `z_scripts/`, `node-mapgen/`,
+`z_AutoDownloader/`, `*.py`, and the Gemfiles. Adding a new tooling directory means adding it
+here too.
+
+Gitignored: `node-mapgen/node_modules/`, `.mapgen-tmp/`, `admin/.venv/`, `admin/.runtime/`,
+`__pycache__/`.
+
+Note: the local Ruby toolchain is currently broken (system Ruby 2.6 vs. a bundler version
+mismatch), so `bundle exec jekyll build` does not run on this machine. Pages builds remotely and
+is unaffected.

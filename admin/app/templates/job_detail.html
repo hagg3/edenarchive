@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Job {{ job.id }} — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <a class="back" href="/jobs">← jobs</a>
+  <h1>Job #{{ job.id }} — {{ job.kind }} {{ job.target }}</h1>
+  <span id="job-status">
+    <span class="pill {{ 'ok' if job.status == 'ok' else 'bad' if job.status in ('failed','cancelled') else 'warn' }}">
+      {{ job.status }}{{ ' (' + job.error_class + ')' if job.error_class }}
+    </span>
+  </span>
+</div>
+
+{% if job.status in ('queued', 'running') %}
+<form method="post" action="/jobs/{{ job.id }}/cancel">
+  <button class="tiny" type="submit">cancel</button>
+</form>
+{% endif %}
+
+<section class="card" hx-ext="sse" sse-connect="/jobs/{{ job.id }}/stream">
+  <h2>Log</h2>
+  <div id="joblog" class="body log" sse-swap="log" hx-swap="beforeend"></div>
+  <div sse-swap="done" hx-target="#job-status" hx-swap="innerHTML"></div>
+</section>
+
+{% endblock %}

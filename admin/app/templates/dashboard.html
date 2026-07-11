@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Dashboard</h1>
+  <button hx-post="/reindex" hx-target="#stats" hx-swap="outerHTML"
+          hx-indicator="#reindex-spin">Rescan archive</button>
+  <span id="reindex-spin" class="htmx-indicator">scanning…</span>
+</div>
+
+{% include "partials/stats.html" %}
+
+<div class="cols">
+  <section class="card">
+    <h2>Defects</h2>
+    {% if issues %}
+      <table class="kv">
+        {% for kind, n in issues.items() %}
+        <tr>
+          <td><a href="/worlds?issue={{ kind }}">{{ kind.replace('_', ' ') }}</a></td>
+          <td class="num">{{ n }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p class="ok">No defects found.</p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Top tags <span class="muted">{{ counts.tags }} distinct</span></h2>
+    <div class="tagcloud">
+      {% for t in tags %}
+        <a class="tag" href="/worlds?tag={{ t.tag }}">{{ t.tag }} <span>{{ t.n }}</span></a>
+      {% endfor %}
+    </div>
+    {% if counts.untagged %}
+      <p class="warn"><a href="/worlds?issue=missing_tags">{{ counts.untagged }} worlds have no tags</a></p>
+    {% endif %}
+  </section>
+
+  <section class="card" id="git-panel"
+           hx-get="/git" hx-trigger="load, every 10s" hx-swap="innerHTML">
+    <h2>Pending changes</h2>
+    <p class="muted">loading…</p>
+  </section>
+</div>
+
+{% endblock %}

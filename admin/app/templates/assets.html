@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Assets — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Assets</h1>
+  {% if too_large %}<span class="pill warn">{{ too_large }} too large for node-mapgen</span>{% endif %}
+</div>
+
+<div class="filters">
+  <form hx-get="/assets" hx-target="#asset-grid" hx-swap="outerHTML"
+        hx-trigger="change from:select" hx-push-url="true">
+    <select name="status">
+      <option value="">all worlds</option>
+      <option value="missing_map"     {{ 'selected' if status == 'missing_map' }}>missing map</option>
+      <option value="missing_preview" {{ 'selected' if status == 'missing_preview' }}>missing preview</option>
+      <option value="missing_zip"     {{ 'selected' if status == 'missing_zip' }}>missing zip</option>
+    </select>
+    <a class="clear" href="/assets">reset</a>
+  </form>
+
+  <button hx-post="/assets/mapgen/bulk" hx-target="#bulk-result" hx-swap="innerHTML"
+          hx-confirm="Enqueue map generation for every world currently missing a map (excluding known too-large worlds)?">
+    Generate all missing maps
+  </button>
+  <span id="bulk-result"></span>
+</div>
+
+{% include "partials/asset_grid.html" %}
+
+{% endblock %}

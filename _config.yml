@@ -7,7 +7,14 @@ title: Eden Worlds Archive
 exclude:
   - z_Uploading
   - node-mapgen-broken
-  
+  - admin
+  - z_scripts
+  - node-mapgen
+  - z_AutoDownloader
+  - "*.py"
+  - Gemfile
+  - Gemfile.lock
+
 header_pages:
 #  - articles.md
   - blog.md

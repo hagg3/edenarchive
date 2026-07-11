@@ -42,3 +42,10 @@ node-mapgen-broken/node_modules/
 
 # Scratch/dump files
 file_list*.txt
+
+# Admin app runtime (disposable SQLite index, backups, staged uploads) + venv
+admin/.runtime/
+admin/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

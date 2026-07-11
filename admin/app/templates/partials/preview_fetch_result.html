@@ -1,0 +1,5 @@
+{% if ok %}
+  <p class="ok">Preview fetched for {{ world_id }}. <a href="/worlds">reload the world page</a> to see it.</p>
+{% else %}
+  <p class="err">Could not fetch a preview for {{ world_id }} — {{ error }}</p>
+{% endif %}

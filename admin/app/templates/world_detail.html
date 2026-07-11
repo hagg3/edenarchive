@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %}{{ w.worldname or w.slug }} — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <a class="back" href="/worlds">← worlds</a>
+  <h1>{{ w.worldname or w.slug }}</h1>
+  {% if w.issues %}
+    {% for i in w.issues %}<span class="pill bad">{{ i.replace('_',' ') }}</span>{% endfor %}
+  {% else %}
+    <span class="pill ok">complete</span>
+  {% endif %}
+</div>
+
+{% if saved %}<p class="ok">Saved.</p>{% endif %}
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+
+<form method="post" action="/worlds/{{ w.slug }}">
+  <section class="card">
+    <h2>Front matter</h2>
+    <p class="muted mono">{{ rel_path }}</p>
+
+    {% if w.doc.malformed %}
+      <p class="err">Front matter is not valid YAML — {{ w.doc.error }}.
+      Values could not be read. Editing is disabled until it is repaired by hand.</p>
+    {% endif %}
+
+    <table class="kv fm form-kv">
+      <tr><td>filename</td><td class="mono">{{ w.data.get('filename') or '—' }}</td></tr>
+      <tr><td>world id</td><td class="mono">{{ w.world_id or '—' }}</td></tr>
+      <tr><td>worldname</td><td>
+        <input name="worldname" value="{{ w.worldname }}" {{ 'disabled' if w.doc.malformed }}>
+      </td></tr>
+      <tr><td>author</td><td>
+        <input name="author" value="{{ w.author }}" {{ 'disabled' if w.doc.malformed }}>
+      </td></tr>
+      <tr><td>publishdate</td><td>
+        <input name="publishdate" class="mono" placeholder="YYYY-MM-DD"
+               value="{{ w.publishdate }}" {{ 'disabled' if w.doc.malformed }}>
+      </td></tr>
+      <tr><td>archivedate</td><td>
+        <input name="archivedate" class="mono" placeholder="YYYY-MM-DD"
+               value="{{ w.archivedate }}" {{ 'disabled' if w.doc.malformed }}>
+      </td></tr>
+      <tr><td>filesize</td><td>
+        <input name="filesize" class="mono" value="{{ w.filesize }}" {{ 'disabled' if w.doc.malformed }}>
+      </td></tr>
+      <tr>
+        <td>tags</td>
+        <td>
+          <input name="tags" list="tag-options" value="{{ tags | join(', ') }}"
+                 placeholder="comma-separated" {{ 'disabled' if w.doc.malformed }}>
+          <datalist id="tag-options">
+            {% for t in all_tags %}<option value="{{ t.tag }}">{% endfor %}
+          </datalist>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Body</h2>
+    <textarea name="body" class="body-edit" rows="16"
+              {{ 'disabled' if w.doc.malformed }}>{{ w.body.strip('\n') }}</textarea>
+  </section>
+
+  <div class="save-row">
+    <button type="submit" {{ 'disabled' if w.doc.malformed }}>Save</button>
+    <span class="muted">Writes the file directly — review with <code>git diff</code> below.</span>
+  </div>
+</form>
+
+<section class="card">
+  <h2>Assets</h2>
+  <table class="kv">
+    <tr>
+      <td>world file</td>
+      <td>
+        {% if row.has_zip %}
+          <span class="pill ok">zip</span>
+          <span class="mono">{{ row.zip_bytes | human_bytes }}</span>
+        {% else %}<span class="pill bad">missing</span>{% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td>2D map</td>
+      <td>
+        {% if row.map_status == 'too_large' %}
+          <span class="pill warn" title="payload too large for node-mapgen">too large</span>
+        {% elif row.has_map %}
+          <span class="pill ok">present</span>
+        {% else %}
+          <span class="pill warn">missing</span>
+        {% endif %}
+        {% if w.world_id and row.has_zip and not row.has_map and row.map_status != 'too_large' %}
+          <form class="inline" method="post" action="/assets/{{ w.world_id }}/map">
+            <button class="tiny" type="submit">generate map</button>
+          </form>
+        {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td>3D preview</td>
+      <td>
+        {% if row.has_preview %}<span class="pill ok">present</span>
+        {% else %}<span class="pill warn">missing</span>{% endif %}
+        {% if w.world_id %}
+          <form class="inline" hx-post="/assets/{{ w.world_id }}/preview/fetch"
+                hx-target="#preview-fetch-result" hx-swap="innerHTML">
+            <button class="tiny" type="submit">retry fetch</button>
+          </form>
+          <form class="inline" method="post" action="/assets/{{ w.world_id }}/preview"
+                enctype="multipart/form-data">
+            <input class="tiny-file" type="file" name="file" accept="image/*" required>
+            <button class="tiny" type="submit">upload</button>
+          </form>
+        {% endif %}
+      </td>
+    </tr>
+  </table>
+  <div id="preview-fetch-result"></div>
+
+  <div class="shots">
+    {% if row.has_map %}
+      <figure><img src="/assets/{{ w.world_id }}/map.png" alt="map">
+        <figcaption>map.png</figcaption></figure>
+    {% endif %}
+    {% if row.has_preview %}
+      <figure><img src="/assets/{{ w.world_id }}/{{ w.world_id }}.eden.png" alt="preview">
+        <figcaption>{{ w.world_id }}.eden.png</figcaption></figure>
+    {% endif %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Working-tree diff</h2>
+  <div hx-get="/worlds/{{ w.slug }}/diff" hx-trigger="load" hx-swap="innerHTML">
+    <p class="muted">loading…</p>
+  </div>
+</section>
+
+{% endblock %}

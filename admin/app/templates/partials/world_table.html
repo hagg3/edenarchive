@@ -1,0 +1,71 @@
+{% macro qs(page) -%}
+/worlds?q={{ q|urlencode }}&tag={{ tag|urlencode }}&author={{ author|urlencode }}&asset={{ asset }}&issue={{ issue }}&sort={{ sort }}&page={{ page }}
+{%- endmacro %}
+
+<div id="world-table">
+  <p class="count">{{ total }} world{{ '' if total == 1 else 's' }}</p>
+
+  {% if not rows %}
+    <p class="empty">Nothing matches those filters.</p>
+  {% else %}
+  <table class="worlds">
+    <thead>
+      <tr>
+        <th class="thumb"></th>
+        <th>World</th>
+        <th>Author</th>
+        <th>Published</th>
+        <th>Size</th>
+        <th>Tags</th>
+        <th>Assets</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td class="thumb">
+          {% if r.has_map %}
+            <img loading="lazy" src="/assets/{{ r.world_id }}/map.png" alt="">
+          {% else %}
+            <span class="nomap">—</span>
+          {% endif %}
+        </td>
+        <td>
+          <a class="wname" href="/worlds/{{ r.slug }}">{{ r.worldname or r.slug }}</a>
+          <span class="wid">{{ r.world_id or 'no id' }}</span>
+        </td>
+        <td>{{ r.author or '—' }}</td>
+        <td class="mono">{{ r.publishdate or '—' }}</td>
+        <td class="mono num">{{ r.zip_bytes | human_bytes }}</td>
+        <td class="tags">
+          {% if r.tags_csv %}
+            {% for t in r.tags_csv.split(',') %}<a class="tag" href="/worlds?tag={{ t }}">{{ t }}</a>{% endfor %}
+          {% else %}
+            <span class="muted">untagged</span>
+          {% endif %}
+        </td>
+        <td class="assets">
+          <span class="pill {{ 'ok' if r.has_zip else 'bad' }}" title="world file">zip</span>
+          <span class="pill {{ 'ok' if r.has_map else 'warn' }}" title="2D map">map</span>
+          <span class="pill {{ 'ok' if r.has_preview else 'warn' }}" title="3D preview">img</span>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if pages > 1 %}
+  <nav class="pager">
+    {% if page > 1 %}
+      <a hx-get="{{ qs(page - 1) }}" hx-target="#world-table" hx-swap="outerHTML"
+         hx-push-url="true" href="{{ qs(page - 1) }}">← prev</a>
+    {% endif %}
+    <span>page {{ page }} of {{ pages }}</span>
+    {% if page < pages %}
+      <a hx-get="{{ qs(page + 1) }}" hx-target="#world-table" hx-swap="outerHTML"
+         hx-push-url="true" href="{{ qs(page + 1) }}">next →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+  {% endif %}
+</div>
