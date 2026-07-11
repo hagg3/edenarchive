@@ -20,11 +20,13 @@ try {
   }
 
   const buffer = fs.readFileSync(edenFilePath);
-  const world = loadWorldFromArrayBuffer(buffer.buffer as ArrayBuffer);
+  // Node.js pools small Buffers in a shared ArrayBuffer; slice to get the exact bytes.
+  const ab = buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+  const world = loadWorldFromArrayBuffer(ab as ArrayBuffer);
   const { data, width, height } = renderNormalMap(world);
 
   const png = new PNG({ width, height });
-  png.data = Buffer.from(data.buffer);
+  png.data = Buffer.from(data.buffer, data.byteOffset, data.byteLength);
   const pngBuffer = PNG.sync.write(png);
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });

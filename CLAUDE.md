@@ -136,13 +136,21 @@ npx ts-node src/generate-map.ts <eden_file> <output.png>
 ```
 
 **Key files:**
-- `src/World.ts` — parses `.eden` binary; handles gzip and raw; reads chunk pointer table; detects 64z vs 256z via min-gap between chunk offsets
+- `src/World.ts` — parses `.eden` binary; handles gzip and raw; reads chunk pointer table; detects 64z vs 256z via min-gap between chunk offsets; `MAX_CHUNK_COUNT`/`MAX_CHUNK_AREA` guard against the chunk table's lack of an end marker producing an implausible chunk count or bounding box (see below)
 - `src/renderNormalMap.ts` — iterates bands top-down (4 for 64z, 16 for 256z), finds highest block per column
 - `src/MapColors.ts` — flat RGB palette (54 paint colors + 127 block-type colors)
-- `src/generate-map.ts` — CLI entry point; uses `pngjs` to write PNG
-- `dist/` — compiled JS (run `npx tsc` to rebuild after editing TypeScript)
+- `src/generate-map.ts` — CLI entry point; uses `pngjs` to write PNG. Slices the read buffer to its exact byte range before handing it to `loadWorldFromArrayBuffer` — Node pools small `Buffer`s in a shared `ArrayBuffer`, so `buffer.buffer` alone can include unrelated neighboring data for small files.
+- `dist/` — compiled JS (run `npx tsc` to rebuild after editing TypeScript; the build excludes `*.test.ts`)
+- `src/*.test.ts` — `node --test` suite, run with `npm test`; builds synthetic `.eden` buffers rather than depending on real archive files
 
 **Known limitation:** cannot render worlds that decompress to >~2 GB (Node.js ArrayBuffer limit). ~14 worlds in the archive fall into this category (e.g. Starling City at 8.8 GB). The Rust rendering pipeline in `eden-world-editor` handles these via memory-mapped files; a standalone Rust CLI could be added later.
+
+**The chunk pointer table has no length field or end marker** (confirmed against `eden-world-editor/MROB.txt`'s reverse-engineering notes) — it's read by scanning 16-byte records from the header's directory offset to end of file. This can produce implausible results the naive `Math.min`/`Math.max`-based bounding box used to choke on:
+- A world whose chunk table scan finds >2,000,000 plausible-looking records (`MAX_CHUNK_COUNT`) is either genuinely too large for node-mapgen or its table is corrupt; fails cleanly with a `WorldParseError` instead of `Math.min(...millions_of_args)` throwing "Maximum call stack size exceeded" (found live on world `1770253120`, a genuine ~6.3 GB world compressing to a deceptively small ~18 MB gzip stream).
+- A world whose naive bounding box exceeds `MAX_CHUNK_AREA` (400M px / 256 px-per-chunk) gets cluster-trimmed: chunks are grouped by proximity, and only the largest cluster (plus any others that fit within 4x its own area) survives — a world can genuinely have several separate builds far apart, so simple distance-from-median trimming isn't reliable (found live on world `1315736126`: a 572-chunk build, a much smaller one, and a handful of outliers spread out to 5,911 chunks away, all *within* the real chunk-table region, not from over-scanning past it). If even the largest single cluster is still implausibly large, throws `WorldParseError` rather than allocating a multi-GB canvas.
+- An empty chunk table throws `WorldParseError` ("no valid chunks found") instead of silently producing a broken 0×0 PNG — found live on world `1623093424`, whose stored `.eden.zip` decompresses to a 263-byte XML error page (a failed download), not real Eden data.
+
+All three are surfaced through `admin/core/mapgen.py`'s `classify_error()` as `too_large` (the first two) or a generic `node_error` (the last one — it's corrupt source data, not a size problem).
 
 ## Batch Map Generation
 

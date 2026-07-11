@@ -254,6 +254,13 @@ _TOO_LARGE_MARKERS = (
     "Array buffer allocation failed",
     "Cannot create a string longer than",
     "JavaScript heap out of memory",
+    # World.ts's WorldParseError messages (see MAX_CHUNK_COUNT/MAX_CHUNK_AREA
+    # in World.ts) — both fire on genuinely oversized worlds that preflight's
+    # zip-central-directory check can't see coming for gzip/nested packaging
+    # (world 1770253120: ~6.3 GB, compresses to a deceptively small ~18 MB
+    # gzip stream named in a way preflight can't cheaply size).
+    "chunk pointer table scan found over",
+    "is implausibly large even after outlier trimming",
 )
 
 

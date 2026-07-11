@@ -183,6 +183,13 @@ def test_preflight_unknown_for_non_zip(tmp_path):
         "FATAL ERROR: Array buffer allocation failed",
         "RangeError: Cannot create a string longer than 0x3fffffe7 characters",
         "<--- Last few GCs --->\nJavaScript heap out of memory",
+        # World.ts's WorldParseError messages (see MAX_CHUNK_COUNT/
+        # MAX_CHUNK_AREA) — genuinely oversized worlds that preflight's
+        # zip-central-directory check can't see for gzip/nested packaging.
+        "⚠ chunk pointer table scan found over 2,000,000 entries — this "
+        "world is either too large for node-mapgen or its chunk table is corrupt",
+        "⚠ world area 5912×5912 chunks is implausibly large even after "
+        "outlier trimming — refusing to allocate a canvas for it",
     ],
 )
 def test_classify_too_large(stderr):

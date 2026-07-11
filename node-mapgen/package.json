@@ -4,7 +4,8 @@
   "description": "Top-down 2D map renderer for Eden world files",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "node -r ts-node/register --test src/*.test.ts"
   },
   "keywords": [],
   "author": "",
