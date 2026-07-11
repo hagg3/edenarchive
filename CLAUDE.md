@@ -42,19 +42,22 @@ on those exact bytes:
 - Files are LF and ASCII. All 208 `archivedate:` lines are currently empty.
 
 `yaml.safe_dump` destroys all of this — it unquotes `filesize`, turns an empty `archivedate:`
-into `archivedate: null`, and re-wraps the file, producing a huge spurious diff.
+into `archivedate: null`, and re-wraps the file, producing a huge spurious diff. `z_scripts/tag
+manage/merge_tags.py` does exactly this; it already corrupted 41 files this way before the admin
+app existed (repaired 2026-07-11 — see `frontmatter.repair_corruption()`/`save_repair()`, a
+one-off fix for literal `key: null` scalars and de-indented tag blocks). Do not use
+`merge_tags.py` or copy its `save_file()`.
 
-**Anything that modifies a world file must go through `admin/core/frontmatter.py`**, which uses
-YAML only to *read* and edits the original lines in place, leaving every untouched line
-byte-identical. Its invariant — `render(parse(f)) == f` for all 775 markdown files — is enforced
-by `admin/tests/`. Run it after touching that module:
+**Anything that modifies a world (or post/article) file must go through
+`admin/core/frontmatter.py`**, which uses YAML only to *read* and edits the original lines in
+place, leaving every untouched line byte-identical (`core/content.py` reuses the same module for
+`_posts`/`_articles` — it isn't world-specific). Its invariant — `render(parse(f)) == f` for
+every markdown file in the corpus — is enforced by `admin/tests/`. Run it after touching that
+module:
 
 ```bash
-admin/.venv/bin/python -m pytest admin/tests -q     # must be 782/782
+admin/.venv/bin/python -m pytest admin/tests -q     # must be 870/870 (grows as admin/ grows)
 ```
-
-`z_scripts/tag manage/merge_tags.py` violates this today and corrupts the formatting of every
-file it touches. Do not use it; do not copy its `save_file()`.
 
 ## Admin App (`admin/`)
 
@@ -69,18 +72,25 @@ tree; the archivist reviews with `git diff` and pushes. It never talks to GitHub
 ```
 admin/core/       # pure library, no FastAPI imports, usable from CLI scripts
   paths.py        # all repo paths; validates every write stays inside the archive
-  frontmatter.py  # ★ format-preserving parse/render (see warning above)
-  world.py        # World record: front matter + assets on disk; validate()
-  index.py        # SQLite cache + incremental scanner + FTS search
+  frontmatter.py  # ★ format-preserving parse/render (see warning above) + repair_corruption()
+  world.py        # World record: front matter + assets on disk; validate(), normalize_name/strip_version
+  content.py      # _posts/_articles CRUD, reusing frontmatter.py directly
+  index.py        # SQLite cache + incremental scanner + FTS search + dupe_pairs/jobs tables
+  mapgen.py       # zip→.eden extraction ladder (4 packaging variants), pre-flight size check, lock
+  hashing.py      # streaming zip + payload sha256 (never extracts to disk, even for 8+ GB worlds)
+  tags.py         # near-dupe grouping, tag_map.yaml bulk retag
+  dupes.py        # candidate-pair scoring (hash/name/author), dismissal persistence
   git.py          # read-only git
-admin/app/        # FastAPI + Jinja2 + HTMX; templates/, static/ (htmx vendored, no CDN)
-admin/tests/      # the front-matter round-trip test — gates all write features
+admin/app/        # FastAPI + Jinja2 + HTMX; jobs.py (asyncio queue), routers/, templates/, static/
+admin/tests/      # ~870 tests; the front-matter round-trip test gates all write features
 admin/.runtime/   # gitignored: index.db, backups/. Disposable — markdown is the truth.
 ```
 
-**Status: M0 (read-only) is shipped** — dashboard, world search/filter, world detail, git panel.
-Editing, map generation, tag health, dupe detection and the upload flow are M1–M6. The roadmap,
-the design rationale, and the findings behind them are in `ADMIN_APP_PLAN.md`.
+**Status: M0–M5 shipped** — read-only dashboard, world editing, assets + map-generation job queue,
+tag health, duplicate/version detection, blog/article CRUD. M6 (upload flow) and M7 (optional CLI
+cleanup) are what's left. The roadmap, design rationale, and findings behind them are in
+`ADMIN_APP_PLAN.md` — each milestone has an "outcome" section with what was actually built and
+verified live against the real repo, which is more current than anything summarized here.
 
 The SQLite index at `admin/.runtime/index.db` is a disposable cache — delete it and it rebuilds
 on next start. Markdown is always the source of truth. Cold scan of 768 worlds: ~1.4s.
@@ -119,9 +129,18 @@ assets/worldfiles/{world_id}/
 - Standard: outer zip → raw `.eden`
 - Common: outer zip → gzip-compressed `.eden` named `*.eden.zip` (gzip magic `1f 8b`, not a real zip)
 - Rare: outer zip contains the entire `.eden.zip` bundle from the Eden server download
-- Rare: **no outer zip at all** — a bare gzip stream saved directly as `{id}.eden.zip` (`zipfile.is_zipfile()` is False for it; the game server always delivers worlds gzip-compressed over HTTP, and this is what you get if that response gets saved straight to disk under the archive's `.eden.zip` naming convention without the usual outer real-zip wrap). Confirmed live on world `1584568651`. This is what usually gets reported as "doubly zipped" — the `.zip` in the name is misleading, since there's no zip layer there at all, just gzip.
+- Rare: **no outer zip at all** — a bare gzip stream saved directly as `{id}.eden.zip`
+  (`zipfile.is_zipfile()` is `False` for it; the game server always delivers worlds
+  gzip-compressed over HTTP, and this is what you get if that response is saved straight to disk
+  under the `.eden.zip` naming convention, skipping the usual outer wrap). Confirmed on world
+  `1584568651`. This is what usually gets reported as "doubly zipped" — the `.zip` in the name is
+  misleading; there's no zip layer at all, just gzip. There is no genuine double-compression
+  (gzip-of-gzip or zip-of-zip) anywhere in the current archive — verified by walking every stored
+  zip's payload layers by magic bytes.
 
-`generate_missing_maps.py` and `node-mapgen` handle all four. `World.ts` auto-detects gzip vs raw regardless of which packaging got it there.
+`generate_missing_maps.py`, `admin/core/mapgen.py`, and `node-mapgen` handle all four
+(`mapgen._bare_gzip_fallback`/`_eden_name_for`). `World.ts` auto-detects gzip vs raw regardless of
+which packaging got it there.
 
 ## Map Generation (`node-mapgen/`)
 
@@ -136,21 +155,16 @@ npx ts-node src/generate-map.ts <eden_file> <output.png>
 ```
 
 **Key files:**
-- `src/World.ts` — parses `.eden` binary; handles gzip and raw; reads chunk pointer table; detects 64z vs 256z via min-gap between chunk offsets; `MAX_CHUNK_COUNT`/`MAX_CHUNK_AREA` guard against the chunk table's lack of an end marker producing an implausible chunk count or bounding box (see below)
+- `src/World.ts` — parses `.eden` binary; handles gzip and raw; reads chunk pointer table; detects 64z vs 256z via min-gap between chunk offsets
 - `src/renderNormalMap.ts` — iterates bands top-down (4 for 64z, 16 for 256z), finds highest block per column
 - `src/MapColors.ts` — flat RGB palette (54 paint colors + 127 block-type colors)
-- `src/generate-map.ts` — CLI entry point; uses `pngjs` to write PNG. Slices the read buffer to its exact byte range before handing it to `loadWorldFromArrayBuffer` — Node pools small `Buffer`s in a shared `ArrayBuffer`, so `buffer.buffer` alone can include unrelated neighboring data for small files.
-- `dist/` — compiled JS (run `npx tsc` to rebuild after editing TypeScript; the build excludes `*.test.ts`)
-- `src/*.test.ts` — `node --test` suite, run with `npm test`; builds synthetic `.eden` buffers rather than depending on real archive files
+- `src/generate-map.ts` — CLI entry point; uses `pngjs` to write PNG; slices the read buffer to its exact byte range (Node pools small `Buffer`s in a shared `ArrayBuffer`) before parsing
+- `dist/` — compiled JS (`npx tsc` to rebuild; excludes `*.test.ts`)
+- `src/*.test.ts` — `node --test` suite (`npm test`), synthetic `.eden` buffers, no real-file fixtures
 
-**Known limitation:** cannot render worlds that decompress to >~2 GB (Node.js ArrayBuffer limit). ~14 worlds in the archive fall into this category (e.g. Starling City at 8.8 GB). The Rust rendering pipeline in `eden-world-editor` handles these via memory-mapped files; a standalone Rust CLI could be added later.
+**Known limitation:** cannot render worlds that decompress to >~2 GB (Node.js ArrayBuffer limit). ~14 worlds fall into this category (e.g. Starling City, 8.8 GB) — pre-flight in `admin/core/mapgen.py` catches most of these before spawning node. The Rust pipeline in `eden-world-editor` handles these via memory-mapped files; a standalone Rust CLI could be added later.
 
-**The chunk pointer table has no length field or end marker** (confirmed against `eden-world-editor/MROB.txt`'s reverse-engineering notes) — it's read by scanning 16-byte records from the header's directory offset to end of file. This can produce implausible results the naive `Math.min`/`Math.max`-based bounding box used to choke on:
-- A world whose chunk table scan finds >2,000,000 plausible-looking records (`MAX_CHUNK_COUNT`) is either genuinely too large for node-mapgen or its table is corrupt; fails cleanly with a `WorldParseError` instead of `Math.min(...millions_of_args)` throwing "Maximum call stack size exceeded" (found live on world `1770253120`, a genuine ~6.3 GB world compressing to a deceptively small ~18 MB gzip stream).
-- A world whose naive bounding box exceeds `MAX_CHUNK_AREA` (400M px / 256 px-per-chunk) gets cluster-trimmed: chunks are grouped by proximity, and only the largest cluster (plus any others that fit within 4x its own area) survives — a world can genuinely have several separate builds far apart, so simple distance-from-median trimming isn't reliable (found live on world `1315736126`: a 572-chunk build, a much smaller one, and a handful of outliers spread out to 5,911 chunks away, all *within* the real chunk-table region, not from over-scanning past it). If even the largest single cluster is still implausibly large, throws `WorldParseError` rather than allocating a multi-GB canvas.
-- An empty chunk table throws `WorldParseError` ("no valid chunks found") instead of silently producing a broken 0×0 PNG — found live on world `1623093424`, whose stored `.eden.zip` decompresses to a 263-byte XML error page (a failed download), not real Eden data.
-
-All three are surfaced through `admin/core/mapgen.py`'s `classify_error()` as `too_large` (the first two) or a generic `node_error` (the last one — it's corrupt source data, not a size problem).
+**The chunk pointer table has no length field or end marker** (confirmed against `eden-world-editor/MROB.txt`) — read by scanning 16-byte records to EOF, which can produce an implausible chunk count or bounding box for a corrupt or genuinely oversized world. `World.ts`'s `MAX_CHUNK_COUNT`/`MAX_CHUNK_AREA` guard against this (clean `WorldParseError`, cluster-based trimming when a world has several separate builds, never a multi-GB canvas allocation or a stack overflow) — see `ADMIN_APP_PLAN.md`'s "doubly zipped" entry for the full investigation and the three real worlds that found each failure mode. Surfaced through `admin/core/mapgen.py`'s `classify_error()`.
 
 ## Batch Map Generation
 
@@ -184,8 +198,8 @@ python3 admin/edenadmin.py tags merge         # apply tag_map.yaml merges
 
 `validate` checks for: `missing_zip`, `missing_preview`, `missing_map`, `missing_tags`, `invalid_publishdate`, `missing_asset_dir`, `invalid_front_matter`.
 
-**Known bugs in the CLI** (all fixed in the admin app; the CLI gets rewired onto `admin/core/`
-in M7):
+**Known bugs in the CLI** (all fixed in the admin app — use `/tags` there instead of `tags
+analyze`/`tags merge`; the CLI itself gets rewired onto `admin/core/` in the optional M7):
 
 - `validate` needs **PyYAML, which is not installed system-wide** — it exits with an error under
   bare `python3`. Use the admin venv: `admin/.venv/bin/python admin/edenadmin.py validate`.
@@ -193,12 +207,14 @@ in M7):
   `2011-09-07` as a `datetime.date`, not a `str`, so its `isinstance(pd, str)` check
   (`edenadmin.py:136`) always fails. Ignore that line; every other count is correct.
 - `tags analyze` / `tags merge` **read zero worlds** — they run with `cwd` set to
-  `z_scripts/tag manage/`, but those scripts hardcode a relative `Path("_worlds")`.
+  `z_scripts/tag manage/`, but those scripts hardcode a relative `Path("_worlds")`. The admin
+  app's `/tags` page does the same job correctly (`admin/core/tags.py`).
 - `_articles/creatures.md` has **genuinely malformed front matter** (a bare
-  `Eden World Builder Wiki` line with no key). Worth repairing by hand.
+  `Eden World Builder Wiki` line with no key). The admin app tolerates and flags it; still worth
+  repairing by hand.
 
-Current real defect counts: 1 `missing_asset_dir`, 5 `missing_zip`, 227 `missing_preview`,
-14 `missing_map`, 392 `missing_tags`.
+Current real defect counts (as of 2026-07-11): 1 `missing_asset_dir`, 5 `missing_zip`, 227
+`missing_preview`, 10 `missing_map`, 392 `missing_tags`.
 
 ## Dev / Build
 
