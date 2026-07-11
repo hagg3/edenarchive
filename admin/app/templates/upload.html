@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Upload — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Upload a world</h1>
+</div>
+
+<section class="card">
+  <p class="muted">
+    Accepts a <code>.eden</code> file, a <code>.eden.zip</code>, or a folder-style zip bundle —
+    same packagings <code>generate_missing_maps.py</code> already understands. Naming it
+    <code>&lt;world name&gt; &lt;10+ digit id&gt; &lt;tags&gt;.eden.zip</code> pre-fills the
+    review form below; otherwise you'll fill it in by hand.
+  </p>
+  <form method="post" action="/upload/stage" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".eden,.zip" required>
+    <button type="submit">Stage upload</button>
+  </form>
+</section>
+
+{% endblock %}

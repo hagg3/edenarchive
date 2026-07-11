@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Review upload — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Review upload</h1>
+</div>
+
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+
+{% set blocking = warnings | selectattr('blocking') | list %}
+{% set soft = warnings | rejectattr('blocking') | list %}
+
+<section class="card">
+  <p class="muted mono">{{ staged.original_filename }}</p>
+  <table class="kv">
+    <tr><td>world id</td><td class="mono">{{ staged.world_id or '— could not be determined' }}</td></tr>
+    <tr><td>publish date</td><td class="mono">{{ staged.publishdate or '—' }}</td></tr>
+    <tr><td>file size</td><td class="mono">{{ staged.filesize or '—' }}</td></tr>
+    <tr><td>zip sha256</td><td class="mono">{{ staged.zip_sha256[:16] }}…</td></tr>
+    <tr><td>payload sha256</td>
+      <td class="mono">{{ (staged.payload_sha256[:16] + '…') if staged.payload_sha256 else '—' }}
+        {% if staged.payload_error %}<span class="err">{{ staged.payload_error }}</span>{% endif %}
+      </td></tr>
+    {% if staged.preview_paths %}
+    <tr><td>bundled images</td><td>{{ staged.preview_paths | length }} found — largest will be used as map.png</td></tr>
+    {% endif %}
+  </table>
+</section>
+
+{% if blocking %}
+<section class="card">
+  <h2>Blocked</h2>
+  {% for w in blocking %}
+    <p class="err">{{ w.detail }} —
+      <a href="/worlds/{{ w.slug }}">view {{ w.worldname }}</a>.
+      Replacing an existing world's assets isn't supported here yet; edit that world directly,
+      or use <code>edenadmin.py</code> if you really need to overwrite it.
+    </p>
+  {% endfor %}
+  <form method="post" action="/upload/discard">
+    <input type="hidden" name="token" value="{{ staged.token }}">
+    <button type="submit">Discard upload</button>
+  </form>
+</section>
+{% else %}
+
+{% if soft %}
+<section class="card">
+  <h2>Possible matches</h2>
+  {% for w in soft %}
+    <p class="warn">
+      <span class="pill warn">{{ w.kind.replace('_',' ') }}</span>
+      {{ w.detail }} — <a href="/worlds/{{ w.slug }}">{{ w.worldname }}</a>
+    </p>
+  {% endfor %}
+</section>
+{% endif %}
+
+<form method="post" action="/upload/commit">
+  <input type="hidden" name="token" value="{{ staged.token }}">
+  <input type="hidden" name="original_filename" value="{{ staged.original_filename }}">
+
+  <section class="card">
+    <h2>World details</h2>
+    <table class="kv form-kv">
+      <tr><td>worldname</td><td>
+        <input name="worldname" required
+               value="{{ form.worldname if form else staged.worldname or '' }}">
+      </td></tr>
+      <tr><td>author</td><td>
+        <input name="author" value="{{ form.author if form else '' }}">
+      </td></tr>
+      <tr><td>archivedate</td><td>
+        <input name="archivedate" class="mono" placeholder="YYYY-MM-DD"
+               value="{{ form.archivedate if form else '' }}">
+      </td></tr>
+      <tr><td>tags</td><td>
+        <input name="tags" placeholder="comma-separated"
+               value="{{ form.tags if form else staged.tags | join(', ') }}">
+      </td></tr>
+    </table>
+  </section>
+
+  {% if soft %}
+  <p class="warn">
+    <label><input type="checkbox" name="confirm" value="true" required>
+      I've reviewed the possible matches above and want to import anyway.</label>
+  </p>
+  {% endif %}
+
+  <div class="save-row">
+    <button type="submit" {{ 'disabled' if not staged.world_id }}>Import</button>
+    <span class="muted">Writes the new world into the archive — review with <code>git status</code> after.</span>
+  </div>
+</form>
+
+<form method="post" action="/upload/discard">
+  <input type="hidden" name="token" value="{{ staged.token }}">
+  <button class="tiny" type="submit">Discard instead</button>
+</form>
+
+{% endif %}
+
+{% endblock %}

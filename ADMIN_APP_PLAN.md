@@ -1,9 +1,60 @@
 # Eden Archive Admin — Handoff / Implementation Plan
 
-> **Status: M5 ✅ DONE (2026-07-11).** Blog/article CRUD is shipped — reuses M1's
-> format-preserving `frontmatter.py` machinery for `_posts`/`_articles` too (it was never
-> world-specific), with an explicit rename-warning flow rather than silent renames when a
-> post's date or an article's title changes. See "M5 outcome" below.
+> **Status: M0–M6 all shipped (2026-07-11).** Every planned milestone through the upload flow
+> is done and live-verified against the real repo. Only M7 (optional CLI cleanup) remains. See
+> "M6 outcome" below for what shipped last.
+
+---
+
+## M6 outcome (2026-07-11)
+
+**Shipped:** `admin/core/importer.py` — a de-interactivized port of
+`z_add_world.py:import_one_file()` (every `input()` prompt removed; the archivist fills in the
+same fields through a review form instead, pre-filled by `parse_naming_convention()` from the
+same `<world name> <10+ digit id> <tags>.eden(.zip)` convention the original script already
+understood). Two-phase, matching the plan exactly:
+
+- `stage()` — read-only. Extracts the `.eden` payload into `admin/.runtime/uploads/`, computes
+  both hash tiers via M4's `core/hashing.py`. Writes nothing into the archive.
+- `check_against_archive()` — the plan's "Upload-time check" table verbatim: world ID already
+  archived is a **hard block** (returns immediately, nothing else computed); payload-hash match,
+  zip-hash match, and near-name/version-chain match (reusing `world.normalize_name`/
+  `strip_version` from M0) are **soft warnings** requiring an explicit "import anyway" checkbox.
+- `commit()` — writes the asset dir, a freshly-recompressed `{id}.eden.zip` (matches
+  `z_add_world.py`'s behavior exactly — new imports are always the "standard" raw-in-zip
+  packaging, not the gzip-packaged form most existing downloads use, since that's what the
+  original script already did), an optional bundled preview image as `map.png`, a best-effort
+  live preview download, the 0-byte worldname marker file (kept for corpus parity per Open
+  item 4), and `_worlds/{slug}.md` in the exact hand-written shape `z_add_world.py` emits —
+  intentionally *not* routed through `frontmatter.render()`, since this is a new file, not an
+  edit. **Never overwrites an existing `.md` for the same slug**, matching the original script.
+
+New routes: `GET /upload`, `POST /upload/stage`, `POST /upload/commit`, `POST /upload/discard`.
+On a successful commit, reindexes and auto-enqueues a `mapgen` job for the new world through
+M2's job queue (only if it doesn't already have a map — relevant when a bundled preview image
+was already used).
+
+**Deliberate scope reduction:** the "hard block" path (world ID already archived) doesn't offer
+the plan's "replace assets instead" alternative — overwriting an existing world's files is a
+materially riskier operation than importing a new one and deserves its own careful design rather
+than being bolted onto M6 at the end of a long session. It's a clear block with a link to the
+existing world instead.
+
+**17 new tests** (`admin/tests/test_importer.py`) — naming-convention parsing, staging (zip-wrapped,
+raw, missing ID), all four warning kinds, and commit (front-matter byte shape, never overwriting
+an existing `.md`, bundled-preview-as-map.png, required-field validation). **887/887 green.**
+
+**Live-verified against the real repo, the full round trip:** staged and committed a real upload
+(`Admin Upload Smoke Test 9999999999 test smoketest.eden.zip`) — naming convention parsed
+correctly (worldname, world ID, tags), front matter and asset zip matched `z_add_world.py`'s
+exact output shape, and a `mapgen` job was auto-enqueued and failed cleanly (`node_error`, since
+the payload was synthetic, not a real Eden world — confirming the M2 job queue and M2-era error
+classification both still work correctly end to end). Re-uploading the *same* world ID correctly
+hard-blocked with a link to the existing entry. A second upload with a similar name correctly
+produced a `similar_name` soft warning, was correctly refused without the confirm checkbox, and
+succeeded once confirmed. Discard correctly removed staged files from `admin/.runtime/uploads/`.
+All test worlds and assets were removed before committing — `git status` was clean before and
+after.
 
 ---
 
@@ -786,7 +837,7 @@ __pycache__/
 
 **M5 — Blog/article CRUD. ✅ DONE (2026-07-11).** `core/content`, list/create/edit/delete, markdown live preview, filename/date/slug rules with rename warnings. See the M5 outcome section above.
 
-**M6 — Upload flow.** `core/importer` (de-interactivized `z_add_world.py`), staged upload → hash + similarity check → review panel → commit → auto-enqueue map. **Depends on M2 and M4**, hence last.
+**M6 — Upload flow. ✅ DONE (2026-07-11).** `core/importer` (de-interactivized `z_add_world.py`), staged upload → hash + similarity check → review panel → commit → auto-enqueue map. See the M6 outcome section above.
 
 **M7 — Cleanup (optional).** Rewrite `generate_missing_maps.py`, `z_add_world.py`, `z_scripts/tag manage/*` as thin shims over `core/`. Delete `script.py` and `z_scripts/z_add_world.py`. Update `CLAUDE.md`.
 
