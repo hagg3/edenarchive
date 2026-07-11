@@ -720,33 +720,25 @@ The formatting test gates everything else. Status as of M0:
 1. ~~**Python 3.14 + pydantic wheels**~~ — **RESOLVED in M0.** FastAPI 0.139 + pydantic 2.13.4
    install from wheels on 3.14.3. No fallback needed.
 
-2. **CORRECTION (M3, 2026-07-11): the M0 finding below was wrong — `merge_tags.py` *has* mangled
-   files.** The original claim ("RESOLVED: it hasn't") checked `filesize`/`archivedate`, which
-   happen to be absent from the affected files, and missed the two fields that actually show the
-   damage. Found live while smoke-testing M3's bulk retag against the real corpus (then reverted
-   before committing, so the corpus itself is untouched by this correction — this entry just fixes
-   the record).
-   - **24 files have a literal `author: null`** (`grep -l '^author: null$' _worlds/*.md`), not the
-     corpus convention's `author: ` with a trailing space. Confirmed via `git log -p` on one of
-     them (`barnim-v28.md`, commit `571d584 "cleaned tags using script"`) that this predates the
-     admin app entirely — it's `yaml.safe_dump`'s `None` rendering as `null`, from a run of
-     `merge_tags.py` before this project existed.
-   - **The same 24 files also lost the tags block's 2-space indent** — `- tag` at column 0 instead
-     of `  - tag` — another `yaml.safe_dump` artifact (its default list indentation).
-   - **Not currently fixable through the app's own no-op-safe editing.** `frontmatter.render`'s
-     `_unchanged()` treats `None` and `""` as equal (by design, so a fresh short-form file doesn't
-     get a spurious `archivedate: ` inserted — see M0 finding 3). That means submitting the world
-     edit form with author left blank against one of these 24 files is silently a no-op: old
-     value `None` and new value `""` compare equal, so the original `author: null` line is kept
-     verbatim rather than corrected to `author: `. **Fixing these needs either a one-off scripted
-     repair (bypass `_unchanged` for this specific case) or a small `frontmatter.render` change
-     that treats a literal YAML `null` as always-dirty against an empty target.** Not done in this
-     pass — flagged for the user to decide, since it's a real edit to 24 tracked content files, not
-     an internal `admin/` change.
-   - Silver lining: the tags-block half of the corruption self-heals as a side effect of any tag
-     edit — `_emit_tags` always emits the canonical 2-space form regardless of the original
-     indent, so a world's tags block is fixed the next time *any* tag change touches it (including
-     M3's bulk retag). Only `author: null` needs a deliberate fix.
+2. ~~**CORRECTION (M3, 2026-07-11): the M0 finding below was wrong.**~~ **FIXED (2026-07-11,
+   immediately after M3).** `merge_tags.py` *had* mangled files — the original M0 claim
+   ("RESOLVED: it hasn't") checked `filesize`/`archivedate`, which happen to be absent from the
+   affected files, and missed the two fields that actually showed the damage:
+   - **24 files had a literal `author: null`** instead of the corpus convention's `author: ` with
+     a trailing space. Confirmed via `git log -p` on one of them (`barnim-v28.md`, commit `571d584
+     "cleaned tags using script"`) that this predates the admin app entirely — `yaml.safe_dump`
+     rendering `None` as `null`, from a run of `merge_tags.py` before this project existed.
+   - **41 files** (the 24 above plus 17 more whose `author` happened to already be set, so they
+     had no `null` symptom) **had the tags block's 2-space indent stripped** — `- tag` at column 0
+     instead of `  - tag`, `yaml.safe_dump`'s default list indentation.
+   - **Fixed via `frontmatter.repair_corruption()`/`save_repair()`** (new, `admin/core/
+     frontmatter.py`) — a narrow one-off pass, deliberately *not* going through the normal
+     `render()`/`_unchanged()` update path, since `_unchanged()` treats `None` and `""` as equal by
+     design (see M0 finding 3) and would silently no-op a `null`→`""` edit forever. 6 new tests
+     (`admin/tests/test_frontmatter_repair.py`). Applied to the real corpus: **41 files changed**,
+     diff touches nothing but the `author:` line and tag-block indentation on those files, and the
+     front-matter round-trip gate stayed **827/827**. Verified zero `: null`/`: ~` scalars and zero
+     unindented tag lines remain anywhere in `_worlds/`, `_articles/`, `_posts/` after the fix.
    - The original (now-corrected) M0 finding is preserved below for the historical record of what
      was actually checked and why it gave a false all-clear.
 
