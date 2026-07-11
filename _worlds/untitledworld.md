@@ -7,11 +7,11 @@ archivedate:
 filesize: "1.6 MB"
 author: 
 tags:
-- small
-- flat
-- modern
-- detail
-- city
+  - small
+  - flat
+  - modern
+  - detail
+  - city
 ---
 ## UntitledWorld
 

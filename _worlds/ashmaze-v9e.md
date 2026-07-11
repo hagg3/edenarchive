@@ -5,7 +5,7 @@ worldname: ASHMAZE V9E
 publishdate: 2013-09-09
 author: 
 tags:
-- wiki
+  - wiki
 ---
 ## ASHMAZE V9E
 

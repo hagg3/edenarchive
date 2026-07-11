@@ -3,17 +3,17 @@ layout: page
 filename: 1767485213.eden
 worldname: Island Beach Hotel
 publishdate: 2026-01-04
-author: null
+author: 
 tags:
-- beach
-- resort
-- interior
-- detailed
-- tropical
-- newterrain
-- coastal
-- hotel
-- pool
+  - beach
+  - resort
+  - interior
+  - detailed
+  - tropical
+  - newterrain
+  - coastal
+  - hotel
+  - pool
 ---
 ## Island Beach Hotel
 

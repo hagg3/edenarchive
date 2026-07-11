@@ -3,21 +3,21 @@ layout: page
 filename: 1618052390.eden
 worldname: SN City
 publishdate: 2021-04-10
-author: null
+author: 
 tags:
-- unqiue
-- flat
-- europe
-- easterneurope
-- germany
-- saxony
-- lviv
-- ukraine
-- hospital
-- brutalism
-- architecture
-- metro
-- river
+  - unqiue
+  - flat
+  - europe
+  - easterneurope
+  - germany
+  - saxony
+  - lviv
+  - ukraine
+  - hospital
+  - brutalism
+  - architecture
+  - metro
+  - river
 ---
 ## SN City
 

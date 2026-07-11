@@ -5,13 +5,13 @@ worldname: Desert World Template
 publishdate: 2026-01-14
 author: Jeremy, Sam H
 tags:
-- customterrain
-- manipulator
-- template
-- sand
-- desert
-- SamH
-- jeremy
+  - customterrain
+  - manipulator
+  - template
+  - sand
+  - desert
+  - SamH
+  - jeremy
 ---
 ## Desert World Template
 

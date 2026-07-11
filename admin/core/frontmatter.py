@@ -12,6 +12,7 @@ lines in place and leaves every untouched line byte-identical.
 from __future__ import annotations
 
 import os
+import re
 import shutil
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -245,15 +246,9 @@ def render(
     return "\n".join([DELIM, *fm, DELIM]) + (doc.body if body is None else body)
 
 
-def save(
-    path: Path,
-    doc: Document,
-    updates: dict[str, Any] | None = None,
-    body: str | None = None,
-) -> bool:
+def _write(path: Path, text: str) -> bool:
     """Backup, then atomically write. Returns False if the bytes are unchanged."""
     path = paths.assert_writable(Path(path))
-    text = render(doc, updates, body)
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
 
@@ -267,3 +262,67 @@ def save(
     tmp.write_text(text, encoding="utf-8", newline="\n")
     os.replace(tmp, path)
     return True
+
+
+def save(
+    path: Path,
+    doc: Document,
+    updates: dict[str, Any] | None = None,
+    body: str | None = None,
+) -> bool:
+    return _write(path, render(doc, updates, body))
+
+
+# --- one-off repair for pre-existing yaml.safe_dump damage -------------------
+#
+# z_scripts/tag manage/merge_tags.py ran at least once (commit 571d584,
+# predating this app) and left 24 files with two symptoms of yaml.safe_dump
+# having touched them: a scalar rendered as a literal YAML `null` instead of
+# the corpus's `key: ` (empty, trailing space), and the `tags:` block's items
+# indented 0 spaces (`- tag`) instead of the corpus's 2 (`  - tag`). This is
+# narrower and more mechanical than render()'s normal update path — it does
+# not go through _unchanged(), which by design treats `None` and `""` as
+# equal (see M0 finding 3) and would otherwise leave `key: null` untouched
+# forever, since a caller submitting an empty value for that key looks like a
+# no-op edit.
+
+_NULL_SCALAR_RE = re.compile(r"^([A-Za-z][\w-]*):\s*(null|Null|NULL|~)\s*$")
+_UNINDENTED_TAG_RE = re.compile(r"^-\s+(.*)$")
+
+
+def repair_corruption(doc: Document) -> str | None:
+    """Full repaired file text, or None if nothing needed fixing."""
+    fm = list(doc.fm_lines)
+    changed = False
+
+    for i, line in enumerate(fm):
+        m = _NULL_SCALAR_RE.match(line)
+        if m:
+            fm[i] = f"{m.group(1)}: "
+            changed = True
+
+    for i, line in enumerate(fm):
+        if line.strip() != "tags:":
+            continue
+        j = i + 1
+        while j < len(fm):
+            m = _UNINDENTED_TAG_RE.match(fm[j])
+            if m:
+                fm[j] = f"  - {m.group(1)}"
+                changed = True
+                j += 1
+            elif fm[j].startswith("  - "):
+                j += 1
+            else:
+                break
+
+    if not changed:
+        return None
+    return "\n".join([DELIM, *fm, DELIM]) + doc.body
+
+
+def save_repair(path: Path, doc: Document) -> bool:
+    text = repair_corruption(doc)
+    if text is None:
+        return False
+    return _write(path, text)

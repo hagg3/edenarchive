@@ -3,13 +3,13 @@ layout: page
 filename: 1764887481.eden
 worldname: The Impossible Mansion
 publishdate: 2025-12-04
-author: null
+author: 
 tags:
-- unique
-- city
-- town
-- architecture
-- house
+  - unique
+  - city
+  - town
+  - architecture
+  - house
 ---
 ## The Impossible Mansion
 

@@ -5,7 +5,7 @@ worldname: ASHMAZE V7E
 publishdate: 2012-08-19
 author: 
 tags:
-- wiki
+  - wiki
 ---
 ## ASHMAZE V7E
 

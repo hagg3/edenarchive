@@ -3,15 +3,15 @@ layout: page
 filename: 1768390747.eden
 worldname: Cape Canaveral
 publishdate: 2026-01-14
-author: null
+author: 
 tags:
-- nasa
-- space
-- rocket
-- infrastructure
-- oldterrain
-- unique
-- base
+  - nasa
+  - space
+  - rocket
+  - infrastructure
+  - oldterrain
+  - unique
+  - base
 ---
 ## Cape Canaveral
 

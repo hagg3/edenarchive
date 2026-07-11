@@ -3,23 +3,23 @@ layout: page
 filename: 1752471070.eden
 worldname: CIUDAD satelite 77
 publishdate: 2025-07-14
-author: null
+author: 
 tags:
-- mexico
-- large
-- impressive
-- city
-- detailed
-- quality
-- interior
-- realistic
-- replica
-- lighting
-- realworld
-- stadium
-- arena
-- themepark
-- flat
+  - mexico
+  - large
+  - impressive
+  - city
+  - detailed
+  - quality
+  - interior
+  - realistic
+  - replica
+  - lighting
+  - realworld
+  - stadium
+  - arena
+  - themepark
+  - flat
 ---
 ## CIUDAD satelite 77
 
