@@ -1,9 +1,49 @@
 # Eden Archive Admin — Handoff / Implementation Plan
 
-> **Status: M2 ✅ DONE (2026-07-11).** The job-cancellation concurrency bug described below is
-> fixed, regression-tested, and verified live. See "M2 outcome" below for what shipped; the
-> "M2 handoff" section immediately after it is kept as the historical record of the bug and fix
-> design (useful context if this code regresses).
+> **Status: M3 ✅ DONE (2026-07-11).** Tag health (near-dupe grouping, thin/untagged reports,
+> format-preserving bulk retag) is shipped. M3 also found and corrected a wrong M0 finding — see
+> "Open items" item 2 — that `merge_tags.py` never actually corrupted anything; it corrupted 24
+> files, just not in the two fields the original check looked at. See "M3 outcome" below.
+
+---
+
+## M3 outcome (2026-07-11)
+
+**Shipped:** `admin/core/tags.py` (tag inventory, difflib near-dupe grouping ported from
+`analyze_tags.py`, `tag_map.yaml` loader, format-preserving bulk retag), `GET /tags` (near-dupe
+groups, thin tags, untagged count, bulk-retag dry-run diff), `POST /tags/bulk` (applies
+`z_scripts/tag manage/tag_map.yaml`, writes through `world.save`/`frontmatter.render` — never
+`yaml.dump`). Tags nav link enabled in `base.html`.
+
+**Deliberate scope reduction from the original plan:** bulk retag is two plain synchronous routes
+(`GET /tags` for the dry-run preview, `POST /tags/bulk` to apply), not a queued `bulk_retag` job.
+Rewriting ~25 small text files takes milliseconds — routing it through the async job queue would
+have added SSE/job-table plumbing for no benefit in a single-user local app. The "mandatory
+dry-run diff" requirement is still met: the preview table is always rendered before the apply
+button, and the two are separate requests. `/tags/suggest` (autocomplete) from the original route
+list was also dropped — the world-edit tag `<datalist>` already gets its options from
+`index.all_tags()` at page load (built in M1), so a dedicated endpoint would have duplicated that
+for no user-visible gain.
+
+**11 new tests** (`admin/tests/test_tags.py`), covering tag inventory counting/ordering,
+near-dupe grouping, `tag_map.yaml` case normalization, `rewrite_tags` dedup behavior, and —
+critically — that `apply_bulk_retag` writes through `frontmatter.render` (quoted `filesize`
+untouched, `archivedate: ` stays empty-with-trailing-space, no `archivedate: null`) rather than
+`yaml.dump`. **821/821 green.**
+
+**Live-verified against the real repo:** `GET /tags` renders correctly against all 768 worlds
+(near-dupe groups, thin-tag cloud, untagged count all populated). `POST /tags/bulk` was actually
+applied against the real corpus — 25 worlds changed, diff was clean and format-preserving
+(quoted fields, empty-field trailing spaces, and tag-block indentation all correct; the *only*
+change per file was the tags block) — **then reverted** (`git checkout -- _worlds/`) before
+committing, since applying it for real is the archivist's call, not something to land silently as
+a side effect of shipping the feature. The dry-run/apply flow is proven correct; running it for
+real is a one-click action away whenever the archivist wants it.
+
+**What the live test found:** confirmed the corpus really does contain a batch of
+`merge_tags.py`-corrupted files (24 of them, `author: null` + unindented tag blocks) — see "Open
+items" item 2 for the correction to the wrong M0 finding, and why it's flagged rather than
+auto-repaired here.
 
 ---
 
@@ -641,7 +681,7 @@ __pycache__/
 
 **M2 — Assets + job queue. ✅ DONE (2026-07-11).** `core/mapgen`, `app/jobs.py` + SSE, asset grid, single + bulk map generation, `too_large` pre-flight, preview upload + re-fetch. See the M2 outcome section above.
 
-**M3 — Tag health.** `core/tags`, difflib near-dupe grouping, thin/missing-tag reports, `tag_map.yaml` apply as a `bulk_retag` job **routed through `frontmatter.render`** (replacing the format-destroying `merge_tags.py:save_file`), bulk retag with mandatory dry-run diff.
+**M3 — Tag health. ✅ DONE (2026-07-11).** `core/tags`, difflib near-dupe grouping, thin/missing-tag reports, `tag_map.yaml` apply **routed through `frontmatter.render`** (replacing the format-destroying `merge_tags.py:save_file`), bulk retag with mandatory dry-run diff. Shipped as synchronous routes rather than a queued job — see the M3 outcome section above for why. See the M3 outcome section above.
 
 **M4 — Dupes & versions.** `core/hashing` streaming payload hash over the archive, `core/dupes` scoring, `/dupes` review UI, persisted dismissals.
 
@@ -680,16 +720,46 @@ The formatting test gates everything else. Status as of M0:
 1. ~~**Python 3.14 + pydantic wheels**~~ — **RESOLVED in M0.** FastAPI 0.139 + pydantic 2.13.4
    install from wheels on 3.14.3. No fallback needed.
 
-2. ~~**`merge_tags.py` may have already mangled some files.**~~ — **RESOLVED: it hasn't. No file
-   in the corpus is mangled.**
+2. **CORRECTION (M3, 2026-07-11): the M0 finding below was wrong — `merge_tags.py` *has* mangled
+   files.** The original claim ("RESOLVED: it hasn't") checked `filesize`/`archivedate`, which
+   happen to be absent from the affected files, and missed the two fields that actually show the
+   damage. Found live while smoke-testing M3's bulk retag against the real corpus (then reverted
+   before committing, so the corpus itself is untouched by this correction — this entry just fixes
+   the record).
+   - **24 files have a literal `author: null`** (`grep -l '^author: null$' _worlds/*.md`), not the
+     corpus convention's `author: ` with a trailing space. Confirmed via `git log -p` on one of
+     them (`barnim-v28.md`, commit `571d584 "cleaned tags using script"`) that this predates the
+     admin app entirely — it's `yaml.safe_dump`'s `None` rendering as `null`, from a run of
+     `merge_tags.py` before this project existed.
+   - **The same 24 files also lost the tags block's 2-space indent** — `- tag` at column 0 instead
+     of `  - tag` — another `yaml.safe_dump` artifact (its default list indentation).
+   - **Not currently fixable through the app's own no-op-safe editing.** `frontmatter.render`'s
+     `_unchanged()` treats `None` and `""` as equal (by design, so a fresh short-form file doesn't
+     get a spurious `archivedate: ` inserted — see M0 finding 3). That means submitting the world
+     edit form with author left blank against one of these 24 files is silently a no-op: old
+     value `None` and new value `""` compare equal, so the original `author: null` line is kept
+     verbatim rather than corrected to `author: `. **Fixing these needs either a one-off scripted
+     repair (bypass `_unchanged` for this specific case) or a small `frontmatter.render` change
+     that treats a literal YAML `null` as always-dirty against an empty target.** Not done in this
+     pass — flagged for the user to decide, since it's a real edit to 24 tracked content files, not
+     an internal `admin/` change.
+   - Silver lining: the tags-block half of the corruption self-heals as a side effect of any tag
+     edit — `_emit_tags` always emits the canonical 2-space form regardless of the original
+     indent, so a world's tags block is fixed the next time *any* tag change touches it (including
+     M3's bulk retag). Only `author: null` needs a deliberate fix.
+   - The original (now-corrected) M0 finding is preserved below for the historical record of what
+     was actually checked and why it gave a false all-clear.
+
+   ~~**`merge_tags.py` may have already mangled some files.**~~ — ~~RESOLVED: it hasn't. No file
+   in the corpus is mangled.~~ *(Superseded by the correction above.)*
    *The plan's proposed detector was wrong and would have given a false all-clear.* Round-tripping
    preserves whatever bytes are on disk, so a file `merge_tags.py` had already rewritten would
    still round-trip perfectly — a failure to round-trip proves nothing about it either way. The
    actual test is whether a file *deviates from the corpus convention*, which was measured
    directly: all 208 files that have `filesize` still have it double-quoted, all 208
    `archivedate:` lines are still empty-with-trailing-space, and not one `archivedate: null`
-   exists anywhere. So `merge_tags.py` has never successfully run over the archive. Nothing to
-   repair.
+   exists anywhere. **This check just didn't cover `author` or tag-block indentation, which is
+   where the actual damage is.**
 
 3. **`_articles/creatures.md` has malformed front matter** (found in M0) — a bare
    `Eden World Builder Wiki` line with no key, which is not valid YAML. The app tolerates it and

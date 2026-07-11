@@ -1,0 +1,6 @@
+{% if changed %}
+  <span class="ok">Rewrote tags on {{ changed | length }} world{{ '' if changed | length == 1 else 's' }} —
+  review with <code>git diff</code> before pushing.</span>
+{% else %}
+  <span class="muted">Nothing to apply — no world's tags differ from tag_map.yaml.</span>
+{% endif %}

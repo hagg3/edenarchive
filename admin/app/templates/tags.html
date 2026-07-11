@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Tags — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Tags</h1>
+  <span class="muted">{{ stats | length }} distinct tags</span>
+</div>
+
+<div class="cols">
+  <section class="card">
+    <h2>Near-duplicate groups <span class="muted">difflib, cutoff 0.85</span></h2>
+    {% if groups %}
+      <table class="kv">
+        {% for group in groups %}
+        <tr>
+          <td>
+            {% for t in group %}
+              <a class="tag" href="/worlds?tag={{ t }}">{{ t }}</a>{{ ' ' if not loop.last }}
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <p class="muted note">Not auto-merged — add the ones that are really the same tag to
+        <code>{{ tag_map_path }}</code> and apply below.</p>
+    {% else %}
+      <p class="ok">No near-duplicate tags found.</p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Thin tags <span class="muted">used on ≤2 worlds</span></h2>
+    {% if thin %}
+      <div class="tagcloud">
+        {% for s in thin %}
+          <a class="tag" href="/worlds?tag={{ s.tag }}">{{ s.tag }} <span>{{ s.count }}</span></a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="ok">No thin tags.</p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Untagged <span class="muted">{{ untagged | length }} worlds</span></h2>
+    {% if untagged %}
+      <p class="warn"><a href="/worlds?issue=missing_tags">review untagged worlds</a></p>
+    {% else %}
+      <p class="ok">Every world has at least one tag.</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>Bulk retag <span class="muted">from {{ tag_map_path or 'z_scripts/tag manage/tag_map.yaml (missing)' }}</span></h2>
+  {% if not tag_map %}
+    <p class="muted">No tag_map.yaml found (or it's empty) — nothing to apply.</p>
+  {% elif not preview %}
+    <p class="ok">Every mapped tag is already applied — nothing to do.</p>
+  {% else %}
+    <p class="count">{{ preview | length }} world{{ '' if preview | length == 1 else 's' }} would change:</p>
+    <table class="kv">
+      {% for p in preview %}
+      <tr>
+        <td><a href="/worlds/{{ p.slug }}">{{ p.slug }}</a></td>
+        <td class="mono">
+          <span class="muted">{{ p.before | join(', ') }}</span>
+          &rarr;
+          {{ p.after | join(', ') }}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div class="save-row">
+      <button hx-post="/tags/bulk" hx-target="#retag-result" hx-swap="innerHTML"
+              hx-confirm="Apply tag_map.yaml to the {{ preview | length }} world(s) shown above? This writes to disk — review with git diff before pushing.">
+        Apply tag_map.yaml
+      </button>
+      <span id="retag-result">{% if applied is not none %}
+        {% with changed = applied %}{% include "partials/retag_applied.html" %}{% endwith %}
+      {% endif %}</span>
+    </div>
+  {% endif %}
+</section>
+
+{% endblock %}
