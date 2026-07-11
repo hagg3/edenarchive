@@ -167,3 +167,65 @@ def test_start_sweeps_stale_running_jobs_from_a_prior_process(tmp_path, monkeypa
         asyncio.run(body())
     finally:
         conn.close()
+
+
+def _insert_world_row(conn, slug, zip_path):
+    conn.execute(
+        "INSERT INTO worlds (slug, md_path, world_id, has_zip, zip_path) "
+        "VALUES (?,?,?,1,?)",
+        (slug, f"_worlds/{slug}.md", WORLD_ID, str(zip_path)),
+    )
+    conn.commit()
+
+
+def test_payload_hash_job_runs_and_updates_the_row(tmp_path, monkeypatch):
+    zpath = _wire_paths(tmp_path, monkeypatch)
+    conn = index.connect(tmp_path / ".runtime" / "index.db")
+    _insert_world_row(conn, "some-world", zpath)
+
+    async def body():
+        queue = jobs_mod.JobQueue(conn)
+        queue.start()
+        try:
+            job_id = queue.enqueue("payload_hash", "some-world")
+            await _wait_until(lambda: index.get_job(conn, job_id)["status"] in ("ok", "failed"))
+            job = index.get_job(conn, job_id)
+            assert job["status"] == "ok"
+            assert job["result"]  # the sha256
+
+            row = index.get(conn, "some-world")
+            assert row["payload_sha256"] == job["result"]
+            assert row["payload_hashed_at"] is not None
+        finally:
+            await queue.stop()
+
+    try:
+        asyncio.run(body())
+    finally:
+        conn.close()
+
+
+def test_payload_hash_job_records_error_without_crashing_the_worker(tmp_path, monkeypatch):
+    _wire_paths(tmp_path, monkeypatch)
+    conn = index.connect(tmp_path / ".runtime" / "index.db")
+    bad_zip = tmp_path / "assets" / WORLD_ID / "broken.eden.zip"
+    bad_zip.write_bytes(b"neither zip nor gzip")
+    _insert_world_row(conn, "broken-world", bad_zip)
+
+    async def body():
+        queue = jobs_mod.JobQueue(conn)
+        queue.start()
+        try:
+            job_id = queue.enqueue("payload_hash", "broken-world")
+            await _wait_until(lambda: index.get_job(conn, job_id)["status"] in ("ok", "failed"))
+            assert index.get_job(conn, job_id)["status"] == "failed"
+            row = index.get(conn, "broken-world")
+            assert row["payload_sha256"] is None
+            assert row["payload_error"]
+        finally:
+            await queue.stop()
+
+    try:
+        asyncio.run(body())
+    finally:
+        conn.close()

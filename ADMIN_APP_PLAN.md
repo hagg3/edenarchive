@@ -1,9 +1,63 @@
 # Eden Archive Admin — Handoff / Implementation Plan
 
-> **Status: M3 ✅ DONE (2026-07-11).** Tag health (near-dupe grouping, thin/untagged reports,
-> format-preserving bulk retag) is shipped. M3 also found and corrected a wrong M0 finding — see
-> "Open items" item 2 — that `merge_tags.py` never actually corrupted anything; it corrupted 24
-> files, just not in the two fields the original check looked at. See "M3 outcome" below.
+> **Status: M4 ✅ DONE (2026-07-11).** Duplicate & version detection is shipped — streaming
+> payload hashing (verified against the *entire* real archive, all 763 zipped worlds, 0
+> failures, including Starling City's 8.8 GB), name/hash-based scoring, `/dupes` review UI,
+> persisted dismissals. See "M4 outcome" below.
+
+---
+
+## M4 outcome (2026-07-11)
+
+**Shipped:** `admin/core/hashing.py` (streaming sha256 of zip bytes and of the decompressed
+payload — reuses `mapgen.py`'s packaging ladder but never extracts to disk or holds a full
+payload in memory, so even the ~14 worlds too large for node-mapgen get a payload identity
+hash), `admin/core/dupes.py` (name normalization/version-stripping reused from M0's
+`world.normalize_name`/`strip_version`, candidate scoring per the plan's table, dismissal
+persistence to the committed `admin/dupe_dismissals.yaml`), a new `payload_hash` job kind wired
+into the M2 job queue, and `GET /dupes` / `POST /dupes/scan` / `POST /dupes/{a}/{b}/{reason}` /
+`POST /dupes/hash/bulk` / `POST /dupes/hash/{slug}`.
+
+**Scope note:** dupe *scoring* (`POST /dupes/scan`) is a synchronous route, not a queued job —
+name-similarity scoring across all 768 worlds runs in well under a second (matches the plan's own
+estimate), so queueing it would add latency and complexity for no benefit. Only payload *hashing*
+(genuinely slow — streaming gigabytes for the largest worlds) goes through the job queue, exactly
+as the plan intended.
+
+**29 new tests** (`test_hashing.py`, `test_dupes.py`, plus 2 in `test_jobs.py` for the
+`payload_hash` job kind) — including a same-bytes-different-packaging test proving the payload
+hash is identity-stable across raw/gzip/nested-zip/bare-gzip packaging, which is the entire point
+of hashing the decompressed payload instead of the zip bytes. **856/856 green.**
+
+**Live-verified against the real repo, all the way through:**
+- `POST /dupes/scan` against all 768 worlds (before any payload hashing) found 458 candidate
+  pairs — 422 `version_chain`, 20 `near_name`, 8 `same_author_similar`, 8 `identical_zip` — and
+  eyeballing the top-scored ones (verification item 8) found them **genuinely useful**: e.g.
+  `town-city-by-finto-opera-theatre` / `...theatreg` at 0.98 near-name (almost certainly a
+  typo'd duplicate slug) and a chain of `the-creature-quest-part-*` entries from the same author
+  (a real version series). The 8 `identical_zip` pairs (byte-identical re-uploads under
+  different names, e.g. `mars-colony-5000` / `mars-colony-5000-2-1`) look like real duplicate
+  archive entries worth the archivist's attention.
+- `POST /dupes/hash/bulk` was run against the **entire real archive**: all 762 worlds missing a
+  payload hash at the time, including every one of the ~14 known oversized worlds. **763/763
+  succeeded, 0 failures** (one had already been hashed via the single-world endpoint moments
+  earlier in the same test). Starling City (8.8 GB) got a payload hash with no error.
+  `.mapgen-tmp/` stayed completely empty throughout, confirming the streaming design never
+  touches disk — this is verification item 7 from the M0 plan, now fully confirmed rather than
+  just designed for.
+- Re-ran `POST /dupes/scan` after hashing: all 8 `identical_zip` pairs were correctly promoted
+  to (also) `identical_payload` — the strongest possible signal, byte-identical decompressed
+  world data — with the original `identical_zip` rows left in place rather than deleted (the
+  schema's `PRIMARY KEY (a_slug, b_slug, reason)` deliberately allows both to coexist; `status`
+  is tracked per reason, never overwritten by a rescan per the plan).
+- Exercised `POST /dupes/{a}/{b}/{reason}` end-to-end with a `dismissed` status: confirmed the
+  dupe_pairs row updated and the decision was appended to `admin/dupe_dismissals.yaml` — then
+  reverted that specific test dismissal (the note was fabricated for the test, not a real
+  archivist judgment call) before committing, same discipline as M2/M3's live-test-then-revert
+  pattern.
+
+**Not done in this pass** (deliberate M4 scope, matching what M6 needs later): the upload-time
+similarity check (plan section "Upload-time check") is part of M6's staged-upload flow, not M4.
 
 ---
 
@@ -683,7 +737,7 @@ __pycache__/
 
 **M3 — Tag health. ✅ DONE (2026-07-11).** `core/tags`, difflib near-dupe grouping, thin/missing-tag reports, `tag_map.yaml` apply **routed through `frontmatter.render`** (replacing the format-destroying `merge_tags.py:save_file`), bulk retag with mandatory dry-run diff. Shipped as synchronous routes rather than a queued job — see the M3 outcome section above for why. See the M3 outcome section above.
 
-**M4 — Dupes & versions.** `core/hashing` streaming payload hash over the archive, `core/dupes` scoring, `/dupes` review UI, persisted dismissals.
+**M4 — Dupes & versions. ✅ DONE (2026-07-11).** `core/hashing` streaming payload hash over the archive, `core/dupes` scoring, `/dupes` review UI, persisted dismissals. See the M4 outcome section above.
 
 **M5 — Blog/article CRUD.** `core/content`, list/create/edit/delete, markdown live preview, filename/date/slug rules with rename warnings.
 
@@ -707,8 +761,16 @@ The formatting test gates everything else. Status as of M0:
    Starling City (`1705432759`) lands in `too_large` without spawning node. *(Did not confirm the
    64z/256z/gzip-packaging split specifically — the 3 worlds chosen were small ones with existing
    maps, picked for speed; worth a follow-up if a format-specific regression is ever suspected.)*
-7. **Payload hashing:** `.mapgen-tmp/` stays empty during a hash job (streaming, not extracting), peak RSS < 100 MB, and Starling City *does* get a hash. *(M4 scope, not started.)*
-8. **Dupe sanity:** run the scan, eyeball the top 30 pairs, tune the 0.87 cutoff on real output. *(M4 scope, not started.)*
+7. ✅ **Payload hashing:** ran the full bulk-hash job against all 762 unhashed real worlds —
+   `.mapgen-tmp/` stayed empty throughout (confirmed, streaming not extracting), 763/763
+   succeeded including Starling City (8.8 GB). *(Peak RSS wasn't independently profiled, but the
+   design streams in 1 MiB chunks and never buffers a full payload — see core/hashing.py — so
+   this is expected by construction, not just by observation.)*
+8. ✅ **Dupe sanity:** ran the scan against the real archive (458 pairs from 768 worlds),
+   eyeballed the top-scored results — genuinely useful (a likely typo'd duplicate slug at 0.98
+   near-name, a real version series from one author, 8 byte-identical re-uploads under different
+   names). The 0.87 near-name cutoff wasn't retuned — real output looked reasonable at the
+   plan's original value, so there was no signal to tune against.
 9. ✅ **Concurrency:** ran `generate_missing_maps.py --world-id 1592031274` in a terminal while an
    admin mapgen job for the same world held the lock → refused with the lock message, exactly as
    designed.

@@ -62,6 +62,9 @@ button {
 button:hover { border-color: var(--accent); }
 button.tiny { padding: 2px 8px; font-size: 11px; margin-left: auto; }
 
+.inline-actions { display: flex; gap: 4px; }
+.inline-actions button { padding: 3px 8px; font-size: 11px; }
+
 .htmx-indicator { opacity: 0; color: var(--muted); font-size: 13px; transition: opacity .2s; }
 .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { opacity: 1; }
 

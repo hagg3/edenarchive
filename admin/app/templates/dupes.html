@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Dupes — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Dupes &amp; versions</h1>
+  {% if unhashed_count %}<span class="pill warn">{{ unhashed_count }} worlds missing a payload hash</span>{% endif %}
+</div>
+
+<div class="filters">
+  <form hx-get="/dupes" hx-target="body" hx-push-url="true">
+    <select name="status" onchange="this.form.requestSubmit()">
+      <option value=""                   {{ 'selected' if not status }}>all statuses</option>
+      <option value="new"                {{ 'selected' if status == 'new' }}>new</option>
+      <option value="confirmed_dupe"     {{ 'selected' if status == 'confirmed_dupe' }}>confirmed dupe</option>
+      <option value="confirmed_version"  {{ 'selected' if status == 'confirmed_version' }}>confirmed version</option>
+      <option value="dismissed"          {{ 'selected' if status == 'dismissed' }}>dismissed</option>
+    </select>
+    <a class="clear" href="/dupes">reset</a>
+  </form>
+
+  <button hx-post="/dupes/scan" hx-confirm="Rescan for duplicate/version-chain candidates? Fast (name similarity + hash matches only) — doesn't compute any missing payload hashes.">
+    Rescan
+  </button>
+
+  <button hx-post="/dupes/hash/bulk" hx-target="#hash-result" hx-swap="innerHTML"
+          hx-confirm="Enqueue a payload-hash job for every world that doesn't have one yet? This streams through each world's .eden payload (can take a while for the full archive, but runs in the background).">
+    Hash all missing payloads
+  </button>
+  <span id="hash-result"></span>
+</div>
+
+<p class="count">{{ pairs | length }} pair{{ '' if pairs | length == 1 else 's' }}</p>
+
+{% if pairs %}
+<table class="worlds">
+  <thead>
+    <tr>
+      <th>reason</th>
+      <th>score</th>
+      <th>a</th>
+      <th>b</th>
+      <th>detail</th>
+      <th>status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in pairs %}
+    <tr>
+      <td class="mono">{{ p.reason }}</td>
+      <td class="mono">{{ "%.2f" | format(p.score) }}</td>
+      <td>
+        <a href="/worlds/{{ p.a_slug }}">{{ p.a_worldname or p.a_slug }}</a>
+        {% if not p.a_has_map %}<span class="nomap" title="no map">·</span>{% endif %}
+      </td>
+      <td>
+        <a href="/worlds/{{ p.b_slug }}">{{ p.b_worldname or p.b_slug }}</a>
+        {% if not p.b_has_map %}<span class="nomap" title="no map">·</span>{% endif %}
+      </td>
+      <td class="muted">{{ p.detail }}</td>
+      <td>
+        <span class="pill {{ 'ok' if p.status == 'confirmed_dupe' or p.status == 'confirmed_version' else 'bad' if p.status == 'dismissed' else 'warn' }}">
+          {{ p.status }}
+        </span>
+      </td>
+      <td>
+        {% if p.status == 'new' %}
+        <form class="inline-actions" hx-post="/dupes/{{ p.a_slug }}/{{ p.b_slug }}/{{ p.reason }}" hx-target="body">
+          <button name="status" value="confirmed_dupe" title="Same world">Dupe</button>
+          <button name="status" value="confirmed_version" title="Same build, different version">Version</button>
+          <button name="status" value="dismissed" title="Not related">Dismiss</button>
+        </form>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">No pairs{{ ' for this filter' if status }} — try Rescan, or Hash all missing payloads first for the most accurate results.</p>
+{% endif %}
+
+{% endblock %}

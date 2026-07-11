@@ -1,0 +1,5 @@
+# Dismissed duplicate-pair decisions from /dupes. Committed (unlike
+# admin/.runtime/index.db, which is disposable) so a rescan or a DB wipe
+# never loses a decision an archivist already made. Appended to by
+# core/dupes.append_dismissal(); never hand-edit the "at" timestamps.
+[]

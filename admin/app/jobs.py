@@ -10,8 +10,9 @@ from __future__ import annotations
 import asyncio
 import shutil
 import sqlite3
+from pathlib import Path
 
-from ..core import index, mapgen
+from ..core import hashing, index, mapgen
 from ..core import paths
 
 MAPGEN_TIMEOUT = 300
@@ -122,6 +123,8 @@ class JobQueue:
         try:
             if job["kind"] == "mapgen":
                 await self._run_mapgen(job_id, job["target"])
+            elif job["kind"] == "payload_hash":
+                await self._run_payload_hash(job_id, job["target"])
             else:
                 index.update_job(
                     self.conn, job_id, status="failed",
@@ -271,3 +274,39 @@ class JobQueue:
                 await proc.wait()
             mapgen.clear_temp_dir()
             mapgen.release_lock()
+
+    async def _run_payload_hash(self, job_id: int, slug: str) -> None:
+        """Streams the decompressed .eden payload through sha256 — pure
+        Python I/O, no subprocess, no lock (doesn't touch .mapgen-tmp/), so
+        it can safely run alongside a mapgen job. Handles worlds too large
+        for node-mapgen too (that's the point — see core/hashing.py)."""
+        row = index.get(self.conn, slug)
+        if row is None or not row["has_zip"]:
+            self._log(job_id, "stderr", "no zip on disk for this world")
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="no_zip", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+
+        zip_path = Path(row["zip_path"])
+        self._log(job_id, "stdout", f"hashing {zip_path.name}")
+        result = await asyncio.to_thread(hashing.hash_payload, zip_path)
+        index.update_payload_hash(self.conn, slug, result.sha256, result.bytes_, result.error)
+
+        if result.error:
+            self._log(job_id, "stderr", result.error)
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="hash_error", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+
+        self._log(job_id, "stdout", f"sha256={result.sha256} bytes={result.bytes_}")
+        index.update_job(
+            self.conn, job_id, status="ok", ended_at=index.now(),
+            result=result.sha256,
+        )
+        self._publish(job_id, {"done": True, "status": "ok"})

@@ -1,0 +1,6 @@
+{% if count %}
+  <span class="ok">Enqueued {{ count }} payload-hash job{{ '' if count == 1 else 's' }} —
+  <a href="/jobs">watch progress</a>.</span>
+{% else %}
+  <span class="muted">Nothing to hash — every world with a zip already has a payload hash.</span>
+{% endif %}

@@ -513,3 +513,95 @@ def job_logs(conn: sqlite3.Connection, job_id: int, after_seq: int = -1) -> list
             (job_id, after_seq),
         )
     )
+
+
+# --- payload hashing (M4) -----------------------------------------------------
+
+def update_payload_hash(
+    conn: sqlite3.Connection, slug: str, sha256: str | None, bytes_: int | None, error: str | None
+) -> None:
+    conn.execute(
+        "UPDATE worlds SET payload_sha256=?, payload_bytes=?, payload_hashed_at=?, "
+        "payload_error=? WHERE slug=?",
+        (sha256, bytes_, _now(), error, slug),
+    )
+    conn.commit()
+
+
+def worlds_missing_payload_hash(conn: sqlite3.Connection, limit: int | None = None) -> list[sqlite3.Row]:
+    q = "SELECT slug, zip_path FROM worlds WHERE has_zip=1 AND payload_hashed_at IS NULL ORDER BY slug"
+    if limit:
+        q += f" LIMIT {int(limit)}"
+    return list(conn.execute(q))
+
+
+# --- dupe pairs (M4) -----------------------------------------------------------
+
+def dupes_for_worlds(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    """Everything score_pairs() needs, in one query."""
+    return list(
+        conn.execute(
+            "SELECT slug, worldname, author, publishdate, norm_name, base_name, "
+            "version_token, zip_sha256, payload_sha256 FROM worlds"
+        )
+    )
+
+
+def upsert_dupe_pairs(conn: sqlite3.Connection, pairs: Iterable[Any]) -> None:
+    """`status` is never overwritten here — dismissals/confirmations survive
+    a rescan. Pairs no longer produced by a fresh scan are left in place
+    (stale but harmless); `POST /dupes/scan` doesn't delete anything."""
+    conn.executemany(
+        """
+        INSERT INTO dupe_pairs (a_slug, b_slug, reason, score, detail, status, status_at)
+        VALUES (?,?,?,?,?, 'new', ?)
+        ON CONFLICT(a_slug, b_slug, reason) DO UPDATE SET
+          score=excluded.score, detail=excluded.detail
+        """,
+        [(p.a_slug, p.b_slug, p.reason, p.score, p.detail, _now()) for p in pairs],
+    )
+    conn.commit()
+
+
+def list_dupes(conn: sqlite3.Connection, status: str = "") -> list[sqlite3.Row]:
+    where = "WHERE d.status=?" if status else ""
+    params = (status,) if status else ()
+    return list(
+        conn.execute(
+            f"""
+            SELECT d.*, wa.worldname AS a_worldname, wb.worldname AS b_worldname,
+                   wa.has_map AS a_has_map, wb.has_map AS b_has_map
+            FROM dupe_pairs d
+            JOIN worlds wa ON wa.slug = d.a_slug
+            JOIN worlds wb ON wb.slug = d.b_slug
+            {where}
+            ORDER BY d.score DESC, d.a_slug, d.reason
+            """,
+            params,
+        )
+    )
+
+
+def set_dupe_status(
+    conn: sqlite3.Connection, a_slug: str, b_slug: str, reason: str, status: str, note: str = ""
+) -> bool:
+    cur = conn.execute(
+        "UPDATE dupe_pairs SET status=?, status_note=?, status_at=? "
+        "WHERE a_slug=? AND b_slug=? AND reason=?",
+        (status, note, _now(), a_slug, b_slug, reason),
+    )
+    conn.commit()
+    return cur.rowcount > 0
+
+
+def apply_dismissal_statuses(conn: sqlite3.Connection, dismissals: list[dict]) -> None:
+    """Re-applies the committed admin/dupe_dismissals.yaml onto a freshly
+    scored (freshly rebuilt) index, so a disposable-DB rebuild doesn't lose
+    dismissal decisions that predate this scan."""
+    for d in dismissals:
+        conn.execute(
+            "UPDATE dupe_pairs SET status='dismissed', status_note=?, status_at=? "
+            "WHERE a_slug=? AND b_slug=? AND reason=? AND status='new'",
+            (d.get("note", ""), d.get("at", _now()), d["a_slug"], d["b_slug"], d["reason"]),
+        )
+    conn.commit()
