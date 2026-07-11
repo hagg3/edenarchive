@@ -5,6 +5,13 @@ worldname: Stantwan Metropolis V30'2
 publishdate: 2014-03-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 123
+chunkheight: 111
+skycolor: 0
+seed: 0
+spawnx: 786.9
+spawny: 579.9
 ---
 ## Stantwan Metropolis V30'2
 

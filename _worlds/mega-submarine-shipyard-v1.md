@@ -5,6 +5,13 @@ worldname: MEGA SUBMARINE SHIPYARD V1
 publishdate: 2012-05-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 40
+skycolor: 0
+seed: 0
+spawnx: 344
+spawny: 312
 ---
 ## MEGA SUBMARINE SHIPYARD V1
 

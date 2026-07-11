@@ -5,6 +5,13 @@ worldname: steamy's pokemon museum
 publishdate: 2017-08-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 62
+chunkheight: 25
+skycolor: 9
+seed: 0
+spawnx: 111.9
+spawny: 180.0
 ---
 ## steamy's pokemon museum
 

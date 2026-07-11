@@ -10,6 +10,13 @@ tags:
   - lightingnew
   - unique
   - interior
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 50
+skycolor: 54
+seed: 0
+spawnx: 339
+spawny: 417
 ---
 ## Passenger mall 2 ata 12
 

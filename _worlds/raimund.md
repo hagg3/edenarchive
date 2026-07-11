@@ -10,6 +10,13 @@ tags:
   - oldterrain
   - gianttree
   - lighting
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 54
+seed: 100654
+spawnx: 253.2
+spawny: 221.5
 ---
 ## Raimund
 

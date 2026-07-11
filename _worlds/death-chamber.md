@@ -12,6 +12,13 @@ tags:
   - ice
   - snow
   - mountains
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 8
+skycolor: 37
+seed: 333333
+spawnx: 27.6
+spawny: 1.6
 ---
 ## Death Chamber
 

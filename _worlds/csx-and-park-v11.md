@@ -9,6 +9,13 @@ author:
 tags:
   - flat
   - train
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 24
+skycolor: 54
+seed: 0
+spawnx: 136
+spawny: 200
 ---
 ## CSX and park v11
 

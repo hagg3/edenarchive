@@ -5,6 +5,13 @@ worldname: Sam's mega stadiums and huge city 37
 publishdate: 2014-07-04
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 106
+chunkheight: 82
+skycolor: 0
+seed: 0
+spawnx: 847.9
+spawny: 393.0
 ---
 ## Sam's mega stadiums and huge city 37
 

@@ -17,6 +17,13 @@ tags:
   - dock
   - tropical
   - fantasy
+worldformat: 64z
+chunkwidth: 71
+chunkheight: 137
+skycolor: 6
+seed: 333333
+spawnx: 991.8
+spawny: 1646.2
 ---
 ## Daniels settlement
 

@@ -69,6 +69,24 @@ function loadWorldFromArrayBuffer(buffer) {
     while (nameEnd <= 75 && bytes[nameEnd] !== 0)
         nameEnd++;
     const name = new TextDecoder('ascii').decode(bytes.slice(40, nameEnd));
+    // level_seed: i32 LE at byte 0 (matches eden-world-editor's read_i32!(0)).
+    const seed = bytes.length >= 4 ? readInt32LE(bytes, 0) : 0;
+    // home/respawn point: bytes 16-19 abs X, bytes 20-23 height (not used here),
+    // bytes 24-27 abs Z f32 LE (matches eden-world-editor's read_spawn, lib.rs —
+    // note the gap: height sits between X and Z). (0, 0) means "unset". Absolute
+    // coordinates are converted to the same local/editor space map.png uses, by
+    // subtracting the world's bounding-box origin in blocks (16 per chunk) —
+    // computed below once worldArea is known.
+    let rawSpawnX = null;
+    let rawSpawnZ = null;
+    if (bytes.length >= 28) {
+        const sx = readFloat32LE(bytes, 16);
+        const sz = readFloat32LE(bytes, 24);
+        if (Number.isFinite(sx) && Number.isFinite(sz) && !(sx === 0 && sz === 0)) {
+            rawSpawnX = sx;
+            rawSpawnZ = sz;
+        }
+    }
     // Each chunk pointer is 16 bytes: X@[0..2] i16, Y@[4..6] i16, offset@[8..12] u32.
     const chunks = [];
     let idx = chunkPointerStart;
@@ -120,7 +138,18 @@ function loadWorldFromArrayBuffer(buffer) {
         minGap = Math.min(minGap, addresses[i] - addresses[i - 1]);
     }
     const numBands = minGap >= 131072 ? 16 : 4;
-    return { meta: { name, skyColor, worldArea, chunks: keptChunks, numBands }, bytes };
+    const spawnX = rawSpawnX === null ? null : rawSpawnX - worldArea.x * 16;
+    const spawnY = rawSpawnZ === null ? null : rawSpawnZ - worldArea.y * 16;
+    return {
+        meta: { name, skyColor, worldArea, chunks: keptChunks, numBands, seed, spawnX, spawnY },
+        bytes,
+    };
+}
+function readInt32LE(bytes, offset) {
+    return new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getInt32(offset, true);
+}
+function readFloat32LE(bytes, offset) {
+    return new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getFloat32(offset, true);
 }
 function isGzip(data) {
     return data.length >= 2 && data[0] === 0x1f && data[1] === 0x8b;

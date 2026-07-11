@@ -8,6 +8,13 @@ tags:
   - newterrain
   - needsreview
   - abstract
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 48
+skycolor: 42
+seed: 333333
+spawnx: 124.6
+spawny: 673.2
 ---
 ## Zone 3 DeepUnderwater
 

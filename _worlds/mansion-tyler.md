@@ -13,6 +13,13 @@ tags:
   - mansion
   - interior
   - flat
+worldformat: 64z
+chunkwidth: 50
+chunkheight: 70
+skycolor: 5
+seed: 0
+spawnx: 426.4
+spawny: 810.1
 ---
 ## mansion tyler
 

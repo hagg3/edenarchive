@@ -5,6 +5,13 @@ worldname: Stantwan Metropolis V79 unverified
 publishdate: 2021-08-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 167
+chunkheight: 122
+skycolor: 15
+seed: 0
+spawnx: 1632.0
+spawny: 330.8
 ---
 ## Stantwan Metropolis V79 unverified
 

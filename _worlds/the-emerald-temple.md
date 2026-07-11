@@ -5,6 +5,13 @@ worldname: The Emerald Temple
 publishdate: 2012-12-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 34
+skycolor: 0
+seed: 0
+spawnx: 298.1
+spawny: 267.9
 ---
 ## The Emerald Temple
 

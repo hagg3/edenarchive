@@ -11,6 +11,13 @@ tags:
   - beach
   - modern
   - future
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 85
+skycolor: 9
+seed: 333333
+spawnx: 466.7
+spawny: 554.7
 ---
 ## Aston Santoga
 

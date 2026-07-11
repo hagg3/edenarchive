@@ -5,6 +5,13 @@ worldname: SUfutureB 2.1
 publishdate: 2021-08-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 352
+chunkheight: 769
+skycolor: 6
+seed: 0
+spawnx: 1111.1
+spawny: 11325.1
 ---
 ## SUfutureB 2.1
 

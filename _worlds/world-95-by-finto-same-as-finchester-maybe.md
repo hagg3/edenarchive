@@ -5,6 +5,13 @@ worldname: World 95 by Finto - same as finchester maybe
 publishdate: 2024-04-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 54
+chunkheight: 55
+skycolor: 54
+seed: 0
+spawnx: 327.6
+spawny: 386.4
 ---
 ## World 95 by Finto - same as finchester maybe
 

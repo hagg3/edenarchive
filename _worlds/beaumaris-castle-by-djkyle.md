@@ -5,6 +5,13 @@ worldname: Beaumaris Castle by DJKyle
 publishdate: 2011-12-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 30
+skycolor: 0
+seed: 0
+spawnx: 196.3
+spawny: 127.8
 ---
 ## Beaumaris Castle by DJKyle
 

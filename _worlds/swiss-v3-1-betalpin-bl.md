@@ -5,6 +5,13 @@ worldname: Swiss V3'1 Betalpin BL
 publishdate: 2022-10-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 326
+chunkheight: 175
+skycolor: 54
+seed: 0
+spawnx: 2183.8
+spawny: 1050.0
 ---
 ## Swiss V3'1 Betalpin BL
 

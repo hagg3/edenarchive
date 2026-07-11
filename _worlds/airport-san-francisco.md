@@ -5,6 +5,13 @@ worldname: Airport San Francisco
 publishdate: 2012-02-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 50
+chunkheight: 41
+skycolor: 0
+seed: 0
+spawnx: 444.1
+spawny: 326.3
 ---
 ## Airport San Francisco
 

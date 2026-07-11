@@ -5,6 +5,13 @@ worldname: 'Eden Springs'
 publishdate: 2012-10-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 53
+chunkheight: 57
+skycolor: 0
+seed: 277122
+spawnx: 536.8
+spawny: 402.6
 ---
 ## 'Eden Springs'
 

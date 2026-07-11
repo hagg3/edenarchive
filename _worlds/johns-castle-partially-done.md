@@ -5,6 +5,13 @@ worldname: Johns castle partially done
 publishdate: 2012-12-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 31
+skycolor: 0
+seed: 0
+spawnx: 154.0
+spawny: 300.4
 ---
 ## Johns castle partially done
 

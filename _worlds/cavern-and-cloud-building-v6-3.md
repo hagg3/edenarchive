@@ -8,6 +8,13 @@ tags:
   - oldterrain
   - requested
   - abstract
+worldformat: 64z
+chunkwidth: 69
+chunkheight: 56
+skycolor: 10
+seed: 137037
+spawnx: 580.0
+spawny: 670.8
 ---
 ## cavern and cloud building V6'3
 

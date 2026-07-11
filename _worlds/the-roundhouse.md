@@ -15,6 +15,13 @@ tags:
   - arena
   - venue
   - architecture
+worldformat: 64z
+chunkwidth: 90
+chunkheight: 418
+skycolor: 54
+seed: 88955
+spawnx: 680.8
+spawny: 6094.2
 ---
 ## THE ROUNDHOUSE
 

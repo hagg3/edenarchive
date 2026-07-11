@@ -5,6 +5,13 @@ worldname: Super Mario 64 Castle by Boa49
 publishdate: 2012-07-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 24
+skycolor: 0
+seed: 173556
+spawnx: 217.5
+spawny: 185.3
 ---
 ## Super Mario 64 Castle by Boa49
 

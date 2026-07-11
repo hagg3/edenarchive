@@ -11,6 +11,13 @@ tags:
   - restaurant
   - bar
   - replica
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 24
+skycolor: 10
+seed: 229796
+spawnx: 87.6
+spawny: 304.8
 ---
 ## Modern Bistro
 

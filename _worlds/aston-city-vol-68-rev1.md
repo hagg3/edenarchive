@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.3 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 85
+skycolor: 9
+seed: 333333
+spawnx: 168.1
+spawny: 604.7
 ---
 ## aston city vol'68 rev1
 

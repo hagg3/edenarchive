@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 31
+skycolor: 10
+seed: 0
+spawnx: 309.9
+spawny: 280.3
 ---
 ## National Shrine of All Saints
 

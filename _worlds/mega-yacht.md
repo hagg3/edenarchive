@@ -5,6 +5,13 @@ worldname: Mega Yacht
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 47
+skycolor: 0
+seed: 0
+spawnx: 222.2
+spawny: 185.5
 ---
 ## Mega Yacht
 

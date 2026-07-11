@@ -5,6 +5,13 @@ worldname: DIRECT CITY 0'9'1
 publishdate: 2012-09-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 68
+chunkheight: 41
+skycolor: 0
+seed: 287331
+spawnx: 776
+spawny: 344
 ---
 ## DIRECT CITY 0'9'1
 

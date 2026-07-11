@@ -10,6 +10,13 @@ tags:
   - newterrain
   - japan
   - asia
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 48
+skycolor: 15
+seed: 333333
+spawnx: 450.0
+spawny: 571.0
 ---
 ## Stevenjj's Japanese Town v10
 

@@ -10,6 +10,13 @@ tags:
   - interior
   - scene
   - adventure
+worldformat: 64z
+chunkwidth: 3
+chunkheight: 17
+skycolor: 10
+seed: 0
+spawnx: 25.9
+spawny: 228.1
 ---
 ## Stronghold 0'2'2 4our Dimension
 

@@ -7,6 +7,13 @@ author:
 tags:
   - village
   - needsreview
+worldformat: 64z
+chunkwidth: 121
+chunkheight: 118
+skycolor: 36
+seed: 0
+spawnx: 448.4
+spawny: 1121.0
 ---
 ## collection of villages 2025
 

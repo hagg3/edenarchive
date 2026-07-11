@@ -11,6 +11,13 @@ tags:
   - physics
   - linear
   - portals
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 46
+skycolor: 10
+seed: 0
+spawnx: 264.2
+spawny: 316.3
 ---
 ## Rollar Coaster by IAN
 

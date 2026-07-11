@@ -5,6 +5,13 @@ worldname: Chinese Temple
 publishdate: 2012-02-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 19
+skycolor: 0
+seed: 0
+spawnx: 152
+spawny: 120
 ---
 ## Chinese Temple
 

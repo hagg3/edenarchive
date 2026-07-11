@@ -5,6 +5,13 @@ worldname: Storybrooke V1 by MD15
 publishdate: 2022-03-04
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 12
+chunkheight: 14
+skycolor: 6
+seed: 0
+spawnx: 136.2
+spawny: 121.9
 ---
 ## Storybrooke V1 by MD15
 

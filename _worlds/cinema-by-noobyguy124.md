@@ -13,6 +13,13 @@ tags:
   - roleplay
   - interior
   - cinema
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 35
+skycolor: 54
+seed: 0
+spawnx: 304.1
+spawny: 244.6
 ---
 ## Cinema by Noobyguy124
 

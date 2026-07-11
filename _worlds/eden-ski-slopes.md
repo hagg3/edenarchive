@@ -5,6 +5,13 @@ worldname: Eden Ski Slopes
 publishdate: 2022-09-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 56
+chunkheight: 58
+skycolor: 6
+seed: 333333
+spawnx: 378.0
+spawny: 498.6
 ---
 ## Eden Ski Slopes
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.5 MB"
 author: LvK
 tags:
+worldformat: 64z
+chunkwidth: 95
+chunkheight: 106
+skycolor: 21
+seed: 182730
+spawnx: 775.3
+spawny: 1218.1
 ---
 ## Haunted House Challenge by LvK
 

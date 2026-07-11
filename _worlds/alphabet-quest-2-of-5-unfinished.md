@@ -6,6 +6,13 @@ publishdate: 2025-12-25
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 34
+skycolor: 9
+seed: 0
+spawnx: 280
+spawny: 328
 ---
 ## Alphabet Quest 2 of 5 unfinished
 

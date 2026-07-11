@@ -5,6 +5,13 @@ worldname: Apple City FUTURE new skate park V3
 publishdate: 2012-05-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 46
+chunkheight: 76
+skycolor: 0
+seed: 0
+spawnx: 520
+spawny: 696
 ---
 ## Apple City FUTURE new skate park V3
 

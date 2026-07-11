@@ -5,6 +5,13 @@ worldname: Super Mario Galaxy v69
 publishdate: 2017-01-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 11
+chunkheight: 8
+skycolor: 41
+seed: 0
+spawnx: 131.1
+spawny: 67.3
 ---
 ## Super Mario Galaxy v69
 

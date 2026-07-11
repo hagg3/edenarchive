@@ -12,6 +12,13 @@ tags:
   - quest
   - adventure
   - feverdream
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 50
+skycolor: 9
+seed: 0
+spawnx: 392
+spawny: 472
 ---
 ## Unfinished Dream Hall
 

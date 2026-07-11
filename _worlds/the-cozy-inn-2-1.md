@@ -5,6 +5,13 @@ worldname: The Cozy inn 2.1
 publishdate: 2021-01-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 9
+chunkheight: 12
+skycolor: 1
+seed: 0
+spawnx: -71
+spawny: 74
 ---
 ## The Cozy inn 2.1
 

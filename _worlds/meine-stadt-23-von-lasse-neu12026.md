@@ -6,6 +6,13 @@ publishdate: 2026-01-01
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 51
+skycolor: 10
+seed: 0
+spawnx: 470.6
+spawny: 443.0
 ---
 ## meine stadt 23 von lasse neu12026
 

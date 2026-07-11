@@ -9,6 +9,13 @@ tags:
   - zombie
   - collab
   - flat
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 30
+skycolor: 22
+seed: 0
+spawnx: 232.1
+spawny: 191.8
 ---
 ## build a zombie safe zone and share
 

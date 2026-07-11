@@ -5,6 +5,13 @@ worldname: Eden World Tour V19 2017 Updated
 publishdate: 2017-04-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 37
+skycolor: 6
+seed: 0
+spawnx: 263.9
+spawny: 392.0
 ---
 ## Eden World Tour V19 2017 Updated
 

@@ -5,6 +5,13 @@ worldname: Hogwarts the one and only
 publishdate: 2012-03-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 38
+skycolor: 0
+seed: 91786
+spawnx: 495.8
+spawny: 187.4
 ---
 ## Hogwarts the one and only
 

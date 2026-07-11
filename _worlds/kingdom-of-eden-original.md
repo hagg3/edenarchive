@@ -7,6 +7,13 @@ archivedate:
 filesize: "5.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 137
+chunkheight: 193
+skycolor: 6
+seed: 170130
+spawnx: 884.1
+spawny: 2148.7
 ---
 ## Kingdom of Eden original
 

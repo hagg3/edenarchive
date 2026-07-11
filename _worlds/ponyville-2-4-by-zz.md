@@ -5,6 +5,13 @@ worldname: Ponyville 2'4 by zz
 publishdate: 2016-06-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 71
+chunkheight: 74
+skycolor: 15
+seed: 246475
+spawnx: 877.1
+spawny: 447.8
 ---
 ## Ponyville 2'4 by zz
 

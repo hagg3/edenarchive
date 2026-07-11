@@ -5,6 +5,13 @@ worldname: Best Cathedral in Eden V1
 publishdate: 2012-02-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 25
+skycolor: 0
+seed: 98389
+spawnx: 286.1
+spawny: 122.5
 ---
 ## Best Cathedral in Eden V1
 

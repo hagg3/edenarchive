@@ -5,6 +5,13 @@ worldname: Airport
 publishdate: 2017-04-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 44
+skycolor: 15
+seed: 0
+spawnx: 600
+spawny: 152
 ---
 ## Airport
 

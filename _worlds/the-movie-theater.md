@@ -7,6 +7,13 @@ author:
 tags:
   - cinema
   - needsreview
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 10
+seed: 0
+spawnx: 232.1
+spawny: 237.2
 ---
 ## The Movie Theater
 

@@ -5,6 +5,13 @@ worldname: ANCIENT CASTLE 6 spk
 publishdate: 2013-12-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 45
+skycolor: 0
+seed: 0
+spawnx: 515.3
+spawny: 185.8
 ---
 ## ANCIENT CASTLE 6 spk
 

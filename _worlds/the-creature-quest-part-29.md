@@ -15,6 +15,13 @@ tags:
   - quest
   - treasure
   - lighting
+worldformat: 64z
+chunkwidth: 14
+chunkheight: 14
+skycolor: 6
+seed: 0
+spawnx: 148.6
+spawny: 114.5
 ---
 ## The Creature Quest Part 29
 

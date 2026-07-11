@@ -9,6 +9,13 @@ tags:
   - plant
   - russia
   - flag
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 17
+skycolor: 6
+seed: 0
+spawnx: 234.9
+spawny: 152.7
 ---
 ## Eden Power V2
 

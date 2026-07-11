@@ -5,6 +5,13 @@ worldname: The dark traveler 2.1
 publishdate: 2020-06-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 49
+skycolor: 54
+seed: 0
+spawnx: 295.4
+spawny: 259.2
 ---
 ## The dark traveler 2.1
 

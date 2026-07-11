@@ -7,6 +7,13 @@ archivedate:
 filesize: "2.7 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 136
+chunkheight: 93
+skycolor: 1
+seed: 296620
+spawnx: 1250.5
+spawny: 810.2
 ---
 ## United Military Harbour
 

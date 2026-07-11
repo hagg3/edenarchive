@@ -5,6 +5,13 @@ worldname: MEGA CITY by Sylv1 V113
 publishdate: 2017-02-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 99
+chunkheight: 95
+skycolor: 6
+seed: 30599
+spawnx: 792.5
+spawny: 779.4
 ---
 ## MEGA CITY by Sylv1 V113
 

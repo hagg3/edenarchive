@@ -1,0 +1,104 @@
+// Site-specific overrides on top of the Minima 2.5 base theme, imported by
+// this site's own assets/css/style.scss (which shadows the theme gem's copy
+// of that file — see that file for why it's done this way rather than
+// relying on a theme-version-specific customization hook).
+
+// --- pagination (worlds.md) -------------------------------------------------
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin: 1em 0 2em;
+
+  button {
+    padding: 0.4em 0.9em;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+}
+
+// --- tag links (world-details.html, worlds table) ---------------------------
+.tag-link {
+  white-space: nowrap;
+}
+
+// --- dark mode ---------------------------------------------------------------
+// Minima 2.5 has no built-in dark theme (fixed SCSS variables, not runtime
+// custom properties), so this re-declares the handful of colors that matter
+// under prefers-color-scheme rather than touching the theme's own partials.
+@media (prefers-color-scheme: dark) {
+  $dm-bg: #1b1b1d;
+  $dm-bg-alt: #242426;
+  $dm-text: #d8d8d8;
+  $dm-muted: #9a9a9a;
+  $dm-link: #7ab8ff;
+  $dm-border: #3a3a3d;
+
+  html, body {
+    background-color: $dm-bg;
+    color: $dm-text;
+  }
+
+  .site-header {
+    background-color: $dm-bg-alt;
+    border-bottom-color: $dm-border;
+  }
+
+  .site-title, .site-title:visited {
+    color: $dm-text;
+  }
+
+  .site-nav .page-link {
+    color: $dm-text;
+  }
+
+  a {
+    color: $dm-link;
+
+    &:visited {
+      color: $dm-link;
+    }
+  }
+
+  .footer-heading, .site-footer {
+    background-color: $dm-bg-alt;
+    color: $dm-text;
+    border-top-color: $dm-border;
+  }
+
+  .footer-col a {
+    color: $dm-text;
+  }
+
+  table, th, td {
+    border-color: $dm-border;
+  }
+
+  th {
+    background-color: $dm-bg-alt;
+  }
+
+  code, pre {
+    background-color: $dm-bg-alt;
+    color: $dm-text;
+  }
+
+  blockquote {
+    color: $dm-muted;
+    border-left-color: $dm-border;
+  }
+
+  input, select, button, textarea {
+    background-color: $dm-bg-alt;
+    color: $dm-text;
+    border: 1px solid $dm-border;
+  }
+
+  .muted {
+    color: $dm-muted;
+  }
+}

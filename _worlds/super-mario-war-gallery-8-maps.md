@@ -5,6 +5,13 @@ worldname: Super Mario War Gallery 8 Maps
 publishdate: 2020-11-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 18
+skycolor: 10
+seed: 0
+spawnx: 54.0
+spawny: 22.0
 ---
 ## Super Mario War Gallery 8 Maps
 

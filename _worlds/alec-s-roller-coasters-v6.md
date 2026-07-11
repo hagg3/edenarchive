@@ -8,6 +8,13 @@ filesize: "0.0 MB"
 author: 
 tags:
   - slide
+worldformat: 64z
+chunkwidth: 67
+chunkheight: 7
+skycolor: 0
+seed: 0
+spawnx: 555.6
+spawny: 52.2
 ---
 ## Alec's Roller Coasters v6
 

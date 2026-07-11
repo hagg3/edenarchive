@@ -11,6 +11,13 @@ tags:
   - flat
   - retro
   - signs
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 36
+skycolor: 15
+seed: 0
+spawnx: 184
+spawny: 280
 ---
 ## Kilian EuropaPark
 

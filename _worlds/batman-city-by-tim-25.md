@@ -6,6 +6,13 @@ publishdate: 2025-11-23
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 352
+chunkheight: 151
+skycolor: 0
+seed: 0
+spawnx: 944.5
+spawny: 816.5
 ---
 ## batman city by tim 25
 

@@ -5,6 +5,13 @@ worldname: Death Star Interior
 publishdate: 2012-02-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 16
+skycolor: 0
+seed: 0
+spawnx: 140.6
+spawny: 155.3
 ---
 ## Death Star Interior
 

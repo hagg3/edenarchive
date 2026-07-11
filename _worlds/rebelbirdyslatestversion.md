@@ -7,6 +7,13 @@ archivedate:
 filesize: "35.2 MB"
 author: Rebelbirdy
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 71
+skycolor: 29
+seed: 0
+spawnx: 272.3
+spawny: 244.0
 ---
 ## Rebelbirdyslatestversion
 

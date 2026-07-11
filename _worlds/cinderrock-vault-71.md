@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 27
+skycolor: 10
+seed: 0
+spawnx: 129.8
+spawny: 104.6
 ---
 ## Cinderrock vault 71
 

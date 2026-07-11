@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.3 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 73
+chunkheight: 66
+skycolor: 10
+seed: 0
+spawnx: 559.8
+spawny: 510.8
 ---
 ## big EDEN city v6'1 uncomplete
 

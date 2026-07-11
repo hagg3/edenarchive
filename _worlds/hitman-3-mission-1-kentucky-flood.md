@@ -13,6 +13,13 @@ tags:
   - detailed
   - modern
   - variety
+worldformat: 64z
+chunkwidth: 88
+chunkheight: 153
+skycolor: 45
+seed: 0
+spawnx: 783.9
+spawny: 1969.2
 ---
 ## Hitman 3 mission 1 kentucky flood
 

@@ -7,6 +7,13 @@ author: Edmunds713
 tags:
   - oldterrain
   - needsreview
+worldformat: 64z
+chunkwidth: 88
+chunkheight: 31
+skycolor: 10
+seed: 84011
+spawnx: 1222.6
+spawny: 337.4
 ---
 ## ORF Headquarters Edmunds713
 

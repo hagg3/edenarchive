@@ -5,6 +5,13 @@ worldname: Airport and Boeing 747 V7
 publishdate: 2012-03-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 23
+skycolor: 0
+seed: 0
+spawnx: 285.7
+spawny: 155.7
 ---
 ## Airport and Boeing 747 V7
 

@@ -14,6 +14,13 @@ tags:
   - heightlimit
   - lightingnew
   - scale
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 47
+skycolor: 6
+seed: 0
+spawnx: 392
+spawny: 392
 ---
 ## Upland I
 

@@ -5,6 +5,13 @@ worldname: WW2 US Battleship
 publishdate: 2012-02-04
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 54
+skycolor: 0
+seed: 0
+spawnx: 184
+spawny: 536
 ---
 ## WW2 US Battleship
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 4
+chunkheight: 4
+skycolor: 15
+seed: 0
+spawnx: 21
+spawny: 50
 ---
 ## National Bank
 

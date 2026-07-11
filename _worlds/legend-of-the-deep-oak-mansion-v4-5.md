@@ -5,6 +5,13 @@ worldname: Legend Of The Deep Oak Mansion V4'5
 publishdate: 2013-11-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 37
+skycolor: 0
+seed: 0
+spawnx: 199.1
+spawny: 237.0
 ---
 ## Legend Of The Deep Oak Mansion V4'5
 

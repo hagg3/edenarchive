@@ -6,6 +6,13 @@ publishdate: 2025-12-13
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 46
+chunkheight: 49
+skycolor: 9
+seed: 0
+spawnx: 249.1
+spawny: 570.6
 ---
 ## Kingdom Castle1
 

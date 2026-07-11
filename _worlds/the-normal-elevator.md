@@ -8,6 +8,13 @@ filesize: "0.0 MB"
 author: Peter
 tags:
   - puzzle
+worldformat: 64z
+chunkwidth: 9
+chunkheight: 12
+skycolor: 7
+seed: 0
+spawnx: 65.8
+spawny: 102.8
 ---
 ## The Normal Elevator
 

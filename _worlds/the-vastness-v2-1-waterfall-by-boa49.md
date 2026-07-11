@@ -5,6 +5,13 @@ worldname: The Vastness V2'1 Waterfall by Boa49
 publishdate: 2012-11-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 31
+skycolor: 0
+seed: 173556
+spawnx: 254.9
+spawny: 266.7
 ---
 ## The Vastness V2'1 Waterfall by Boa49
 

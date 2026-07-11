@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 12
+chunkheight: 12
+skycolor: 0
+seed: 0
+spawnx: 104
+spawny: 104
 ---
 ## Evil Lair and Throne Room
 

@@ -10,6 +10,13 @@ tags:
   - natural
   - landscape
   - abstract
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 31
+skycolor: 0
+seed: 173556
+spawnx: 255.5
+spawny: 290.4
 ---
 ## The Vastness V3 Canyon by Boa49
 

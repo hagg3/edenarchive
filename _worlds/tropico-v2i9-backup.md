@@ -13,6 +13,13 @@ tags:
   - newterrain
   - beach
   - tropical
+worldformat: 64z
+chunkwidth: 85
+chunkheight: 161
+skycolor: 6
+seed: 333333
+spawnx: 742.6
+spawny: 1978.1
 ---
 ## Tropico V2i9 Backup
 

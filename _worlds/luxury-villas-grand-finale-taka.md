@@ -6,6 +6,13 @@ publishdate: 2026-01-03
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 53
+chunkheight: 54
+skycolor: 15
+seed: 0
+spawnx: 368.7
+spawny: 286.8
 ---
 ## Luxury Villas Grand Finale taka
 

@@ -5,6 +5,13 @@ worldname: Bright Castle
 publishdate: 2012-02-25
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 23
+skycolor: 0
+seed: 0
+spawnx: 449.6
+spawny: 221.9
 ---
 ## Bright Castle
 

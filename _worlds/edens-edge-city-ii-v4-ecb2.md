@@ -5,6 +5,13 @@ worldname: EDENS EDGE CITY II V4 ECB2
 publishdate: 2013-03-25
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 36
+skycolor: 101
+seed: 0
+spawnx: 277.9
+spawny: 268.7
 ---
 ## EDENS EDGE CITY II V4 ECB2
 

@@ -7,6 +7,13 @@ author:
 tags:
   - castle
   - newterrain
+worldformat: 64z
+chunkwidth: 101
+chunkheight: 114
+skycolor: 6
+seed: 333333
+spawnx: 344.1
+spawny: 355.7
 ---
 ## New Fortress v1
 

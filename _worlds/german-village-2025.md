@@ -7,6 +7,13 @@ author:
 tags:
   - europe
   - needsreview
+worldformat: 64z
+chunkwidth: 123
+chunkheight: 85
+skycolor: 15
+seed: 49843
+spawnx: 980.2
+spawny: 641.9
 ---
 ## German Village 2025
 

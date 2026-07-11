@@ -5,6 +5,13 @@ worldname: Salt Lake City v12
 publishdate: 2015-06-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 90
+chunkheight: 418
+skycolor: 54
+seed: 88955
+spawnx: 680.8
+spawny: 6094.2
 ---
 ## Salt Lake City v12
 

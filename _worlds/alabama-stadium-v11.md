@@ -5,6 +5,13 @@ worldname: Alabama Stadium V11
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 28
+skycolor: 0
+seed: 0
+spawnx: 218.5
+spawny: 207.5
 ---
 ## Alabama Stadium V11
 

@@ -14,6 +14,13 @@ tags:
   - city
   - town
   - interior
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 59
+skycolor: 6
+seed: 74508
+spawnx: 727.8
+spawny: 373.7
 ---
 ## TALLINN 2026
 

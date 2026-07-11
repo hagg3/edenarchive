@@ -5,6 +5,13 @@ worldname: This is sparta XIX by vasiliy
 publishdate: 2012-12-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 90
+skycolor: 0
+seed: 183886
+spawnx: 423.7
+spawny: 640.0
 ---
 ## This is sparta XIX by vasiliy
 

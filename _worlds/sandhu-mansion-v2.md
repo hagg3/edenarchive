@@ -5,6 +5,13 @@ worldname: sandhu mansion v2
 publishdate: 2022-11-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 28
+skycolor: 40
+seed: 273274
+spawnx: 168.1
+spawny: 283.6
 ---
 ## sandhu mansion v2
 

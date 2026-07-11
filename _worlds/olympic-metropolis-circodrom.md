@@ -5,6 +5,13 @@ worldname: Olympic Metropolis Circodrom
 publishdate: 2016-03-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 158
+chunkheight: 144
+skycolor: 54
+seed: 0
+spawnx: 1146.7
+spawny: 939.3
 ---
 ## Olympic Metropolis Circodrom
 

@@ -12,6 +12,13 @@ tags:
   - cafe
   - small
   
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 83
+skycolor: 9
+seed: 333333
+spawnx: 375
+spawny: 984
 ---
 ## Diane's Beach v4
 

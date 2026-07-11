@@ -5,6 +5,13 @@ worldname: Queen Mary 2
 publishdate: 2012-02-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 69
+skycolor: 0
+seed: 0
+spawnx: 200
+spawny: 184
 ---
 ## Queen Mary 2
 

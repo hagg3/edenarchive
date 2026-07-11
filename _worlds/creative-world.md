@@ -14,6 +14,13 @@ tags:
   - unique
   - secret
   - exploration
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 18
+skycolor: 54
+seed: 0
+spawnx: 156.8
+spawny: 113.2
 ---
 ## Creative World
 

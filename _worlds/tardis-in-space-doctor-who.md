@@ -5,6 +5,13 @@ worldname: TARDIS IN SPACE DOCTOR WHO
 publishdate: 2023-11-04
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 60
+chunkheight: 87
+skycolor: 6
+seed: 0
+spawnx: 380.2
+spawny: 987.4
 ---
 ## TARDIS IN SPACE DOCTOR WHO
 

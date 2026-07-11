@@ -5,6 +5,13 @@ worldname: Ruins v2 Mnb
 publishdate: 2014-04-06
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 35
+skycolor: 0
+seed: 0
+spawnx: 160.2
+spawny: 214.8
 ---
 ## Ruins v2 Mnb
 

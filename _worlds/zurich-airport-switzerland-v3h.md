@@ -8,6 +8,13 @@ tags:
   - needsreview
   - europe
   - swiss
+worldformat: 64z
+chunkwidth: 128
+chunkheight: 112
+skycolor: 6
+seed: 0
+spawnx: 1187.7
+spawny: 337.5
 ---
 ## Zurich Airport Switzerland V3H
 

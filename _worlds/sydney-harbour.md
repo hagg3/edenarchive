@@ -5,6 +5,13 @@ worldname: Sydney Harbour
 publishdate: 2012-03-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 0
+seed: 0
+spawnx: 232
+spawny: 216
 ---
 ## Sydney Harbour
 

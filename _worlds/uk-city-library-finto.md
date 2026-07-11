@@ -5,6 +5,13 @@ worldname: UK City Library Finto
 publishdate: 2023-01-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 150
+chunkheight: 132
+skycolor: 6
+seed: 0
+spawnx: 1248
+spawny: 979
 ---
 ## UK City Library Finto
 

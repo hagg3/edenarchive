@@ -10,6 +10,13 @@ tags:
   - arena
   - stadium
   - basketball
+worldformat: 64z
+chunkwidth: 26
+chunkheight: 37
+skycolor: 54
+seed: 0
+spawnx: 69.1
+spawny: 421.2
 ---
 ## JOE PARISH SPORTS COMPLEX
 

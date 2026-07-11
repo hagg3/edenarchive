@@ -5,6 +5,13 @@ worldname: Doors in Eden V2'0'0 JEB EVENT
 publishdate: 2023-04-04
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 12
+chunkheight: 12
+skycolor: 54
+seed: 0
+spawnx: 91.0
+spawny: 131.1
 ---
 ## Doors in Eden V2'0'0 JEB EVENT
 

@@ -8,6 +8,13 @@ filesize: "4.1 MB"
 author: 
 tags:
   - merge
+worldformat: 64z
+chunkwidth: 127
+chunkheight: 132
+skycolor: 15
+seed: 254505
+spawnx: 1316.7
+spawny: 1231.3
 ---
 ## Ellesmera FK 1008 February 26
 

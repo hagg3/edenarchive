@@ -10,6 +10,13 @@ tags:
   - city
   - unique
   - normalterrain
+worldformat: 64z
+chunkwidth: 204
+chunkheight: 194
+skycolor: 51
+seed: 333333
+spawnx: 1109.6
+spawny: 1153.9
 ---
 ## filo normal world 11 2024
 

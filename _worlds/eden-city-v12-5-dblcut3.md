@@ -6,6 +6,13 @@ publishdate: 2020-12-06
 author: 
 tags:
   - wiki
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 103
+skycolor: 6
+seed: 0
+spawnx: 274.1
+spawny: 422.6
 ---
 ## Eden City v12'5 Dblcut3
 

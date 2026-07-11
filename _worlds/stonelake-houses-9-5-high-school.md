@@ -13,6 +13,13 @@ tags:
   - house
   - suburb
   - landscaping
+worldformat: 64z
+chunkwidth: 88
+chunkheight: 45
+skycolor: 5
+seed: 0
+spawnx: 1059.0
+spawny: 293.6
 ---
 ## Stonelake Houses 9'5 High School
 

@@ -6,6 +6,13 @@ publishdate: 2025-11-29
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 80
+chunkheight: 93
+skycolor: 5
+seed: 0
+spawnx: 667.5
+spawny: 586.7
 ---
 ## Jennifer Carroll 49
 

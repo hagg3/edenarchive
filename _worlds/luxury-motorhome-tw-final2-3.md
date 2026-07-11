@@ -5,6 +5,13 @@ worldname: Luxury Motorhome TW Final2'3
 publishdate: 2023-12-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 33
+skycolor: 54
+seed: 0
+spawnx: 248
+spawny: 248
 ---
 ## Luxury Motorhome TW Final2'3
 

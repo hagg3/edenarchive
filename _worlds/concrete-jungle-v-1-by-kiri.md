@@ -5,6 +5,13 @@ worldname: Concrete Jungle V'1 By Kiri
 publishdate: 2013-09-06
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 31
+skycolor: 52
+seed: 0
+spawnx: 247.9
+spawny: 157.9
 ---
 ## Concrete Jungle V'1 By Kiri
 

@@ -13,6 +13,13 @@ tags:
   - unique
   - fortress
   - town
+worldformat: 64z
+chunkwidth: 187
+chunkheight: 192
+skycolor: 6
+seed: 333333
+spawnx: 844.6
+spawny: 257.1
 ---
 ## The Citadel Fortress
 

@@ -13,6 +13,13 @@ tags:
   - portal
   - abstract
   - exploration
+worldformat: 64z
+chunkwidth: 50
+chunkheight: 66
+skycolor: 54
+seed: 0
+spawnx: 408
+spawny: 328
 ---
 ## Pit Parkour 6'2
 

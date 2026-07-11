@@ -5,6 +5,13 @@ worldname: Dinosaur Realm
 publishdate: 2020-12-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 4
+chunkheight: 5
+skycolor: 13
+seed: 0
+spawnx: 37
+spawny: 34
 ---
 ## Dinosaur Realm
 

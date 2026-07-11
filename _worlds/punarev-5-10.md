@@ -10,6 +10,13 @@ tags:
   - city
   - town
   - interior
+worldformat: 64z
+chunkwidth: 93
+chunkheight: 122
+skycolor: 9
+seed: 333333
+spawnx: 651.2
+spawny: 1303.7
 ---
 ## PUNAREV 5'10
 

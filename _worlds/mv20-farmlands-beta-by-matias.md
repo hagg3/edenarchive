@@ -6,6 +6,13 @@ publishdate: 2020-01-12
 author: Matias
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 57
+chunkheight: 75
+skycolor: 10
+seed: 0
+spawnx: 520.0
+spawny: 872.0
 ---
 ## Mv20 farmlands beta by Matias
 

@@ -5,6 +5,13 @@ worldname: Enjoy Machi City V6
 publishdate: 2012-02-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 52
+chunkheight: 39
+skycolor: 0
+seed: 0
+spawnx: 251.6
+spawny: 236.0
 ---
 ## Enjoy Machi City V6
 

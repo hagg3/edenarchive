@@ -5,6 +5,13 @@ worldname: Atlantis Paradise Island By RafiQui
 publishdate: 2012-08-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 43
+skycolor: 0
+seed: 0
+spawnx: 427.0
+spawny: 312.7
 ---
 ## Atlantis Paradise Island By RafiQui
 

@@ -6,6 +6,13 @@ publishdate: 2020-03-16
 author: Tzekoo
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 50
+chunkheight: 47
+skycolor: 10
+seed: 0
+spawnx: 264.4
+spawny: 554.1
 ---
 ## Metropolis 2150 V32 by Tzekoo
 

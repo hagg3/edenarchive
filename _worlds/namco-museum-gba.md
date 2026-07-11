@@ -5,6 +5,13 @@ worldname: Namco Museum GBA
 publishdate: 2019-04-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 8
+skycolor: 6
+seed: 0
+spawnx: 53
+spawny: 46
 ---
 ## Namco Museum GBA
 

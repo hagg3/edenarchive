@@ -10,6 +10,13 @@ tags:
   - portal
   - parkour
   - puzzle
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 10
+skycolor: 18
+seed: 0
+spawnx: 169.1
+spawny: 46.0
 ---
 ## Portal Parkour add to the end v10
 

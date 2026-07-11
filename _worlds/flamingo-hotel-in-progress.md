@@ -10,6 +10,13 @@ tags:
   - flat
   - hotel
   - simple
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 37
+skycolor: 10
+seed: 0
+spawnx: 248
+spawny: 376
 ---
 ## Flamingo Hotel in progress
 

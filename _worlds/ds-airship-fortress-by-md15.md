@@ -5,6 +5,13 @@ worldname: DS Airship Fortress by MD15
 publishdate: 2017-10-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 3
+skycolor: 28
+seed: 0
+spawnx: 53.4
+spawny: 21.8
 ---
 ## DS Airship Fortress by MD15
 

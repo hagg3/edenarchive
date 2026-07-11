@@ -9,6 +9,13 @@ tags:
   - town
   - city
   - metro
+worldformat: 64z
+chunkwidth: 193
+chunkheight: 193
+skycolor: 6
+seed: 333333
+spawnx: 1388.0
+spawny: 1569.1
 ---
 ## Rheinland V73
 

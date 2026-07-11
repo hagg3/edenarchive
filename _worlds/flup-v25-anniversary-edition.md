@@ -5,6 +5,13 @@ worldname: flup v25 anniversary edition
 publishdate: 2012-09-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 62
+chunkheight: 75
+skycolor: 0
+seed: 0
+spawnx: 836.6
+spawny: 158.5
 ---
 ## flup v25 anniversary edition
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 18
+skycolor: 10
+seed: 0
+spawnx: 178.0
+spawny: 190.0
 ---
 ## Classic Restaurant By King
 

@@ -5,6 +5,13 @@ worldname: a walled city v47
 publishdate: 2020-04-25
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 94
+chunkheight: 110
+skycolor: 10
+seed: 52454
+spawnx: 528.1
+spawny: 1327.6
 ---
 ## a walled city v47
 

@@ -5,6 +5,13 @@ worldname: Le Hotel Finto le opera
 publishdate: 2024-02-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 52
+skycolor: 45
+seed: 0
+spawnx: 290.8
+spawny: 319.5
 ---
 ## Le Hotel Finto le opera
 

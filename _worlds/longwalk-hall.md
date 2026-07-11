@@ -12,6 +12,13 @@ tags:
   - large
   - exploration
   - flat
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 40
+skycolor: 36
+seed: 0
+spawnx: 424
+spawny: 440
 ---
 ## Longwalk hall
 

@@ -9,6 +9,13 @@ tags:
   - abstract
   - veryoldcaves
   - exploration
+worldformat: 64z
+chunkwidth: 56
+chunkheight: 51
+skycolor: 6
+seed: 265259
+spawnx: 398.5
+spawny: 270.4
 ---
 ## iLLuSioN World by Boa49 V51 unverified
 

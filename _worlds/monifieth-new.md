@@ -19,6 +19,13 @@ tags:
   - city
   - realistic
   - signs
+worldformat: 64z
+chunkwidth: 247
+chunkheight: 181
+skycolor: 51
+seed: 0
+spawnx: 3125
+spawny: 1806
 ---
 ## Monifieth NEW
 

@@ -8,6 +8,13 @@ tags:
   - replica
   - small
   - flat
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 34
+skycolor: 10
+seed: 0
+spawnx: 264
+spawny: 280
 ---
 ## GUMBALL House
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 30
+skycolor: 10
+seed: 0
+spawnx: 231.3
+spawny: 198.7
 ---
 ## Ian's Airport v11
 

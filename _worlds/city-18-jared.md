@@ -5,6 +5,13 @@ worldname: city 18 JARED
 publishdate: 2025-10-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 128
+chunkheight: 113
+skycolor: 10
+seed: 108367
+spawnx: 1336
+spawny: 760
 ---
 ## city 18 JARED
 

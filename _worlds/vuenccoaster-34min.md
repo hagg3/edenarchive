@@ -5,6 +5,13 @@ worldname: Vuenccoaster 34min
 publishdate: 2014-01-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 78
+chunkheight: 83
+skycolor: 0
+seed: 0
+spawnx: 847.8
+spawny: 304.2
 ---
 ## Vuenccoaster 34min
 

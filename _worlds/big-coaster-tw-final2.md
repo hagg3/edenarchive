@@ -5,6 +5,13 @@ worldname: Big Coaster TW final2
 publishdate: 2022-06-06
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 6
+skycolor: 54
+seed: 0
+spawnx: 54.9
+spawny: 27.6
 ---
 ## Big Coaster TW final2
 

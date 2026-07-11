@@ -20,6 +20,13 @@ tags:
   - arena
   - themepark
   - flat
+worldformat: 64z
+chunkwidth: 97
+chunkheight: 76
+skycolor: 0
+seed: 0
+spawnx: 465.8
+spawny: 500.9
 ---
 ## CIUDAD satelite 77
 

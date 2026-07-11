@@ -5,6 +5,13 @@ worldname: EDENS EDGE CITY II V1
 publishdate: 2013-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 20
+skycolor: 0
+seed: 0
+spawnx: 274.9
+spawny: 146.0
 ---
 ## EDENS EDGE CITY II V1
 

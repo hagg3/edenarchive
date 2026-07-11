@@ -11,6 +11,13 @@ tags:
   - adventure
   - parkour
   - unique
+worldformat: 64z
+chunkwidth: 909
+chunkheight: 940
+skycolor: 5
+seed: 0
+spawnx: 8539.7
+spawny: 8739.5
 ---
 ## Steven Universe Gem War jb
 

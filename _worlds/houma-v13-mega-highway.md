@@ -5,6 +5,13 @@ worldname: Houma V13 Mega Highway
 publishdate: 2017-12-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 128
+chunkheight: 145
+skycolor: 10
+seed: 0
+spawnx: 792
+spawny: 872
 ---
 ## Houma V13 Mega Highway
 

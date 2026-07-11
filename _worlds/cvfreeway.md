@@ -12,6 +12,13 @@ tags:
   - exploration
   - openworld
   - roads
+worldformat: 64z
+chunkwidth: 373
+chunkheight: 255
+skycolor: 15
+seed: 291339
+spawnx: 678.2
+spawny: 1712.5
 ---
 ## CVfreeway
 

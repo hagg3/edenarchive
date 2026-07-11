@@ -13,6 +13,13 @@ tags:
   - exploration
   - adventure
   - quest
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 36
+skycolor: 54
+seed: 0
+spawnx: 336.7
+spawny: 252.3
 ---
 ## Liminal Exploration Map
 

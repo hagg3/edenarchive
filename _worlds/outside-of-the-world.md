@@ -5,6 +5,13 @@ worldname: Outside of the World
 publishdate: 2012-03-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 19
+skycolor: 0
+seed: 0
+spawnx: 139.8
+spawny: 117.8
 ---
 ## Outside of the World
 

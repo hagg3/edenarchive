@@ -5,6 +5,13 @@ worldname: scottish kingdom by andrew and ben
 publishdate: 2026-01-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 69
+chunkheight: 134
+skycolor: 10
+seed: 170130
+spawnx: 544.1
+spawny: 659.7
 ---
 ## scottish kingdom by andrew and ben
 

@@ -5,6 +5,13 @@ worldname: Galaxy coaster mystery version bykid
 publishdate: 2013-01-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 40
+skycolor: 0
+seed: 0
+spawnx: 240.9
+spawny: 147.8
 ---
 ## Galaxy coaster mystery version bykid
 

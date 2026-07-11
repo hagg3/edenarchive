@@ -13,6 +13,13 @@ tags:
   - impressive
   - interior
   - scene
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 75
+skycolor: 9
+seed: 333333
+spawnx: 343.3
+spawny: 808.9
 ---
 ## Seaside by ella
 

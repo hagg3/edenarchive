@@ -12,6 +12,13 @@ tags:
   - suburb
   - street
   - test
+worldformat: 64z
+chunkwidth: 102
+chunkheight: 79
+skycolor: 23
+seed: 0
+spawnx: 738.5
+spawny: 567.1
 ---
 ## modernhomes
 

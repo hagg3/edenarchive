@@ -5,6 +5,13 @@ worldname: Lake Side Mansion
 publishdate: 2016-03-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 16
+skycolor: 4
+seed: 333333
+spawnx: 155.1
+spawny: 105.0
 ---
 ## Lake Side Mansion
 

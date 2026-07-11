@@ -5,6 +5,13 @@ worldname: Palace by KingPhil v29
 publishdate: 2023-11-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 120
+chunkheight: 111
+skycolor: 1
+seed: 0
+spawnx: 1176.1
+spawny: 930.2
 ---
 ## Palace by KingPhil v29
 

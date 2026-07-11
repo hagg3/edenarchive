@@ -5,6 +5,13 @@ worldname: Hampton V1 Hampton Hall Finto
 publishdate: 2022-10-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 15
+skycolor: 6
+seed: 0
+spawnx: 279
+spawny: 178
 ---
 ## Hampton V1 Hampton Hall Finto
 

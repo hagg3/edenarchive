@@ -5,6 +5,13 @@ worldname: Tree House By Ella
 publishdate: 2015-02-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 14
+chunkheight: 13
+skycolor: 0
+seed: 0
+spawnx: 104
+spawny: 104
 ---
 ## Tree House By Ella
 

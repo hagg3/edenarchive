@@ -11,6 +11,13 @@ tags:
   - ice
   - snow
   - mountain
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 11
+skycolor: 6
+seed: 333333
+spawnx: 59.9
+spawny: 46.7
 ---
 ## Deep Snow Mountain Resort v1'2 beta
 

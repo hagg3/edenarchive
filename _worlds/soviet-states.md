@@ -13,6 +13,13 @@ tags:
   - architecture
   - cool
   - town
+worldformat: 64z
+chunkwidth: 69
+chunkheight: 140
+skycolor: 10
+seed: 76526
+spawnx: 371.8
+spawny: 2049.5
 ---
 ## Soviet States
 

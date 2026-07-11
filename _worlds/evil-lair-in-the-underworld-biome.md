@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 85
+skycolor: 9
+seed: 333333
+spawnx: 454.9
+spawny: 1266.8
 ---
 ## evil lair in the underworld biome
 

@@ -5,6 +5,13 @@ worldname: SCG's Biotopia v5 'Nature's Utopia'
 publishdate: 2021-07-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 40
+skycolor: 54
+seed: 0
+spawnx: 138.2
+spawny: 423.6
 ---
 ## SCG's Biotopia v5 'Nature's Utopia'
 

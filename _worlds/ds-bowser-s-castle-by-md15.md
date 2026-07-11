@@ -5,6 +5,13 @@ worldname: DS Bowser's Castle by MD15
 publishdate: 2021-03-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 24
+skycolor: 54
+seed: 0
+spawnx: 154.0
+spawny: 90.0
 ---
 ## DS Bowser's Castle by MD15
 

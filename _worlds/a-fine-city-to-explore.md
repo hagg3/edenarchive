@@ -5,6 +5,13 @@ worldname: A Fine City To Explore
 publishdate: 2012-02-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 39
+skycolor: 0
+seed: 0
+spawnx: 216
+spawny: 376
 ---
 ## A Fine City To Explore
 

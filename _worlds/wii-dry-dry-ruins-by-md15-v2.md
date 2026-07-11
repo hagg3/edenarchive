@@ -5,6 +5,13 @@ worldname: Wii Dry Dry Ruins by MD15 V2
 publishdate: 2015-02-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 12
+chunkheight: 28
+skycolor: 6
+seed: 333333
+spawnx: 74.6
+spawny: 10.5
 ---
 ## Wii Dry Dry Ruins by MD15 V2
 

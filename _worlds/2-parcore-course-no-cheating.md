@@ -9,6 +9,13 @@ tags:
   - parkour
   - bhop
   - physics
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 32
+skycolor: 10
+seed: 0
+spawnx: 225.8
+spawny: 297.0
 ---
 ## 2 parcore course no cheating
 

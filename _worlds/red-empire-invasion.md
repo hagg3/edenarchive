@@ -12,6 +12,13 @@ tags:
   - army
   - millitary
   - battle
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 31
+skycolor: 9
+seed: 333333
+spawnx: 229.5
+spawny: 225.7
 ---
 ## Red Empire Invasion
 

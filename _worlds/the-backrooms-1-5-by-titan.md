@@ -5,6 +5,13 @@ worldname: The backrooms 1'5 by titan
 publishdate: 2025-01-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 39
+skycolor: 54
+seed: 0
+spawnx: 337.1
+spawny: 325.2
 ---
 ## The backrooms 1'5 by titan
 

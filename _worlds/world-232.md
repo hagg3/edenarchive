@@ -10,6 +10,13 @@ tags:
   - unique
   - abstract
   - slides
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 23
+skycolor: 8
+seed: 0
+spawnx: 101.0
+spawny: 245.0
 ---
 ## World 232
 

@@ -5,6 +5,13 @@ worldname: Timms Megaworld 4
 publishdate: 2012-02-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 253
+chunkheight: 66
+skycolor: 0
+seed: 34065
+spawnx: 504.1
+spawny: 456.3
 ---
 ## Timms Megaworld 4
 

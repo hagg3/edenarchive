@@ -5,6 +5,13 @@ worldname: new yorkk FINAL by CM
 publishdate: 2014-02-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 88
+chunkheight: 153
+skycolor: 0
+seed: 0
+spawnx: 754.9
+spawny: 1974.9
 ---
 ## new yorkk FINAL by CM
 

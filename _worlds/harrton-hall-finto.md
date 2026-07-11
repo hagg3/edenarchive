@@ -5,6 +5,13 @@ worldname: Harrton Hall Finto
 publishdate: 2024-03-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 36
+skycolor: 5
+seed: 0
+spawnx: 328
+spawny: 312
 ---
 ## Harrton Hall Finto
 

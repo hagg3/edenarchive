@@ -12,6 +12,13 @@ tags:
   - lighting
   - quest
   - puzzle
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 29
+skycolor: 54
+seed: 0
+spawnx: 240.2
+spawny: 232.1
 ---
 ## FE2 Map 1 DSF by Emil 173
 

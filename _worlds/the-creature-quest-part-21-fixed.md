@@ -15,6 +15,13 @@ tags:
   - quest
   - treasure
   - lighting
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 8
+skycolor: 54
+seed: 0
+spawnx: 46.1
+spawny: 15.9
 ---
 ## The Creature Quest Part 21 FIXED
 

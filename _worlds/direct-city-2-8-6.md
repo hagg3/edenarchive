@@ -5,6 +5,13 @@ worldname: Direct City 2'8'6
 publishdate: 2014-03-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 84
+chunkheight: 102
+skycolor: 0
+seed: 287331
+spawnx: 861.9
+spawny: 741.0
 ---
 ## Direct City 2'8'6
 

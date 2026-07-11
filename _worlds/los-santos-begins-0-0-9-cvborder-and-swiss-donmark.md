@@ -5,6 +5,13 @@ worldname: Los Santos begins 0'0'9
 publishdate: 2023-10-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 128
+skycolor: 10
+seed: 34132
+spawnx: 443.3
+spawny: 1523.6
 ---
 ## Los Santos begins 0'0'9 (cvborder and swiss donmark)
 

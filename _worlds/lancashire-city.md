@@ -5,6 +5,13 @@ worldname: lancashire city
 publishdate: 2016-06-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 73
+chunkheight: 77
+skycolor: 15
+seed: 0
+spawnx: 582.2
+spawny: 671.2
 ---
 ## lancashire city
 

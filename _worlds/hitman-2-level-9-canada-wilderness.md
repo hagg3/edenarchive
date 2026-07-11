@@ -11,6 +11,13 @@ tags:
   - scale
   - roads
   - needsreview
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 20
+skycolor: 10
+seed: 0
+spawnx: 274.9
+spawny: 146.0
 ---
 ## Hitman  2 Level 9 Canada Wilderness
 

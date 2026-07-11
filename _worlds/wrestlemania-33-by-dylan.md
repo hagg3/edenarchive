@@ -5,6 +5,13 @@ worldname: Wrestlemania 33 by dylan
 publishdate: 2017-04-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 44
+skycolor: 54
+seed: 0
+spawnx: 196.7
+spawny: 488.1
 ---
 ## Wrestlemania 33 by dylan
 

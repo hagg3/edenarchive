@@ -11,6 +11,13 @@ tags:
   - city
   - detail
   - quality
+worldformat: 64z
+chunkwidth: 54
+chunkheight: 58
+skycolor: 6
+seed: 0
+spawnx: 368.7
+spawny: 286.8
 ---
 ## JBR World 2026
 

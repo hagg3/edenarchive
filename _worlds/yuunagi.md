@@ -5,6 +5,13 @@ worldname: Yuunagi
 publishdate: 2017-04-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 30
+skycolor: 10
+seed: 26887
+spawnx: 353.3
+spawny: 180.9
 ---
 ## Yuunagi
 

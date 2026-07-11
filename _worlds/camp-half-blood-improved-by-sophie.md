@@ -5,6 +5,13 @@ worldname: CAMP HALF BLOOD improved by Sophie
 publishdate: 2017-04-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 32
+skycolor: 45
+seed: 0
+spawnx: 334.0
+spawny: 314.5
 ---
 ## CAMP HALF BLOOD improved by Sophie
 

@@ -12,6 +12,13 @@ tags:
   - snow
   - winterr
   - ski
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 20
+skycolor: 9
+seed: 0
+spawnx: 213
+spawny: 126
 ---
 ## Alpine Sports Complex Switzerland
 

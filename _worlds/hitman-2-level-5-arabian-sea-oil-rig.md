@@ -9,6 +9,13 @@ tags:
   - hitman
   - industrial
   - story
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 20
+skycolor: 10
+seed: 0
+spawnx: 168
+spawny: 168
 ---
 ## Hitman 2 Level 5 Arabian Sea Oil Rig
 

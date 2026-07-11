@@ -5,6 +5,13 @@ worldname: WWE WM XXVIII V2
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 39
+skycolor: 0
+seed: 0
+spawnx: 137.5
+spawny: 507.2
 ---
 ## WWE WM XXVIII V2
 

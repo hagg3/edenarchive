@@ -11,6 +11,13 @@ tags:
   - oldterrain
   - skyscraper
   - scalesmall
+worldformat: 64z
+chunkwidth: 64
+chunkheight: 102
+skycolor: 3
+seed: 29033
+spawnx: 490.0
+spawny: 623.0
 ---
 ## RocolowCITY2026
 

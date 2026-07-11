@@ -5,6 +5,13 @@ worldname: Milky Way Express
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 164
+chunkheight: 57
+skycolor: 0
+seed: 109431
+spawnx: 2523.3
+spawny: 591.1
 ---
 ## Milky Way Express
 

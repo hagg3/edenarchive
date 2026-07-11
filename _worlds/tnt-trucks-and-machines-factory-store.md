@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 33
+skycolor: 15
+seed: 0
+spawnx: 248.0
+spawny: 232.5
 ---
 ## TNT TRUCKS AND MACHINES FACTORY STORE
 

@@ -17,6 +17,13 @@ tags:
   - town
   - lake
   - lighthouse
+worldformat: 64z
+chunkwidth: 89
+chunkheight: 48
+skycolor: 8
+seed: 0
+spawnx: 823.6
+spawny: 147.2
 ---
 ## STONELAKE CITY v11 Beach n' pier
 

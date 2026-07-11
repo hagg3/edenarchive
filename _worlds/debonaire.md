@@ -5,6 +5,13 @@ worldname: Debonaire
 publishdate: 2017-05-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 7
+skycolor: 54
+seed: 0
+spawnx: 48
+spawny: 35
 ---
 ## Debonaire
 

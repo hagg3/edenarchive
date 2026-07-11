@@ -1,10 +1,17 @@
+const PAGE_SIZE = 40;
+
 const tableBody = document.querySelector("#world-table tbody");
 const searchInput = document.getElementById("search");
 const tagSelect = document.getElementById("tag-filter");
 const dateFrom = document.getElementById("date-from");
 const dateTo = document.getElementById("date-to");
+const pagePrev = document.getElementById("page-prev");
+const pageNext = document.getElementById("page-next");
+const pageStatus = document.getElementById("page-status");
 
 let allWorlds = [];
+let filteredWorlds = [];
+let currentPage = 1;
 
 fetch("{{ site.baseurl }}/assets/data/worlds.json")
   .then(res => res.json())
@@ -13,7 +20,17 @@ fetch("{{ site.baseurl }}/assets/data/worlds.json")
 
     populateTags(worlds);
     computeStats(worlds);
-    render(worlds);
+
+    // A tag link (e.g. from a world page) arrives as ?tag=City — honor it on
+    // load so those links are shareable/bookmarkable, not just a client-side
+    // filter state that resets on navigation.
+    const params = new URLSearchParams(window.location.search);
+    const tagParam = params.get("tag");
+    if (tagParam && [...tagSelect.options].some(o => o.value === tagParam)) {
+      tagSelect.value = tagParam;
+    }
+
+    applyFilters();
   });
 
 function populateTags(worlds) {
@@ -33,6 +50,9 @@ function render(worlds) {
 
   worlds.forEach(w => {
     const row = document.createElement("tr");
+    const tagLinks = (w.tags || [])
+      .map(t => `<a href="?tag=${encodeURIComponent(t)}" class="tag-link">${t}</a>`)
+      .join(", ");
     row.innerHTML = `
     <td class="preview-cell">
         ${w.filename ? `
@@ -46,12 +66,41 @@ function render(worlds) {
     <td><a href="{{ site.baseurl }}${w.url}">${w.worldname}</a></td>
     <td>${w.author || ""}</td>
     <td>${w.publishdate || ""}</td>
-    <td>${(w.tags || []).join(", ")}</td>
+    <td>${tagLinks}</td>
     `;
 
     tableBody.appendChild(row);
   });
+
+  // Tag links reuse the same client-side filter instead of a full page
+  // navigation to themselves.
+  tableBody.querySelectorAll(".tag-link").forEach(a => {
+    a.addEventListener("click", evt => {
+      evt.preventDefault();
+      const tag = new URLSearchParams(a.search).get("tag");
+      tagSelect.value = tag;
+      applyFilters();
+      window.scrollTo({ top: document.getElementById("world-table").offsetTop - 20, behavior: "smooth" });
+    });
+  });
 }
+
+function renderPage() {
+  const pages = Math.max(1, Math.ceil(filteredWorlds.length / PAGE_SIZE));
+  currentPage = Math.min(Math.max(1, currentPage), pages);
+
+  const start = (currentPage - 1) * PAGE_SIZE;
+  render(filteredWorlds.slice(start, start + PAGE_SIZE));
+
+  pageStatus.textContent = filteredWorlds.length
+    ? `Page ${currentPage} of ${pages} (${filteredWorlds.length} worlds)`
+    : "No worlds match these filters";
+  pagePrev.disabled = currentPage <= 1;
+  pageNext.disabled = currentPage >= pages;
+}
+
+pagePrev.addEventListener("click", () => { currentPage--; renderPage(); });
+pageNext.addEventListener("click", () => { currentPage++; renderPage(); });
 
 function computeStats(worlds) {
   // --- Total worlds ---
@@ -102,7 +151,7 @@ function applyFilters() {
   const from = dateFrom.value;
   const to = dateTo.value;
 
-  const filtered = allWorlds.filter(w => {
+  filteredWorlds = allWorlds.filter(w => {
     const text =
       `${w.worldname} ${w.author} ${(w.tags || []).join(" ")}`.toLowerCase();
 
@@ -114,7 +163,15 @@ function applyFilters() {
     return true;
   });
 
-  render(filtered);
+  currentPage = 1;
+
+  // Keep the tag filter shareable in the URL without a full navigation.
+  const params = new URLSearchParams(window.location.search);
+  if (tag) params.set("tag", tag); else params.delete("tag");
+  const query = params.toString();
+  history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
+
+  renderPage();
 }
 
 [searchInput, tagSelect, dateFrom, dateTo].forEach(el =>

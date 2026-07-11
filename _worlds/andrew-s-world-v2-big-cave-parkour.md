@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.4 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 189
+chunkheight: 180
+skycolor: 7
+seed: 333333
+spawnx: 1841.9
+spawny: 644.3
 ---
 ## andrew's world v2 big cave parkour
 

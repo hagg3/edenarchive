@@ -11,6 +11,13 @@ tags:
   - city
   - oldterrain
   - modern
+worldformat: 64z
+chunkwidth: 562
+chunkheight: 365
+skycolor: 0
+seed: 187845
+spawnx: 7618.9
+spawny: 4504.1
 ---
 ## Atlanta GA Skyline Capital
 

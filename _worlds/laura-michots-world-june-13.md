@@ -5,6 +5,13 @@ worldname: Laura Michots World June 13
 publishdate: 2012-06-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 98
+chunkheight: 101
+skycolor: 0
+seed: 0
+spawnx: 393.5
+spawny: 1159.9
 ---
 ## Laura Michots World June 13
 

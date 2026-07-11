@@ -14,6 +14,13 @@ tags:
   - signs
   - architecture
   - modern
+worldformat: 64z
+chunkwidth: 134
+chunkheight: 122
+skycolor: 15
+seed: 163342
+spawnx: 652.5
+spawny: 383.8
 ---
 ## FAMG ORIGEN
 

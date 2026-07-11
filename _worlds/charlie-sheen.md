@@ -5,6 +5,13 @@ worldname: Charlie Sheen
 publishdate: 2012-02-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 14
+chunkheight: 31
+skycolor: 0
+seed: 0
+spawnx: 108.9
+spawny: 342.0
 ---
 ## Charlie Sheen
 

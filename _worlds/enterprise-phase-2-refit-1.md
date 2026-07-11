@@ -13,6 +13,13 @@ tags:
   - startrek
   - lighting
   - flat
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 19
+skycolor: 54
+seed: 0
+spawnx: 233.1
+spawny: 159.3
 ---
 ## Enterprise Phase 2 Refit 1
 

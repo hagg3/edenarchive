@@ -5,6 +5,13 @@ worldname: Basketball Stadium
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 19
+skycolor: 0
+seed: 0
+spawnx: 184
+spawny: 168
 ---
 ## Basketball Stadium
 

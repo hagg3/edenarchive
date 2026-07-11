@@ -10,6 +10,13 @@ tags:
   - needsreview
   - nintendo
   - mario
+worldformat: 64z
+chunkwidth: 16
+chunkheight: 17
+skycolor: 10
+seed: 0
+spawnx: 120
+spawny: 152
 ---
 ## Mk 8 Luigi's Mansion
 

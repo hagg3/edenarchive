@@ -5,6 +5,13 @@ worldname: COMPLETELY ACCURATE TITANIC v3
 publishdate: 2012-10-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 39
+skycolor: 0
+seed: 29391
+spawnx: 209.6
+spawny: 265.6
 ---
 ## COMPLETELY ACCURATE TITANIC v3
 

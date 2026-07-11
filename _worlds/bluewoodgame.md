@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 85
+chunkheight: 76
+skycolor: 15
+seed: 0
+spawnx: 824
+spawny: 520
 ---
 ## Bluewoodgame
 

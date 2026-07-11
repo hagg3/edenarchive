@@ -5,6 +5,13 @@ worldname: biome
 publishdate: 2025-12-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 98
+chunkheight: 35
+skycolor: 6
+seed: 0
+spawnx: 910.0
+spawny: 288.8
 ---
 ## biome
 

@@ -5,6 +5,13 @@ worldname: Cathedral of Mary Queen of Angels
 publishdate: 2020-01-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 31
+skycolor: 10
+seed: 0
+spawnx: 309.9
+spawny: 280.3
 ---
 ## Cathedral of Mary Queen of Angels
 

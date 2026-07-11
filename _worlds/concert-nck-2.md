@@ -9,6 +9,13 @@ author:
 tags:
   - arena
   - concert
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 33
+skycolor: 6
+seed: 0
+spawnx: 235.3
+spawny: 252.0
 ---
 ## Concert NCK 2
 

@@ -5,6 +5,13 @@ worldname: The Octagon power core
 publishdate: 2016-07-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 93
+chunkheight: 124
+skycolor: 4
+seed: 276117
+spawnx: 921.1
+spawny: 907.6
 ---
 ## The Octagon power core
 

@@ -5,6 +5,13 @@ worldname: Medieval City
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 16
+chunkheight: 19
+skycolor: 0
+seed: 0
+spawnx: 133.7
+spawny: 218.2
 ---
 ## Medieval City
 

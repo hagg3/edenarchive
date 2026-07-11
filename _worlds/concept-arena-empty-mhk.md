@@ -8,6 +8,13 @@ tags:
   - arena
   - concert
   - hall
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 34
+skycolor: 9
+seed: 0
+spawnx: 389.9
+spawny: 237.7
 ---
 ## Concept Arena empty mhk
 

@@ -5,6 +5,13 @@ worldname: SM European Mansion redone
 publishdate: 2021-05-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 28
+skycolor: 54
+seed: 0
+spawnx: 170.2
+spawny: 190.4
 ---
 ## SM European Mansion redone
 

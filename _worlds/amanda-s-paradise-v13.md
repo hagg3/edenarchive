@@ -13,6 +13,13 @@ tags:
   - abstract
   - logo
   - signs
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 44
+skycolor: 0
+seed: 80866
+spawnx: 251.1
+spawny: 556.2
 ---
 ## Amanda's Paradise v13
 

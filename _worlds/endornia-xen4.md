@@ -15,6 +15,13 @@ tags:
   - resort
   - jungle
   - island
+worldformat: 64z
+chunkwidth: 121
+chunkheight: 85
+skycolor: 9
+seed: 333333
+spawnx: 1136.8
+spawny: 1003.3
 ---
 ## Endornia XEN4
 

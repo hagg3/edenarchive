@@ -5,6 +5,13 @@ worldname: Craig Tara Refurb
 publishdate: 2026-01-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 28
+skycolor: 54
+seed: 0
+spawnx: 252.2
+spawny: 214.2
 ---
 ## Craig Tara Refurb
 

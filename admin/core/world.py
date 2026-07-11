@@ -94,6 +94,37 @@ class World:
         t = self.data.get("tags")
         return [str(x) for x in t] if isinstance(t, list) else []
 
+    # --- technical metadata (extracted from the .eden binary by node-mapgen,
+    # via admin/core/mapgen.py's meta.json sidecar; absent until a world's map
+    # has been generated/regenerated at least once since this feature landed) --
+    @property
+    def worldformat(self) -> str:
+        return str(self.data.get("worldformat") or "").strip()
+
+    @property
+    def chunkwidth(self) -> int | None:
+        return self.data.get("chunkwidth")
+
+    @property
+    def chunkheight(self) -> int | None:
+        return self.data.get("chunkheight")
+
+    @property
+    def skycolor(self) -> int | None:
+        return self.data.get("skycolor")
+
+    @property
+    def seed(self) -> int | None:
+        return self.data.get("seed")
+
+    @property
+    def spawnx(self) -> float | None:
+        return self.data.get("spawnx")
+
+    @property
+    def spawny(self) -> float | None:
+        return self.data.get("spawny")
+
     @property
     def body(self) -> str:
         return self.doc.body
@@ -128,6 +159,22 @@ def normalize_body(text: str) -> str:
 
 
 EDITABLE_FIELDS = ("worldname", "author", "publishdate", "archivedate", "filesize")
+
+# Technical fields are machine-extracted (node-mapgen), never hand-edited —
+# kept separate from EDITABLE_FIELDS, which drives the manual edit form.
+TECHNICAL_FIELDS = (
+    "worldformat", "chunkwidth", "chunkheight", "skycolor", "seed", "spawnx", "spawny",
+)
+
+
+def technical_info(w: World) -> dict[str, Any]:
+    """Present-only subset of TECHNICAL_FIELDS, or {} if none have been
+    extracted yet (map never generated, or generated before this feature)."""
+    return {
+        key: w.data[key]
+        for key in TECHNICAL_FIELDS
+        if w.data.get(key) not in (None, "")
+    }
 
 
 def save(w: World, updates: dict[str, Any], body: str | None = None) -> bool:

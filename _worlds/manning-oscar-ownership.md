@@ -13,6 +13,13 @@ tags:
   - temple
   - city
   - architecture
+worldformat: 64z
+chunkwidth: 66
+chunkheight: 63
+skycolor: 6
+seed: 0
+spawnx: 333.9
+spawny: 460.5
 ---
 ## Manning Oscar Ownership
 

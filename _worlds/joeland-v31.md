@@ -10,6 +10,13 @@ tags:
   - city
   - town
   - oldterrain
+worldformat: 64z
+chunkwidth: 291
+chunkheight: 217
+skycolor: 10
+seed: 284490
+spawnx: 1439.1
+spawny: 1543.1
 ---
 ## Joeland V31
 

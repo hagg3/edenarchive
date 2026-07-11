@@ -5,6 +5,13 @@ worldname: Hitman 2 Level 2 San Deigo Mansion
 publishdate: 2021-03-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 42
+skycolor: 10
+seed: 0
+spawnx: 257.0
+spawny: 466.8
 ---
 ## Hitman 2 Level 2 San Deigo Mansion
 

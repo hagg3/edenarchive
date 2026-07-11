@@ -5,6 +5,13 @@ worldname: Milopolis
 publishdate: 2020-04-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 113
+chunkheight: 142
+skycolor: 15
+seed: 333333
+spawnx: 445.6
+spawny: 103.6
 ---
 ## Milopolis
 

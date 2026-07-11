@@ -7,6 +7,13 @@ archivedate:
 filesize: "8.0 MB"
 author: Aaron MRD
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 20
+skycolor: 31
+seed: 0
+spawnx: 326.2
+spawny: 156.9
 ---
 ## Erebor V1'2 by Aaron MRD
 

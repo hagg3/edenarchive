@@ -5,6 +5,13 @@ worldname: New York V1
 publishdate: 2012-02-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 38
+skycolor: 0
+seed: 0
+spawnx: 209.5
+spawny: 165.2
 ---
 ## New York V1
 

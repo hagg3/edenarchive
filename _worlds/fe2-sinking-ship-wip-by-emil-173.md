@@ -10,6 +10,13 @@ tags:
   - lighting
   - quest
   - puzzle
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 46
+seed: 0
+spawnx: 237.7
+spawny: 225.2
 ---
 ## FE2 Sinking Ship WIP By Emil 173
 

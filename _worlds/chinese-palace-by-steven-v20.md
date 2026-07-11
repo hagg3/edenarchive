@@ -5,6 +5,13 @@ worldname: Chinese Palace by Steven V20
 publishdate: 2012-06-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 42
+skycolor: 0
+seed: 0
+spawnx: 272.0
+spawny: 319.3
 ---
 ## Chinese Palace by Steven V20
 

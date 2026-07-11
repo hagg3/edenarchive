@@ -5,6 +5,13 @@ worldname: Asian Temple v3 TW
 publishdate: 2022-09-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 10
+chunkheight: 10
+skycolor: 54
+seed: 0
+spawnx: 51.6
+spawny: 52.9
 ---
 ## Asian Temple v3 TW
 

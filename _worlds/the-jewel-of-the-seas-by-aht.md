@@ -5,6 +5,13 @@ worldname: The Jewel of the seas by AHT
 publishdate: 2017-06-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 32
+skycolor: 9
+seed: 333333
+spawnx: 27
+spawny: 0
 ---
 ## The Jewel of the seas by AHT
 

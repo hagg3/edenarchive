@@ -5,6 +5,13 @@ worldname: Star Wars Republic Cruiser
 publishdate: 2012-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 20
+skycolor: 0
+seed: 0
+spawnx: 164.3
+spawny: 195.9
 ---
 ## Star Wars Republic Cruiser
 

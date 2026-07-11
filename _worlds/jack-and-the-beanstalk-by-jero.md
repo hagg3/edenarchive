@@ -8,6 +8,13 @@ tags:
   - unique
   - scene
   - needsreview
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 37
+skycolor: 54
+seed: 75304
+spawnx: 334.8
+spawny: 367.2
 ---
 ## Jack and the Beanstalk by Jero
 

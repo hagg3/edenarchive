@@ -16,6 +16,13 @@ tags:
   - architecture
   - impressive
   - farcity
+worldformat: 64z
+chunkwidth: 99
+chunkheight: 85
+skycolor: 2
+seed: 276117
+spawnx: 828.9
+spawny: 691.9
 ---
 ## Zadras Capital City v2
 

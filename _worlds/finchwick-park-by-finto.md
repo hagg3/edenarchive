@@ -5,6 +5,13 @@ worldname: Finchwick Park by Finto
 publishdate: 2024-04-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 75
+chunkheight: 82
+skycolor: 6
+seed: 0
+spawnx: 521.7
+spawny: 295.8
 ---
 ## Finchwick Park by Finto
 

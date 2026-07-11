@@ -25,6 +25,13 @@ tags:
   - city
   - town
   - architecture
+worldformat: 64z
+chunkwidth: 73
+chunkheight: 106
+skycolor: 15
+seed: 170130
+spawnx: 722.1
+spawny: 680.1
 ---
 ## Kingdom Life Returnal 2
 

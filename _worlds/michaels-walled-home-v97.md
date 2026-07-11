@@ -5,6 +5,13 @@ worldname: Michaels Walled Home v97
 publishdate: 2012-12-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 49
+skycolor: 0
+seed: 0
+spawnx: 255.2
+spawny: 250.2
 ---
 ## Michaels Walled Home v97
 

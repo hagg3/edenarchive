@@ -5,6 +5,13 @@ worldname: The Library of Congress TZECHLAB_1739
 publishdate: 2020-11-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 23
+skycolor: 51
+seed: 0
+spawnx: 135
+spawny: 244.0
 ---
 ## The Library of Congress TZECHLAB_1739
 

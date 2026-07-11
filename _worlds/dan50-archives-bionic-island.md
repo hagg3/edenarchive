@@ -11,6 +11,13 @@ tags:
   - facility
   - unique
   - interior
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 29
+skycolor: 27
+seed: 0
+spawnx: 295
+spawny: 200
 ---
 ## Dan50 Archives Bionic Island
 

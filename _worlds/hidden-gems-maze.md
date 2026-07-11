@@ -5,6 +5,13 @@ worldname: hidden gems maze
 publishdate: 2025-09-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 190
+chunkheight: 192
+skycolor: 9
+seed: 333333
+spawnx: 2354
+spawny: 1512
 ---
 ## hidden gems maze
 

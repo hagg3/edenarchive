@@ -5,6 +5,13 @@ worldname: Kantrava City v1'4'2
 publishdate: 2019-09-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 86
+chunkheight: 158
+skycolor: 0
+seed: 0
+spawnx: 1171
+spawny: 502.6
 ---
 ## Kantrava City v1'4'2
 

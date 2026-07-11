@@ -18,6 +18,13 @@ tags:
   - architecture
   - metro
   - river
+worldformat: 64z
+chunkwidth: 56
+chunkheight: 133
+skycolor: 10
+seed: 0
+spawnx: 596.2
+spawny: 441.2
 ---
 ## SN City
 

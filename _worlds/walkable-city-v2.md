@@ -12,6 +12,13 @@ tags:
   - interior
   - detailed
   - europe
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 39
+skycolor: 10
+seed: 0
+spawnx: 327.9
+spawny: 251.7
 ---
 ## Walkable City v2
 

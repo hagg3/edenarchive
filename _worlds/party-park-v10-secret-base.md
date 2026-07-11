@@ -11,6 +11,13 @@ tags:
   - variety
   - retro
   - airport
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 91
+skycolor: 0
+seed: 0
+spawnx: 259.0
+spawny: 1142.2
 ---
 ## Party Park v10 Secret Base
 

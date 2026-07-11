@@ -10,6 +10,13 @@ tags:
   - town
   - architecture
   - house
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 49
+skycolor: 7
+seed: 0
+spawnx: 413.3
+spawny: 432.3
 ---
 ## The Impossible Mansion
 

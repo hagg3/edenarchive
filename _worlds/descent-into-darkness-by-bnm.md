@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 16
+chunkheight: 27
+skycolor: 54
+seed: 60681
+spawnx: 106.3
+spawny: 339.8
 ---
 ## Descent into Darkness by Bnm
 

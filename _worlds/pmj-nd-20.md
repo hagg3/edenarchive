@@ -6,6 +6,13 @@ publishdate: 2025-04-09
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 152
+chunkheight: 207
+skycolor: 0
+seed: 0
+spawnx: 1278.8
+spawny: 1662.2
 ---
 ## PMJ ND 20
 

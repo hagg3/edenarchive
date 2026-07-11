@@ -9,6 +9,13 @@ author: Noah Kotzin
 tags:
   - wiki
   - story
+worldformat: 64z
+chunkwidth: 63
+chunkheight: 184
+skycolor: 10
+seed: 0
+spawnx: 409.1
+spawny: 2557.3
 ---
 ## A Series of Unfortunate Events V11
 

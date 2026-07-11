@@ -5,6 +5,13 @@ worldname: Star Wars V120
 publishdate: 2012-04-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 162
+chunkheight: 202
+skycolor: 0
+seed: 0
+spawnx: 739.5
+spawny: 1212.1
 ---
 ## Star Wars V120
 

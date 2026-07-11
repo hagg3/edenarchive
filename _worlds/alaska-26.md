@@ -10,6 +10,13 @@ tags:
   - city
   - normalterrain
   - beach
+worldformat: 64z
+chunkwidth: 189
+chunkheight: 209
+skycolor: 9
+seed: 333333
+spawnx: 1824.4
+spawny: 2287.2
 ---
 ## Alaska 26
 

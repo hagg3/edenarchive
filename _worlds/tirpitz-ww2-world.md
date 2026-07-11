@@ -5,6 +5,13 @@ worldname: Tirpitz (ww2 world)
 publishdate: 2020-04-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 65
+chunkheight: 61
+skycolor: 9
+seed: 123035
+spawnx: 710.5
+spawny: 536.1
 ---
 ## Tirpitz (ww2 world)
 

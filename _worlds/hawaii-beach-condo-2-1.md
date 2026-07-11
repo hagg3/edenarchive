@@ -6,6 +6,13 @@ publishdate: 2017-10-23
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 55
+skycolor: 23
+seed: 0
+spawnx: 590.7
+spawny: 296.9
 ---
 ## Hawaii Beach Condo 2.1
 

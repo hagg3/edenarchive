@@ -14,16 +14,18 @@
       <td><strong>Published</strong></td>
       <td>{{ page.publishdate }}</td>
     </tr>
-<!--
+    {% if page.archivedate %}
     <tr>
       <td><strong>Archived</strong></td>
       <td>{{ page.archivedate }}</td>
     </tr>
+    {% endif %}
+    {% if page.filesize %}
     <tr>
       <td><strong>Filesize</strong></td>
       <td>{{ page.filesize }}</td>
     </tr>
--->
+    {% endif %}
     <tr>
       <td><strong>Author</strong></td>
       <td>{{ page.author }}</td>
@@ -32,9 +34,33 @@
       <td><strong>Tags</strong></td>
       <td>
         {% if page.tags %}
-          {{ page.tags | join: ", " }}
+          {% for tag in page.tags %}<a href="{{ site.baseurl }}/worlds/?tag={{ tag | url_encode }}" class="tag-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
         {% endif %}
       </td>
     </tr>
+    {% if page.worldformat %}
+    <tr>
+      <td><strong>Format</strong></td>
+      <td>{{ page.worldformat }}</td>
+    </tr>
+    {% endif %}
+    {% if page.chunkwidth and page.chunkheight %}
+    <tr>
+      <td><strong>Dimensions</strong></td>
+      <td>{{ page.chunkwidth }} &times; {{ page.chunkheight }} chunks ({{ page.chunkwidth | times: 16 }} &times; {{ page.chunkheight | times: 16 }} blocks)</td>
+    </tr>
+    {% endif %}
+    {% if page.seed %}
+    <tr>
+      <td><strong>Seed</strong></td>
+      <td>{{ page.seed }}</td>
+    </tr>
+    {% endif %}
+    {% if page.spawnx and page.spawny %}
+    <tr>
+      <td><strong>Spawn point</strong></td>
+      <td>{{ page.spawnx }}, {{ page.spawny }}</td>
+    </tr>
+    {% endif %}
   </tbody>
 </table>

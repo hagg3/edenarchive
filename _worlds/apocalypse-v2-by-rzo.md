@@ -12,6 +12,13 @@ tags:
   - scene
   - exploration
   - lighting
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 23
+skycolor: 10
+seed: 207121
+spawnx: 216
+spawny: 120
 ---
 ## Apocalypse V2 by RZO
 

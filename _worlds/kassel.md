@@ -5,6 +5,13 @@ worldname: Kassel
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 52
+skycolor: 0
+seed: 0
+spawnx: 312
+spawny: 392
 ---
 ## Kassel
 

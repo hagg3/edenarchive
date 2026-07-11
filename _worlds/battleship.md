@@ -5,6 +5,13 @@ worldname: Battleship
 publishdate: 2012-02-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 25
+skycolor: 0
+seed: 138979
+spawnx: 184
+spawny: 200
 ---
 ## Battleship
 

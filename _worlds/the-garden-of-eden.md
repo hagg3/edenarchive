@@ -5,6 +5,13 @@ worldname: The Garden Of Eden
 publishdate: 2022-01-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 120
+chunkheight: 18
+skycolor: 9
+seed: 333333
+spawnx: 53
+spawny: 46
 ---
 ## The Garden Of Eden
 

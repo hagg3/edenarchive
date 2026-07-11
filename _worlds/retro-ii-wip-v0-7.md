@@ -5,6 +5,13 @@ worldname: Retro II WIP v0'7
 publishdate: 2015-11-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 58
+chunkheight: 42
+skycolor: 15
+seed: 0
+spawnx: 399.1
+spawny: 367.0
 ---
 ## Retro II WIP v0'7
 

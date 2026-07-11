@@ -5,6 +5,13 @@ worldname: NIGHTMARE REALM
 publishdate: 2021-07-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 355
+chunkheight: 41
+skycolor: 37
+seed: 92556
+spawnx: 421.6
+spawny: 466.9
 ---
 ## NIGHTMARE REALM
 

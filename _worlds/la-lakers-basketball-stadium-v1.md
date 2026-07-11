@@ -5,6 +5,13 @@ worldname: LA Lakers Basketball Stadium V1
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 23
+skycolor: 0
+seed: 0
+spawnx: 216.6
+spawny: 165.0
 ---
 ## LA Lakers Basketball Stadium V1
 

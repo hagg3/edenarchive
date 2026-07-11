@@ -8,6 +8,13 @@ tags:
   - small
   - abstract
   - scene
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 10
+skycolor: 22
+seed: 0
+spawnx: 23
+spawny: 66
 ---
 ## Epic Stronghold
 

@@ -5,6 +5,13 @@ worldname: earth V3'5
 publishdate: 2021-01-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 139
+chunkheight: 203
+skycolor: 10
+seed: 0
+spawnx: 1450.9
+spawny: 1455.9
 ---
 ## earth V3'5
 

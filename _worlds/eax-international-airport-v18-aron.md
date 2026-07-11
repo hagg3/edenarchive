@@ -7,6 +7,13 @@ archivedate:
 filesize: "160.6 MB"
 author: Aron
 tags:
+worldformat: 64z
+chunkwidth: 67
+chunkheight: 233
+skycolor: 18
+seed: 0
+spawnx: 568
+spawny: 2696
 ---
 ## EAX International Airport v18 Aron
 

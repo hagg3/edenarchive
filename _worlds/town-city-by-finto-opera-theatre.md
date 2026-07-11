@@ -10,6 +10,13 @@ tags:
   - europe
   - realistic
   - interior
+worldformat: 64z
+chunkwidth: 81
+chunkheight: 80
+skycolor: 6
+seed: 0
+spawnx: 704.2
+spawny: 460.0
 ---
 ## town city by finto opera theatre
 

@@ -14,6 +14,13 @@ tags:
   - quest
   - puzzle
   - parkour
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 17
+skycolor: 8
+seed: 0
+spawnx: 139.1
+spawny: 86.0
 ---
 ## PARKOUR COURSE V1 by SINFUL
 

@@ -5,6 +5,13 @@ worldname: skyscraper Empire AW construction 2.1 unverified
 publishdate: 2021-05-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 55
+chunkheight: 59
+skycolor: 15
+seed: 0
+spawnx: 572.1
+spawny: 675.2
 ---
 ## skyscraper Empire AW construction 2.1 unverified
 

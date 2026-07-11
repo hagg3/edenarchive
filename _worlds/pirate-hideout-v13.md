@@ -5,6 +5,13 @@ worldname: Pirate Hideout V13
 publishdate: 2012-04-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 19
+skycolor: 0
+seed: 247334
+spawnx: 224.4
+spawny: 135.8
 ---
 ## Pirate Hideout V13
 

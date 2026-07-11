@@ -5,6 +5,13 @@ worldname: SWISS V7 CS
 publishdate: 2020-04-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 326
+chunkheight: 175
+skycolor: 6
+seed: 0
+spawnx: 2004.3
+spawny: 997.2
 ---
 ## SWISS V7 CS
 

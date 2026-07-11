@@ -5,6 +5,13 @@ worldname: Rimshine City v5
 publishdate: 2017-08-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 107
+chunkheight: 85
+skycolor: 54
+seed: 0
+spawnx: 560.1
+spawny: 1155.2
 ---
 ## Rimshine City v5
 

@@ -10,6 +10,13 @@ tags:
   - lighting
   - industrial
   - facility
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 41
+skycolor: 54
+seed: 129001
+spawnx: 216.8
+spawny: 339.8
 ---
 ## ORF District 713
 

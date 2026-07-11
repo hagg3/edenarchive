@@ -5,6 +5,13 @@ worldname: Beverly Hills 5 star hotel estate
 publishdate: 2016-03-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 80
+chunkheight: 43
+skycolor: 15
+seed: 0
+spawnx: 699.1
+spawny: 431.9
 ---
 ## Beverly Hills 5 star hotel estate
 

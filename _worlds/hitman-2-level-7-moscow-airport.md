@@ -5,6 +5,13 @@ worldname: Hitman 2 Level 7 Moscow Airport
 publishdate: 2021-03-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 176
+chunkheight: 196
+skycolor: 9
+seed: 0
+spawnx: 1040.2
+spawny: 1442.2
 ---
 ## Hitman 2 Level 7 Moscow Airport
 

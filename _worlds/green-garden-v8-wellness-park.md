@@ -5,6 +5,13 @@ worldname: Green Garden V8 Wellness Park
 publishdate: 2013-04-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 73
+chunkheight: 68
+skycolor: 0
+seed: 0
+spawnx: 694.7
+spawny: 613.8
 ---
 ## Green Garden V8 Wellness Park
 

@@ -5,6 +5,13 @@ worldname: DIRECT CITY 8'0
 publishdate: 2017-02-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 104
+chunkheight: 115
+skycolor: 2
+seed: 287331
+spawnx: 808.1
+spawny: 1172.7
 ---
 ## DIRECT CITY 8'0
 

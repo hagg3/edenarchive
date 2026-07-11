@@ -10,6 +10,13 @@ tags:
   - suburb
   - house
   - street
+worldformat: 64z
+chunkwidth: 83
+chunkheight: 85
+skycolor: 6
+seed: 0
+spawnx: 727.7
+spawny: 935.9
 ---
 ## Suburbs Of Toronto
 

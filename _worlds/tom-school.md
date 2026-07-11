@@ -11,6 +11,13 @@ tags:
   - detail
   - interior
   - lighting
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 24
+skycolor: 20
+seed: 0
+spawnx: 244.9
+spawny: 244.6
 ---
 ## tom school
 

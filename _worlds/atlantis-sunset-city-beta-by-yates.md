@@ -5,6 +5,13 @@ worldname: Atlantis Sunset City Beta by Yates
 publishdate: 2014-03-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 63
+chunkheight: 54
+skycolor: 0
+seed: 0
+spawnx: 328.0
+spawny: 208.4
 ---
 ## Atlantis Sunset City Beta by Yates
 

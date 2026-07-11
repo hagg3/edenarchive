@@ -5,6 +5,13 @@ worldname: WASHINGTON DC CB 94
 publishdate: 2019-06-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 92
+chunkheight: 84
+skycolor: 15
+seed: 0
+spawnx: 654.7
+spawny: 739.4
 ---
 ## WASHINGTON DC CB 94
 

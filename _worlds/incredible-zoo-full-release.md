@@ -5,6 +5,13 @@ worldname: INCREDIBLE Zoo Full Release
 publishdate: 2020-12-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 12
+skycolor: 54
+seed: 0
+spawnx: 107.4
+spawny: 96.4
 ---
 ## INCREDIBLE Zoo Full Release
 

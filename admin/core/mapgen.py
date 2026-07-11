@@ -31,12 +31,14 @@ Two safety mechanisms not in the original script:
 """
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import time
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 from . import paths
 
@@ -270,3 +272,57 @@ def classify_error(stderr: str, returncode: int) -> str:
     if returncode != 0:
         return "node_error"
     return "unknown_error"
+
+
+# --- technical metadata sidecar ----------------------------------------------
+#
+# node-mapgen computes format (64z/256z), chunk dimensions, sky color, seed
+# and spawn coordinates as a side effect of parsing a world (see World.ts /
+# worldMeta.ts) and writes them as `meta.json` next to map.png — generate-map.ts
+# does this for every normal render, and the meta-only generate-meta.ts CLI
+# does it without the expensive render step, for backfilling worlds that
+# already have a map.png. This maps that JSON onto the world's front-matter
+# keys (admin/core/frontmatter.py writes them; CANONICAL_ORDER in that module
+# places them after `tags`).
+
+META_SIDECAR_NAME = "meta.json"
+
+# node-mapgen JSON key -> front-matter key.
+META_TO_FRONTMATTER = {
+    "format": "worldformat",
+    "chunkWidth": "chunkwidth",
+    "chunkHeight": "chunkheight",
+    "skyColor": "skycolor",
+    "seed": "seed",
+    "spawnX": "spawnx",
+    "spawnY": "spawny",
+}
+
+
+def meta_sidecar_path(world_id: str) -> Path:
+    return paths.ASSETS_DIR / world_id / META_SIDECAR_NAME
+
+
+def read_meta_sidecar(world_id: str) -> dict[str, Any] | None:
+    path = meta_sidecar_path(world_id)
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def frontmatter_updates_from_meta(meta: dict[str, Any]) -> dict[str, Any]:
+    """meta.json contents -> front-matter update dict, skipping absent values
+    (e.g. spawnX/spawnY are null for a world with no home point set)."""
+    updates: dict[str, Any] = {}
+    for meta_key, fm_key in META_TO_FRONTMATTER.items():
+        value = meta.get(meta_key)
+        if value is None:
+            continue
+        if fm_key in ("spawnx", "spawny") and isinstance(value, float):
+            value = round(value, 1)
+        updates[fm_key] = value
+    return updates

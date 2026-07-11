@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 30
+skycolor: 6
+seed: 0
+spawnx: 323.3
+spawny: 188.2
 ---
 ## Allanapolis House
 

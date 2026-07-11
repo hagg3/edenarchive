@@ -7,6 +7,13 @@ author:
 tags:
   - replica
   - rollercoaster
+worldformat: 64z
+chunkwidth: 176
+chunkheight: 121
+skycolor: 54
+seed: 0
+spawnx: 855.2
+spawny: 721.4
 ---
 ## eden disneyland v40'2
 

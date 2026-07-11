@@ -12,6 +12,13 @@ tags:
   - town
   - architecture
   - house
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 23
+skycolor: 15
+seed: 0
+spawnx: 295.9
+spawny: 207.8
 ---
 ## Gravschaft Freise
 

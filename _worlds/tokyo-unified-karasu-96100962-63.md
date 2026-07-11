@@ -5,6 +5,13 @@ worldname: Tokyo Unified Karasu 96100962'63
 publishdate: 2020-06-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 274
+chunkheight: 122
+skycolor: 8
+seed: 115115
+spawnx: 2341.9
+spawny: 1282.2
 ---
 ## Tokyo Unified Karasu 96100962'63
 

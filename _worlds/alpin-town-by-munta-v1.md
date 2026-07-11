@@ -5,6 +5,13 @@ worldname: ALPIN TOWN by Munta V1
 publishdate: 2014-03-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 54
+skycolor: 0
+seed: 0
+spawnx: 568
+spawny: 232
 ---
 ## ALPIN TOWN by Munta V1
 

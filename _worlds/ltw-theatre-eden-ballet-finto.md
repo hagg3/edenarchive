@@ -5,6 +5,13 @@ worldname: LTW Theatre Eden Ballet finto
 publishdate: 2024-10-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 106
+chunkheight: 73
+skycolor: 54
+seed: 0
+spawnx: 824
+spawny: 584
 ---
 ## LTW Theatre Eden Ballet finto
 

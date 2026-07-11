@@ -10,6 +10,13 @@ tags:
   - gothic
   - retro
   - flat
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 33
+skycolor: 5
+seed: 0
+spawnx: 493.9
+spawny: 271.9
 ---
 ## City of Riverbrook v3'0
 

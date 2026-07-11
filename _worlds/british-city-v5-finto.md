@@ -5,6 +5,13 @@ worldname: British City V5 Finto
 publishdate: 2022-12-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 150
+chunkheight: 132
+skycolor: 6
+seed: 0
+spawnx: 1248
+spawny: 979
 ---
 ## British City V5 Finto
 

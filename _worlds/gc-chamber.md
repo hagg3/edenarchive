@@ -16,6 +16,13 @@ tags:
   - abstract
   - exploration
   - flat
+worldformat: 64z
+chunkwidth: 14
+chunkheight: 25
+skycolor: 54
+seed: 0
+spawnx: 131
+spawny: 225
 ---
 ## GC Chamber
 

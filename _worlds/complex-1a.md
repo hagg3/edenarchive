@@ -7,6 +7,13 @@ author:
 tags:
   - needsreview
   - scene
+worldformat: 64z
+chunkwidth: 4
+chunkheight: 2
+skycolor: 10
+seed: 0
+spawnx: 19
+spawny: 1
 ---
 ## Complex 1A
 

@@ -8,6 +8,13 @@ tags:
   - newterrain
   - house
   - mansion
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 13
+skycolor: 9
+seed: 333333
+spawnx: 151
+spawny: -78
 ---
 ## Haus Dominic und Marco
 

@@ -8,6 +8,13 @@ tags:
   - mariokart
   - race
   - needsreview
+worldformat: 64z
+chunkwidth: 2
+chunkheight: 4
+skycolor: 10
+seed: 0
+spawnx: 19.4
+spawny: 34.2
 ---
 ## MK DLC Mountain Road
 

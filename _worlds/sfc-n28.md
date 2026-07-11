@@ -8,6 +8,13 @@ tags:
   - skyscraper
   - city
   - needsreview
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 105
+skycolor: 9
+seed: 0
+spawnx: 685.8
+spawny: 941.5
 ---
 ## SFC n28
 

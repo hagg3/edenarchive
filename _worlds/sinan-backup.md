@@ -19,6 +19,13 @@ tags:
   - interior
   - europe
   - switzerland
+worldformat: 64z
+chunkwidth: 90
+chunkheight: 94
+skycolor: 10
+seed: 0
+spawnx: 936.8
+spawny: 531.3
 ---
 ## Sinan Backup
 

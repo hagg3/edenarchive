@@ -8,6 +8,13 @@ tags:
   - small
   - scene
   - volcano
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 21
+skycolor: 10
+seed: 0
+spawnx: 170.2
+spawny: 134.6
 ---
 ## Mount Doom
 

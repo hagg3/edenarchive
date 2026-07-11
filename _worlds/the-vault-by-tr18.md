@@ -8,6 +8,13 @@ filesize: "2.9 MB"
 author: TR18
 tags:
   - newterrain
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 26
+skycolor: 9
+seed: 333333
+spawnx: 717.8
+spawny: 93.0
 ---
 ## The Vault by TR18
 

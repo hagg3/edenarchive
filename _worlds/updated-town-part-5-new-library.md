@@ -5,6 +5,13 @@ worldname: Updated town part 5 new library
 publishdate: 2022-04-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 104
+chunkheight: 156
+skycolor: 15
+seed: 0
+spawnx: 507.8
+spawny: 1277.2
 ---
 ## Updated town part 5 new library
 

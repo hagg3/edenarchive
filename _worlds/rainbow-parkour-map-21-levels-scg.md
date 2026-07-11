@@ -10,6 +10,13 @@ tags:
   - adventure
   - quest
   - puzzle
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 31
+skycolor: 10
+seed: 0
+spawnx: 412.6
+spawny: 256.0
 ---
 ## Rainbow Parkour Map 21 Levels SCG
 

@@ -11,6 +11,13 @@ tags:
   - unique
   - technical
   - slide
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 68
+skycolor: 10
+seed: 0
+spawnx: 443.8
+spawny: 673.2
 ---
 ## I Just Wanna Get Featured Day16
 

@@ -5,6 +5,13 @@ worldname: Forbidden Lands 1 2.2 by Octagon
 publishdate: 2024-01-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 36
+skycolor: 9
+seed: 0
+spawnx: 355.2
+spawny: 292.3
 ---
 ## Forbidden Lands 1 2.2 by Octagon
 

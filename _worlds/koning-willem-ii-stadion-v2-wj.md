@@ -5,6 +5,13 @@ worldname: Koning Willem II Stadion v2 WJ
 publishdate: 2013-01-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 34
+skycolor: 0
+seed: 0
+spawnx: 328
+spawny: 216
 ---
 ## Koning Willem II Stadion v2 WJ
 

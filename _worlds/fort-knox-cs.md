@@ -5,6 +5,13 @@ worldname: Fort Knox Cs
 publishdate: 2019-08-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 224
+skycolor: 6
+seed: 0
+spawnx: 488
+spawny: 2424
 ---
 ## Fort Knox Cs
 

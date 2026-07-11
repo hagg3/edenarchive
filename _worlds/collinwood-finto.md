@@ -6,6 +6,13 @@ publishdate: 2024-08-19
 author: Finto
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 6
+seed: 0
+spawnx: 232
+spawny: 232
 ---
 ## Collinwood Finto
 

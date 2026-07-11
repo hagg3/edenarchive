@@ -5,6 +5,13 @@ worldname: apindev 2.1
 publishdate: 2024-03-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 102
+chunkheight: 84
+skycolor: 6
+seed: 333333
+spawnx: 1009.9
+spawny: 212.1
 ---
 ## apindev 2.1
 

@@ -14,6 +14,13 @@ tags:
   - story
   - adventure
   - scene
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 36
+skycolor: 54
+seed: 0
+spawnx: 264
+spawny: 296
 ---
 ## Haunted Mansion Holiday
 

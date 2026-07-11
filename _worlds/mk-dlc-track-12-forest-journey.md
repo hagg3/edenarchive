@@ -10,6 +10,13 @@ tags:
   - needsreview
   - nintendo
   - mario
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 4
+skycolor: 9
+seed: 333333
+spawnx: 64.9
+spawny: 14.0
 ---
 ## MK DLC track 12 Forest journey
 

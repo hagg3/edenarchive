@@ -5,6 +5,13 @@ worldname: city in progress v214 (possibly same as cvfutureb)
 publishdate: 2023-01-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 352
+chunkheight: 769
+skycolor: 10
+seed: 0
+spawnx: 1264.2
+spawny: 9672.2
 ---
 ## city in progress v214 (possibly same as cvfutureb)
 

@@ -9,6 +9,13 @@ author: Pato2251
 tags:
   - themepark
   - slide
+worldformat: 64z
+chunkwidth: 53
+chunkheight: 22
+skycolor: 15
+seed: 0
+spawnx: 675.9
+spawny: 188.9
 ---
 ## Theme Park King Da Ka v12 By Pato2251
 

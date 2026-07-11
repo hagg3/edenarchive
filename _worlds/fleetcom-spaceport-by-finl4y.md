@@ -9,6 +9,13 @@ tags:
   - flat
   - spaceport
   - port
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 46
+skycolor: 9
+seed: 0
+spawnx: 280
+spawny: 584
 ---
 ## FleetCom Spaceport by Finl4y
 

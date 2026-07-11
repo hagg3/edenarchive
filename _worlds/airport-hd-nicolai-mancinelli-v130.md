@@ -8,6 +8,13 @@ filesize: "0.6 MB"
 author: Nicolai Mancinelli
 tags:
   - airport
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 33
+skycolor: 33
+seed: 29391
+spawnx: 311.2
+spawny: 313.9
 ---
 ## AIRPORT HD NICOLAI MANCINELLI v130
 

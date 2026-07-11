@@ -5,6 +5,13 @@ worldname: manchon
 publishdate: 2026-01-25
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 81
+chunkheight: 68
+skycolor: 18
+seed: 0
+spawnx: 788.4
+spawny: 487.6
 ---
 ## manchon
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.2 MB"
 author: Trifillou
 tags:
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 103
+skycolor: 6
+seed: 0
+spawnx: 628.7
+spawny: 606.5
 ---
 ## Eden City v12'0 by Trifillou
 

@@ -6,6 +6,13 @@ publishdate: 2024-03-12
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 23
+skycolor: 1
+seed: 0
+spawnx: 325.5
+spawny: 174.8
 ---
 ## Dark Island
 

@@ -12,6 +12,13 @@ tags:
   - abstract
   - castle
   - fortress
+worldformat: 64z
+chunkwidth: 181
+chunkheight: 181
+skycolor: 7
+seed: 0
+spawnx: 906.9
+spawny: 1569.4
 ---
 ## riverbeta cebt 6point2
 

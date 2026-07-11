@@ -6,6 +6,13 @@ publishdate: 2025-12-11
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 85
+chunkheight: 76
+skycolor: 15
+seed: 0
+spawnx: 824
+spawny: 520
 ---
 ## Bluewood3
 

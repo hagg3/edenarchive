@@ -5,6 +5,13 @@ worldname: Texas Resort 10 21 25
 publishdate: 2025-10-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 78
+chunkheight: 86
+skycolor: 9
+seed: 0
+spawnx: 762.0
+spawny: 601.6
 ---
 ## Texas Resort 10 21 25
 

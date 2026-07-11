@@ -5,6 +5,13 @@ worldname: Grand Kingdom
 publishdate: 2012-02-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 212
+chunkheight: 95
+skycolor: 0
+seed: 43652
+spawnx: 184.1
+spawny: 1256.0
 ---
 ## Grand Kingdom
 

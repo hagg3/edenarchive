@@ -13,6 +13,13 @@ tags:
   - puzzle
   - adventure
   - treasure
+worldformat: 64z
+chunkwidth: 60
+chunkheight: 66
+skycolor: 54
+seed: 0
+spawnx: 568
+spawny: 600
 ---
 ## Pit Parkour 2 Find Santas Workshop
 

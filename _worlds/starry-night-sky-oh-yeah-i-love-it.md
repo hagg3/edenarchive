@@ -6,6 +6,13 @@ publishdate: 2025-12-05
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 279
+chunkheight: 190
+skycolor: 40
+seed: 0
+spawnx: 1310.4
+spawny: 582.0
 ---
 ## STARRY NIGHT SKY Oh yeah i love it
 

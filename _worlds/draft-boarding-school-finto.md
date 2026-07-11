@@ -5,6 +5,13 @@ worldname: draft boarding school finto
 publishdate: 2023-11-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 42
+skycolor: 6
+seed: 0
+spawnx: 328
+spawny: 312
 ---
 ## draft boarding school finto
 

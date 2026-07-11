@@ -5,6 +5,13 @@ worldname: Big Ben and other palaces krimlin 47
 publishdate: 2024-02-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 210
+chunkheight: 342
+skycolor: 8
+seed: 0
+spawnx: 2745.2
+spawny: 494.3
 ---
 ## Big Ben and other palaces krimlin 47
 

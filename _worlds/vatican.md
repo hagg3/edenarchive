@@ -5,6 +5,13 @@ worldname: VATICAN
 publishdate: 2012-04-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 18
+skycolor: 0
+seed: 0
+spawnx: 387.2
+spawny: 161.9
 ---
 ## VATICAN
 

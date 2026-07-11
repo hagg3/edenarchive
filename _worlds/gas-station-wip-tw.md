@@ -5,6 +5,13 @@ worldname: Gas Station WIP TW
 publishdate: 2023-05-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 8
+skycolor: 54
+seed: 0
+spawnx: 7.2
+spawny: 59.3
 ---
 ## Gas Station WIP TW
 

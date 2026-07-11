@@ -5,6 +5,13 @@ worldname: Imperial Palace V10
 publishdate: 2012-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 30
+skycolor: 0
+seed: 0
+spawnx: 256.9
+spawny: 270.5
 ---
 ## Imperial Palace V10
 

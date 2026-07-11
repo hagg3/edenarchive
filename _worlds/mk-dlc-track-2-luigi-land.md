@@ -8,6 +8,13 @@ tags:
   - mariokart
   - race
   - needsreview
+worldformat: 64z
+chunkwidth: 16
+chunkheight: 17
+skycolor: 45
+seed: 0
+spawnx: 120
+spawny: 152
 ---
 ## Mk DLC Track 2 Luigi Land
 

@@ -5,6 +5,13 @@ worldname: silly little ice slide v3
 publishdate: 2026-01-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 32
+skycolor: 9
+seed: 0
+spawnx: 231.0
+spawny: 247.0
 ---
 ## silly little ice slide v3
 

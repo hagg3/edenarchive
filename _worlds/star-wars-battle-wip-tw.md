@@ -11,6 +11,13 @@ tags:
   - replica
   - space
   - lighting
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 32
+skycolor: 54
+seed: 0
+spawnx: 314.2
+spawny: 279.6
 ---
 ## Star Wars Battle WIP TW
 

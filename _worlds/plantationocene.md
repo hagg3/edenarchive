@@ -9,6 +9,13 @@ author:
 tags:
   - customterrain
   - newterrain
+worldformat: 64z
+chunkwidth: 111
+chunkheight: 215
+skycolor: 15
+seed: 333333
+spawnx: 946
+spawny: 1640
 ---
 ## Plantationocene
 

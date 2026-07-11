@@ -9,6 +9,13 @@ tags:
   - theatre
   - replica
   - realistic
+worldformat: 64z
+chunkwidth: 106
+chunkheight: 66
+skycolor: 54
+seed: 0
+spawnx: 824
+spawny: 536
 ---
 ## LTW Theatre The Mikado Finto
 

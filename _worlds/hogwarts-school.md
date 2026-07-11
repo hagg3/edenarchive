@@ -5,6 +5,13 @@ worldname: Hogwarts School
 publishdate: 2012-01-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 28
+skycolor: 0
+seed: 29391
+spawnx: 400.6
+spawny: 269.0
 ---
 ## Hogwarts School
 

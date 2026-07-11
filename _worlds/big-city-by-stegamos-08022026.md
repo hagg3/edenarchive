@@ -16,6 +16,13 @@ tags:
   - heightlimit
   - hill
   - merge
+worldformat: 64z
+chunkwidth: 162
+chunkheight: 348
+skycolor: 5
+seed: 281460
+spawnx: 1569
+spawny: 780.8
 ---
 ## big city by STEGAMOS 08022026
 

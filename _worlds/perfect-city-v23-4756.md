@@ -13,6 +13,13 @@ tags:
   - britain
   - city
   - modern
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 37
+skycolor: 23
+seed: 286940
+spawnx: 298.0
+spawny: 267.9
 ---
 ## PERFECT CITY V23'4756
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 55
+chunkheight: 41
+skycolor: 54
+seed: 0
+spawnx: 488.2
+spawny: 535.1
 ---
 ## Big Airport V2 Boeing 777 etc V3
 

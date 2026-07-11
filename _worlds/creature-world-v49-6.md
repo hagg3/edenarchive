@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 34
+skycolor: 15
+seed: 0
+spawnx: 285.7
+spawny: 311.6
 ---
 ## Creature World V49'6
 

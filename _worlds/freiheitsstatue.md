@@ -5,6 +5,13 @@ worldname: Freiheitsstatue
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 18
+skycolor: 0
+seed: 0
+spawnx: 279.9
+spawny: 116.1
 ---
 ## Freiheitsstatue
 

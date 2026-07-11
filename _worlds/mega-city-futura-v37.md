@@ -5,6 +5,13 @@ worldname: MEGA CITY FUTURA V37
 publishdate: 2013-04-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 211
+chunkheight: 383
+skycolor: 0
+seed: 170353
+spawnx: 582.6
+spawny: 612.8
 ---
 ## MEGA CITY FUTURA V37
 

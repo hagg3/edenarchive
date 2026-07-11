@@ -12,6 +12,13 @@ tags:
   - retro
   - collab
   - minecraft
+worldformat: 64z
+chunkwidth: 57
+chunkheight: 94
+skycolor: 6
+seed: 0
+spawnx: 377.2
+spawny: 772.7
 ---
 ## Add pixel art August 25 2025 AD
 

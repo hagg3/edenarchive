@@ -5,6 +5,13 @@ worldname: Xiphos Tempel
 publishdate: 2020-12-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 40
+skycolor: 3
+seed: 0
+spawnx: 252.4
+spawny: 395.4
 ---
 ## Xiphos Tempel
 

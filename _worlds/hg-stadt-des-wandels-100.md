@@ -6,6 +6,13 @@ publishdate: 2025-07-10
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 68
+chunkheight: 74
+skycolor: 6
+seed: 0
+spawnx: 539.9
+spawny: 387.0
 ---
 ## HG Stadt des Wandels 100
 

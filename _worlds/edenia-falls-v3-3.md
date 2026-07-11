@@ -13,6 +13,13 @@ tags:
   - city
   - variety
   - architecture
+worldformat: 64z
+chunkwidth: 86
+chunkheight: 82
+skycolor: 0
+seed: 0
+spawnx: 718.8
+spawny: 942.1
 ---
 ## Edenia Falls V3'3
 

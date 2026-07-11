@@ -5,6 +5,13 @@ worldname: Magic Island 'flying' By Kiri
 publishdate: 2012-07-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 42
+skycolor: 0
+seed: 0
+spawnx: 301.9
+spawny: 314.4
 ---
 ## Magic Island 'flying' By Kiri
 

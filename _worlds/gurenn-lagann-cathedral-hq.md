@@ -5,6 +5,13 @@ worldname: Gurenn Lagann Cathedral HQ
 publishdate: 2012-02-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 57
+chunkheight: 70
+skycolor: 0
+seed: 218392
+spawnx: 278.5
+spawny: 823.9
 ---
 ## Gurenn Lagann Cathedral HQ
 

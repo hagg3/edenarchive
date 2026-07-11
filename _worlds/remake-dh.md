@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.6 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 103
+chunkheight: 132
+skycolor: 17
+seed: 0
+spawnx: 582.2
+spawny: 398.9
 ---
 ## Remake DH
 

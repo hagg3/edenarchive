@@ -9,6 +9,13 @@ tags:
   - replica
   - exploration
   - disney
+worldformat: 64z
+chunkwidth: 87
+chunkheight: 71
+skycolor: 6
+seed: 0
+spawnx: 399.2
+spawny: 773.3
 ---
 ## Disneyland Paris Resort
 

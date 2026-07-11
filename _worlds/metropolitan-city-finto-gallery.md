@@ -5,6 +5,13 @@ worldname: Metropolitan City Finto Gallery
 publishdate: 2023-10-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 150
+chunkheight: 132
+skycolor: 6
+seed: 0
+spawnx: 1248
+spawny: 979
 ---
 ## Metropolitan City Finto Gallery
 

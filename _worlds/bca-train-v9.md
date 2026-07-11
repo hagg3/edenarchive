@@ -5,6 +5,13 @@ worldname: BCA Train v9
 publishdate: 2012-11-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 35
+skycolor: 0
+seed: 0
+spawnx: 277.8
+spawny: 229.7
 ---
 ## BCA Train v9
 

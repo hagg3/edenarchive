@@ -13,6 +13,13 @@ tags:
   - startrek
   - lighting
   - flat
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 19
+skycolor: 10
+seed: 0
+spawnx: 200
+spawny: 136
 ---
 ## USS Enterprise
 

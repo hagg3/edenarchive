@@ -5,6 +5,13 @@ worldname: catherdral wip finto
 publishdate: 2023-12-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 45
+skycolor: 6
+seed: 0
+spawnx: 472
+spawny: 376
 ---
 ## catherdral wip finto
 

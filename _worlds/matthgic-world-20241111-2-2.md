@@ -5,6 +5,13 @@ worldname: Matthgic world 20241111 2.2
 publishdate: 2024-11-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 117
+chunkheight: 78
+skycolor: 15
+seed: 0
+spawnx: 1177.4
+spawny: 273.2
 ---
 ## Matthgic world 20241111 2.2
 

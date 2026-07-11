@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.7 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 65
+chunkheight: 127
+skycolor: 6
+seed: 333333
+spawnx: 438.0
+spawny: 378.5
 ---
 ## outpost militarY v1
 

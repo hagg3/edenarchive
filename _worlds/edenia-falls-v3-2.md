@@ -5,6 +5,13 @@ worldname: Edenia Falls V3'2
 publishdate: 2024-03-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 86
+chunkheight: 82
+skycolor: 0
+seed: 0
+spawnx: 718.8
+spawny: 942.1
 ---
 ## Edenia Falls V3'2
 

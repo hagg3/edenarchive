@@ -5,6 +5,13 @@ worldname: Huge Delta City 2026
 publishdate: 2020-04-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 287
+chunkheight: 329
+skycolor: 0
+seed: 0
+spawnx: 1723.3
+spawny: 3985.8
 ---
 ## Huge Delta City 2026
 

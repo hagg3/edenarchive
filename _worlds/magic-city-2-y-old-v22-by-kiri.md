@@ -5,6 +5,13 @@ worldname: Magic City '2 y old' V22 By Kiri
 publishdate: 2012-07-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 37
+skycolor: 0
+seed: 0
+spawnx: 225.6
+spawny: 149.2
 ---
 ## Magic City '2 y old' V22 By Kiri
 

@@ -9,6 +9,13 @@ author:
 tags:
   - unique
   - oldterrain
+worldformat: 64z
+chunkwidth: 66
+chunkheight: 94
+skycolor: 15
+seed: 52088
+spawnx: 545.5
+spawny: 876.4
 ---
 ## Tribal world 2
 

@@ -5,6 +5,13 @@ worldname: New Berlin by Fabi 2.2 CHECK
 publishdate: 2024-11-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 145
+chunkheight: 104
+skycolor: 6
+seed: 333333
+spawnx: 1077.5
+spawny: 777.5
 ---
 ## New Berlin by Fabi 2.2 CHECK
 

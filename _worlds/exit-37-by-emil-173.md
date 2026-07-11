@@ -10,6 +10,13 @@ tags:
   - adventure
   - quest
   - puzzle
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 30
+skycolor: 27
+seed: 0
+spawnx: 229.1
+spawny: 230.0
 ---
 ## Exit 37 by Emil 173
 

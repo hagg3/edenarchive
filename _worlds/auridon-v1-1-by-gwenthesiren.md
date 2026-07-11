@@ -7,6 +7,13 @@ archivedate:
 filesize: "6.2 MB"
 author: GwenTheSiren
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 44
+skycolor: 9
+seed: 333333
+spawnx: 69
+spawny: 158
 ---
 ## Auridon V1'1 by GwenTheSiren
 

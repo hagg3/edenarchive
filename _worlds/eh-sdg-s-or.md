@@ -12,6 +12,13 @@ tags:
   - adventure
   - unique
   - quest
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 33
+skycolor: 10
+seed: 0
+spawnx: 260.9
+spawny: 266.0
 ---
 ## EH SDG's Or
 

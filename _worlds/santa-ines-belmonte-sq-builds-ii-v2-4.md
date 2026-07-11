@@ -7,6 +7,13 @@ author: Santiago H
 tags:
   - city
   - newterrain
+worldformat: 64z
+chunkwidth: 75
+chunkheight: 127
+skycolor: 9
+seed: 333333
+spawnx: 821.7
+spawny: 415.0
 ---
 ## Santa Ines Belmonte sq buildsII
 

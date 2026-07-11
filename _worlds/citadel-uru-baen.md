@@ -9,6 +9,13 @@ tags:
   - palace
   - citadel
   - oldterrain
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 26
+skycolor: 10
+seed: 103991
+spawnx: 267.4
+spawny: 189.8
 ---
 ## Citadel Uru'baen
 

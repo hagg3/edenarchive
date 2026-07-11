@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.2 MB"
 author: Keegan
 tags:
+worldformat: 64z
+chunkwidth: 8
+chunkheight: 8
+skycolor: 5
+seed: 0
+spawnx: 18.2
+spawny: 41.4
 ---
 ## Army Training V4 By Keegan
 

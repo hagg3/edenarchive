@@ -5,6 +5,13 @@ worldname: MASSIVE CITY v28
 publishdate: 2017-04-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 119
+chunkheight: 138
+skycolor: 54
+seed: 123535
+spawnx: 1354.8
+spawny: 1049.8
 ---
 ## MASSIVE CITY v28
 

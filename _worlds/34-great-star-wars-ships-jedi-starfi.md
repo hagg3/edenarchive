@@ -5,6 +5,13 @@ worldname: 34 Great Star Wars ships jedi starfi
 publishdate: 2012-07-22
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 28
+skycolor: 0
+seed: 0
+spawnx: 229.7
+spawny: 149.1
 ---
 ## 34 Great Star Wars ships jedi starfi
 

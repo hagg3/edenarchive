@@ -5,6 +5,13 @@ worldname: SWISS V 3'1 alpin
 publishdate: 2013-03-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 326
+chunkheight: 175
+skycolor: 0
+seed: 0
+spawnx: 2376.7
+spawny: 808.3
 ---
 ## SWISS V 3'1 alpin
 

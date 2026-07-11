@@ -5,6 +5,13 @@ worldname: Biome and Void v3'0 by SCG
 publishdate: 2021-06-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 28
+skycolor: 31
+seed: 0
+spawnx: 214.0
+spawny: 127.1
 ---
 ## Biome and Void v3'0 by SCG
 

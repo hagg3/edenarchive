@@ -7,6 +7,13 @@ archivedate:
 filesize: "3.4 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 118
+chunkheight: 120
+skycolor: 6
+seed: 333333
+spawnx: 646.8
+spawny: 783.1
 ---
 ## Eden Ski Club
 

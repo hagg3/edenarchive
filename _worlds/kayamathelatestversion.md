@@ -5,6 +5,13 @@ worldname: kayamathelatestversion
 publishdate: 2025-09-25
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 62
+chunkheight: 119
+skycolor: 27
+seed: 173556
+spawnx: 494.1
+spawny: 727.9
 ---
 ## kayamathelatestversion
 

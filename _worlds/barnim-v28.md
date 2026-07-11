@@ -13,6 +13,13 @@ tags:
   - germany
   - parliament
   - exploration
+worldformat: 64z
+chunkwidth: 243
+chunkheight: 107
+skycolor: 6
+seed: 0
+spawnx: 3140.5
+spawny: 927.8
 ---
 ## Barnim v28
 

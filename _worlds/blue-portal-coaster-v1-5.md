@@ -9,6 +9,13 @@ author:
 tags:
   - slide
   - portals
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 38
+skycolor: 10
+seed: 0
+spawnx: 183.4
+spawny: 328.2
 ---
 ## Blue Portal Coaster V1'5
 

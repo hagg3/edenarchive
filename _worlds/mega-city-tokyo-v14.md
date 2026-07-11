@@ -5,6 +5,13 @@ worldname: Mega City Tokyo V14
 publishdate: 2012-03-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 134
+chunkheight: 82
+skycolor: 0
+seed: 115115
+spawnx: 1689.7
+spawny: 472.7
 ---
 ## Mega City Tokyo V14
 

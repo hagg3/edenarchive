@@ -5,6 +5,13 @@ worldname: One Big Ship V18
 publishdate: 2012-02-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 40
+skycolor: 0
+seed: 0
+spawnx: 216
+spawny: 365.0
 ---
 ## One Big Ship V18
 

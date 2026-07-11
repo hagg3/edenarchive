@@ -12,6 +12,13 @@ tags:
   - port
   - abstract
   - cyberpunk
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 62
+skycolor: 10
+seed: 0
+spawnx: 440.0
+spawny: 648.0
 ---
 ## Elysian City v7 by AJ
 

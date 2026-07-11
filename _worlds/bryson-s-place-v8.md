@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 26
+skycolor: 0
+seed: 0
+spawnx: 152
+spawny: 216
 ---
 ## Bryson's Place v8
 

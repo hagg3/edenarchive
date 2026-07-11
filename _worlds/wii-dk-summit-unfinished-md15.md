@@ -5,6 +5,13 @@ worldname: Wii DK Summit Unfinished MD15
 publishdate: 2015-10-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 3
+skycolor: 5
+seed: 0
+spawnx: 50.8
+spawny: 17.3
 ---
 ## Wii DK Summit Unfinished MD15
 

@@ -10,6 +10,13 @@ tags:
   - detail
   - interior
   - mall
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 50
+skycolor: 6
+seed: 0
+spawnx: 328
+spawny: 504
 ---
 ## Stirling Shopping Center
 

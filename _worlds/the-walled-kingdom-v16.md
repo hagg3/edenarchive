@@ -5,6 +5,13 @@ worldname: The Walled Kingdom V16
 publishdate: 2012-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 62
+chunkheight: 54
+skycolor: 0
+seed: 229649
+spawnx: 627.2
+spawny: 584.2
 ---
 ## The Walled Kingdom V16
 

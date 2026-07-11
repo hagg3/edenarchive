@@ -17,6 +17,13 @@ tags:
   - planets
   - large
   - variety
+worldformat: 64z
+chunkwidth: 441
+chunkheight: 117
+skycolor: 54
+seed: 169506
+spawnx: 984.2
+spawny: 744.0
 ---
 ## The Hidden Galaxy v3'1 2.1 unverified
 

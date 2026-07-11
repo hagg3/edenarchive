@@ -15,6 +15,13 @@ tags:
   - olympic
   - sports
   - airport
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 37
+skycolor: 0
+seed: 263133
+spawnx: 344
+spawny: 312
 ---
 ## olypmics by dante
 

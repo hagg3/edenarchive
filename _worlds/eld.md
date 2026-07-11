@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.4 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 78
+chunkheight: 83
+skycolor: 8
+seed: 0
+spawnx: 408
+spawny: 472
 ---
 ## ELD
 

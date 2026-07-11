@@ -5,6 +5,13 @@ worldname: Recreating Garitton Finto art galler
 publishdate: 2024-04-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 44
+skycolor: 9
+seed: 0
+spawnx: 297.9
+spawny: 379.1
 ---
 ## Recreating Garitton Finto art galler
 

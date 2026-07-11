@@ -5,6 +5,13 @@ worldname: Willy Wonkas Chocolate Factory
 publishdate: 2022-09-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 59
+skycolor: 10
+seed: 0
+spawnx: 386.1
+spawny: 247.4
 ---
 ## Willy Wonkas Chocolate Factory
 

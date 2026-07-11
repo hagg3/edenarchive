@@ -13,6 +13,13 @@ tags:
   - factory
   - millitary
   - army
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 41
+skycolor: 0
+seed: 0
+spawnx: 385.5
+spawny: 386.4
 ---
 ## Red Empire Facility
 

@@ -10,6 +10,13 @@ tags:
   - unique
   - quality
   - slide
+worldformat: 64z
+chunkwidth: 188
+chunkheight: 77
+skycolor: 6
+seed: 0
+spawnx: 1772.6
+spawny: 460.6
 ---
 ## BIGGEST CITY AMUSEMENT PARK V6 unique quality
 

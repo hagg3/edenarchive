@@ -5,6 +5,13 @@ worldname: Mv18 airport by matias
 publishdate: 2012-06-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 74
+skycolor: 0
+seed: 0
+spawnx: 264.0
+spawny: 856.0
 ---
 ## Mv18 airport by matias
 

@@ -5,6 +5,13 @@ worldname: X145s World update 2
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 41
+chunkheight: 37
+skycolor: 0
+seed: 99953
+spawnx: 459.2
+spawny: 263.8
 ---
 ## X145s World update 2
 

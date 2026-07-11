@@ -15,6 +15,13 @@ tags:
   - detailed
   - remix
   - olympic
+worldformat: 64z
+chunkwidth: 166
+chunkheight: 166
+skycolor: 54
+seed: 0
+spawnx: 869.1
+spawny: 1618.3
 ---
 ## OCEU 40A1
 

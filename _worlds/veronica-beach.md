@@ -16,6 +16,13 @@ tags:
   - hotel
   - vacation
   - holiday
+worldformat: 64z
+chunkwidth: 181
+chunkheight: 150
+skycolor: 9
+seed: 333333
+spawnx: 1185.0
+spawny: 2122.3
 ---
 ## Veronica Beach
 

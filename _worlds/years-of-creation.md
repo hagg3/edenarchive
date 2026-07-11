@@ -15,6 +15,13 @@ tags:
   - lake
   - village
   - unique
+worldformat: 64z
+chunkwidth: 83
+chunkheight: 173
+skycolor: 21
+seed: 25410
+spawnx: 490.1
+spawny: 363.9
 ---
 ## years of creation
 

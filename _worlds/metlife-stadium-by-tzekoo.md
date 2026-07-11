@@ -5,6 +5,13 @@ worldname: METLIFE STADIUM by Tzekoo
 publishdate: 2012-11-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 24
+skycolor: 0
+seed: 0
+spawnx: 188.1
+spawny: 234.0
 ---
 ## METLIFE STADIUM by Tzekoo
 

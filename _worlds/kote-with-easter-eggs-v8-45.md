@@ -7,6 +7,13 @@ author:
 tags:
   - needsreview
   - old
+worldformat: 64z
+chunkwidth: 66
+chunkheight: 56
+skycolor: 0
+seed: 0
+spawnx: 266.1
+spawny: 558.9
 ---
 ## KotE with Easter EGGS v8'45
 

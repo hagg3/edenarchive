@@ -5,6 +5,13 @@ worldname: CVfuture
 publishdate: 2021-12-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 59
+skycolor: 9
+seed: 0
+spawnx: 112.3
+spawny: 660.4
 ---
 ## CVfuture
 

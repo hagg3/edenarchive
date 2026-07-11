@@ -13,6 +13,13 @@ tags:
   - on
   - roblox
   - floodescape
+worldformat: 64z
+chunkwidth: 8
+chunkheight: 11
+skycolor: 46
+seed: 0
+spawnx: 107.2
+spawny: 78.9
 ---
 ## FE2 Maps V3 Beneath the Ruins Added
 

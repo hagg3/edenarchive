@@ -5,6 +5,13 @@ worldname: Super Fun Happy Slide
 publishdate: 2012-06-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 14
+skycolor: 0
+seed: 16534
+spawnx: 130.9
+spawny: 122.7
 ---
 ## Super Fun Happy Slide
 

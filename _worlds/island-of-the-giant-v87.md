@@ -5,6 +5,13 @@ worldname: Island of the Giant V87
 publishdate: 2017-02-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 167
+chunkheight: 159
+skycolor: 15
+seed: 0
+spawnx: 1309.9
+spawny: 1751.0
 ---
 ## Island of the Giant V87
 

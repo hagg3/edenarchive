@@ -8,6 +8,13 @@ tags:
   - arena
   - theatre
   - lighting
+worldformat: 64z
+chunkwidth: 81
+chunkheight: 43
+skycolor: 15
+seed: 0
+spawnx: 709.5
+spawny: 58.0
 ---
 ## Hamilton Project
 

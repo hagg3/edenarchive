@@ -5,6 +5,13 @@ worldname: Eden ELITE Builder World V 0'4'1
 publishdate: 2013-07-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 54
+chunkheight: 45
+skycolor: 0
+seed: 0
+spawnx: 159.5
+spawny: 216.5
 ---
 ## Eden ELITE Builder World V 0'4'1
 

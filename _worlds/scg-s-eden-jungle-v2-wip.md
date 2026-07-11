@@ -6,6 +6,13 @@ publishdate: 2025-07-09
 author: SCG
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 37
+skycolor: 32
+seed: 0
+spawnx: 319.3
+spawny: 275.7
 ---
 ## SCG's Eden Jungle v2 WIP
 

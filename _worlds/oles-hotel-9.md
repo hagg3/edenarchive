@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 29
+skycolor: 0
+seed: 0
+spawnx: 96.9
+spawny: 269.9
 ---
 ## Oles Hotel 9
 

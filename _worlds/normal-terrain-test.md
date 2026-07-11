@@ -8,6 +8,13 @@ tags:
   - customterrain
   - jeremy
   - template
+worldformat: 64z
+chunkwidth: 69
+chunkheight: 55
+skycolor: 6
+seed: 0
+spawnx: 772.0
+spawny: 352.8
 ---
 ## Normal Terrain Test
 

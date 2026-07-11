@@ -5,6 +5,13 @@ worldname: Olympic City Old Eden
 publishdate: 2012-02-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 37
+skycolor: 0
+seed: 263133
+spawnx: 328
+spawny: 312
 ---
 ## Olympic City Old Eden
 

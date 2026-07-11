@@ -5,6 +5,13 @@ worldname: 242172 BLOCKS OF TNT
 publishdate: 2012-03-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 29
+skycolor: 0
+seed: 0
+spawnx: 133.6
+spawny: 143.1
 ---
 ## 242172 BLOCKS OF TNT
 

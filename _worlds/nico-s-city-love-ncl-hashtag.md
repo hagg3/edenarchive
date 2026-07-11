@@ -5,6 +5,13 @@ worldname: NICO's City LOVE NCL hashtag
 publishdate: 2020-06-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 615
+chunkheight: 160
+skycolor: 6
+seed: 72418
+spawnx: 9276.8
+spawny: 1142.7
 ---
 ## NICO's City LOVE NCL hashtag
 

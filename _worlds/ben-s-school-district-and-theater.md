@@ -10,6 +10,13 @@ tags:
   - college
   - small
   - town
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 31
+skycolor: 54
+seed: 0
+spawnx: 280
+spawny: 296
 ---
 ## Ben's School District and Theater
 

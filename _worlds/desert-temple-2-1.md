@@ -5,6 +5,13 @@ worldname: Desert Temple 2.1
 publishdate: 2020-07-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 28
+skycolor: 11
+seed: 99977
+spawnx: 309.5
+spawny: 204.1
 ---
 ## Desert Temple 2.1
 

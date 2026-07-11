@@ -5,6 +5,13 @@ worldname: Hitman 2 Level 8 Atlanta Funeral
 publishdate: 2021-04-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 118
+chunkheight: 112
+skycolor: 0
+seed: 0
+spawnx: 1040.2
+spawny: 1081.1
 ---
 ## Hitman 2 Level 8 Atlanta Funeral
 

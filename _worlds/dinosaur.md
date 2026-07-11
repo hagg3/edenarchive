@@ -5,6 +5,13 @@ worldname: Dinosaur
 publishdate: 2012-03-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 21
+skycolor: 0
+seed: 0
+spawnx: 185.8
+spawny: 181.4
 ---
 ## Dinosaur
 

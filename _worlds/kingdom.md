@@ -5,6 +5,13 @@ worldname: Kingdom
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 107
+chunkheight: 129
+skycolor: 0
+seed: 144662
+spawnx: 1192
+spawny: 648
 ---
 ## Kingdom
 

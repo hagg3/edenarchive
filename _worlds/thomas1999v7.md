@@ -15,6 +15,13 @@ tags:
   - fortress
   - fort
   - gothic
+worldformat: 64z
+chunkwidth: 101
+chunkheight: 205
+skycolor: 6
+seed: 333333
+spawnx: 701.3
+spawny: 559.2
 ---
 ## Thomas1999v7
 

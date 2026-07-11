@@ -7,6 +7,13 @@ archivedate:
 filesize: "13.8 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 23
+skycolor: 10
+seed: 0
+spawnx: 122.8
+spawny: 169.2
 ---
 ## DJ City V3
 

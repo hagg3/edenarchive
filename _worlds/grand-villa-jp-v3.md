@@ -5,6 +5,13 @@ worldname: grand villa jp v3
 publishdate: 2016-03-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 10
+chunkheight: 11
+skycolor: 10
+seed: 0
+spawnx: 85
+spawny: 98
 ---
 ## grand villa jp v3
 

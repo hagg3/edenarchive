@@ -13,6 +13,13 @@ tags:
   - exploration
   - star
   - realistic
+worldformat: 64z
+chunkwidth: 81
+chunkheight: 69
+skycolor: 6
+seed: 0
+spawnx: 776
+spawny: 792
 ---
 ## town city by finto scenic
 

@@ -17,6 +17,13 @@ tags:
   - interior
   - detail
   - lighting
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 18
+skycolor: 54
+seed: 333333
+spawnx: 9
+spawny: 74
 ---
 ## Cozy Cabin by Peter
 

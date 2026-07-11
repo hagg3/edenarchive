@@ -15,6 +15,13 @@ tags:
   - quest
   - treasure
   - lighting
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 14
+skycolor: 15
+seed: 0
+spawnx: 132.2
+spawny: 116.4
 ---
 ## the creature quest part 1
 

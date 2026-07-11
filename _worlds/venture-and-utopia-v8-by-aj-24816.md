@@ -5,6 +5,13 @@ worldname: VENTURE and UTOPIA v8 by AJ '24816'
 publishdate: 2012-09-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 46
+skycolor: 0
+seed: 0
+spawnx: 495.8
+spawny: 195.8
 ---
 ## VENTURE and UTOPIA v8 by AJ '24816'
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 7
+skycolor: 9
+seed: 333333
+spawnx: -137
+spawny: -62
 ---
 ## Port Zac Original
 

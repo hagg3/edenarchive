@@ -5,6 +5,13 @@ worldname: Betzensteiner Str
 publishdate: 2012-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 22
+skycolor: 0
+seed: 0
+spawnx: 184
+spawny: 200
 ---
 ## Betzensteiner Str
 

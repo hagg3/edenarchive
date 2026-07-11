@@ -8,6 +8,13 @@ tags:
   - facility
   - flat
   - lighting
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 6
+skycolor: 54
+seed: 0
+spawnx: 41.8
+spawny: 23.3
 ---
 ## Project IGI WIP TW
 

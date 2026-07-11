@@ -6,6 +6,13 @@ publishdate: 2015-02-15
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 79
+chunkheight: 71
+skycolor: 0
+seed: 277122
+spawnx: 683.8
+spawny: 676.8
 ---
 ## Eden Springs XIV Natural History Mus
 

@@ -11,6 +11,13 @@ tags:
   - usa
   - america
   - scale
+worldformat: 64z
+chunkwidth: 95
+chunkheight: 97
+skycolor: 5
+seed: 0
+spawnx: 1096.2
+spawny: 866.7
 ---
 ## apartment complex
 

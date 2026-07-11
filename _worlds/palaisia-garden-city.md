@@ -5,6 +5,13 @@ worldname: Palaisia Garden City
 publishdate: 2020-10-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 177
+chunkheight: 181
+skycolor: 15
+seed: 333333
+spawnx: 1522.7
+spawny: 1478.7
 ---
 ## Palaisia Garden City
 

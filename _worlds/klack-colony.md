@@ -6,6 +6,13 @@ publishdate: 2015-02-02
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 39
+skycolor: 0
+seed: 0
+spawnx: 281.9
+spawny: 445.0
 ---
 ## Klack Colony
 

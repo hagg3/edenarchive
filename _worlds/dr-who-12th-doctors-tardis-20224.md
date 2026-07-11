@@ -8,6 +8,13 @@ tags:
   - needsreview
   - drwho
   - doctorwho
+worldformat: 64z
+chunkwidth: 75
+chunkheight: 141
+skycolor: 5
+seed: 0
+spawnx: 621.1
+spawny: 880.4
 ---
 ## dr who 12th doctors tardis 20224
 

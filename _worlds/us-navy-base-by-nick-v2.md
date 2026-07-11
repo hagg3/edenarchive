@@ -5,6 +5,13 @@ worldname: US Navy Base by Nick V2
 publishdate: 2012-08-30
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 34
+skycolor: 0
+seed: 97519
+spawnx: 237.0
+spawny: 315.1
 ---
 ## US Navy Base by Nick V2
 

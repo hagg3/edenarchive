@@ -7,6 +7,13 @@ archivedate:
 filesize: "12.8 MB"
 author: Noah Kotzin
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 20
+skycolor: 0
+seed: 0
+spawnx: 232
+spawny: 200
 ---
 ## Elven Valley V12
 

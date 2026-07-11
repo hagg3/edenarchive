@@ -10,6 +10,13 @@ tags:
   - flat
   - airport
   - england
+worldformat: 64z
+chunkwidth: 72
+chunkheight: 156
+skycolor: 9
+seed: 0
+spawnx: 587.6
+spawny: 1666.8
 ---
 ## Hotel tower with airport v17
 

@@ -5,6 +5,13 @@ worldname: CIUDAD satelite 64
 publishdate: 2022-02-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 76
+skycolor: 0
+seed: 0
+spawnx: 275.6
+spawny: 364.2
 ---
 ## CIUDAD satelite 64
 

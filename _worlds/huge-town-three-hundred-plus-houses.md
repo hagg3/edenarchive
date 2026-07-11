@@ -13,6 +13,13 @@ tags:
   - realistic
   - interior
   - house
+worldformat: 64z
+chunkwidth: 204
+chunkheight: 147
+skycolor: 54
+seed: 0
+spawnx: 2810.8
+spawny: 319.2
 ---
 ## Huge Town Three Hundred Plus Houses
 

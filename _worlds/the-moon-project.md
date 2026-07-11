@@ -7,6 +7,13 @@ author:
 tags:
   - space
   - flat
+worldformat: 64z
+chunkwidth: 14
+chunkheight: 15
+skycolor: 54
+seed: 0
+spawnx: 67
+spawny: 65
 ---
 ## the moon project
 

@@ -13,6 +13,13 @@ tags:
   - sport
   - city
   - germany
+worldformat: 64z
+chunkwidth: 80
+chunkheight: 125
+skycolor: 9
+seed: 0
+spawnx: 231.5
+spawny: 1024.2
 ---
 ## Home Stadion
 

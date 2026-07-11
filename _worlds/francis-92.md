@@ -8,6 +8,13 @@ tags:
   - needsreview
   - remix
   - olympic
+worldformat: 64z
+chunkwidth: 144
+chunkheight: 123
+skycolor: 0
+seed: 0
+spawnx: 1872.8
+spawny: 1277.3
 ---
 ## Francis 92
 

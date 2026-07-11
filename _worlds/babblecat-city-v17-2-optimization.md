@@ -5,6 +5,13 @@ worldname: Babblecat City V17'2 Optimization
 publishdate: 2014-03-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 53
+skycolor: 0
+seed: 0
+spawnx: 386.8
+spawny: 405.5
 ---
 ## Babblecat City V17'2 Optimization
 

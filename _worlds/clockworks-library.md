@@ -5,6 +5,13 @@ worldname: clockworks library
 publishdate: 2021-01-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 5
+skycolor: 9
+seed: 0
+spawnx: 27
+spawny: 48
 ---
 ## clockworks library
 

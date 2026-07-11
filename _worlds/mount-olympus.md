@@ -5,6 +5,13 @@ worldname: Mount Olympus
 publishdate: 2016-03-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 63
+chunkheight: 51
+skycolor: 0
+seed: 0
+spawnx: 241.6
+spawny: 268.5
 ---
 ## Mount Olympus
 

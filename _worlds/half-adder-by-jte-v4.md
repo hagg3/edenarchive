@@ -8,6 +8,13 @@ tags:
   - unique
   - math
   - hack
+worldformat: 64z
+chunkwidth: 4
+chunkheight: 4
+skycolor: 10
+seed: 0
+spawnx: 40.5
+spawny: 31.1
 ---
 ## Half Adder by JTE v4
 

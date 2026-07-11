@@ -6,6 +6,13 @@ publishdate: 2018-09-05
 author: Cris
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 33
+skycolor: 9
+seed: 0
+spawnx: 177.8
+spawny: 132.3
 ---
 ## New Project by Cris v 1'0 2.1
 

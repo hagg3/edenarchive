@@ -8,6 +8,13 @@ tags:
   - unique
   - oldterrain
   - titanfall
+worldformat: 64z
+chunkwidth: 26
+chunkheight: 31
+skycolor: 10
+seed: 249389
+spawnx: 223.0
+spawny: 217.1
 ---
 ## Titanfall Milita Outpost By Finl4y
 

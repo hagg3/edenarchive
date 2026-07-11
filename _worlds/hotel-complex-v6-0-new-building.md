@@ -9,6 +9,13 @@ author:
 tags:
   - hotel
   - flat
+worldformat: 64z
+chunkwidth: 11
+chunkheight: 12
+skycolor: 10
+seed: 0
+spawnx: 99
+spawny: 97
 ---
 ## Hotel Complex v6'0 New Building
 

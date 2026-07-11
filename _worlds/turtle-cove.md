@@ -5,6 +5,13 @@ worldname: Turtle Cove
 publishdate: 2017-04-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 19
+skycolor: 9
+seed: 333333
+spawnx: 135
+spawny: 184
 ---
 ## Turtle Cove
 

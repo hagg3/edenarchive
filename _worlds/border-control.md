@@ -12,6 +12,13 @@ tags:
   - army
   - government
   - frontier
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 26
+skycolor: 6
+seed: 333333
+spawnx: 328.5
+spawny: 290.5
 ---
 ## Border Control
 

@@ -5,6 +5,13 @@ worldname: One Chunk
 publishdate: 2026-01-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 136
+chunkheight: 128
+skycolor: 6
+seed: 333333
+spawnx: 231.8
+spawny: 391.8
 ---
 ## One Chunk
 

@@ -9,6 +9,13 @@ author:
 tags:
   - oldterrain
   - large
+worldformat: 64z
+chunkwidth: 112
+chunkheight: 136
+skycolor: 15
+seed: 144662
+spawnx: 950.6
+spawny: 702.2
 ---
 ## DANIELAND v31 MEGA HIGHWAY
 

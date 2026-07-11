@@ -14,6 +14,13 @@ tags:
   - space
   - scene
   - quality
+worldformat: 64z
+chunkwidth: 116
+chunkheight: 203
+skycolor: 10
+seed: 0
+spawnx: 1320.1
+spawny: 1571.8
 ---
 ## Stardust City V1'9' By Red
 

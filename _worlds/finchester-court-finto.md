@@ -13,6 +13,13 @@ tags:
   - detail
   - quality
   - lightingnew
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 64
+skycolor: 6
+seed: 0
+spawnx: 343.6
+spawny: 466.4
 ---
 ## Finchester Court Finto
 

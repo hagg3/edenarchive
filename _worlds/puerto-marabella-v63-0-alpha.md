@@ -5,6 +5,13 @@ worldname: Puerto Marabella V63'0 Alpha
 publishdate: 2020-12-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 118
+chunkheight: 137
+skycolor: 10
+seed: 0
+spawnx: 1228.3
+spawny: 1459.8
 ---
 ## Puerto Marabella V63'0 Alpha
 

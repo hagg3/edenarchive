@@ -12,6 +12,13 @@ tags:
   - parkour
   - interior
   - lightingnew
+worldformat: 64z
+chunkwidth: 102
+chunkheight: 90
+skycolor: 54
+seed: 333333
+spawnx: 1071.3
+spawny: 717.9
 ---
 ## Aperture Portal Adventure
 

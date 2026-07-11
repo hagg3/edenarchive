@@ -4,6 +4,7 @@ import path from "path";
 import { PNG } from "pngjs";
 import { loadWorldFromArrayBuffer } from "./World";
 import { renderNormalMap } from "./renderNormalMap";
+import { metaFromWorld } from "./worldMeta";
 
 if (process.argv.length < 4) {
   console.error("Usage: ts-node generate-map.ts <eden_file> <output.png>");
@@ -31,6 +32,13 @@ try {
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, pngBuffer);
+
+  // meta.json sidecar: technical fields already computed as a side effect of
+  // rendering, written alongside the map so the archive site/admin app can
+  // surface them without re-parsing the .eden file.
+  const metaPath = path.join(path.dirname(outputPath), 'meta.json');
+  fs.writeFileSync(metaPath, JSON.stringify(metaFromWorld(world)));
+
   console.log(`✔ ${width}×${height} → ${outputPath}`);
 } catch (err) {
   console.error(`⚠ ${(err as Error).message}`);

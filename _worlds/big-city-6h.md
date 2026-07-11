@@ -5,6 +5,13 @@ worldname: Big City 6h
 publishdate: 2012-02-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 122
+chunkheight: 67
+skycolor: 0
+seed: 281460
+spawnx: 1638.9
+spawny: 403.2
 ---
 ## Big City 6h
 

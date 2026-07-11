@@ -6,6 +6,13 @@ publishdate: 2025-12-20
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 150
+chunkheight: 129
+skycolor: 9
+seed: 0
+spawnx: 1801
+spawny: 778
 ---
 ## Rennaissance Star City
 

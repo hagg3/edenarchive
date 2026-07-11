@@ -11,6 +11,13 @@ tags:
   - highway
   - realistic
   - infrastructure
+worldformat: 64z
+chunkwidth: 90
+chunkheight: 65
+skycolor: 6
+seed: 0
+spawnx: 948.0
+spawny: 496.8
 ---
 ## Normal Terrain Motorway And Road
 

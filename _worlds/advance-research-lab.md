@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 98
+chunkheight: 182
+skycolor: 6
+seed: 333333
+spawnx: 690.3
+spawny: 774.2
 ---
 ## ADVANCE RESEARCH LAB
 

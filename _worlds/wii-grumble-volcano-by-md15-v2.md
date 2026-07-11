@@ -5,6 +5,13 @@ worldname: Wii Grumble Volcano by MD15 V2
 publishdate: 2015-02-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 25
+skycolor: 9
+seed: 333333
+spawnx: 199.2
+spawny: 356.5
 ---
 ## Wii Grumble Volcano by MD15 V2
 

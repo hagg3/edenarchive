@@ -5,6 +5,13 @@ worldname: Koning Willem II Stadion
 publishdate: 2012-09-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 33
+skycolor: 0
+seed: 0
+spawnx: 280
+spawny: 200
 ---
 ## Koning Willem II Stadion
 

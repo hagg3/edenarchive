@@ -5,6 +5,13 @@ worldname: Castle by dane
 publishdate: 2025-10-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 39
+skycolor: 10
+seed: 0
+spawnx: 449.6
+spawny: 445.9
 ---
 ## Castle by dane
 

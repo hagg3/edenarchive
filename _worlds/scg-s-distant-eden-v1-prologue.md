@@ -5,6 +5,13 @@ worldname: SCG's Distant Eden v1 Prologue
 publishdate: 2022-02-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 41
+skycolor: 23
+seed: 0
+spawnx: 417.3
+spawny: 351.8
 ---
 ## SCG's Distant Eden v1 Prologue
 

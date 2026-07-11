@@ -8,6 +8,13 @@ filesize: "0.3 MB"
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 55
+skycolor: 10
+seed: 0
+spawnx: 485.5
+spawny: 561.0
 ---
 ## Flo's City V27
 

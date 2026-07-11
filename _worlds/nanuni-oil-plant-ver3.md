@@ -11,6 +11,13 @@ tags:
   - snow
   - ice
   - newterrain
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 28
+skycolor: 9
+seed: 333333
+spawnx: 146.5
+spawny: 307.9
 ---
 ## nanuni oil plant ver3
 

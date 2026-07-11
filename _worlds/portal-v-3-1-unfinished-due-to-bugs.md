@@ -11,6 +11,13 @@ tags:
   - quest
   - puzzle
   - parkour
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 44
+skycolor: 10
+seed: 0
+spawnx: 491.6
+spawny: 406.7
 ---
 ## Portal V'3'1 UNFINISHED DUE TO BUGS
 

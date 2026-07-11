@@ -9,6 +9,13 @@ tags:
   - city
   - flat
   - architecture
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 37
+skycolor: 6
+seed: 0
+spawnx: 278.3
+spawny: 373.2
 ---
 ## BlakeWorld2025
 

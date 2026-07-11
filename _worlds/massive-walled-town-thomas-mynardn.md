@@ -5,6 +5,13 @@ worldname: massive walled town thomas mynardn
 publishdate: 2020-02-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 39
+skycolor: 10
+seed: 0
+spawnx: 281.9
+spawny: 445.0
 ---
 ## massive walled town thomas mynardn
 

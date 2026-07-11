@@ -22,6 +22,13 @@ tags:
   - rollercoaster
   - themepark
   - variety
+worldformat: 64z
+chunkwidth: 157
+chunkheight: 170
+skycolor: 7
+seed: 0
+spawnx: 2104
+spawny: 1080
 ---
 ## OLES WORLD 14
 

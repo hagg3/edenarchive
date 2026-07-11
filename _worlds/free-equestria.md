@@ -7,6 +7,13 @@ author:
 tags:
   - scene
   - oldterrain
+worldformat: 64z
+chunkwidth: 59
+chunkheight: 48
+skycolor: 4
+seed: 246475
+spawnx: 749.1
+spawny: 447.8
 ---
 ## Free Equestria
 

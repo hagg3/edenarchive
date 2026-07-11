@@ -5,6 +5,13 @@ worldname: Royal Albert Hall Theatre and Movie
 publishdate: 2020-02-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 17
+skycolor: 10
+seed: 0
+spawnx: 99.2
+spawny: 144.0
 ---
 ## Royal Albert Hall Theatre and Movie
 

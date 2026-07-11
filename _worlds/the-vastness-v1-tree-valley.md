@@ -5,6 +5,13 @@ worldname: The Vastness V1 Tree Valley
 publishdate: 2012-04-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 31
+skycolor: 0
+seed: 173556
+spawnx: 347.9
+spawny: 238.7
 ---
 ## The Vastness V1 Tree Valley
 

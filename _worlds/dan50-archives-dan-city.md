@@ -9,6 +9,13 @@ author: Dan50
 tags:
   - flat
   - retro
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 61
+skycolor: 22
+seed: 0
+spawnx: 281.0
+spawny: 279.0
 ---
 ## Dan50 Archives DAN city
 

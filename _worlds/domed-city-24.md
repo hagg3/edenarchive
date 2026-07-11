@@ -10,6 +10,13 @@ tags:
   - oldterrain
   - city
   - abstract
+worldformat: 64z
+chunkwidth: 302
+chunkheight: 212
+skycolor: 36
+seed: 227932
+spawnx: 3220.8
+spawny: 1319.1
 ---
 ## Domed City 24
 

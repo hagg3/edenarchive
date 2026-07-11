@@ -5,6 +5,13 @@ worldname: Huge Temple Daibutsu Oshiro V2
 publishdate: 2012-02-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 170
+chunkheight: 243
+skycolor: 0
+seed: 271837
+spawnx: 637.9
+spawny: 3334.1
 ---
 ## Huge Temple Daibutsu Oshiro V2
 

@@ -11,6 +11,13 @@ tags:
   - retro
   - city
   - lighting
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 25
+skycolor: 54
+seed: 0
+spawnx: 328
+spawny: 120
 ---
 ## Vector City 34 night v8
 

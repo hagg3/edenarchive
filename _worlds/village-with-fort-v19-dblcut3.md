@@ -5,6 +5,13 @@ worldname: Village With Fort V19 Dblcut3
 publishdate: 2021-01-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 77
+chunkheight: 73
+skycolor: 9
+seed: 197289
+spawnx: 646.1
+spawny: 829.0
 ---
 ## Village With Fort V19 Dblcut3
 

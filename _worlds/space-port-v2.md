@@ -19,6 +19,13 @@ tags:
   - amongus
   - interior
   - detailed
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 40
+skycolor: 18
+seed: 0
+spawnx: 415.8
+spawny: 211.8
 ---
 ## Space Port v2
 

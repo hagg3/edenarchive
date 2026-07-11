@@ -8,6 +8,13 @@ tags:
   - impressive
   - modern
   - city
+worldformat: 64z
+chunkwidth: 118
+chunkheight: 139
+skycolor: 10
+seed: 0
+spawnx: 676.7
+spawny: 851.9
 ---
 ## NYC boarding school
 

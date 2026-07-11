@@ -14,6 +14,13 @@ tags:
   - on
   - new
   - terrain
+worldformat: 64z
+chunkwidth: 141
+chunkheight: 151
+skycolor: 9
+seed: 333333
+spawnx: 1405.5
+spawny: 1400.9
 ---
 ## Brepa V2
 

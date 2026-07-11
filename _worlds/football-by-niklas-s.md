@@ -9,6 +9,13 @@ tags:
   - veryoldterrain
   - football
   - retro
+worldformat: 64z
+chunkwidth: 27
+chunkheight: 26
+skycolor: 0
+seed: 115115
+spawnx: 232
+spawny: 200
 ---
 ## FOOTBALL BY NIKLAS S
 

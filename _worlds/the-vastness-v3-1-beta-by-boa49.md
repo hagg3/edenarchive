@@ -5,6 +5,13 @@ worldname: The Vastness V3'1 BETA by Boa49
 publishdate: 2016-03-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 31
+skycolor: 10
+seed: 173556
+spawnx: 255.5
+spawny: 290.4
 ---
 ## The Vastness V3'1 BETA by Boa49
 

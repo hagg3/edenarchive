@@ -15,6 +15,13 @@ tags:
   - quest
   - treasure
   - lighting
+worldformat: 64z
+chunkwidth: 12
+chunkheight: 7
+skycolor: 54
+seed: 0
+spawnx: 106.7
+spawny: 59.2
 ---
 ## The Creature Quest pt 22 BOSS LVL
 

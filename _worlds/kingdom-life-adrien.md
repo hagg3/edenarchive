@@ -23,6 +23,13 @@ tags:
   - city
   - town
   - architecture
+worldformat: 64z
+chunkwidth: 360
+chunkheight: 222
+skycolor: 27
+seed: 170130
+spawnx: 758.3
+spawny: 948.8
 ---
 ## Kingdom Life ADRIEN
 

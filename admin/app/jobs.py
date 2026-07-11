@@ -14,6 +14,7 @@ from pathlib import Path
 
 from ..core import hashing, index, mapgen
 from ..core import paths
+from ..core import world as world_mod
 
 MAPGEN_TIMEOUT = 300
 
@@ -252,6 +253,8 @@ class JobQueue:
 
             if returncode == 0 and map_path.exists():
                 self._log(job_id, "stdout", "done")
+                if slug:
+                    self._fold_technical_meta(job_id, slug, world_id)
                 index.update_job(
                     self.conn, job_id, status="ok", ended_at=index.now(),
                     result="map.png written",
@@ -274,6 +277,24 @@ class JobQueue:
                 await proc.wait()
             mapgen.clear_temp_dir()
             mapgen.release_lock()
+
+    def _fold_technical_meta(self, job_id: int, slug: str, world_id: str) -> None:
+        """After a successful mapgen run, read the meta.json sidecar node-mapgen
+        wrote next to map.png and fold it into the world's front matter (format,
+        chunk dimensions, sky color, seed, spawn). Best-effort: a failure here
+        must not turn a successful map render into a failed job."""
+        meta = mapgen.read_meta_sidecar(world_id)
+        if not meta:
+            return
+        updates = mapgen.frontmatter_updates_from_meta(meta)
+        if not updates:
+            return
+        try:
+            w = world_mod.load(paths.WORLDS_DIR / f"{slug}.md")
+            world_mod.save(w, updates)
+            self._log(job_id, "stdout", f"technical info updated: {', '.join(updates)}")
+        except Exception as exc:  # noqa: BLE001 — best-effort, must not fail the job
+            self._log(job_id, "stderr", f"failed to write technical info: {exc}")
 
     async def _run_payload_hash(self, job_id: int, slug: str) -> None:
         """Streams the decompressed .eden payload through sha256 — pure

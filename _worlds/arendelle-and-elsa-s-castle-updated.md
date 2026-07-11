@@ -12,6 +12,13 @@ tags:
   - castle
   - frozen
   - ice
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 22
+skycolor: 5
+seed: 0
+spawnx: 152
+spawny: 200
 ---
 ## Arendelle and Elsa's castle UPDATED
 

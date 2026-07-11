@@ -5,6 +5,13 @@ worldname: Olympolis V70 HighwayToHell
 publishdate: 2012-10-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 104
+chunkheight: 144
+skycolor: 0
+seed: 0
+spawnx: 794.4
+spawny: 1151.4
 ---
 ## Olympolis V70 HighwayToHell
 

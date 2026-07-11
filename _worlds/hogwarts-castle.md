@@ -5,6 +5,13 @@ worldname: Hogwarts Castle
 publishdate: 2012-02-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 30
+skycolor: 0
+seed: 0
+spawnx: 184
+spawny: 312
 ---
 ## Hogwarts Castle
 

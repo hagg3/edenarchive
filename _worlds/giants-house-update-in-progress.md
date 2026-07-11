@@ -11,6 +11,13 @@ tags:
   - perspective
   - macro
   - scale
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 25
+skycolor: 10
+seed: 0
+spawnx: 180.1
+spawny: 192.0
 ---
 ## Giants House Update In Progress
 

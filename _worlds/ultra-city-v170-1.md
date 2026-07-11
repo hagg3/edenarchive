@@ -9,6 +9,13 @@ author:
 tags:
   - retro
   - oldterrain
+worldformat: 64z
+chunkwidth: 194
+chunkheight: 74
+skycolor: 6
+seed: 210046
+spawnx: 1588.5
+spawny: 627.1
 ---
 ## Ultra City v170'1
 

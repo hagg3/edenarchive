@@ -7,6 +7,13 @@ author:
 tags:
   - needsreview
   - retro
+worldformat: 64z
+chunkwidth: 70
+chunkheight: 56
+skycolor: 6
+seed: 0
+spawnx: 527.1
+spawny: 479.0
 ---
 ## Retro II WIP w0'7 Search
 

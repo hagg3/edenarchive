@@ -8,6 +8,13 @@ tags:
   - unique
   - strange
   - cool
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 10
+seed: 0
+spawnx: 224.8
+spawny: 227.4
 ---
 ## The Human Body
 

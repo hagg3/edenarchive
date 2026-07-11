@@ -8,6 +8,13 @@ tags:
   - needsreview
   - abstract
   - unique
+worldformat: 64z
+chunkwidth: 274
+chunkheight: 135
+skycolor: 18
+seed: 73882
+spawnx: 1197.4
+spawny: 1166.0
 ---
 ## CHEF GMBH UND CO 14
 

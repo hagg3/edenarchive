@@ -5,6 +5,13 @@ worldname: Island of the Giant Glacier Breeze
 publishdate: 2017-04-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 37
+skycolor: 16
+seed: 0
+spawnx: 230.9
+spawny: 393.3
 ---
 ## Island of the Giant Glacier Breeze
 

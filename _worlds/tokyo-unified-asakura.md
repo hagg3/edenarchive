@@ -6,6 +6,13 @@ publishdate: 2000-09-28
 author: 
 tags:
   - 1466654315
+worldformat: 64z
+chunkwidth: 274
+chunkheight: 122
+skycolor: 10
+seed: 115115
+spawnx: 2341.9
+spawny: 1282.2
 ---
 ## Tokyo Unified Asakura
 

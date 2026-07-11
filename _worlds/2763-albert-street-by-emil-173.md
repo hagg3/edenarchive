@@ -6,6 +6,13 @@ publishdate: 2026-01-01
 author: Emil173
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 33
+skycolor: 9
+seed: 0
+spawnx: 254
+spawny: 318
 ---
 ## 2763 Albert Street by Emil 173
 

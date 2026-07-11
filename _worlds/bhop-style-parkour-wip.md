@@ -11,6 +11,13 @@ tags:
   - quest
   - abstract
   - secrets
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 10
+skycolor: 9
+seed: 333333
+spawnx: 114.5
+spawny: 44.0
 ---
 ## BHOP Style Parkour WIP
 

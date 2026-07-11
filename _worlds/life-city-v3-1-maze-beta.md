@@ -7,6 +7,13 @@ archivedate:
 filesize: "250.7 MB"
 author: mAzE
 tags:
+worldformat: 64z
+chunkwidth: 104
+chunkheight: 151
+skycolor: 10
+seed: 0
+spawnx: 664.9
+spawny: 777.8
 ---
 ## Life city v3'1 mAzE BETA
 

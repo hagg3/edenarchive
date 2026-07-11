@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 20
+skycolor: 9
+seed: 333333
+spawnx: 138.9
+spawny: 240.1
 ---
 ## robot and synthetics factory
 

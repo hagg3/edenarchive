@@ -8,6 +8,13 @@ tags:
   - temple
   - asia
   - lighting
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 24
+skycolor: 9
+seed: 0
+spawnx: 235.9
+spawny: 224.2
 ---
 ## thang long citadel v3
 

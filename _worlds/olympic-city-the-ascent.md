@@ -5,6 +5,13 @@ worldname: Olympic City The Ascent
 publishdate: 2024-01-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 166
+chunkheight: 165
+skycolor: 54
+seed: 0
+spawnx: 1101.6
+spawny: 1165.9
 ---
 ## Olympic City The Ascent
 

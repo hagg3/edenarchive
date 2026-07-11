@@ -5,6 +5,13 @@ worldname: Hogwarts2 Part5
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 21
+skycolor: 0
+seed: 0
+spawnx: 133.5
+spawny: 137.5
 ---
 ## Hogwarts2 Part5
 

@@ -5,6 +5,13 @@ worldname: Undertale Ruins
 publishdate: 2024-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 92
+chunkheight: 52
+skycolor: 16
+seed: 333333
+spawnx: 1247.6
+spawny: 238.0
 ---
 ## Undertale Ruins
 

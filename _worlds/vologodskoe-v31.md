@@ -5,6 +5,13 @@ worldname: Vologodskoe v31
 publishdate: 2017-06-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 68
+skycolor: 10
+seed: 0
+spawnx: 536.9
+spawny: 564.5
 ---
 ## Vologodskoe v31
 

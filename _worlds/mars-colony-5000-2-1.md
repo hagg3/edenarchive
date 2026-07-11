@@ -5,6 +5,13 @@ worldname: Mars Colony 5000 2.1
 publishdate: 2021-03-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 122
+chunkheight: 26
+skycolor: 19
+seed: 333333
+spawnx: 1788.7
+spawny: 147.3
 ---
 ## Mars Colony 5000 2.1
 

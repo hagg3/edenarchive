@@ -12,6 +12,13 @@ tags:
   - variety
   - slide
   - themepark
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 42
+skycolor: 54
+seed: 0
+spawnx: 316.7
+spawny: 211.8
 ---
 ## EMODIA Theme park V10
 

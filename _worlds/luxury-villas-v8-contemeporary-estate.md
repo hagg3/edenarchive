@@ -5,6 +5,13 @@ worldname: Luxury Villas v8 Contemeporary Estate
 publishdate: 2012-05-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 52
+chunkheight: 42
+skycolor: 0
+seed: 0
+spawnx: 313.8
+spawny: 166.2
 ---
 ## Luxury Villas v8 Contemeporary Estate
 

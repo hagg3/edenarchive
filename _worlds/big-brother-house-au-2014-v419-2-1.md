@@ -5,6 +5,13 @@ worldname: Big Brother House AU 2014 V419 2.1
 publishdate: 2022-02-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 89
+chunkheight: 67
+skycolor: 10
+seed: 0
+spawnx: 794.2
+spawny: 564.0
 ---
 ## Big Brother House AU 2014 V419 2.1
 

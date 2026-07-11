@@ -5,6 +5,13 @@ worldname: KLSVII
 publishdate: 2026-01-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 55
+chunkheight: 41
+skycolor: 54
+seed: 0
+spawnx: 444.2
+spawny: 321.8
 ---
 ## KLSVII
 

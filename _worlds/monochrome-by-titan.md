@@ -5,6 +5,13 @@ worldname: Monochrome by Titan
 publishdate: 2025-01-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 29
+skycolor: 54
+seed: 0
+spawnx: 224.0
+spawny: 240.9
 ---
 ## Monochrome by Titan
 

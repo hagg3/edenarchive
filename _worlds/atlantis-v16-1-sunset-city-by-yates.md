@@ -5,6 +5,13 @@ worldname: Atlantis v16'1 Sunset City by Yates
 publishdate: 2014-04-21
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 63
+chunkheight: 54
+skycolor: 0
+seed: 0
+spawnx: 328.0
+spawny: 208.4
 ---
 ## Atlantis v16'1 Sunset City by Yates
 

@@ -10,6 +10,13 @@ tags:
   - interior
   - detail
   - quality
+worldformat: 64z
+chunkwidth: 67
+chunkheight: 52
+skycolor: 9
+seed: 0
+spawnx: 695.3
+spawny: 391.2
 ---
 ## high school Tay
 

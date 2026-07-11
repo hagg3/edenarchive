@@ -5,6 +5,13 @@ worldname: Paint a Cat or Dog and share 5
 publishdate: 2017-05-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 11
+skycolor: 3
+seed: 0
+spawnx: 84.8
+spawny: 81.3
 ---
 ## Paint a Cat or Dog and share 5
 

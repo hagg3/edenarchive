@@ -5,6 +5,13 @@ worldname: EDENLANDIA 2025
 publishdate: 2026-01-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 114
+chunkheight: 95
+skycolor: 9
+seed: 0
+spawnx: 1075.2
+spawny: 822.0
 ---
 ## EDENLANDIA 2025
 

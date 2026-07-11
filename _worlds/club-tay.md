@@ -10,6 +10,13 @@ tags:
   - interior
   - quality
   - detail
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 33
+skycolor: 10
+seed: 0
+spawnx: 316.8
+spawny: 214.3
 ---
 ## Club Tay
 

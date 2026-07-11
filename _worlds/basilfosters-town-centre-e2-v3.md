@@ -13,6 +13,13 @@ tags:
   - city
   - town
   - signs
+worldformat: 64z
+chunkwidth: 63
+chunkheight: 76
+skycolor: 10
+seed: 0
+spawnx: 310.2
+spawny: 552.3
 ---
 ## Basilfosters Town Centre E2 V3
 

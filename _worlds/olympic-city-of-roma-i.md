@@ -5,6 +5,13 @@ worldname: Olympic City Of Roma I
 publishdate: 2013-12-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 25
+skycolor: 0
+seed: 0
+spawnx: 328.7
+spawny: 264.7
 ---
 ## Olympic City Of Roma I
 

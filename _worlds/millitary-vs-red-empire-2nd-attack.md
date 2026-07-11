@@ -11,6 +11,13 @@ tags:
   - war
   - millitary
   - battle
+worldformat: 64z
+chunkwidth: 191
+chunkheight: 180
+skycolor: 18
+seed: 333333
+spawnx: 362.1
+spawny: 1361.3
 ---
 ## Millitary vs Red Empire 2nd attack
 

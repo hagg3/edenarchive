@@ -5,6 +5,13 @@ worldname: Biggest freeway system in eden Final
 publishdate: 2023-09-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 564
+chunkheight: 363
+skycolor: 10
+seed: 0
+spawnx: 6770.2
+spawny: 2809.1
 ---
 ## Biggest freeway system in eden Final
 

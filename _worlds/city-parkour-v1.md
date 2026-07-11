@@ -12,6 +12,13 @@ tags:
   - treasure
   - quest
   - adventure
+worldformat: 64z
+chunkwidth: 8
+chunkheight: 10
+skycolor: 9
+seed: 333333
+spawnx: 48.6
+spawny: 60.2
 ---
 ## City Parkour v1
 

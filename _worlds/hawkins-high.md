@@ -9,6 +9,13 @@ tags:
   - modern
   - town
   - exploration
+worldformat: 64z
+chunkwidth: 55
+chunkheight: 39
+skycolor: 23
+seed: 0
+spawnx: 734.6
+spawny: 321.2
 ---
 ## Hawkins high
 

@@ -12,6 +12,13 @@ tags:
   - city
   - variety
   - unique
+worldformat: 64z
+chunkwidth: 84
+chunkheight: 137
+skycolor: 2
+seed: 76526
+spawnx: 845.1
+spawny: 1532.3
 ---
 ## Six USA Cities V18'2 by BrixXx
 

@@ -12,6 +12,13 @@ tags:
   - modern
   - detail
   - city
+worldformat: 64z
+chunkwidth: 86
+chunkheight: 80
+skycolor: 5
+seed: 0
+spawnx: 733.9
+spawny: 958.5
 ---
 ## UntitledWorld
 

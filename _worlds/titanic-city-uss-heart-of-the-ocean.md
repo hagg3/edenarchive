@@ -5,6 +5,13 @@ worldname: Titanic City USS Heart of the Ocean
 publishdate: 2012-02-06
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 94
+skycolor: 0
+seed: 0
+spawnx: 345.2
+spawny: 1321.1
 ---
 ## Titanic City USS Heart of the Ocean
 

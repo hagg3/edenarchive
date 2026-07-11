@@ -12,6 +12,13 @@ tags:
   - flat
   - lighting
   - unique
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 28
+skycolor: 54
+seed: 0
+spawnx: 104.7
+spawny: 151.4
 ---
 ## Eden Run v2'1'0 BETA Dblcut3
 

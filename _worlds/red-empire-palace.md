@@ -5,6 +5,13 @@ worldname: Red Empire Palace
 publishdate: 2023-11-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 114
+chunkheight: 104
+skycolor: 6
+seed: 0
+spawnx: 1110.5
+spawny: 1037.7
 ---
 ## Red Empire Palace
 

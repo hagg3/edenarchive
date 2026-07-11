@@ -20,6 +20,13 @@ tags:
   - oldterrain
   - manipulator
   - architecture
+worldformat: 64z
+chunkwidth: 93
+chunkheight: 124
+skycolor: 4
+seed: 276117
+spawnx: 740.3
+spawny: 974.3
 ---
 ## The Octagon Coral Reef
 

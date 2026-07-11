@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 72
+chunkheight: 43
+skycolor: 0
+seed: 0
+spawnx: 984.3
+spawny: 191.4
 ---
 ## the greenhouse college
 

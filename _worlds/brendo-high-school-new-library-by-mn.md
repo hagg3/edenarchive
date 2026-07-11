@@ -5,6 +5,13 @@ worldname: Brendo High School New Library by mn
 publishdate: 2021-01-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 54
+chunkheight: 42
+skycolor: 10
+seed: 0
+spawnx: 715.2
+spawny: 272.8
 ---
 ## Brendo High School New Library by mn
 

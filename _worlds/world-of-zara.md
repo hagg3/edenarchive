@@ -5,6 +5,13 @@ worldname: World of Zara
 publishdate: 2012-01-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 22
+chunkheight: 24
+skycolor: 0
+seed: 0
+spawnx: 139.2
+spawny: 207.2
 ---
 ## World of Zara
 

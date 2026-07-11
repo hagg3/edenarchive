@@ -7,6 +7,14 @@ absent, extracts each .eden.zip one at a time into .mapgen-tmp/, runs the
 node-mapgen TypeScript tool to render the PNG, then immediately deletes the
 extracted .eden file before moving on.
 
+node-mapgen also writes a meta.json sidecar next to every map.png now (format,
+chunk dimensions, sky color, seed, spawn point — see node-mapgen/src/worldMeta.ts).
+This script does not fold that into front matter itself, to keep working under
+bare `python3` (no PyYAML dependency, per CLAUDE.md). Run
+`admin/.venv/bin/python backfill_world_meta.py` afterwards (or use the admin
+app, which folds it in automatically after every map job) to write those
+fields into `_worlds/*.md`.
+
 Usage:
     python3 generate_missing_maps.py              # generate all missing maps
     python3 generate_missing_maps.py --dry-run    # list which maps are missing

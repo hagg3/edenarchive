@@ -5,6 +5,13 @@ worldname: Hogwarts By Brendan V7
 publishdate: 2012-06-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 42
+chunkheight: 57
+skycolor: 0
+seed: 0
+spawnx: 257.4
+spawny: 279.7
 ---
 ## Hogwarts By Brendan V7
 

@@ -10,6 +10,13 @@ tags:
   - quest
   - adventure
   - abstract
+worldformat: 64z
+chunkwidth: 13
+chunkheight: 17
+skycolor: 7
+seed: 333333
+spawnx: 78.2
+spawny: 51.5
 ---
 ## Sonic 3K Gusty Ruins By Bobomb73
 

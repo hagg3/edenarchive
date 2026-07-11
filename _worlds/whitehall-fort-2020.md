@@ -5,6 +5,13 @@ worldname: Whitehall Fort 2020
 publishdate: 2020-03-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 106
+chunkheight: 49
+skycolor: 6
+seed: 333333
+spawnx: 259.2
+spawny: 180.6
 ---
 ## Whitehall Fort 2020
 

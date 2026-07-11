@@ -10,6 +10,13 @@ tags:
   - city
   - scalesmall
   - flat
+worldformat: 64z
+chunkwidth: 106
+chunkheight: 93
+skycolor: 6
+seed: 0
+spawnx: 618.2
+spawny: 763.1
 ---
 ## metrocity v115'13
 

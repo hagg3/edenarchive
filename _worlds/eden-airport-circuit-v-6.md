@@ -5,6 +5,13 @@ worldname: Eden Airport Circuit V'6
 publishdate: 2021-08-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 52
+chunkheight: 39
+skycolor: 10
+seed: 0
+spawnx: 502.5
+spawny: 425.9
 ---
 ## Eden Airport Circuit V'6
 

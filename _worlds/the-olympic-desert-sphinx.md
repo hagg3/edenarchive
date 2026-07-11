@@ -5,6 +5,13 @@ worldname: The Olympic Desert Sphinx
 publishdate: 2012-09-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 54
+skycolor: 0
+seed: 284036
+spawnx: 206.1
+spawny: 282.8
 ---
 ## The Olympic Desert Sphinx
 

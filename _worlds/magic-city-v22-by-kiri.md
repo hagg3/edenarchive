@@ -5,6 +5,13 @@ worldname: Magic City V22 By Kiri
 publishdate: 2022-09-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 37
+skycolor: 24
+seed: 0
+spawnx: 225.6
+spawny: 149.2
 ---
 ## Magic City V22 By Kiri
 

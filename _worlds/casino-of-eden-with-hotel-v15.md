@@ -12,6 +12,13 @@ tags:
   - detailed
   - wiki
   - exploration
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 20
+skycolor: 2
+seed: 0
+spawnx: 152
+spawny: 184
 ---
 ## Casino of Eden with Hotel V15
 

@@ -11,6 +11,13 @@ tags:
   - realistic
   - church
   - architecture
+worldformat: 64z
+chunkwidth: 33
+chunkheight: 64
+skycolor: 54
+seed: 0
+spawnx: 270.0
+spawny: 685.1
 ---
 ## St Mary's Catherdral
 

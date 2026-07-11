@@ -12,6 +12,13 @@ tags:
   - beach
   - waterpark
   - newterrain
+worldformat: 64z
+chunkwidth: 181
+chunkheight: 150
+skycolor: 9
+seed: 333333
+spawnx: 1172.5
+spawny: 2049.2
 ---
 ## CatExp Hotel and Waterpark ver 2026
 

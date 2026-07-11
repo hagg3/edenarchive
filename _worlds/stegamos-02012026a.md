@@ -6,6 +6,13 @@ publishdate: 2026-01-02
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 162
+chunkheight: 348
+skycolor: 9
+seed: 281460
+spawnx: 1569
+spawny: 780.8
 ---
 ## STEGAMOS 02012026a
 

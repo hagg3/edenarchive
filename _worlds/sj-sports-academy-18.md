@@ -9,6 +9,13 @@ author:
 tags:
   - sport
   - flat
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 22
+skycolor: 10
+seed: 0
+spawnx: 184
+spawny: 120
 ---
 ## SJ Sports Academy 18
 

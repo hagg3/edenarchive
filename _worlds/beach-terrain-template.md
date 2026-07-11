@@ -15,6 +15,13 @@ tags:
   - island
   - huge
   - large
+worldformat: 64z
+chunkwidth: 187
+chunkheight: 166
+skycolor: 6
+seed: 0
+spawnx: 1054.9
+spawny: 1622.0
 ---
 ## Beach Terrain Template
 

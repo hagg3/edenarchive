@@ -12,6 +12,13 @@ tags:
   - needsreview
   - possibleremix
   - oldterrain
+worldformat: 64z
+chunkwidth: 77
+chunkheight: 140
+skycolor: 8
+seed: 76526
+spawnx: 371.8
+spawny: 2049.5
 ---
 ## US Capital
 

@@ -11,6 +11,13 @@ tags:
   - interior
   - exploration
   - detailed
+worldformat: 64z
+chunkwidth: 130
+chunkheight: 116
+skycolor: 10
+seed: 0
+spawnx: 640.9
+spawny: 480.2
 ---
 ## Perfect Office Building drz
 

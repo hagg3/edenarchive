@@ -5,6 +5,13 @@ worldname: Biggest Pyramid in Eden
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 27
+skycolor: 0
+seed: 0
+spawnx: 262.9
+spawny: 219.0
 ---
 ## Biggest Pyramid in Eden
 

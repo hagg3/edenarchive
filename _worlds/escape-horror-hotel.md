@@ -12,6 +12,13 @@ tags:
   - quest
   - lighting
   - interior
+worldformat: 64z
+chunkwidth: 13
+chunkheight: 5
+skycolor: 54
+seed: 0
+spawnx: 179
+spawny: 49
 ---
 ## Escape Horror Hotel
 

@@ -5,6 +5,13 @@ worldname: GTA EDEN V1 Uncompleted
 publishdate: 2012-04-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 53
+skycolor: 0
+seed: 0
+spawnx: 168
+spawny: 200
 ---
 ## GTA EDEN V1 Uncompleted
 

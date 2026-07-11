@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: Samara / BrixXx
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 30
+skycolor: 10
+seed: 0
+spawnx: 160.5
+spawny: 304.0
 ---
 ## Colossal City V22 by BrixXx
 

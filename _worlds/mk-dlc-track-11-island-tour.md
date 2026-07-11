@@ -10,6 +10,13 @@ tags:
   - needsreview
   - nintendo
   - mario
+worldformat: 64z
+chunkwidth: 10
+chunkheight: 6
+skycolor: 9
+seed: 333333
+spawnx: 34.8
+spawny: 68.5
 ---
 ## MK Dlc track 11 Island tour
 

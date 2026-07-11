@@ -9,6 +9,13 @@ author:
 tags:
   - flat
   - collab
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 33
+skycolor: 54
+seed: 0
+spawnx: 110.6
+spawny: 471.8
 ---
 ## help build this city and share V12'0
 

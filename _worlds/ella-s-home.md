@@ -15,6 +15,13 @@ tags:
   - city
   - architecture
   - modern
+worldformat: 64z
+chunkwidth: 83
+chunkheight: 85
+skycolor: 6
+seed: 0
+spawnx: 477.2
+spawny: 1212.8
 ---
 ## Ella's Home
 

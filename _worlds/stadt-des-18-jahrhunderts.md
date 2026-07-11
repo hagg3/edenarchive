@@ -5,6 +5,13 @@ worldname: Stadt des 18 Jahrhunderts
 publishdate: 2012-02-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 30
+skycolor: 0
+seed: 0
+spawnx: 233.5
+spawny: 393.3
 ---
 ## Stadt des 18 Jahrhunderts
 

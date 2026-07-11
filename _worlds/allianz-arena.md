@@ -5,6 +5,13 @@ worldname: Allianz Arena
 publishdate: 2012-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 61
+chunkheight: 47
+skycolor: 0
+seed: 0
+spawnx: 489.2
+spawny: 341.6
 ---
 ## Allianz Arena
 

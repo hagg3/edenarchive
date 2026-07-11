@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 71
+chunkheight: 80
+skycolor: 23
+seed: 0
+spawnx: 374.6
+spawny: 509.4
 ---
 ## Best airport in Eden V1'8
 

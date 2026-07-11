@@ -5,6 +5,13 @@ worldname: Tw iB
 publishdate: 2026-01-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 165
+chunkheight: 175
+skycolor: 10
+seed: 0
+spawnx: 1459
+spawny: 1233
 ---
 ## Tw iB
 

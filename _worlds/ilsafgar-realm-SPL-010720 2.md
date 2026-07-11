@@ -8,6 +8,13 @@ tags:
   - flat
   - needsreview
   
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 63
+skycolor: 9
+seed: 0
+spawnx: 539.2
+spawny: 320.8
 ---
 ## ilsafgar realm SPK 010720 2
 

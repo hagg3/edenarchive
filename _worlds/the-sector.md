@@ -12,6 +12,13 @@ tags:
   - palace
   - kingdom
   - wall
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 30
+skycolor: 0
+seed: 0
+spawnx: 235.0
+spawny: 294.7
 ---
 ## The Sector
 

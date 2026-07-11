@@ -5,6 +5,13 @@ worldname: Big Sport World
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 17
+skycolor: 0
+seed: 0
+spawnx: 216
+spawny: 120
 ---
 ## Big Sport World
 

@@ -5,6 +5,13 @@ worldname: Four USA Cities V15'7 by BrixXx
 publishdate: 2014-02-16
 author: Samara / BrixXx
 tags:
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 142
+skycolor: 0
+seed: 76526
+spawnx: 381.1
+spawny: 1532.3
 ---
 ## Four USA Cities V15'7 by BrixXx
 

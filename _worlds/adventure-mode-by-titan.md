@@ -5,6 +5,13 @@ worldname: Adventure mode by Titan
 publishdate: 2025-01-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 39
+skycolor: 54
+seed: 0
+spawnx: 254.1
+spawny: 397.8
 ---
 ## Adventure mode by Titan
 

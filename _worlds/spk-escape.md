@@ -5,6 +5,13 @@ worldname: SPK Escape
 publishdate: 2016-03-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 63
+skycolor: 54
+seed: 0
+spawnx: 643.0
+spawny: 269.1
 ---
 ## SPK Escape
 

@@ -17,6 +17,13 @@ tags:
   - infrastructure
   - sea
   - experimental
+worldformat: 64z
+chunkwidth: 211
+chunkheight: 268
+skycolor: 54
+seed: 0
+spawnx: 1136.6
+spawny: 1668.0
 ---
 ## Endornia XEN3
 

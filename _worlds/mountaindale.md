@@ -5,6 +5,13 @@ worldname: Mountaindale
 publishdate: 2013-02-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 25
+skycolor: 0
+seed: 267915
+spawnx: 246.9
+spawny: 190.8
 ---
 ## Mountaindale
 

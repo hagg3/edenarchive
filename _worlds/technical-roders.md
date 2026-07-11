@@ -10,6 +10,13 @@ tags:
   - machinery
   - industrial
   - mechanical
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 73
+skycolor: 8
+seed: 0
+spawnx: 333.2
+spawny: 615.8
 ---
 ## Technical Roders
 

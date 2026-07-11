@@ -32,6 +32,16 @@ CANONICAL_ORDER = [
     "filesize",
     "author",
     "tags",
+    # Technical fields extracted from the .eden binary by node-mapgen
+    # (see admin/core/mapgen.py's META_TO_FRONTMATTER) — always come last,
+    # after the human-curated fields above.
+    "worldformat",
+    "chunkwidth",
+    "chunkheight",
+    "skycolor",
+    "seed",
+    "spawnx",
+    "spawny",
 ]
 
 ALWAYS_QUOTED = {"filesize"}

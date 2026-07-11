@@ -10,6 +10,13 @@ tags:
   - space
   - planet
   - scene
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 39
+skycolor: 54
+seed: 168722
+spawnx: 243.6
+spawny: 263.0
 ---
 ## Steve's Solar System
 

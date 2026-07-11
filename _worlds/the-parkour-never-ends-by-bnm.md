@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: Bnm
 tags:
+worldformat: 64z
+chunkwidth: 29
+chunkheight: 31
+skycolor: 10
+seed: 0
+spawnx: 226.1
+spawny: 282.2
 ---
 ## The Parkour Never Ends by Bnm
 

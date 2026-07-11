@@ -5,6 +5,13 @@ worldname: Ruhrgebiet Metro Update
 publishdate: 2020-05-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 416
+skycolor: 15
+seed: 0
+spawnx: 551.1
+spawny: 5625.8
 ---
 ## Ruhrgebiet Metro Update
 

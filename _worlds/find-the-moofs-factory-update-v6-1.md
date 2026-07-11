@@ -5,6 +5,13 @@ worldname: Find the Moofs Factory Update V6'1
 publishdate: 2022-09-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 25
+skycolor: 10
+seed: 0
+spawnx: 233
+spawny: 266
 ---
 ## Find the Moofs Factory Update V6'1
 

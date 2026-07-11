@@ -12,6 +12,13 @@ tags:
   - quest
   - adventure
   - lighting
+worldformat: 64z
+chunkwidth: 31
+chunkheight: 32
+skycolor: 54
+seed: 100418
+spawnx: 248.8
+spawny: 245.9
 ---
 ## Dan50 Archives The Great Escape
 

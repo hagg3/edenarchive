@@ -5,6 +5,13 @@ worldname: Kingdom of Eden V2
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 65
+chunkheight: 90
+skycolor: 0
+seed: 170130
+spawnx: 544.1
+spawny: 547.7
 ---
 ## Kingdom of Eden V2
 

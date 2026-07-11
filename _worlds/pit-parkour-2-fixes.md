@@ -15,6 +15,13 @@ tags:
   - portal
   - abstract
   - exploration
+worldformat: 64z
+chunkwidth: 66
+chunkheight: 79
+skycolor: 54
+seed: 0
+spawnx: 664
+spawny: 808
 ---
 ## Pit Parkour 2 Fixes
 

@@ -5,6 +5,13 @@ worldname: JL7
 publishdate: 2026-01-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 36
+skycolor: 10
+seed: 0
+spawnx: 312
+spawny: 312
 ---
 ## JL7
 

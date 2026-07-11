@@ -5,6 +5,13 @@ worldname: The Palace v6'2 with W by AF
 publishdate: 2012-06-10
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 191
+chunkheight: 75
+skycolor: 0
+seed: 144037
+spawnx: 2872.2
+spawny: 319.0
 ---
 ## The Palace v6'2 with W by AF
 

@@ -9,6 +9,13 @@ tags:
   - cool
   - retro
   - oldterrain
+worldformat: 64z
+chunkwidth: 92
+chunkheight: 81
+skycolor: 6
+seed: 135006
+spawnx: 1230.4
+spawny: 809.8
 ---
 ## MK City 08
 

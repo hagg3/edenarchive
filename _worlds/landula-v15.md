@@ -10,6 +10,13 @@ tags:
   - unique
   - interior
   - impressive
+worldformat: 64z
+chunkwidth: 385
+chunkheight: 352
+skycolor: 10
+seed: 122599
+spawnx: 5478.9
+spawny: 2414.1
 ---
 ## Landula V15
 

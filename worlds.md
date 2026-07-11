@@ -66,6 +66,12 @@ If you end up with a usable `.eden` file, the extraction has worked correctly.
   <tbody></tbody>
 </table>
 
+<nav class="pagination" id="pagination">
+  <button id="page-prev" type="button">&larr; Prev</button>
+  <span id="page-status" class="muted"></span>
+  <button id="page-next" type="button">Next &rarr;</button>
+</nav>
+
 <script>
 {% include js/world-search.js %}
 </script>

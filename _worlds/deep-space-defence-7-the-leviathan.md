@@ -5,6 +5,13 @@ worldname: Deep Space Defence 7 the Leviathan
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 23
+skycolor: 0
+seed: 0
+spawnx: 226.3
+spawny: 167.8
 ---
 ## Deep Space Defence 7 the Leviathan
 

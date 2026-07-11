@@ -5,6 +5,13 @@ worldname: CRUISE OASIS OF THE SEAS BY ECSC
 publishdate: 2012-04-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 43
+skycolor: 0
+seed: 0
+spawnx: 167.4
+spawny: 280.5
 ---
 ## CRUISE OASIS OF THE SEAS BY ECSC
 

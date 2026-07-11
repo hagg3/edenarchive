@@ -5,6 +5,13 @@ worldname: Scooby Doo Spooky Swamp V2 by MD15
 publishdate: 2019-01-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 9
+chunkheight: 8
+skycolor: 13
+seed: 0
+spawnx: 128
+spawny: 35
 ---
 ## Scooby Doo Spooky Swamp V2 by MD15
 

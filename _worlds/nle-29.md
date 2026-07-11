@@ -15,6 +15,13 @@ tags:
   - realistic
   - detailed
   - interior
+worldformat: 64z
+chunkwidth: 82
+chunkheight: 73
+skycolor: 10
+seed: 0
+spawnx: 677.6
+spawny: 644.1
 ---
 ## NLE 29
 

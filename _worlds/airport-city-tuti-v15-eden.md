@@ -7,6 +7,13 @@ archivedate:
 filesize: "1.6 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 91
+chunkheight: 196
+skycolor: 18
+seed: 228147
+spawnx: 936
+spawny: 360
 ---
 ## airport city tuti v15.eden
 

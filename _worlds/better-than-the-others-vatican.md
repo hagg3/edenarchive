@@ -5,6 +5,13 @@ worldname: better than the others vatican
 publishdate: 2012-07-14
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 18
+skycolor: 0
+seed: 0
+spawnx: 387.2
+spawny: 161.9
 ---
 ## better than the others vatican
 

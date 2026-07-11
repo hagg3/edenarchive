@@ -5,6 +5,13 @@ worldname: olympic grand hotel by k05 the best
 publishdate: 2012-04-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 19
+chunkheight: 26
+skycolor: 0
+seed: 0
+spawnx: 152
+spawny: 216
 ---
 ## olympic grand hotel by k05 the best
 

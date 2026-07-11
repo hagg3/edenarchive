@@ -5,6 +5,13 @@ worldname: BOSTON MA V2
 publishdate: 2022-10-07
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 23
+skycolor: 6
+seed: 333333
+spawnx: 127.7
+spawny: 121.6
 ---
 ## BOSTON MA V2
 

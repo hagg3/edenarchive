@@ -7,6 +7,13 @@ author:
 tags:
   - star
   - wars
+worldformat: 64z
+chunkwidth: 46
+chunkheight: 54
+skycolor: 9
+seed: 0
+spawnx: 577.9
+spawny: 216.0
 ---
 ## imperial senate
 

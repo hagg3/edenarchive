@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.2 MB"
 author: Dan50
 tags:
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 36
+skycolor: 10
+seed: 0
+spawnx: 282.7
+spawny: 264.3
 ---
 ## Dan50 Archives Racing Course
 

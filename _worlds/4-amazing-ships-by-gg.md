@@ -5,6 +5,13 @@ worldname: 4 AMAZING SHIPS BY GG
 publishdate: 2013-01-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 35
+skycolor: 0
+seed: 0
+spawnx: 294.2
+spawny: 335.2
 ---
 ## 4 AMAZING SHIPS BY GG
 

@@ -6,6 +6,13 @@ publishdate: 2017-10-07
 author: Fabi
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 127
+chunkheight: 99
+skycolor: 6
+seed: 0
+spawnx: 1274.2
+spawny: 658.1
 ---
 ## ENTENHAUSEN V3 mit fabi 14 2.1
 

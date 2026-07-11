@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.4 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 55
+chunkheight: 52
+skycolor: 9
+seed: 0
+spawnx: 437.9
+spawny: 617.1
 ---
 ## University Tranium Chine
 

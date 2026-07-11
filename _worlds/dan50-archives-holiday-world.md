@@ -14,6 +14,13 @@ tags:
   - theme
   - art
   - scene
+worldformat: 64z
+chunkwidth: 49
+chunkheight: 38
+skycolor: 10
+seed: 0
+spawnx: 546.5
+spawny: 299.5
 ---
 ## Dan50 Archives Holiday World
 

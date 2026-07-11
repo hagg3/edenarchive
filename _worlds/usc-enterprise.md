@@ -5,6 +5,13 @@ worldname: USC Enterprise
 publishdate: 2012-02-13
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 25
+chunkheight: 86
+skycolor: 0
+seed: 0
+spawnx: 248.0
+spawny: 740.8
 ---
 ## USC Enterprise
 

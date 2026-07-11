@@ -5,6 +5,13 @@ worldname: Retro by Bnm
 publishdate: 2014-02-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 87
+chunkheight: 130
+skycolor: 0
+seed: 98383
+spawnx: 759.1
+spawny: 908.0
 ---
 ## Retro by Bnm
 

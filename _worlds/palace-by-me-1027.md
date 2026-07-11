@@ -10,6 +10,13 @@ tags:
   - quality
   - palace
   - interior
+worldformat: 64z
+chunkwidth: 119
+chunkheight: 117
+skycolor: 45
+seed: 0
+spawnx: 1133.2
+spawny: 698.8
 ---
 ## Palace by me 1027
 

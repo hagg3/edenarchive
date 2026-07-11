@@ -9,6 +9,13 @@ author:
 tags:
   - unique
   - flat
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 42
+skycolor: 10
+seed: 0
+spawnx: 472
+spawny: 328
 ---
 ## Fussball Frick
 

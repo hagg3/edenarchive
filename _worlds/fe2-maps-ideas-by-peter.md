@@ -11,6 +11,13 @@ tags:
   - puzzle
   - lighting
   - adventure
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 5
+skycolor: 10
+seed: 0
+spawnx: 12.8
+spawny: 33.1
 ---
 ## FE2 Maps Ideas by Peter
 

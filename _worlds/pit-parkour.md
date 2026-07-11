@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.6 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 60
+chunkheight: 66
+skycolor: 54
+seed: 0
+spawnx: 568
+spawny: 600
 ---
 ## Pit Parkour
 

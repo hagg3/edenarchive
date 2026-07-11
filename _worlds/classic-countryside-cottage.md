@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 93
+chunkheight: 105
+skycolor: 9
+seed: 333333
+spawnx: 231.7
+spawny: 295.3
 ---
 ## Classic Countryside Cottage
 

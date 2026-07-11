@@ -8,6 +8,13 @@ tags:
   - nice
   - parkour
   - adventure
+worldformat: 64z
+chunkwidth: 6
+chunkheight: 5
+skycolor: 54
+seed: 0
+spawnx: 40.3
+spawny: 60.5
 ---
 ## Dark Sci Facility Insane FE2
 

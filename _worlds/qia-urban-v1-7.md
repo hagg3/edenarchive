@@ -6,6 +6,13 @@ publishdate: 2025-12-17
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 61
+chunkheight: 70
+skycolor: 10
+seed: 0
+spawnx: 711
+spawny: 658
 ---
 ## QIA URBAN V1'7
 

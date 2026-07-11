@@ -12,6 +12,13 @@ tags:
   - soviet
   - architecture
   - exploration
+worldformat: 64z
+chunkwidth: 110
+chunkheight: 136
+skycolor: 18
+seed: 0
+spawnx: 653.9
+spawny: 1188.0
 ---
 ## Donetsk 13
 

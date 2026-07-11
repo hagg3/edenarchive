@@ -5,6 +5,13 @@ worldname: EMERALD EMPIRE v60 ATLANTIS FINISHED
 publishdate: 2015-02-17
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 152
+chunkheight: 116
+skycolor: 0
+seed: 273629
+spawnx: 1364.0
+spawny: 1240.0
 ---
 ## EMERALD EMPIRE v60 ATLANTIS FINISHED
 

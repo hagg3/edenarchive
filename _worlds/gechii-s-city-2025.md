@@ -6,6 +6,13 @@ publishdate: 2025-11-29
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 46
+skycolor: 6
+seed: 0
+spawnx: 343.2
+spawny: 322.1
 ---
 ## GECHII'S CITY 2025
 

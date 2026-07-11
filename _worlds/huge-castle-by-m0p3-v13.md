@@ -5,6 +5,13 @@ worldname: Huge Castle by m0p3 v13
 publishdate: 2016-03-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 32
+skycolor: 9
+seed: 0
+spawnx: 193.8
+spawny: 338.5
 ---
 ## Huge Castle by m0p3 v13
 

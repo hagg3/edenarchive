@@ -5,6 +5,13 @@ worldname: CIUDAD satelite 70
 publishdate: 2022-09-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 97
+chunkheight: 76
+skycolor: 54
+seed: 0
+spawnx: 682.7
+spawny: 653.6
 ---
 ## CIUDAD satelite 70
 

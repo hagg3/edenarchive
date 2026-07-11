@@ -11,6 +11,13 @@ tags:
   - abstract
   - variety
   - flat
+worldformat: 64z
+chunkwidth: 62
+chunkheight: 71
+skycolor: 54
+seed: 0
+spawnx: 716.2
+spawny: 452.1
 ---
 ## The Endless Park v41'9'2 ADDED STEEL
 

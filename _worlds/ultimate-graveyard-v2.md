@@ -5,6 +5,13 @@ worldname: Ultimate Graveyard V2
 publishdate: 2023-11-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 53
+skycolor: 15
+seed: 0
+spawnx: 599.0
+spawny: 357.8
 ---
 ## Ultimate Graveyard V2
 

@@ -12,6 +12,13 @@ tags:
   - variety
   - architecture
   - retro
+worldformat: 64z
+chunkwidth: 381
+chunkheight: 248
+skycolor: 2
+seed: 87482
+spawnx: 3417.8
+spawny: 563.5
 ---
 ## James and Leyton 0986544
 

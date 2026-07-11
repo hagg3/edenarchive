@@ -8,6 +8,13 @@ tags:
   - short
   - quest
   - adventure
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 28
+skycolor: 10
+seed: 0
+spawnx: 232
+spawny: 232
 ---
 ## Fun Game
 

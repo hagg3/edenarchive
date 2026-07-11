@@ -13,6 +13,13 @@ tags:
   - adventure
   - sonic
   - gaming
+worldformat: 64z
+chunkwidth: 73
+chunkheight: 74
+skycolor: 15
+seed: 26269
+spawnx: 138.3
+spawny: 206.9
 ---
 ## Sonic 3K v22'3 by zz
 

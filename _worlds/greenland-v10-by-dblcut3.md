@@ -5,6 +5,13 @@ worldname: Greenland v10 by Dblcut3
 publishdate: 2020-09-15
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 84
+chunkheight: 85
+skycolor: 10
+seed: 287331
+spawnx: 852.3
+spawny: 801.9
 ---
 ## Greenland v10 by Dblcut3
 

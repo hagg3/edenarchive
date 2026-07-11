@@ -10,6 +10,13 @@ tags:
   - remix
   - abandoned
   - overgrown
+worldformat: 64z
+chunkwidth: 162
+chunkheight: 335
+skycolor: 0
+seed: 281460
+spawnx: 1627.4
+spawny: 784.8
 ---
 ## MEXICOcity
 

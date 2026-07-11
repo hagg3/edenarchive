@@ -14,6 +14,13 @@ tags:
   - scene
   - adventure
   - quest
+worldformat: 64z
+chunkwidth: 198
+chunkheight: 181
+skycolor: 54
+seed: 333333
+spawnx: 2170.5
+spawny: 2023.5
 ---
 ## backrooms by andy
 

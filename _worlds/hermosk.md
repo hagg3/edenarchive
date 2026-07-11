@@ -6,6 +6,13 @@ publishdate: 2025-12-17
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 54
+chunkheight: 54
+skycolor: 54
+seed: 0
+spawnx: 551.8
+spawny: 256.5
 ---
 ## HERMOSK
 

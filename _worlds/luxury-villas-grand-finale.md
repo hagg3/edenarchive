@@ -5,6 +5,13 @@ worldname: Luxury Villas Grand Finale
 publishdate: 2021-03-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 52
+chunkheight: 54
+skycolor: 15
+seed: 0
+spawnx: 352.7
+spawny: 286.8
 ---
 ## Luxury Villas Grand Finale
 

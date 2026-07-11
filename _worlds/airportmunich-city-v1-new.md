@@ -5,6 +5,13 @@ worldname: AIRPORTMUNICH city V1 new
 publishdate: 2013-07-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 119
+chunkheight: 105
+skycolor: 0
+seed: 0
+spawnx: 1230.0
+spawny: 334.5
 ---
 ## AIRPORTMUNICH city V1 new
 

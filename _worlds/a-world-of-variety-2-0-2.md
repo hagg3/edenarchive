@@ -5,6 +5,13 @@ worldname: A World Of Variety 2'0'2
 publishdate: 2012-03-05
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 46
+chunkheight: 51
+skycolor: 0
+seed: 107542
+spawnx: 256.2
+spawny: 555.8
 ---
 ## A World Of Variety 2'0'2
 

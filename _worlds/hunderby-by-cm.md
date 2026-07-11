@@ -6,6 +6,13 @@ publishdate: 2019-07-31
 author: CM
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 118
+chunkheight: 112
+skycolor: 0
+seed: 0
+spawnx: 1003.6
+spawny: 323.9
 ---
 ## HUNDERBY BY CM
 

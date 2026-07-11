@@ -11,6 +11,13 @@ tags:
   - hotel
   - unique
   - flat
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 45
+skycolor: 27
+seed: 0
+spawnx: 408
+spawny: 424
 ---
 ## Hotel Julian
 

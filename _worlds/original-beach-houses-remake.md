@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 20
+skycolor: 10
+seed: 0
+spawnx: 267
+spawny: 224
 ---
 ## Original Beach Houses Remake
 

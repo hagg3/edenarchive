@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 35
+skycolor: 10
+seed: 0
+spawnx: 226.1
+spawny: 404.3
 ---
 ## rpg world V1
 

@@ -7,6 +7,13 @@ author:
 tags:
   - needsreview
   - interiors
+worldformat: 64z
+chunkwidth: 46
+chunkheight: 34
+skycolor: 6
+seed: 0
+spawnx: 258.0
+spawny: 177.9
 ---
 ## Zombi Complex By Finl4y
 

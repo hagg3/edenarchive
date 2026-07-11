@@ -5,6 +5,13 @@ worldname: Lake Cottage 37 by FJSP
 publishdate: 2019-06-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 31
+skycolor: 6
+seed: 0
+spawnx: 81.8
+spawny: 207.9
 ---
 ## Lake Cottage 37 by FJSP
 

@@ -5,6 +5,13 @@ worldname: Grand Designs
 publishdate: 2012-02-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 25
+skycolor: 0
+seed: 0
+spawnx: 317.7
+spawny: 221.2
 ---
 ## Grand Designs
 

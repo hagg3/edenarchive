@@ -11,6 +11,13 @@ tags:
   - cool
   - physics
   - rollercoaster
+worldformat: 64z
+chunkwidth: 75
+chunkheight: 113
+skycolor: 9
+seed: 333333
+spawnx: 384.0
+spawny: 301.2
 ---
 ## WICKED Twisterfication V2
 

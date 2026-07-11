@@ -6,6 +6,13 @@ publishdate: 2025-12-26
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 74
+chunkheight: 116
+skycolor: 9
+seed: 333333
+spawnx: 974
+spawny: 974
 ---
 ## Albania
 

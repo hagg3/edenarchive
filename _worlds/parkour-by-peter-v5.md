@@ -10,6 +10,13 @@ tags:
   - parkour
   - puzzle
   - lighting
+worldformat: 64z
+chunkwidth: 4
+chunkheight: 11
+skycolor: 54
+seed: 0
+spawnx: 16.2
+spawny: 132.0
 ---
 ## Parkour by Peter V5
 

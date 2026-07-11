@@ -5,6 +5,13 @@ worldname: eden disneyland v41
 publishdate: 2026-01-16
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 176
+chunkheight: 127
+skycolor: 54
+seed: 0
+spawnx: 855.2
+spawny: 817.4
 ---
 ## eden disneyland v41
 

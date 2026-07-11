@@ -7,6 +7,13 @@ archivedate:
 filesize: "83.2 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 164
+chunkheight: 115
+skycolor: 6
+seed: 0
+spawnx: 2142.0
+spawny: 1428.0
 ---
 ## SJ's World v20 UPDATED
 

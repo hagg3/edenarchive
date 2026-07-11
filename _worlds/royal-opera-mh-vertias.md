@@ -5,6 +5,13 @@ worldname: royal opera MH vertias
 publishdate: 2013-04-20
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 17
+chunkheight: 21
+skycolor: 0
+seed: 0
+spawnx: 136.1
+spawny: 189.6
 ---
 ## royal opera MH vertias
 

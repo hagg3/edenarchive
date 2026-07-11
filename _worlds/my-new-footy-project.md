@@ -10,6 +10,13 @@ tags:
   - arena
   - football
   - soccer
+worldformat: 64z
+chunkwidth: 7
+chunkheight: 7
+skycolor: 10
+seed: 0
+spawnx: 37
+spawny: 34
 ---
 ## My New Footy Project
 

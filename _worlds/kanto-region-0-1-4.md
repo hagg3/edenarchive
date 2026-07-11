@@ -5,6 +5,13 @@ worldname: Kanto Region 0'1'4
 publishdate: 2017-01-29
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 52
+chunkheight: 54
+skycolor: 10
+seed: 0
+spawnx: 352.7
+spawny: 286.8
 ---
 ## Kanto Region 0'1'4
 

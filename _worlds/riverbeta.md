@@ -6,6 +6,13 @@ publishdate: 2014-05-03
 author: Ari Ronen
 tags:
   - customterrain
+worldformat: 64z
+chunkwidth: 180
+chunkheight: 180
+skycolor: 0
+seed: 0
+spawnx: 1448
+spawny: 1448
 ---
 ## riverbeta
 

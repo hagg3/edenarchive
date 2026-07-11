@@ -11,6 +11,13 @@ tags:
   - scale
   - macro
   - interior
+worldformat: 64z
+chunkwidth: 34
+chunkheight: 32
+skycolor: 5
+seed: 0
+spawnx: 272.0
+spawny: 260.8
 ---
 ## The Giants House by heidiz
 

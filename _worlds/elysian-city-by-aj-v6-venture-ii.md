@@ -5,6 +5,13 @@ worldname: Elysian City by AJ v6 Venture II
 publishdate: 2014-02-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 59
+skycolor: 0
+seed: 0
+spawnx: 440.0
+spawny: 616.0
 ---
 ## Elysian City by AJ v6 Venture II
 

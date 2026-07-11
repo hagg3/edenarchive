@@ -5,6 +5,13 @@ worldname: Chateau Delwill V14
 publishdate: 2012-02-23
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 27
+skycolor: 0
+seed: 84951
+spawnx: 299.5
+spawny: 214.2
 ---
 ## Chateau Delwill V14
 

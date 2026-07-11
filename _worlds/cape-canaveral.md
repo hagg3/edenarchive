@@ -12,6 +12,13 @@ tags:
   - oldterrain
   - unique
   - base
+worldformat: 64z
+chunkwidth: 206
+chunkheight: 200
+skycolor: 0
+seed: 259904
+spawnx: 2264
+spawny: 1992
 ---
 ## Cape Canaveral
 

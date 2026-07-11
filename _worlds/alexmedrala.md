@@ -11,6 +11,13 @@ tags:
   - houses
   - beach
   - tropical
+worldformat: 64z
+chunkwidth: 44
+chunkheight: 38
+skycolor: 54
+seed: 0
+spawnx: 291
+spawny: 289
 ---
 ## alexmedrala
 

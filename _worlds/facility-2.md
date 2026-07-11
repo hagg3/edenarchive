@@ -11,6 +11,13 @@ tags:
   - cool
   - lighting
   - needsreview
+worldformat: 64z
+chunkwidth: 152
+chunkheight: 127
+skycolor: 9
+seed: 333333
+spawnx: 673.1
+spawny: 230.5
 ---
 ## Facility 2
 

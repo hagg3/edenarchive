@@ -5,6 +5,13 @@ worldname: Elf Castle by CDog 252
 publishdate: 2015-04-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 45
+chunkheight: 34
+skycolor: 10
+seed: 0
+spawnx: 375.0
+spawny: 203.1
 ---
 ## Elf Castle by CDog 252
 

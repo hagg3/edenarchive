@@ -7,6 +7,13 @@ author:
 tags:
   - environment
   - scene
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 33
+skycolor: 28
+seed: 0
+spawnx: 261
+spawny: 306
 ---
 ## add a biome and share
 

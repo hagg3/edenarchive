@@ -11,6 +11,13 @@ tags:
   - flat
   - scene
   - puzzle
+worldformat: 64z
+chunkwidth: 26
+chunkheight: 29
+skycolor: 0
+seed: 0
+spawnx: 158.9
+spawny: 298.0
 ---
 ## REALM v'beta
 

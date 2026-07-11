@@ -7,6 +7,13 @@ author:
 tags:
   - needsreview
   - albania
+worldformat: 64z
+chunkwidth: 68
+chunkheight: 60
+skycolor: 10
+seed: 0
+spawnx: 601.2
+spawny: 549.6
 ---
 ## Shqiperia
 

@@ -14,6 +14,13 @@ tags:
   - cyberpunk
   - old
   - flat
+worldformat: 64z
+chunkwidth: 50
+chunkheight: 57
+skycolor: 10
+seed: 0
+spawnx: 634.9
+spawny: 183.2
 ---
 ## VENTURE and UTOPIA v10 by AJ '87120' 2.1
 

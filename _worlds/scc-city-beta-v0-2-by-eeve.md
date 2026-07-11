@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: EEVE
 tags:
+worldformat: 64z
+chunkwidth: 39
+chunkheight: 33
+skycolor: 15
+seed: 0
+spawnx: 318.2
+spawny: 214.0
 ---
 ## SCC City Beta V0'2 By EEVE
 

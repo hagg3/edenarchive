@@ -12,6 +12,13 @@ tags:
   - scene
   - temple
   - monument
+worldformat: 64z
+chunkwidth: 344
+chunkheight: 217
+skycolor: 9
+seed: 230030
+spawnx: 3500.8
+spawny: 894.9
 ---
 ## Austin's world v3 Holy City Houses
 

@@ -6,6 +6,13 @@ publishdate: 2014-07-28
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 15
+chunkheight: 14
+skycolor: 0
+seed: 0
+spawnx: 106.8
+spawny: 105.5
 ---
 ## The Punishment Chamber
 

@@ -10,6 +10,13 @@ tags:
   - detail
   - city
   - modern
+worldformat: 64z
+chunkwidth: 71
+chunkheight: 105
+skycolor: 6
+seed: 0
+spawnx: 528.6
+spawny: 1004.3
 ---
 ## Tornesch2026
 

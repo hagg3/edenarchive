@@ -5,6 +5,13 @@ worldname: chernovik by munta rus 2'8'8
 publishdate: 2015-08-03
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 60
+chunkheight: 94
+skycolor: 10
+seed: 0
+spawnx: 316.1
+spawny: 1228.2
 ---
 ## chernovik by munta rus 2'8'8
 

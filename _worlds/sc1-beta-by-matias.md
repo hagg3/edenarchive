@@ -5,6 +5,13 @@ worldname: Sc1 beta by matias
 publishdate: 2012-10-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 48
+chunkheight: 67
+skycolor: 0
+seed: 0
+spawnx: 440.2
+spawny: 824.1
 ---
 ## Sc1 beta by matias
 

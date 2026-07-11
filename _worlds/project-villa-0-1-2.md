@@ -9,6 +9,13 @@ tags:
   - interior
   - house
   - mansion
+worldformat: 64z
+chunkwidth: 79
+chunkheight: 74
+skycolor: 6
+seed: 75289
+spawnx: 474.0
+spawny: 761.8
 ---
 ## Project Villa 0'1'2
 

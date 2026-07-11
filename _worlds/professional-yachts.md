@@ -5,6 +5,13 @@ worldname: Professional Yachts
 publishdate: 2011-12-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 17
+skycolor: 0
+seed: 0
+spawnx: 184
+spawny: 120
 ---
 ## Professional Yachts
 

@@ -17,6 +17,13 @@ tags:
   - roads
   - europe
   - mountains
+worldformat: 64z
+chunkwidth: 451
+chunkheight: 528
+skycolor: 8
+seed: 80866
+spawnx: 3753.0
+spawny: 7110.0
 ---
 ## Endornia v289
 

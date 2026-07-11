@@ -5,6 +5,13 @@ worldname: Olympic City Skymarch 2.2
 publishdate: 2025-01-24
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 166
+chunkheight: 166
+skycolor: 54
+seed: 0
+spawnx: 1535.3
+spawny: 1808.7
 ---
 ## Olympic City Skymarch 2.2
 

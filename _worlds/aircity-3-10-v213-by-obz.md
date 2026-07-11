@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.4 MB"
 author: obz
 tags:
+worldformat: 64z
+chunkwidth: 53
+chunkheight: 58
+skycolor: 25
+seed: 0
+spawnx: 542.2
+spawny: 685.1
 ---
 ## AirCity 3'10 v213 by obz
 

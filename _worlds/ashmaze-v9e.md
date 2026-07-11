@@ -6,6 +6,13 @@ publishdate: 2013-09-09
 author: 
 tags:
   - wiki
+worldformat: 64z
+chunkwidth: 101
+chunkheight: 107
+skycolor: 0
+seed: 0
+spawnx: 488.9
+spawny: 649.3
 ---
 ## ASHMAZE V9E
 

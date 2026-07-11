@@ -9,6 +9,13 @@ author:
 tags:
   - sport
   - stadium
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 42
+skycolor: 10
+seed: 0
+spawnx: 146.8
+spawny: 509.2
 ---
 ## Herb Brooks National Hockey Center
 

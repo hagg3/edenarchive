@@ -5,6 +5,13 @@ worldname: AT AT Walker und AT ST
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 25
+skycolor: 0
+seed: 0
+spawnx: 168
+spawny: 280
 ---
 ## AT AT Walker und AT ST
 

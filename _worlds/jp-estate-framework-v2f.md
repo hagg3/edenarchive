@@ -5,6 +5,13 @@ worldname: jp estate framework v2f
 publishdate: 2016-06-28
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 19
+skycolor: 6
+seed: 0
+spawnx: 155.8
+spawny: 207.2
 ---
 ## jp estate framework v2f
 

@@ -6,6 +6,13 @@ publishdate: 2025-12-27
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 161
+chunkheight: 115
+skycolor: 6
+seed: 273629
+spawnx: 1800.2
+spawny: 777.8
 ---
 ## Max Town V1227
 

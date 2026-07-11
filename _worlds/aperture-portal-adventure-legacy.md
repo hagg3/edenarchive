@@ -13,6 +13,13 @@ tags:
   - interior
   - lighting
   - legacy
+worldformat: 64z
+chunkwidth: 102
+chunkheight: 84
+skycolor: 6
+seed: 333333
+spawnx: 1071.3
+spawny: 621.9
 ---
 ## Aperture Portal Adventure Legacy
 

@@ -92,9 +92,11 @@
         {% else %}
           <span class="pill warn">missing</span>
         {% endif %}
-        {% if w.world_id and row.has_zip and not row.has_map and row.map_status != 'too_large' %}
+        {% if w.world_id and row.has_zip and row.map_status != 'too_large' %}
           <form class="inline" method="post" action="/assets/{{ w.world_id }}/map">
-            <button class="tiny" type="submit">generate map</button>
+            <button class="tiny" type="submit">
+              {% if row.has_map %}regenerate map & info{% else %}generate map{% endif %}
+            </button>
           </form>
         {% endif %}
       </td>
@@ -130,6 +132,31 @@
         <figcaption>{{ w.world_id }}.eden.png</figcaption></figure>
     {% endif %}
   </div>
+</section>
+
+<section class="card">
+  <h2>Technical info</h2>
+  {% if tech %}
+    <table class="kv">
+      {% if tech.worldformat %}
+        <tr><td>Format</td><td class="mono">{{ tech.worldformat }}</td></tr>
+      {% endif %}
+      {% if tech.chunkwidth is not none and tech.chunkheight is not none %}
+        <tr><td>Dimensions</td><td class="mono">{{ tech.chunkwidth }} × {{ tech.chunkheight }} chunks</td></tr>
+      {% endif %}
+      {% if tech.seed is not none %}
+        <tr><td>Seed</td><td class="mono">{{ tech.seed }}</td></tr>
+      {% endif %}
+      {% if tech.spawnx is not none and tech.spawny is not none %}
+        <tr><td>Spawn</td><td class="mono">{{ tech.spawnx }}, {{ tech.spawny }}</td></tr>
+      {% endif %}
+      {% if tech.skycolor is not none %}
+        <tr><td>Sky (raw)</td><td class="mono">{{ tech.skycolor }}</td></tr>
+      {% endif %}
+    </table>
+  {% else %}
+    <p class="muted">Not extracted yet — generate or regenerate the map to populate this.</p>
+  {% endif %}
 </section>
 
 <section class="card">

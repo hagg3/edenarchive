@@ -5,6 +5,13 @@ worldname: neighborhoods
 publishdate: 2026-01-11
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 47
+skycolor: 10
+seed: 0
+spawnx: 344
+spawny: 328
 ---
 ## neighborhoods
 

@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 25
+skycolor: 6
+seed: 0
+spawnx: 278.6
+spawny: 235.0
 ---
 ## UNSINN CITY 26 RENE UMGEBAUT v8 2017
 

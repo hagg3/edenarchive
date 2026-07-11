@@ -5,6 +5,13 @@ worldname: BEST CITY BY JOEYGRIM
 publishdate: 2016-03-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 103
+chunkheight: 62
+skycolor: 10
+seed: 0
+spawnx: 1164.0
+spawny: 736.6
 ---
 ## BEST CITY BY JOEYGRIM
 

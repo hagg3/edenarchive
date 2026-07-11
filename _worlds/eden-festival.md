@@ -8,6 +8,13 @@ tags:
   - music
   - festival
   - outdoor
+worldformat: 64z
+chunkwidth: 51
+chunkheight: 48
+skycolor: 6
+seed: 0
+spawnx: 277.9
+spawny: 379.8
 ---
 ## Eden Festival
 

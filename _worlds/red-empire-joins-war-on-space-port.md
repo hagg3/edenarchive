@@ -13,6 +13,13 @@ tags:
   - scifi
   - millitary
   - flat
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 50
+skycolor: 11
+seed: 0
+spawnx: 250.1
+spawny: 413.2
 ---
 ## Red Empire joins War on Space Port
 

@@ -18,6 +18,13 @@ tags:
   - market
   - newterrain
   - scene
+worldformat: 64z
+chunkwidth: 117
+chunkheight: 162
+skycolor: 6
+seed: 333333
+spawnx: 539.6
+spawny: 616.6
 ---
 ## Neo Arabia
 

@@ -9,6 +9,13 @@ tags:
   - aperture
   - old
   - needsreview
+worldformat: 64z
+chunkwidth: 20
+chunkheight: 15
+skycolor: 0
+seed: 0
+spawnx: 234.8
+spawny: 157.5
 ---
 ## Aperture Science Enrichment V2
 

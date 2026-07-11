@@ -12,6 +12,13 @@ tags:
   - oldcaves
   - retro
   - city
+worldformat: 64z
+chunkwidth: 69
+chunkheight: 57
+skycolor: 6
+seed: 43012
+spawnx: 404.1
+spawny: 394.8
 ---
 ## BIG WORLD ocean rollercoaster
 

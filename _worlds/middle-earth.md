@@ -12,6 +12,13 @@ tags:
   - flat
   - hobbit
   - scene
+worldformat: 64z
+chunkwidth: 60
+chunkheight: 81
+skycolor: 8
+seed: 0
+spawnx: 828.5
+spawny: 1114.8
 ---
 ## Middle Earth
 

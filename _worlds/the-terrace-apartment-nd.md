@@ -6,6 +6,13 @@ publishdate: 2026-01-01
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 31
+skycolor: 51
+seed: 0
+spawnx: 264
+spawny: 248
 ---
 ## The Terrace Apartment (ND)
 

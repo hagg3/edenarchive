@@ -5,6 +5,13 @@ worldname: Government Palace V6
 publishdate: 2021-09-06
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 43
+chunkheight: 99
+skycolor: 6
+seed: 0
+spawnx: 173.1
+spawny: 312.7
 ---
 ## Government Palace V6
 

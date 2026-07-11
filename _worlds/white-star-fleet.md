@@ -18,6 +18,13 @@ tags:
   - impressive
   - quality
   - detail
+worldformat: 64z
+chunkwidth: 71
+chunkheight: 74
+skycolor: 10
+seed: 0
+spawnx: 456
+spawny: 280
 ---
 ## White Star Fleet
 

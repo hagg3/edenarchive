@@ -5,6 +5,13 @@ worldname: adventure map of eden sirgooey
 publishdate: 2015-03-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 56
+chunkheight: 73
+skycolor: 9
+seed: 333333
+spawnx: 546.4
+spawny: 293.1
 ---
 ## adventure map of eden sirgooey
 

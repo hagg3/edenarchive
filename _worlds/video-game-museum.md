@@ -15,6 +15,13 @@ tags:
   - pixelart
   - exploration
   
+worldformat: 64z
+chunkwidth: 23
+chunkheight: 19
+skycolor: 10
+seed: 252390
+spawnx: 168
+spawny: 200
 ---
 ## Video Game Museum
 

@@ -5,6 +5,13 @@ worldname: Welcom to miami v1
 publishdate: 2025-01-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 98
+chunkheight: 118
+skycolor: 54
+seed: 192439
+spawnx: 546.7
+spawny: 639.8
 ---
 ## Welcom to miami v1
 

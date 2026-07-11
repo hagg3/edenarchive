@@ -5,6 +5,13 @@ worldname: Olympic Metropolis Storm Maiden
 publishdate: 2014-01-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 158
+chunkheight: 144
+skycolor: 0
+seed: 0
+spawnx: 719.2
+spawny: 1854.1
 ---
 ## Olympic Metropolis Storm Maiden
 

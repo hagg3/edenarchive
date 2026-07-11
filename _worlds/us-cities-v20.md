@@ -5,6 +5,13 @@ worldname: US Cities V20
 publishdate: 2020-03-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 84
+chunkheight: 137
+skycolor: 0
+seed: 76526
+spawnx: 845.1
+spawny: 1532.3
 ---
 ## US Cities V20
 

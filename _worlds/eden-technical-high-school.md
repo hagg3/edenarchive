@@ -10,6 +10,13 @@ tags:
   - school
   - college
   - university
+worldformat: 64z
+chunkwidth: 28
+chunkheight: 24
+skycolor: 6
+seed: 0
+spawnx: 275.7
+spawny: 229.5
 ---
 ## Eden Technical High School
 

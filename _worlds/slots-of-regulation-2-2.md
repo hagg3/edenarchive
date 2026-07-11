@@ -5,6 +5,13 @@ worldname: Slots of Regulation 2.2
 publishdate: 2025-07-01
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 47
+chunkheight: 84
+skycolor: 10
+seed: 0
+spawnx: 367.8
+spawny: 390.3
 ---
 ## Slots of Regulation 2.2
 

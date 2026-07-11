@@ -9,6 +9,13 @@ tags:
   - math
   - hack
   - AuthorIsJTE
+worldformat: 64z
+chunkwidth: 5
+chunkheight: 4
+skycolor: 54
+seed: 0
+spawnx: 39.9
+spawny: 3.2
 ---
 ## Logic Gates Using Portals
 

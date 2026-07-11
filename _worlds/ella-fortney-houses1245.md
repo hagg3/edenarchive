@@ -5,6 +5,13 @@ worldname: ella fortney houses1245
 publishdate: 2019-12-27
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 18
+chunkheight: 17
+skycolor: 1
+seed: 234414
+spawnx: 181.2
+spawny: 223.9
 ---
 ## ella fortney houses1245
 

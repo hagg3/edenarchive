@@ -14,6 +14,13 @@ tags:
   - abstract
   - exploration
   - story
+worldformat: 64z
+chunkwidth: 40
+chunkheight: 49
+skycolor: 54
+seed: 0
+spawnx: 295.4
+spawny: 259.2
 ---
 ## The dark traveler
 

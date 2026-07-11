@@ -5,6 +5,13 @@ worldname: Washington DC CB
 publishdate: 2012-02-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 67
+chunkheight: 61
+skycolor: 65
+seed: 0
+spawnx: 533.4
+spawny: 646.6
 ---
 ## Washington DC CB
 

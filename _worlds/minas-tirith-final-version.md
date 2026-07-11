@@ -5,6 +5,13 @@ worldname: Minas Tirith Final Version
 publishdate: 2012-01-26
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 37
+chunkheight: 36
+skycolor: 190
+seed: 0
+spawnx: 476.5
+spawny: 424.0
 ---
 ## Minas Tirith Final Version
 

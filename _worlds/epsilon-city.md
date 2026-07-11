@@ -5,6 +5,13 @@ worldname: Epsilon City
 publishdate: 2017-02-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 86
+chunkheight: 76
+skycolor: 6
+seed: 0
+spawnx: 559.8
+spawny: 580.2
 ---
 ## Epsilon City
 

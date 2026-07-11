@@ -5,6 +5,13 @@ worldname: Emerald Empire Suburbia V1
 publishdate: 2012-04-09
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 35
+chunkheight: 50
+skycolor: 0
+seed: 273629
+spawnx: 280.2
+spawny: 169.8
 ---
 ## Emerald Empire Suburbia V1
 

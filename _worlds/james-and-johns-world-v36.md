@@ -10,6 +10,13 @@ tags:
   - variety
   - flat
   - stadium
+worldformat: 64z
+chunkwidth: 67
+chunkheight: 149
+skycolor: 0
+seed: 0
+spawnx: 536.0
+spawny: 983.9
 ---
 ## james and johns world v36
 

@@ -80,6 +80,7 @@ def _detail_ctx(request: Request, slug: str, *, saved: bool = False, error: str 
         "w": w,
         "tags": index.tags_for(conn, slug),
         "all_tags": index.all_tags(conn),
+        "tech": world_mod.technical_info(w),
         "rel_path": str(md_path.relative_to(paths.REPO_ROOT)),
         "nav": "worlds",
         "saved": saved,

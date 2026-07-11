@@ -11,6 +11,13 @@ tags:
   - lighting
   - abstract
   - flat
+worldformat: 64z
+chunkwidth: 53
+chunkheight: 25
+skycolor: 54
+seed: 0
+spawnx: 296.6
+spawny: 191.1
 ---
 ## Voronin fun park v8'2
 

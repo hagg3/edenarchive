@@ -8,6 +8,13 @@ tags:
   - customterrain
   - jeremy
   - template
+worldformat: 64z
+chunkwidth: 64
+chunkheight: 16
+skycolor: 7
+seed: 0
+spawnx: 851.1
+spawny: 189.8
 ---
 ## sine terrain
 

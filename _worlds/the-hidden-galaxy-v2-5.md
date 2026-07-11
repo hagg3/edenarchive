@@ -5,6 +5,13 @@ worldname: The Hidden Galaxy v2'5
 publishdate: 2012-06-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 432
+chunkheight: 92
+skycolor: 0
+seed: 169506
+spawnx: 841.2
+spawny: 743.8
 ---
 ## The Hidden Galaxy v2'5
 

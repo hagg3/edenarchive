@@ -8,6 +8,13 @@ filesize: "61.1 MB"
 author: 
 tags:
   - hospital
+worldformat: 64z
+chunkwidth: 304
+chunkheight: 84
+skycolor: 15
+seed: 259798
+spawnx: 4508.9
+spawny: 864.4
 ---
 ## Hospital
 

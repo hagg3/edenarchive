@@ -5,6 +5,13 @@ worldname: Vuenccoaster alpha 10'40'71536104
 publishdate: 2020-08-19
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 78
+chunkheight: 83
+skycolor: 13
+seed: 0
+spawnx: 851.2
+spawny: 305.1
 ---
 ## Vuenccoaster alpha 10'40'71536104
 

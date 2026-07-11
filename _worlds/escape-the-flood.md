@@ -13,6 +13,13 @@ tags:
   - parkour
   - puzzle
   - story
+worldformat: 64z
+chunkwidth: 24
+chunkheight: 49
+skycolor: 9
+seed: 0
+spawnx: 113.2
+spawny: 77.4
 ---
 ## Escape the Flood
 

@@ -6,6 +6,13 @@ publishdate: 2025-12-26
 author: finto?
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 81
+chunkheight: 42
+skycolor: 6
+seed: 0
+spawnx: 710
+spawny: 281.3
 ---
 ## The Hanbury Arts Centre
 

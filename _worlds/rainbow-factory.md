@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.1 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 32
+chunkheight: 29
+skycolor: 54
+seed: 0
+spawnx: 220
+spawny: 197.0
 ---
 ## Rainbow Factory
 

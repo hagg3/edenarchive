@@ -5,6 +5,13 @@ worldname: Las Vegas
 publishdate: 2012-02-12
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 30
+chunkheight: 42
+skycolor: 0
+seed: 0
+spawnx: 257.0
+spawny: 466.8
 ---
 ## Las Vegas
 

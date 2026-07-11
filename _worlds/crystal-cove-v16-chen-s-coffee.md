@@ -7,6 +7,13 @@ archivedate:
 filesize: "0.0 MB"
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 21
+chunkheight: 24
+skycolor: 10
+seed: 0
+spawnx: 201.6
+spawny: 279.5
 ---
 ## Crystal Cove V16 Chen's Coffee
 

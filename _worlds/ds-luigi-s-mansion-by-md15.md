@@ -5,6 +5,13 @@ worldname: DS Luigi's Mansion by MD15
 publishdate: 2022-06-02
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 36
+chunkheight: 26
+skycolor: 0
+seed: 259912
+spawnx: 406.8
+spawny: 237.2
 ---
 ## DS Luigi's Mansion by MD15
 

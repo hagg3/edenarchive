@@ -6,6 +6,13 @@ publishdate: 2025-11-24
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 80
+chunkheight: 56
+skycolor: 15
+seed: 0
+spawnx: 704.2
+spawny: 254.2
 ---
 ## WWE RAW 2022
 

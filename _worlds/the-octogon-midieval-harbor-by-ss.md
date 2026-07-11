@@ -5,6 +5,13 @@ worldname: THE OCTOGON Midieval Harbor by SS
 publishdate: 2012-10-08
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 74
+chunkheight: 38
+skycolor: 0
+seed: 276117
+spawnx: 776.6
+spawny: 390.5
 ---
 ## THE OCTOGON Midieval Harbor by SS
 

@@ -8,6 +8,13 @@ filesize: "0.2 MB"
 author: 
 tags:
   - needsreview
+worldformat: 64z
+chunkwidth: 38
+chunkheight: 42
+skycolor: 6
+seed: 0
+spawnx: 333.1
+spawny: 305.9
 ---
 ## House with Bunker
 

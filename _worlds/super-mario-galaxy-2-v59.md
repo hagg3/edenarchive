@@ -5,6 +5,13 @@ worldname: Super Mario Galaxy 2 v59
 publishdate: 2017-02-18
 author: 
 tags:
+worldformat: 64z
+chunkwidth: 77
+chunkheight: 71
+skycolor: 10
+seed: 0
+spawnx: 683.0
+spawny: 284.0
 ---
 ## Super Mario Galaxy 2 v59
 
