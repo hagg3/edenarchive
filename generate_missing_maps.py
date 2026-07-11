@@ -17,6 +17,7 @@ Usage:
 import argparse
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -101,17 +102,52 @@ def _real_entries(z: zipfile.ZipFile) -> list[zipfile.ZipInfo]:
     return [e for e in z.infolist() if not _is_junk(e.filename)]
 
 
+GZIP_MAGIC = b"\x1f\x8b"
+
+
+def _eden_name_for(source_name: str) -> str:
+    """`whatever.eden.zip` / `whatever.zip` -> `whatever.eden`, without
+    double-appending `.eden` if it's already there."""
+    name = source_name
+    if name.lower().endswith(".zip"):
+        name = name[:-4]
+    if not name.lower().endswith(".eden"):
+        name += ".eden"
+    return name
+
+
+def _bare_gzip_fallback(path: Path, dest: Path) -> Path | None:
+    """`path` isn't a zip at all — a raw gzip stream saved directly as
+    `{id}.eden.zip`, missing the outer real-zip wrap pattern 2 normally has
+    (confirmed live: world 1584568651). No decompression needed: World.ts
+    detects gzip by magic bytes regardless of filename, so just get the bytes
+    to `dest` under a `.eden` name."""
+    try:
+        with path.open("rb") as f:
+            magic = f.read(2)
+    except OSError:
+        return None
+    if magic != GZIP_MAGIC:
+        return None
+    dest.mkdir(parents=True, exist_ok=True)
+    out = dest / _eden_name_for(path.name)
+    shutil.copy2(path, out)
+    return out
+
+
 def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
     """
     Extract a world .eden file from a zip archive.
 
-    Handles three packaging patterns found in the archive:
+    Handles the packaging patterns found in the archive:
       1. zip -> raw .eden file
       2. zip -> gzip-compressed file named .eden or .eden.zip (World.ts handles gzip)
       3. zip -> zip -> .eden (double-nested)
+      4. a bare gzip stream, no outer zip at all, saved directly as `{id}.eden.zip`
+         (missing case 2's outer wrap) — see _bare_gzip_fallback.
     """
     if not zipfile.is_zipfile(zip_path):
-        return None
+        return _bare_gzip_fallback(zip_path, dest)
 
     with zipfile.ZipFile(zip_path, "r") as z:
         entries = _real_entries(z)
@@ -143,7 +179,7 @@ def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
             if zipfile.is_zipfile(extracted):
                 return _extract_eden(extracted, dest)
             # It's a gzip or raw .eden - rename to .eden so node-mapgen sees it
-            renamed = extracted.with_suffix("").with_suffix(".eden")
+            renamed = extracted.with_name(_eden_name_for(extracted.name))
             extracted.rename(renamed)
             return renamed
 
@@ -151,9 +187,14 @@ def _extract_eden(zip_path: Path, dest: Path) -> Path | None:
         if len(entries) == 1:
             z.extract(entries[0], dest)
             extracted = next(dest.rglob(Path(entries[0].filename).name), None)
-            if extracted and zipfile.is_zipfile(extracted):
+            if not extracted:
+                return None
+            if zipfile.is_zipfile(extracted):
                 return _extract_eden(extracted, dest)
-            return extracted
+            renamed = extracted.with_name(_eden_name_for(extracted.name))
+            if renamed != extracted:
+                extracted.rename(renamed)
+            return renamed
 
     return None
 

@@ -773,3 +773,40 @@ The formatting test gates everything else. Status as of M0:
 8. **The Ruby toolchain is broken locally** (system Ruby 2.6 vs. bundler version mismatch), so
    `bundle exec jekyll build` cannot run on this machine and verification item 5 could not be
    executed. Unrelated to this work — Pages builds remotely. Confirm on the next deploy.
+
+9. ~~**"Doubly zipped" / "doubly compressed" worlds.**~~ **FIXED (2026-07-11).** Investigated
+   using `~/eden-world-editor`'s Rust source as reference (`network.rs::download_world` — the
+   Eden game server always delivers worlds gzip-compressed over HTTP, magic `1f 8b`, unrelated to
+   its separate local "compressed save" format which is a real PK zip; `lib.rs::load_world`
+   detects that by magic bytes on load). Empirically surveyed every stored zip in the archive by
+   walking payload layers via magic bytes (not filename) — **there is no genuine double
+   compression anywhere in the corpus**: zero gzip-of-gzip, zero zip-of-zip. What actually breaks
+   is a 4th, previously undocumented packaging variant — see `CLAUDE.md`'s "Zip packaging
+   variations" — where the stored `{id}.eden.zip` is a **bare gzip stream with no outer zip
+   wrapper at all**. `extract_eden()`'s `if not zipfile.is_zipfile(...): return None` gate
+   rejected this outright. Confirmed live: world `1584568651` (`assets/worldfiles/1584568651/`,
+   "\*Video Game Museum") is the one case of this in the current 768-world archive (verified by
+   running the *actual* `find_zip`/`extract_eden` production code, not just a heuristic scan,
+   against every world).
+   - **Fixed in both `admin/core/mapgen.py` and `generate_missing_maps.py`** (kept in sync, per
+     this doc's reuse-map note) — a new `_bare_gzip_fallback()` catches the case: no Python-side
+     decompression needed, since `World.ts` already detects gzip by magic bytes regardless of
+     filename, so the fix just gets the bytes to the temp dir under a `.eden` name.
+   - Also fixed a related cosmetic bug hit along the way while investigating: the "last resort,
+     take the sole zip entry" fallback branch never renamed its output to `.eden`, and the
+     existing rename logic (`.with_suffix("").with_suffix(".eden")`) broke on filenames with an
+     embedded `.eden` substring that isn't the real extension (e.g. world `1770253120`'s zip entry
+     is literally named `"...1770253120.eden retro oldterrain city ikea.zip"` — tags baked into
+     the filename). Both now go through one `_eden_name_for()` helper.
+   - **11 new tests** (`admin/tests/test_mapgen.py`), covering the bare-gzip case (both `.zip`-
+     and `.eden`-named), the embedded-`.eden`-substring filename case, and the helper directly.
+     **832/832 green.**
+   - **Live-verified**: regenerated world `1584568651`'s map through the real job queue — it now
+     extracts and renders (previously always returned `None`/failed). The regenerated `map.png`
+     is *not* byte-identical to the one already committed, and that's the interesting part: the
+     old file **visibly lacks a building** that the new render shows clearly — a museum structure,
+     consistent with the world's actual name. Since `extract_eden` could never have succeeded for
+     this world before this fix, the old `map.png` must have been produced some other way (by
+     hand, or against different/incomplete bytes); the new one is the first map ever generated
+     through this pipeline for this world, and it looks more complete, not less. The new
+     `map.png` is committed alongside the code fix.

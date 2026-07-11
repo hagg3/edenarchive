@@ -1,10 +1,25 @@
 """Extract a .eden file from a world's zip and render its top-down map.
 
 The extraction ladder is lifted verbatim from generate_missing_maps.py, which
-already handles the three zip packagings found in the archive:
+already handles the packagings found in the archive:
   1. zip -> raw .eden
   2. zip -> gzip-compressed .eden, named *.eden.zip (gzip magic, not a real zip)
   3. zip -> zip -> .eden (double-nested)
+  4. a bare gzip stream, with no outer zip at all, saved directly under
+     `{id}.eden.zip` — confirmed live against the real archive (world
+     `1584568651`): the outer real-zip wrap case 2 normally gets is just
+     missing for this one. `extract_eden` used to `return None` for it
+     (`zipfile.is_zipfile()` is False for raw gzip), so it silently failed to
+     render — a currently-live bug, not a hypothetical one. World.ts already
+     detects gzip by magic bytes regardless of filename/extension, so the fix
+     needs no Python-side decompression: just get the bytes to `dest` under a
+     `.eden` name and let node-mapgen do what it already does for case 2.
+
+There is no genuine double-compression (gzip-of-gzip or zip-of-zip) anywhere
+in the current archive — verified by walking every stored zip's payload
+layers by magic bytes. What gets reported as "doubly zipped" is almost
+certainly case 4 above: a `.eden.zip` that looks like it should unzip but
+isn't a zip at all, just gzip wearing a `.zip` name.
 
 Two safety mechanisms not in the original script:
 - a pre-flight size check so worlds over the ~2 GB Node ArrayBuffer limit never
@@ -17,12 +32,15 @@ Two safety mechanisms not in the original script:
 from __future__ import annotations
 
 import os
+import shutil
 import time
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 
 from . import paths
+
+GZIP_MAGIC = b"\x1f\x8b"
 
 TOO_LARGE_BYTES = int(1.9 * 1024**3)
 
@@ -109,10 +127,40 @@ def _real_entries(z: zipfile.ZipFile) -> list[zipfile.ZipInfo]:
     return [e for e in z.infolist() if not _is_junk(e.filename)]
 
 
+def _eden_name_for(source_name: str) -> str:
+    """`whatever.eden.zip` / `whatever.zip` -> `whatever.eden`, without
+    double-appending `.eden` if it's already there."""
+    name = source_name
+    if name.lower().endswith(".zip"):
+        name = name[:-4]
+    if not name.lower().endswith(".eden"):
+        name += ".eden"
+    return name
+
+
+def _bare_gzip_fallback(path: Path, dest: Path) -> Path | None:
+    """`path` isn't a zip at all — case 4 in the module docstring: a raw gzip
+    stream saved directly as `{id}.eden.zip`, missing the outer real-zip wrap
+    case 2 normally has. No decompression needed here: World.ts detects gzip
+    by magic bytes regardless of filename, so just get the bytes to `dest`
+    under a `.eden` name."""
+    try:
+        with path.open("rb") as f:
+            magic = f.read(2)
+    except OSError:
+        return None
+    if magic != GZIP_MAGIC:
+        return None
+    dest.mkdir(parents=True, exist_ok=True)
+    out = dest / _eden_name_for(path.name)
+    shutil.copy2(path, out)
+    return out
+
+
 def extract_eden(zip_path: Path, dest: Path) -> Path | None:
     """Extract a world's .eden file from `zip_path` into `dest`."""
     if not zipfile.is_zipfile(zip_path):
-        return None
+        return _bare_gzip_fallback(zip_path, dest)
 
     with zipfile.ZipFile(zip_path, "r") as z:
         entries = _real_entries(z)
@@ -137,16 +185,21 @@ def extract_eden(zip_path: Path, dest: Path) -> Path | None:
                 return None
             if zipfile.is_zipfile(extracted):
                 return extract_eden(extracted, dest)
-            renamed = extracted.with_suffix("").with_suffix(".eden")
+            renamed = extracted.with_name(_eden_name_for(extracted.name))
             extracted.rename(renamed)
             return renamed
 
         if len(entries) == 1:
             z.extract(entries[0], dest)
             extracted = next(dest.rglob(Path(entries[0].filename).name), None)
-            if extracted and zipfile.is_zipfile(extracted):
+            if not extracted:
+                return None
+            if zipfile.is_zipfile(extracted):
                 return extract_eden(extracted, dest)
-            return extracted
+            renamed = extracted.with_name(_eden_name_for(extracted.name))
+            if renamed != extracted:
+                extracted.rename(renamed)
+            return renamed
 
     return None
 

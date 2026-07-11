@@ -74,6 +74,52 @@ def test_extract_not_a_zip_returns_none(tmp_path):
     assert mapgen.extract_eden(fake, out) is None
 
 
+def test_extract_bare_gzip_stream_with_no_outer_zip(tmp_path):
+    """world 1584568651 in the real archive: the stored `{id}.eden.zip` is a
+    raw gzip stream with no outer real-zip wrap at all — `zipfile.is_zipfile`
+    is False for it, so the old code returned None outright. No Python-side
+    decompression needed: World.ts detects gzip by magic bytes regardless of
+    filename, so this just needs the bytes moved to `dest` as `.eden`."""
+    payload = gzip.compress(b"bare gzip payload, no outer zip")
+    bare = tmp_path / "1584568651.eden.zip"
+    bare.write_bytes(payload)
+    out = tmp_path / "out"
+    out.mkdir()
+    result = mapgen.extract_eden(bare, out)
+    assert result is not None
+    assert result.name == "1584568651.eden"
+    assert result.read_bytes() == payload  # still gzip; World.ts unwraps it
+
+
+def test_extract_bare_gzip_stream_named_plain_eden(tmp_path):
+    payload = gzip.compress(b"bare gzip, already named .eden")
+    bare = tmp_path / "1584568651.eden"
+    bare.write_bytes(payload)
+    out = tmp_path / "out"
+    out.mkdir()
+    result = mapgen.extract_eden(bare, out)
+    assert result is not None
+    assert result.name == "1584568651.eden"  # not doubled to .eden.eden
+
+
+def test_eden_name_for_handles_embedded_eden_substring():
+    """world 1770253120 in the real archive: the zip entry's filename has
+    world-name/tag words baked in, with an embedded '.eden' substring that
+    isn't the actual extension — the real extension is just '.zip'."""
+    name = "Eden City 0226a 1770253120.eden retro oldterrain city ikea.zip"
+    assert mapgen._eden_name_for(name) == (
+        "Eden City 0226a 1770253120.eden retro oldterrain city ikea.eden"
+    )
+
+
+def test_eden_name_for_plain_zip():
+    assert mapgen._eden_name_for("world.zip") == "world.eden"
+
+
+def test_eden_name_for_already_eden_zip():
+    assert mapgen._eden_name_for("1234567890.eden.zip") == "1234567890.eden"
+
+
 # --- find_zip ----------------------------------------------------------------
 
 def test_find_zip_prefers_standard_name(tmp_path, monkeypatch):

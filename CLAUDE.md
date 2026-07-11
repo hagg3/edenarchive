@@ -119,8 +119,9 @@ assets/worldfiles/{world_id}/
 - Standard: outer zip → raw `.eden`
 - Common: outer zip → gzip-compressed `.eden` named `*.eden.zip` (gzip magic `1f 8b`, not a real zip)
 - Rare: outer zip contains the entire `.eden.zip` bundle from the Eden server download
+- Rare: **no outer zip at all** — a bare gzip stream saved directly as `{id}.eden.zip` (`zipfile.is_zipfile()` is False for it; the game server always delivers worlds gzip-compressed over HTTP, and this is what you get if that response gets saved straight to disk under the archive's `.eden.zip` naming convention without the usual outer real-zip wrap). Confirmed live on world `1584568651`. This is what usually gets reported as "doubly zipped" — the `.zip` in the name is misleading, since there's no zip layer there at all, just gzip.
 
-`generate_missing_maps.py` and `node-mapgen` handle all three. `World.ts` auto-detects gzip vs raw.
+`generate_missing_maps.py` and `node-mapgen` handle all four. `World.ts` auto-detects gzip vs raw regardless of which packaging got it there.
 
 ## Map Generation (`node-mapgen/`)
 
