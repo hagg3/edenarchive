@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/rc/eden-world-editor/**)",
+      "Bash(xargs -I{} echo {})"
+    ]
+  }
+}

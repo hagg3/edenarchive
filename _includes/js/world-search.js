@@ -67,6 +67,7 @@ function render(worlds) {
     <td>${w.author || ""}</td>
     <td>${w.publishdate || ""}</td>
     <td>${tagLinks}</td>
+    <td>${w.filename ? `<a href="https://hagg3.github.io/Emod/public/eden-st.html?build=rel&playworld=${encodeURIComponent(w.filename.replace('.eden',''))}">Play</a>` : ""}</td>
     `;
 
     tableBody.appendChild(row);

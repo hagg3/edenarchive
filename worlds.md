@@ -61,6 +61,7 @@ If you end up with a usable `.eden` file, the extraction has worked correctly.
       <th>Author</th>
       <th>Published</th>
       <th>Tags</th>
+      <th>Play</th>
     </tr>
   </thead>
   <tbody></tbody>
