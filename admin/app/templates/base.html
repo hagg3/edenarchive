@@ -10,16 +10,21 @@
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="/">Eden Archive <span>admin</span></a>
-  <nav>
-    <a href="/" class="{{ 'on' if nav == 'dashboard' }}">Dashboard</a>
-    <a href="/worlds" class="{{ 'on' if nav == 'worlds' }}">Worlds</a>
-    <a href="/assets" class="{{ 'on' if nav == 'assets' }}">Assets</a>
-    <a href="/jobs" class="{{ 'on' if nav == 'jobs' }}">Jobs</a>
-    <a href="/tags" class="{{ 'on' if nav == 'tags' }}">Tags</a>
-    <a href="/dupes" class="{{ 'on' if nav == 'dupes' }}">Dupes</a>
-    <a href="/content" class="{{ 'on' if nav == 'content' }}">Content</a>
-    <a href="/upload" class="{{ 'on' if nav == 'upload' }}">Upload</a>
+  <a class="brand" href="/" title="VuencLibrary — the Eden Worlds Archive admin app">
+    <span class="brand-mark" aria-hidden="true">VL</span>
+    <span><strong>Vuenc</strong><span class="dim">Library</span></span>
+  </a>
+  <nav role="tablist" aria-label="Sections">
+    <a href="/" role="tab" aria-selected="{{ 'true' if nav == 'dashboard' else 'false' }}">Dashboard</a>
+    <a href="/worlds" role="tab" aria-selected="{{ 'true' if nav == 'worlds' else 'false' }}">Worlds</a>
+    <a href="/assets" role="tab" aria-selected="{{ 'true' if nav == 'assets' else 'false' }}">Assets</a>
+    <a href="/server" role="tab" aria-selected="{{ 'true' if nav == 'server' else 'false' }}">Eden Server</a>
+    <a href="/jobs" role="tab" aria-selected="{{ 'true' if nav == 'jobs' else 'false' }}">Jobs</a>
+    <a href="/tags" role="tab" aria-selected="{{ 'true' if nav == 'tags' else 'false' }}">Tags</a>
+    <a href="/dupes" role="tab" aria-selected="{{ 'true' if nav == 'dupes' else 'false' }}">Dupes</a>
+    <a href="/content" role="tab" aria-selected="{{ 'true' if nav == 'content' else 'false' }}">Content</a>
+    <a href="/upload" role="tab" aria-selected="{{ 'true' if nav == 'upload' else 'false' }}">Upload</a>
+    <a href="/edenfind" role="tab" target="_blank" rel="noopener">EdenFind ↗</a>
   </nav>
   <div class="local">local · 127.0.0.1</div>
 </header>

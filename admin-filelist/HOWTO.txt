@@ -1,0 +1,6 @@
+(admin-filelist/):
+- edenfind/parse.py, terms.py, classify.py, series.py, index.py, query.py, server.py, selftest.py, web/{index.html,app.js,style.css}
+
+- build.py (~85s, builds worlds.db, 591MB — preserves triage across rebuilds)
+- serve.py (→ http://127.0.0.1:8777)
+

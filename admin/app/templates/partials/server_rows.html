@@ -1,0 +1,29 @@
+{% for r in rows %}
+<tr>
+  <td class="thumb">
+    <img loading="lazy" src="{{ r.preview_url }}" alt="" class="server-thumb">
+  </td>
+  <td>
+    <span class="wname">{{ r.name }}</span>
+    <span class="wid">{{ r.id }}</span>
+  </td>
+  <td class="mono">{{ r.timestamp | eden_ts_date }}</td>
+  <td>
+    {% if r.badge == 'archived' %}
+      <a class="pill ok" href="/worlds/{{ r.badge_slug }}" title="already in the archive">archived</a>
+    {% elif r.badge == 'possibly archived' %}
+      <a class="pill warn" href="/worlds/{{ r.badge_slug }}" title="looks like a version we already hold">possibly archived</a>
+    {% else %}
+      <span class="muted">—</span>
+    {% endif %}
+  </td>
+  <td class="rowaction">
+    <form method="post" action="/server/fetch">
+      <input type="hidden" name="world_id" value="{{ r.id }}">
+      <input type="hidden" name="name" value="{{ r.name }}">
+      <input type="hidden" name="server" value="{{ server }}">
+      <button class="tiny" type="submit">fetch &amp; review</button>
+    </form>
+  </td>
+</tr>
+{% endfor %}

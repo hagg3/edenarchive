@@ -1,5 +1,5 @@
 {% if count %}
-  <span class="ok">Enqueued {{ count }} map generation job{{ '' if count == 1 else 's' }} —
+  <span class="ok">Enqueued {{ count }} {{ label or 'map generation' }} job{{ '' if count == 1 else 's' }} —
   <a href="/jobs">watch progress</a>.</span>
 {% else %}
   <span class="muted">Nothing to generate — no worlds are missing a map (excluding too-large ones).</span>

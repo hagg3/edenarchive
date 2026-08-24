@@ -8,15 +8,18 @@ any live SSE subscriber for that job.
 from __future__ import annotations
 
 import asyncio
+import json
 import shutil
 import sqlite3
 from pathlib import Path
 
-from ..core import hashing, index, mapgen
+from ..core import edenserver, hashing, index, mapgen
 from ..core import paths
 from ..core import world as world_mod
 
 MAPGEN_TIMEOUT = 300
+SERVER_FETCH_TIMEOUT = 300
+PREVIEW_BACKFILL_SLEEP = 0.5
 
 
 class JobQueue:
@@ -126,6 +129,10 @@ class JobQueue:
                 await self._run_mapgen(job_id, job["target"])
             elif job["kind"] == "payload_hash":
                 await self._run_payload_hash(job_id, job["target"])
+            elif job["kind"] == "server_fetch":
+                await self._run_server_fetch(job_id, job["target"], job["params"])
+            elif job["kind"] == "preview_backfill":
+                await self._run_preview_backfill(job_id, job["target"])
             else:
                 index.update_job(
                     self.conn, job_id, status="failed",
@@ -330,4 +337,133 @@ class JobQueue:
             self.conn, job_id, status="ok", ended_at=index.now(),
             result=result.sha256,
         )
+        self._publish(job_id, {"done": True, "status": "ok"})
+
+    async def _run_server_fetch(self, job_id: int, world_id: str, params_json: str | None) -> None:
+        """Downloads a world from the Eden game servers into a fresh staged
+        upload, so the existing /upload/review -> /upload/commit flow can
+        take it from there unchanged."""
+        params = json.loads(params_json or "{}")
+        server_name = params.get("server", "current")
+        display_name = params.get("name") or world_id
+
+        try:
+            server = edenserver.get_server(server_name)
+        except edenserver.EdenServerError as exc:
+            self._log(job_id, "stderr", str(exc))
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="server_error", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+
+        paths.ensure_runtime_dirs()
+        import uuid
+
+        token = uuid.uuid4().hex[:12]
+        dest = paths.UPLOAD_DIR / f"{token}.eden"
+
+        loop = asyncio.get_running_loop()
+        last_logged = 0
+
+        def progress(downloaded: int, total: int | None) -> None:
+            nonlocal last_logged
+            if downloaded - last_logged < 1_000_000 and (total is None or downloaded < total):
+                return
+            last_logged = downloaded
+            line = f"{downloaded} bytes" if total is None else f"{downloaded}/{total} bytes"
+            loop.call_soon_threadsafe(self._log, job_id, "stdout", line)
+
+        self._log(job_id, "stdout", f"downloading {display_name!r} ({world_id}) from {server_name}")
+        try:
+            await asyncio.wait_for(
+                asyncio.to_thread(edenserver.download, world_id, server, dest, progress=progress),
+                timeout=SERVER_FETCH_TIMEOUT,
+            )
+        except asyncio.TimeoutError:
+            dest.unlink(missing_ok=True)
+            self._log(job_id, "stderr", f"timed out after {SERVER_FETCH_TIMEOUT}s")
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="server_error", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+        except edenserver.DownloadTooLarge as exc:
+            self._log(job_id, "stderr", str(exc))
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="too_large", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+        except Exception as exc:  # noqa: BLE001 — network/IO failure, not a bug
+            self._log(job_id, "stderr", f"download failed: {exc}")
+            index.update_job(
+                self.conn, job_id, status="failed",
+                error_class="server_error", ended_at=index.now(),
+            )
+            self._publish(job_id, {"done": True, "status": "failed"})
+            return
+
+        filename = f"{display_name} {world_id}.eden"
+        self._log(job_id, "stdout", f"done — review at /upload/review/{token}")
+        index.update_job(
+            self.conn, job_id, status="ok", ended_at=index.now(),
+            result=json.dumps({"token": token, "filename": filename}),
+        )
+        self._publish(job_id, {"done": True, "status": "ok"})
+
+    async def _run_preview_backfill(self, job_id: int, target: str) -> None:
+        """Best-effort bulk fetch of `{id}.eden.png` previews for worlds that
+        don't have one. Misses are expected and normal — a server-side glitch
+        left many worlds with no preview at all — so they're logged as skips,
+        not errors, and the job still finishes 'ok'."""
+        if target and target != "all":
+            row = index.get_by_world_id(self.conn, target)
+            rows = [row] if row is not None else []
+        else:
+            rows = list(self.conn.execute(
+                "SELECT slug, world_id FROM worlds WHERE has_preview=0 AND world_id IS NOT NULL"
+            ))
+
+        written = already_had = not_on_server = errors = 0
+        self._log(job_id, "stdout", f"checking {len(rows)} world(s)")
+
+        for row in rows:
+            world_id, slug = row["world_id"], row["slug"]
+            dest_dir = paths.asset_dir_for(world_id)
+            dest = dest_dir / f"{world_id}.eden.png"
+            if dest.exists():
+                already_had += 1
+                continue
+
+            data, server = await asyncio.to_thread(edenserver.fetch_preview_any, world_id)
+            if data is None:
+                not_on_server += 1
+                self._log(job_id, "stdout", f"{world_id}: skipped: no preview on server")
+                await asyncio.sleep(PREVIEW_BACKFILL_SLEEP)
+                continue
+
+            try:
+                dest_dir.mkdir(parents=True, exist_ok=True)
+                paths.assert_writable(dest).write_bytes(data)
+            except OSError as exc:
+                errors += 1
+                self._log(job_id, "stderr", f"{world_id}: {exc}")
+                await asyncio.sleep(PREVIEW_BACKFILL_SLEEP)
+                continue
+
+            index.refresh_assets(self.conn, slug)
+            written += 1
+            self._log(job_id, "stdout", f"{world_id}: written (from {server})")
+            await asyncio.sleep(PREVIEW_BACKFILL_SLEEP)
+
+        summary = (
+            f"written={written} already_had={already_had} "
+            f"not_on_server={not_on_server} errors={errors}"
+        )
+        self._log(job_id, "stdout", summary)
+        index.update_job(self.conn, job_id, status="ok", ended_at=index.now(), result=summary)
         self._publish(job_id, {"done": True, "status": "ok"})

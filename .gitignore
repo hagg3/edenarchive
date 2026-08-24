@@ -54,6 +54,11 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
+# EdenFind (admin-filelist) — rebuildable SQLite index + preview proxy cache
+admin-filelist/worlds.db
+admin-filelist/.preview_cache/
+admin-filelist/archive
+
 # Secrets / credentials (defensive — none currently exist in the repo)
 .env
 .env.*

@@ -1,0 +1,7 @@
+{% include "partials/server_rows.html" %}
+<nav class="pager" id="server-pager" hx-swap-oob="true">
+  {% if next_start is not none %}
+  <a hx-get="/server?server={{ server }}&sort={{ sort }}&hide_junk={{ hide_junk }}&start={{ next_start }}&more=true"
+     hx-target="#server-rows" hx-swap="beforeend" href="#">load more ↓</a>
+  {% endif %}
+</nav>

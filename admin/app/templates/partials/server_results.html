@@ -1,0 +1,31 @@
+<div id="server-results">
+  {% if error %}
+    <p class="err">Could not reach the {{ server }} server — {{ error }}</p>
+  {% elif not rows %}
+    <p class="empty">{{ 'No matches.' if is_search else 'Nothing came back from the server.' }}</p>
+  {% else %}
+  <p class="count">{{ rows | length }} world{{ '' if rows | length == 1 else 's' }}
+    {{ 'found' if is_search else 'loaded' }}</p>
+  <table class="worlds">
+    <thead>
+      <tr>
+        <th class="thumb"></th>
+        <th>World</th>
+        <th>Published</th>
+        <th>Archive status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="server-rows">
+      {% include "partials/server_rows.html" %}
+    </tbody>
+  </table>
+
+  <nav class="pager" id="server-pager">
+    {% if next_start is not none %}
+    <a hx-get="/server?server={{ server }}&sort={{ sort }}&hide_junk={{ hide_junk }}&start={{ next_start }}&more=true"
+       hx-target="#server-rows" hx-swap="beforeend" href="#">load more ↓</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>

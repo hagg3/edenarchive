@@ -32,13 +32,13 @@ from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
 
+from . import edenserver
 from . import hashing
 from . import index as index_mod
 from . import paths
 from . import world as world_mod
 
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
-PREVIEW_BASE_URL = "http://files.edengame.net"
 NAMING_ID_RE = re.compile(r"\b(\d{10,})\b")
 NEAR_NAME_CUTOFF = 0.75  # looser than dupes.py's 0.87 — a softer, earlier nudge
 
@@ -285,16 +285,13 @@ def _render_new_world_md(
 
 
 def _try_download_preview(world_id: str, dest: Path) -> bool:
-    import requests
-
-    url = f"{PREVIEW_BASE_URL}/{world_id}.eden.png"
-    try:
-        resp = requests.get(url, timeout=15)
-        resp.raise_for_status()
-        dest.write_bytes(resp.content)
-        return True
-    except requests.RequestException:
+    """Tries the current server, then legacy. Both used to hit legacy only,
+    which plausibly accounted for a chunk of the archive's preview misses."""
+    data, _server = edenserver.fetch_preview_any(world_id)
+    if data is None:
         return False
+    dest.write_bytes(data)
+    return True
 
 
 def commit(

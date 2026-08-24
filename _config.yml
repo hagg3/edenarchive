@@ -8,6 +8,7 @@ exclude:
   - z_Uploading
   - node-mapgen-broken
   - admin
+  - admin-filelist
   - z_scripts
   - node-mapgen
   - z_AutoDownloader

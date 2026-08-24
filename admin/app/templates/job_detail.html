@@ -18,6 +18,18 @@
 </form>
 {% endif %}
 
+{% if job.kind == 'server_fetch' and job.status == 'ok' %}
+  {% set fetched = job.result | from_json %}
+  {% if fetched.token %}
+    <p class="ok">Downloaded —
+      <a href="/upload/review/{{ fetched.token }}?filename={{ fetched.filename | urlencode }}">review &amp; import →</a>
+    </p>
+  {% endif %}
+{% endif %}
+{% if job.kind == 'preview_backfill' and job.status == 'ok' %}
+  <p class="ok mono">{{ job.result }}</p>
+{% endif %}
+
 <section class="card" hx-ext="sse" sse-connect="/jobs/{{ job.id }}/stream">
   <h2>Log</h2>
   <div id="joblog" class="body log" sse-swap="log" hx-swap="beforeend"></div>

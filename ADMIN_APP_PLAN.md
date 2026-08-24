@@ -841,6 +841,8 @@ __pycache__/
 
 **M7 — Cleanup (optional).** Rewrite `generate_missing_maps.py`, `z_add_world.py`, `z_scripts/tag manage/*` as thin shims over `core/`. Delete `script.py` and `z_scripts/z_add_world.py`. Update `CLAUDE.md`.
 
+**M8 — Eden Server integration + ribbon design. ✅ DONE.** `core/edenserver.py` (Python port of `~/eden-world-editor`'s `network.rs`: listing parse, search/browse, gzip-safe capped download, preview fetch, `score_world` heuristic). `/server` browse/search page with archive-status badges (`archived` / `possibly archived`, reusing `importer.check_against_archive`'s cutoff) and an infinite-scroll "load more" via htmx OOB swap on the pager. `server_fetch` job downloads a world into a fresh staged upload and links to `GET /upload/review/{token}` (split out of `POST /upload/stage` so a finished job can reach the same review screen). `preview_backfill` job (button on `/assets`) bulk-fetches missing previews, logging misses as skips, not failures. `importer._try_download_preview` and the `/assets/{id}/preview/fetch` button now go through `edenserver.fetch_preview_any` (current, then legacy) instead of legacy-only. Top bar restyled as an Office-style ribbon tab strip using VuencEdit's ported palette/geometry tokens (`--rbn-*` in `app.css`) with a violet accent instead of the editor's cyan, and a "VuencLibrary" brand badge in place of the old "Eden Archive admin" wordmark — scoped to the top bar only, no changes to any page body. See `admin/tests/test_edenserver.py`.
+
 ---
 
 ## Verification

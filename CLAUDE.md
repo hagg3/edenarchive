@@ -87,11 +87,21 @@ admin/tests/      # ~890 tests; the front-matter round-trip test gates all write
 admin/.runtime/   # gitignored: index.db, backups/, uploads/. Disposable — markdown is the truth.
 ```
 
-**Status: M0–M6 all shipped** — read-only dashboard, world editing, assets + map-generation job
-queue, tag health, duplicate/version detection, blog/article CRUD, upload flow. Only M7 (optional
-CLI cleanup) remains. The roadmap, design rationale, and findings behind them are in
+**Status: M0–M6 and M8 shipped** — read-only dashboard, world editing, assets + map-generation job
+queue, tag health, duplicate/version detection, blog/article CRUD, upload flow, and (M8) an
+`/server` page that browses/searches the live Eden game servers, badges rows already in the
+archive, and hands any world into the same staged import flow via a `server_fetch` job — plus a
+bulk `preview_backfill` job on `/assets` for the 227 worlds missing `{id}.eden.png`. Only M7
+(optional CLI cleanup) remains. The roadmap, design rationale, and findings behind them are in
 `ADMIN_APP_PLAN.md` — each milestone has an "outcome" section with what was actually built and
 verified live against the real repo, which is more current than anything summarized here.
+
+`admin/core/edenserver.py` is a read-only Python port of `~/eden-world-editor` (VuencEdit)'s
+`src-tauri/src/network.rs` — search/browse (`GET list2.php`), thumbnail fetch, and a streaming
+gzip-safe world download, capped at 2 GiB (matches node-mapgen's own ceiling). One HTTP request
+per user action; no crawl, no polling. The admin app's top bar also now borrows VuencEdit's
+ribbon-tab visual language (see `admin/app/static/app.css`'s `--rbn-*` tokens) with a violet
+accent instead of the editor's cyan, and reads "VuencLibrary" in the brand corner.
 
 The SQLite index at `admin/.runtime/index.db` is a disposable cache — delete it and it rebuilds
 on next start. Markdown is always the source of truth. Cold scan of 768 worlds: ~1.4s.

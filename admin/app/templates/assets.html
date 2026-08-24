@@ -23,6 +23,10 @@
           hx-confirm="Enqueue map generation for every world currently missing a map (excluding known too-large worlds)?">
     Generate all missing maps
   </button>
+  <button hx-post="/assets/preview/backfill" hx-target="#bulk-result" hx-swap="innerHTML"
+          hx-confirm="Fetch previews from the Eden servers for every world currently missing one? Misses are expected — many worlds never had a preview.">
+    Backfill missing previews
+  </button>
   <span id="bulk-result"></span>
 </div>
 

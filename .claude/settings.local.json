@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Read(//Users/rc/eden-world-editor/**)",
-      "Bash(xargs -I{} echo {})"
+      "Bash(xargs -I{} echo {})",
+      "Bash(find / -iname \"*hazy-firefly*\")",
+      "Bash(find / -iname \"*vuencedit*\" -maxdepth 4)",
+      "Bash(curl *)",
+      "Bash(python3 build.py)",
+      "Bash(sqlite3 *)"
     ]
   }
 }

@@ -5,7 +5,10 @@ archivist reviews with `git diff` and pushes. It never talks to GitHub.
 """
 from __future__ import annotations
 
+import os
+import subprocess
 import sqlite3
+import sys
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -15,11 +18,38 @@ from fastapi.staticfiles import StaticFiles
 from ..core import git, index, paths
 from .jobs import JobQueue
 from .routers import (
-    assets_api, content_api, dashboard, dupes_api, git_api, jobs_api, tags_api, upload_api, worlds,
+    assets_api, content_api, dashboard, dupes_api, edenfind_api, git_api, jobs_api, server_api,
+    tags_api, upload_api, worlds,
 )
 from .templating import templates
 
 STATE: dict = {}
+
+EDENFIND_DIR = paths.REPO_ROOT / "admin-filelist"
+EDENFIND_PORT = int(os.environ.get("EDENFIND_PORT", "8778"))
+
+
+def _start_edenfind() -> subprocess.Popen | None:
+    """Launch the EdenFind tool (admin-filelist/) as a sibling process.
+
+    It's a separate stdlib-only ThreadingHTTPServer, not an ASGI app, so it
+    can't be mounted into this FastAPI app directly — see routers/edenfind_api.py.
+    Skipped (with a console note) if its prebuilt worlds.db is missing.
+    """
+    if not (EDENFIND_DIR / "worlds.db").exists():
+        print(
+            "[admin] EdenFind not started — admin-filelist/worlds.db missing "
+            "(run `python3 admin-filelist/build.py` first)"
+        )
+        return None
+    proc = subprocess.Popen(
+        [sys.executable, "serve.py", str(EDENFIND_PORT)],
+        cwd=EDENFIND_DIR,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    print(f"[admin] EdenFind started on http://127.0.0.1:{EDENFIND_PORT} (pid {proc.pid})")
+    return proc
 
 
 @asynccontextmanager
@@ -32,10 +62,14 @@ async def lifespan(app: FastAPI):
     # If the tree was already dirty at startup, later diffs aren't all ours.
     STATE["dirty_at_start"] = git.is_dirty()
     app.state.db = conn
+    app.state.edenfind_port = EDENFIND_PORT
 
     jobs = JobQueue(conn)
     jobs.start()
     app.state.jobs = jobs
+
+    edenfind_proc = _start_edenfind()
+    app.state.edenfind_proc = edenfind_proc
 
     print(
         f"[admin] indexed {stats['scanned']} worlds "
@@ -47,6 +81,12 @@ async def lifespan(app: FastAPI):
     finally:
         await jobs.stop()
         conn.close()
+        if edenfind_proc is not None:
+            edenfind_proc.terminate()
+            try:
+                edenfind_proc.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                edenfind_proc.kill()
 
 
 app = FastAPI(title="Eden Archive Admin", lifespan=lifespan)
@@ -63,6 +103,8 @@ app.include_router(tags_api.router)
 app.include_router(dupes_api.router)
 app.include_router(content_api.router)
 app.include_router(upload_api.router)
+app.include_router(server_api.router)
+app.include_router(edenfind_api.router)
 
 app.mount(
     "/static", StaticFiles(directory=paths.REPO_ROOT / "admin/app/static"), name="static"

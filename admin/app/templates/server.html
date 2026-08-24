@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Eden Server — Eden Archive Admin{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Eden Server</h1>
+</div>
+
+<p class="muted">
+  Browses the live Eden game servers directly — search or scroll the raw listing, see at a
+  glance what's already archived, and hand any world straight into the staged import flow.
+  Read-only: nothing here uploads back to <code>edengame.net</code>.
+</p>
+
+<form class="filters" hx-get="/server" hx-target="#server-results" hx-swap="outerHTML"
+      hx-trigger="submit, input from:#server-q delay:350ms, change from:select, change from:#hide-junk"
+      hx-push-url="true">
+  <input id="server-q" type="search" name="q" value="{{ q }}"
+         placeholder="Search the server by name…" autocomplete="off">
+
+  <select name="server">
+    <option value="current" {{ 'selected' if server == 'current' }}>current server</option>
+    <option value="legacy"  {{ 'selected' if server == 'legacy' }}>legacy server</option>
+  </select>
+
+  <select name="sort">
+    <option value="relevance" {{ 'selected' if sort == 'relevance' }}>relevance</option>
+    <option value="newest"    {{ 'selected' if sort == 'newest' }}>newest</option>
+    <option value="oldest"    {{ 'selected' if sort == 'oldest' }}>oldest</option>
+    <option value="quality"   {{ 'selected' if sort == 'quality' }}>quality (experimental)</option>
+  </select>
+
+  <label class="muted" style="display:flex; align-items:center; gap:4px;">
+    <input id="hide-junk" type="checkbox" name="hide_junk" value="true" {{ 'checked' if hide_junk }}>
+    hide likely junk
+  </label>
+
+  <a class="clear" href="/server">reset</a>
+</form>
+
+{% include "partials/server_results.html" %}
+
+{% endblock %}

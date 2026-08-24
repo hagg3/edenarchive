@@ -42,6 +42,26 @@ def is_htmx(request: Request) -> bool:
     return request.headers.get("HX-Request") == "true"
 
 
+def from_json(raw: str | None) -> dict:
+    try:
+        return json.loads(raw or "{}")
+    except (TypeError, ValueError):
+        return {}
+
+
+def eden_ts_date(ts: int | None) -> str:
+    """A server world's id *is* its unix creation timestamp — same convention
+    _worlds/*.md's publishdate uses."""
+    if not ts:
+        return "—"
+    try:
+        return datetime.fromtimestamp(ts).date().isoformat()
+    except (ValueError, OSError, OverflowError):
+        return "—"
+
+
 templates.env.filters["human_bytes"] = human_bytes
 templates.env.filters["issue_list"] = issue_list
 templates.env.filters["short_time"] = short_time
+templates.env.filters["from_json"] = from_json
+templates.env.filters["eden_ts_date"] = eden_ts_date

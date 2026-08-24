@@ -35,6 +35,20 @@ async def upload_stage(request: Request, file: UploadFile):
     )
 
 
+@router.get("/review/{token}")
+async def upload_review(request: Request, token: str, filename: str = ""):
+    """Splits the review render out of POST /upload/stage so a finished
+    server_fetch job can link straight to it — the request came from the
+    Eden game servers, not a browser file upload."""
+    staged = importer.stage(token, filename or f"{token}.eden")
+    warnings = importer.check_against_archive(staged, request.app.state.db)
+
+    return templates.TemplateResponse(
+        request, "upload_review.html",
+        {"staged": staged, "warnings": warnings, "nav": "upload"},
+    )
+
+
 @router.post("/commit")
 async def upload_commit(
     request: Request,

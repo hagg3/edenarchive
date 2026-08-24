@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EdenFind — Eden shared-worlds archive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div id="brand">EdenFind</div>
+    <div id="view-toggle">
+      <button id="view-archive-btn" class="active">Archive Search</button>
+      <button id="view-live-btn">Live Browse</button>
+    </div>
+    <div id="searchbar">
+      <select id="mode">
+        <option value="lexical">Lexical</option>
+        <option value="fuzzy">Fuzzy</option>
+        <option value="concept">Concept</option>
+        <option value="regex">Regex</option>
+      </select>
+      <input id="q" type="text" placeholder="Search worlds… ( / to focus )" autocomplete="off">
+      <select id="sort">
+        <option value="relevance">Relevance</option>
+        <option value="date_desc">Newest first</option>
+        <option value="date_asc">Oldest first</option>
+        <option value="quality_desc">Quality</option>
+      </select>
+    </div>
+    <div id="resultcount"></div>
+  </header>
+
+  <div id="coverage-banner" class="hidden"></div>
+
+  <div id="live-view" class="hidden">
+    <div id="live-controls">
+      <div id="live-server-switch">
+        <button data-server="current" class="active">Current server</button>
+        <button data-server="legacy">Legacy server</button>
+      </div>
+      <div id="live-tabs">
+        <button data-tab="recent" class="active">Recent</button>
+        <button data-tab="search">Search</button>
+        <button data-tab="featured">Featured</button>
+        <button data-tab="saved">Saved</button>
+      </div>
+    </div>
+
+    <p id="live-note" class="hint">
+      Live data comes straight from the game server — nothing here is cached
+      in worlds.db until you click Save on a row. Recent is capped to 30
+      rows/page; search is a single request, capped and paginated locally;
+      the featured list is fetched in full (it's small). Preview images are
+      only fetched when you click "Preview" on a row.
+    </p>
+
+    <div id="live-recent-panel" class="live-panel">
+      <div class="live-toolbar">
+        <button id="live-recent-first">Start from newest</button>
+        <span id="live-recent-status" class="hint"></span>
+      </div>
+      <div id="live-recent-table" class="live-table"></div>
+      <button id="live-recent-more">Load next 30</button>
+    </div>
+
+    <div id="live-search-panel" class="live-panel hidden">
+      <div class="live-toolbar">
+        <input id="live-search-q" type="text" placeholder="Search this server…">
+        <button id="live-search-btn">Search</button>
+        <span id="live-search-status" class="hint"></span>
+      </div>
+      <div id="live-search-table" class="live-table"></div>
+      <div class="live-toolbar">
+        <button id="live-search-prev">◂ Prev 50</button>
+        <span id="live-search-page" class="hint"></span>
+        <button id="live-search-next">Next 50 ▸</button>
+      </div>
+    </div>
+
+    <div id="live-featured-panel" class="live-panel hidden">
+      <div class="live-toolbar">
+        <button id="live-featured-refresh">Refresh</button>
+        <span id="live-featured-status" class="hint"></span>
+      </div>
+      <div id="live-featured-table" class="live-table"></div>
+    </div>
+
+    <div id="live-saved-panel" class="live-panel hidden">
+      <div id="live-saved-table" class="live-table"></div>
+    </div>
+  </div>
+
+  <div id="body">
+    <aside id="sidebar">
+      <section>
+        <h3>Date range</h3>
+        <div class="era-presets">
+          <button data-era="fragment">Pre-log fragment (≤2015-01)</button>
+          <button data-era="peak">Peak (2015–2017)</button>
+          <button data-era="modern">Modern (2020+)</button>
+          <button data-era="all">All time</button>
+        </div>
+        <div class="date-inputs">
+          <input id="date-from" type="date">
+          <span>–</span>
+          <input id="date-to" type="date">
+        </div>
+      </section>
+
+      <section>
+        <h3>Flags <span class="hint">click to cycle: ignore → exclude → require</span></h3>
+        <div id="flag-list"></div>
+      </section>
+
+      <section>
+        <h3>Quality ≥ <span id="quality-val">0</span></h3>
+        <input id="quality" type="range" min="0" max="100" step="1" value="0">
+      </section>
+
+      <section>
+        <h3>Series</h3>
+        <label>Size ≥ <input id="series-size" type="number" min="0" value="" placeholder="any"></label>
+        <label><input id="featured-only" type="checkbox"> Featured only</label>
+      </section>
+
+      <section>
+        <h3>Origin</h3>
+        <input id="origin" type="text" placeholder="exact origin (IP/UUID)">
+        <select id="origin-class">
+          <option value="">any class</option>
+          <option value="chat">chat</option>
+          <option value="flooder">flooder</option>
+          <option value="builder">builder</option>
+        </select>
+      </section>
+
+      <section>
+        <h3>Author</h3>
+        <input id="author" type="text" placeholder="by …">
+      </section>
+
+      <section>
+        <h3>Collapse</h3>
+        <select id="collapse">
+          <option value="none">None (every upload)</option>
+          <option value="name">One row per name</option>
+          <option value="series">One row per series</option>
+        </select>
+      </section>
+
+      <section>
+        <button id="reset-filters">Reset to defaults</button>
+        <button id="export-btn">Export current results (e)</button>
+      </section>
+    </aside>
+
+    <main id="main">
+      <div id="table-header" class="row header-row">
+        <div class="col-date">Date</div>
+        <div class="col-name">Name</div>
+        <div class="col-flags">Flags</div>
+        <div class="col-quality">Quality</div>
+        <div class="col-series">Series</div>
+        <div class="col-origin">Origin</div>
+      </div>
+      <div id="table-viewport">
+        <div id="table-spacer"></div>
+      </div>
+    </main>
+
+    <aside id="drawer" class="hidden">
+      <button id="drawer-close">×</button>
+      <div id="drawer-content"></div>
+    </aside>
+  </div>
+
+  <footer id="statusbar">
+    <span id="status-text"></span>
+  </footer>
+</div>
+<script src="app.js"></script>
+<script src="live.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, HTTPException, Query, Request, UploadFile
 from fastapi.responses import RedirectResponse
 
-from ...core import index, paths
+from ...core import edenserver, index, paths
 from ..templating import is_htmx, templates
 
 router = APIRouter()
@@ -73,6 +73,18 @@ async def enqueue_bulk_map(request: Request):
     )
 
 
+@router.post("/assets/preview/backfill")
+async def enqueue_preview_backfill(request: Request):
+    """Bulk-fetch {id}.eden.png previews for every world missing one, from
+    the Eden game servers. One job — see jobs.py's _run_preview_backfill for
+    why misses there are normal, not failures."""
+    job_id = request.app.state.jobs.enqueue("preview_backfill", "all")
+    return templates.TemplateResponse(
+        request, "partials/bulk_enqueued.html",
+        {"count": 1, "job_ids": [job_id], "label": "preview backfill"},
+    )
+
+
 @router.post("/assets/{world_id}/preview")
 async def upload_preview(request: Request, world_id: str, file: UploadFile):
     conn = request.app.state.db
@@ -96,30 +108,25 @@ async def upload_preview(request: Request, world_id: str, file: UploadFile):
 
 @router.post("/assets/{world_id}/preview/fetch")
 async def refetch_preview(request: Request, world_id: str):
-    import requests
-
     conn = request.app.state.db
     row = index.get_by_world_id(conn, world_id)
     if row is None:
         raise HTTPException(404)
 
-    url = f"http://files.edengame.net/{world_id}.eden.png"
     dest_dir = paths.asset_dir_for(world_id)
     dest_dir.mkdir(parents=True, exist_ok=True)
     dest = paths.assert_writable(dest_dir / f"{world_id}.eden.png")
 
-    try:
-        resp = requests.get(url, timeout=15)
-        resp.raise_for_status()
-        dest.write_bytes(resp.content)
-    except requests.RequestException as exc:
+    data, server = edenserver.fetch_preview_any(world_id)
+    if data is None:
         return templates.TemplateResponse(
             request, "partials/preview_fetch_result.html",
-            {"ok": False, "error": str(exc), "world_id": world_id},
+            {"ok": False, "error": "not found on either server", "world_id": world_id},
         )
+    dest.write_bytes(data)
 
     index.refresh_assets(conn, row["slug"])
     return templates.TemplateResponse(
         request, "partials/preview_fetch_result.html",
-        {"ok": True, "world_id": world_id},
+        {"ok": True, "world_id": world_id, "server": server},
     )
